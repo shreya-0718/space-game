@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="space-game"
-config/features=PackedStringArray("4.5", "Mobile")
-config/icon="res://icon.svg"
+run/main_scene="uid://dwsjdi6wvhnty"
+config/features=PackedStringArray("4.4", "Mobile")
 
 [display]
 
-window/size/viewport_width=240
-window/size/viewport_height=160
+window/size/viewport_width=960
+window/size/viewport_height=640
 
 [editor_plugins]
 
