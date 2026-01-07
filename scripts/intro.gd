@@ -52,7 +52,7 @@ func camera_dolly_in(duration := 1.5):
 func _update_parallax(progress):
 	var screen_center = get_viewport_rect().size / 2
 
-	var eased = progress * progress 
+	var eased = progress * progress
 	
 	for name in objects.keys():
 		if name == "window":
@@ -98,6 +98,7 @@ func _on_button_pressed():
 	
 	get_tree().change_scene_to_file("res://scenes/Test.tscn")
 	
+	# move this code to inside-rocket scene instead:
 	var w2 = create_tween()
 	w2.tween_property($WhiteRect, "modulate:a", 0, 0.8)
 	await w2.finished
