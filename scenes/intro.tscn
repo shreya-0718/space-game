@@ -26,7 +26,6 @@ offset_top = 504.0
 offset_right = 380.0
 offset_bottom = 535.0
 scale = Vector2(3, 3)
-mouse_filter = 2
 text = "PLAY"
 icon = SubResource("PlaceholderTexture2D_ayt76")
 metadata/_edit_use_anchors_ = true
@@ -37,7 +36,6 @@ scale = Vector2(3.22131, 3.22131)
 texture = ExtResource("3_272cy")
 
 [node name="spaceship" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(583, 380)
 rotation = -1.39626
 scale = Vector2(1.40089, 1.45306)
@@ -72,10 +70,10 @@ visible = false
 position = Vector2(479, 319)
 
 [node name="WhiteRect" type="ColorRect" parent="."]
-visible = false
+modulate = Color(1, 1, 1, 0)
 z_index = 991
 offset_right = 977.0
 offset_bottom = 655.0
-color = Color(1, 1, 1, 0)
+mouse_filter = 2
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

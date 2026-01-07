@@ -28,7 +28,7 @@ func _ready():
 		original_positions[name] = objects[name]["node"].position
 		original_scales[name] = objects[name]["node"].scale
 
-	start_rocking()
+	start_rocking() # have id crisis
 
 
 func start_rocking():
@@ -82,13 +82,8 @@ func _update_parallax(progress):
 
 	cam.zoom = Vector2(1.0 + eased * 0.2, 1.0 + eased * 0.2)
 
-	
-func fade_to_white():
-	var t = create_tween()
-	t.tween_property(white, "modulate:a", 1.0, 0.8)
-
-
 func _on_button_pressed():
+	print("Clicked on button")
 	camera_dolly_in(1.5)
 
 	await get_tree().create_timer(1.5).timeout
@@ -97,7 +92,13 @@ func _on_button_pressed():
 	var t = create_tween()
 	t.tween_property(cam, "zoom", Vector2(15, 15), 3).set_ease(Tween.EASE_IN)
 	
-	fade_to_white()
-
-	await get_tree().create_timer(0.8).timeout
+	var w = create_tween()
+	w.tween_property($WhiteRect, "modulate:a", 1.0, 0.8)
+	await w.finished
+	
 	get_tree().change_scene_to_file("res://scenes/Test.tscn")
+	
+	var w2 = create_tween()
+	w2.tween_property($WhiteRect, "modulate:a", 0, 0.8)
+	await w2.finished
+	
