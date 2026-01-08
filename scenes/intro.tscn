@@ -72,8 +72,9 @@ position = Vector2(479, 319)
 [node name="WhiteRect" type="ColorRect" parent="."]
 modulate = Color(1, 1, 1, 0)
 z_index = 991
+offset_top = -53.0
 offset_right = 977.0
-offset_bottom = 655.0
+offset_bottom = 602.0
 mouse_filter = 2
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

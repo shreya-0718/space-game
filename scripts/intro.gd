@@ -5,7 +5,7 @@ extends Node2D
 	"window": {"node": $spaceship/window, "depth": 100000000},
 	"asteroid1": {"node": $asteroid1, "depth": 1.7},
 	"asteroid2": {"node": $asteroid2, "depth": 0.8},
-	"planet": {"node": $planet, "depth": 5.0},
+	"planet": {"node": $planet, "depth": 50.0},
 	"comet": {"node": $comet, "depth": 3},
 	"Galactico": {"node": $Galactico, "depth": 0.5},
 	"Button": {"node": $Button, "depth": 0.5}
@@ -96,10 +96,9 @@ func _on_button_pressed():
 	w.tween_property($WhiteRect, "modulate:a", 1.0, 0.8)
 	await w.finished
 	
-	get_tree().change_scene_to_file("res://scenes/Test.tscn")
+	get_tree().change_scene_to_file("res://scenes/levelpage.tscn")
 	
 	# move this code to inside-rocket scene instead:
 	var w2 = create_tween()
 	w2.tween_property($WhiteRect, "modulate:a", 0, 0.8)
 	await w2.finished
-	
