@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmhlv5c17pb3h"]
+
+[ext_resource type="Script" uid="uid://dokef6073lycj" path="res://scripts/levelpage.gd" id="1_edjwb"]
+[ext_resource type="Texture2D" uid="uid://bjn0tqfvcv1bn" path="res://images/level_page/pixel_space_bckg.webp" id="2_nnj5f"]
+[ext_resource type="Texture2D" uid="uid://bktfvbnjv1fa6" path="res://images/intro_page/planet.png" id="3_sr1gy"]
+[ext_resource type="Script" uid="uid://ctqkhov7l71o3" path="res://scripts/testplanet.gd" id="4_hji0n"]
+
+[node name="LevelPageNode" type="Node2D"]
+script = ExtResource("1_edjwb")
+
+[node name="Backgroundtemp" type="Sprite2D" parent="."]
+position = Vector2(847.92285, 324.921)
+scale = Vector2(2.524039, 1.7087448)
+texture = ExtResource("2_nnj5f")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(478, 325)
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 124.0
+offset_top = 262.0
+offset_right = 365.0
+offset_bottom = 501.0
+texture_normal = ExtResource("3_sr1gy")
+script = ExtResource("4_hji0n")
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]

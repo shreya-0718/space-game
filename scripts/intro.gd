@@ -96,7 +96,7 @@ func _on_button_pressed():
 	w.tween_property($WhiteRect, "modulate:a", 1.0, 0.8)
 	await w.finished
 	
-	get_tree().change_scene_to_file("res://scenes/levelpage.tscn")
+	get_tree().change_scene_to_file("res://scenes/levelpage1.tscn")
 	
 	# move this code to inside-rocket scene instead:
 	var w2 = create_tween()
