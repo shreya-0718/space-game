@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="space-game"
+<<<<<<< Updated upstream
 run/main_scene="uid://dwsjdi6wvhnty"
 config/features=PackedStringArray("4.4", "Mobile")
+=======
+run/main_scene="uid://svv2qpaqd2fn"
+config/features=PackedStringArray("4.5", "Mobile")
+config/icon="res://icon.svg"
+>>>>>>> Stashed changes
 
 [display]
 
