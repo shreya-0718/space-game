@@ -1,0 +1,44 @@
+extends Node2D
+
+#ARROW KEYS
+var scroll_speed := 400
+
+@onready var camera = $Camera2D
+
+#Details:
+#Background X = ?
+#Background Y must be 640, x can be anything to fit the pictures
+#Dimensions of camera = (960, 640)
+#clamp MAX = Background X - 480
+
+func _process(delta):
+	var move := Vector2.ZERO
+	if Input.is_action_pressed("ui_right"):
+		move.x += 1
+	if Input.is_action_pressed("ui_left"):
+		move.x -= 1
+
+	camera.position += move * scroll_speed * delta
+	
+	camera.position.x = clamp(camera.position.x, 480, 1200)
+	camera.position.y = 320
+	
+#SCROLLING
+var pan_speed := 1.0
+
+func _input1(event):
+	if event is InputEventPanGesture:
+		camera.position.x -= event.delta.x * pan_speed
+	
+#DRAGGING
+var dragging := false
+var drag_speed := 1.0
+
+func _input(event):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			dragging = event.pressed
+	if event is InputEventMouseMotion and dragging:
+		camera.position.x -= event.relative.x * drag_speed
+	camera.position.y = 320
+	camera.position.x = clamp(camera.position.x, 480, 1200)
