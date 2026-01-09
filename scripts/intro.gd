@@ -62,9 +62,10 @@ func _update_parallax(progress):
 		var depth = objects[name]["depth"]
 		var start_pos = original_positions[name]
 
+		var scale_amount = 1.0 + eased * (3.0 / depth)
+		var base_scale = original_scales[name]
+		
 		if name == "spaceship":
-			var scale_amount = 1.0 + eased * (3.0 / depth)
-			var base_scale = original_scales[name]
 			obj.scale = base_scale * scale_amount
 
 			var window_offset = screen_center - $spaceship/window.global_position
@@ -76,8 +77,7 @@ func _update_parallax(progress):
 		var fly_distance = 1800 * eased * (1.0 / depth)
 		obj.position = start_pos + dir * fly_distance
 
-		var scale_amount = 1.0 + eased * (3.0 / depth)
-		var base_scale = original_scales[name]
+		
 		obj.scale = base_scale * scale_amount
 
 	cam.zoom = Vector2(1.0 + eased * 0.2, 1.0 + eased * 0.2)
