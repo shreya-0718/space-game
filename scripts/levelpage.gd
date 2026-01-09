@@ -5,7 +5,7 @@ var scroll_speed := 400
 
 @onready var camera = $Camera2D
 
-#Details:
+#Details: for level page background
 #Background X = ?
 #Background Y must be 640, x can be anything to fit the pictures
 #Dimensions of camera = (960, 640)
