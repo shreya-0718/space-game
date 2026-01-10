@@ -312,19 +312,20 @@ tile_map_data = PackedByteArray("AAAOAAgAAAACAAMAAAANAAgAAAABAAMAAAAMAAgAAAAAAAM
 tile_set = SubResource("TileSet_1y6ab")
 
 [node name="astronaut" type="CharacterBody2D" parent="."]
+position = Vector2(2002, 437)
 script = ExtResource("2_doqmq")
 
 [node name="Sprite2D" type="Sprite2D" parent="astronaut"]
-position = Vector2(1928.5, 449.65463)
+position = Vector2(0.5, -5.3453674)
 scale = Vector2(0.43750006, 0.4375001)
 texture = ExtResource("2_1y6ab")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="astronaut"]
-position = Vector2(1928, 449)
+position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_doqmq")
 
 [node name="Camera2D" type="Camera2D" parent="astronaut"]
-position = Vector2(1810, 268)
+position = Vector2(-118, -187)
 limit_left = 794
 limit_top = -10000101
 limit_right = 16613
@@ -337,6 +338,7 @@ drag_top_margin = 0.4
 drag_bottom_margin = 0.08
 
 [node name="star1" type="Area2D" parent="."]
+position = Vector2(35, -16)
 script = ExtResource("4_2ndqr")
 
 [node name="Sprite2D" type="Sprite2D" parent="star1"]
@@ -349,6 +351,7 @@ position = Vector2(1300.0002, 463)
 shape = SubResource("RectangleShape2D_2ndqr")
 
 [node name="star2" type="Area2D" parent="."]
+position = Vector2(1934, 472)
 script = ExtResource("6_w3gva")
 
 [node name="Sprite2D" type="Sprite2D" parent="star2"]
@@ -361,6 +364,7 @@ position = Vector2(6287.7983, -112.74994)
 shape = SubResource("RectangleShape2D_o7j63")
 
 [node name="star3" type="Area2D" parent="."]
+position = Vector2(1931, 451)
 script = ExtResource("7_hny5o")
 
 [node name="Sprite2D" type="Sprite2D" parent="star3"]
