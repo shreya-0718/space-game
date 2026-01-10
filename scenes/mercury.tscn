@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=4 uid="uid://d30n18ft2jng7"]
+[gd_scene load_steps=16 format=4 uid="uid://d30n18ft2jng7"]
 
 [ext_resource type="Texture2D" uid="uid://u0xdit51o8mk" path="res://images/mercury/mercury_tileset.png" id="1_7rm5h"]
+[ext_resource type="Script" uid="uid://cwo21gqf1hn1r" path="res://scenes/mercurylevel.gd" id="1_hny5o"]
 [ext_resource type="Texture2D" uid="uid://dpswc71tjbx6u" path="res://images/mercury/astronaut.png" id="2_1y6ab"]
 [ext_resource type="Script" uid="uid://dbdp1iwy628d6" path="res://scripts/astronaut.gd" id="2_doqmq"]
 [ext_resource type="Texture2D" uid="uid://ck1ylfdoydefx" path="res://images/level_page/star.png" id="3_wv0ba"]
@@ -303,6 +304,7 @@ size = Vector2(87, 90.5)
 size = Vector2(103, 82)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_hny5o")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(4, 4)
@@ -377,6 +379,32 @@ offset_right = 15679.0
 offset_bottom = 974.0
 text = "end game"
 script = ExtResource("8_3ogdj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 1739.0
+offset_top = -28.0
+offset_right = 1887.0
+offset_bottom = 33.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="levelstart" type="Marker2D" parent="."]
+position = Vector2(1080, 443)
+
+[node name="levelend" type="Marker2D" parent="."]
+position = Vector2(15768, 546)
 
 [connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
 [connection signal="body_entered" from="star2" to="star2" method="_on_body_entered"]
