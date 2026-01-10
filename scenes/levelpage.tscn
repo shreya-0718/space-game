@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://1flfmqmgx08v"]
 
-[ext_resource type="Script" uid="uid://dokef6073lycj" path="res://scripts/levelpage.gd" id="1_6d2bj"]
+[ext_resource type="Script" uid="uid://dokef6073lycj" path="res://scripts/delete.gd" id="1_6d2bj"]
 [ext_resource type="Texture2D" uid="uid://bjn0tqfvcv1bn" path="res://images/level_page/pixel_space_bckg.webp" id="2_3ei2d"]
 [ext_resource type="Texture2D" uid="uid://bktfvbnjv1fa6" path="res://images/intro_page/planet.png" id="3_3ei2d"]
-[ext_resource type="Script" uid="uid://ctqkhov7l71o3" path="res://scripts/testplanet.gd" id="4_3ei2d"]
+[ext_resource type="Script" uid="uid://ctqkhov7l71o3" path="res://scripts/mercury.gd" id="4_3ei2d"]
 
 [node name="LevelPageNode" type="Node2D"]
 script = ExtResource("1_6d2bj")
