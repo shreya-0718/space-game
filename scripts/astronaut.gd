@@ -1,8 +1,9 @@
 extends CharacterBody2D
 
-@export var move_speed = 200.0
-@export var jump_force = 350.0
-@export var glide_gravity_scale := 0.25 
+var move_speed : float = Global.move_speed
+var jump_force : float = Global.jump_force
+var glide_gravity_scale : float = Global.glide_gravity_scale 
+
 
 func _physics_process(delta):
 	var direction = 0.0
