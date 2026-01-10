@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dpswc71tjbx6u" path="res://images/mercury/astronaut.png" id="2_1y6ab"]
 [ext_resource type="Script" uid="uid://dbdp1iwy628d6" path="res://scripts/astronaut.gd" id="2_doqmq"]
 [ext_resource type="Texture2D" uid="uid://ck1ylfdoydefx" path="res://images/level_page/star.png" id="3_wv0ba"]
-[ext_resource type="Script" uid="uid://12rlcnsbuggt" path="res://scripts/star_1.gd" id="4_2ndqr"]
+[ext_resource type="Script" uid="uid://bpkfgwxoiplt0" path="res://star_1.gd" id="4_2ndqr"]
 [ext_resource type="Script" uid="uid://bdosl6d7hvmur" path="res://scripts/star_2.gd" id="6_w3gva"]
 [ext_resource type="Script" uid="uid://cpx3qiakoyr26" path="res://scripts/star_3.gd" id="7_hny5o"]
 [ext_resource type="Script" uid="uid://cs7lu74ly1jac" path="res://scripts/end.gd" id="8_3ogdj"]
@@ -372,6 +372,40 @@ texture = ExtResource("3_wv0ba")
 position = Vector2(10773.804, 960.75)
 shape = SubResource("RectangleShape2D_w3gva")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchor_right = 0.45000002
+anchor_bottom = 0.062000003
+offset_left = 414.0
+offset_top = 25.0
+offset_right = 137.99997
+offset_bottom = 53.32
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 6.4038467
+anchor_top = 0.014705882
+anchor_right = 6.4038467
+anchor_bottom = 0.014705882
+offset_left = -1026.0
+offset_top = -8.0
+offset_right = -834.0
+offset_bottom = 72.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 6.0
+offset_right = 138.0
+offset_bottom = 67.0
+metadata/_edit_use_anchors_ = true
+
 [node name="Button" type="Button" parent="."]
 offset_left = 15594.0
 offset_top = 943.0
@@ -380,31 +414,11 @@ offset_bottom = 974.0
 text = "end game"
 script = ExtResource("8_3ogdj")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Control" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Control"]
-layout_mode = 0
-offset_left = 1739.0
-offset_top = -28.0
-offset_right = 1887.0
-offset_bottom = 33.0
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="levelstart" type="Marker2D" parent="."]
-position = Vector2(1080, 443)
+position = Vector2(1042, 454)
 
 [node name="levelend" type="Marker2D" parent="."]
-position = Vector2(15768, 546)
+position = Vector2(15929, 642)
 
 [connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
 [connection signal="body_entered" from="star2" to="star2" method="_on_body_entered"]
