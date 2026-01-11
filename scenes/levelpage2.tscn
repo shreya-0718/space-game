@@ -1,20 +1,21 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmhlv5c17pb3h"]
+[gd_scene load_steps=9 format=3 uid="uid://bgcakxgdbhba5"]
 
-[ext_resource type="Script" uid="uid://dxg58er1iashs" path="res://scripts/levelpage.gd" id="1_nnj5f"]
-[ext_resource type="Texture2D" uid="uid://bjn0tqfvcv1bn" path="res://images/level_page/pixel_space_bckg.webp" id="2_nnj5f"]
-[ext_resource type="Texture2D" uid="uid://bktfvbnjv1fa6" path="res://images/intro_page/planet.png" id="3_sr1gy"]
-[ext_resource type="Script" uid="uid://ctqkhov7l71o3" path="res://scripts/mercury.gd" id="4_hji0n"]
-[ext_resource type="Texture2D" uid="uid://ck1ylfdoydefx" path="res://images/level_page/star.png" id="5_nnj5f"]
-[ext_resource type="Texture2D" uid="uid://bi1d457bj8157" path="res://images/level_page/lock.png" id="5_sr1gy"]
-[ext_resource type="Texture2D" uid="uid://68nqrjdq1ion" path="res://images/level_page/venus.png" id="8_my82s"]
+[ext_resource type="Script" uid="uid://dxg58er1iashs" path="res://scripts/levelpage.gd" id="1_or1i0"]
+[ext_resource type="Texture2D" uid="uid://bjn0tqfvcv1bn" path="res://images/level_page/pixel_space_bckg.webp" id="2_ro40s"]
+[ext_resource type="Script" uid="uid://ctqkhov7l71o3" path="res://scripts/mercury.gd" id="3_ak80f"]
+[ext_resource type="Texture2D" uid="uid://bktfvbnjv1fa6" path="res://images/intro_page/planet.png" id="4_6sn2o"]
+[ext_resource type="Texture2D" uid="uid://ck1ylfdoydefx" path="res://images/level_page/star.png" id="5_uhuk6"]
+[ext_resource type="Script" uid="uid://bk7f0x4slvsm0" path="res://scripts/venus.gd" id="6_16tqc"]
+[ext_resource type="Texture2D" uid="uid://68nqrjdq1ion" path="res://images/level_page/venus.png" id="7_iv3v4"]
+[ext_resource type="Texture2D" uid="uid://bi1d457bj8157" path="res://images/level_page/lock.png" id="8_krtnf"]
 
 [node name="LevelPageNode" type="Node2D"]
-script = ExtResource("1_nnj5f")
+script = ExtResource("1_or1i0")
 
 [node name="Backgroundtemp" type="Sprite2D" parent="."]
 position = Vector2(849.00006, 335)
 scale = Vector2(2.524039, 1.7087448)
-texture = ExtResource("2_nnj5f")
+texture = ExtResource("2_ro40s")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(478, 325)
@@ -24,11 +25,11 @@ offset_left = 124.0
 offset_top = 262.0
 offset_right = 365.0
 offset_bottom = 501.0
-script = ExtResource("4_hji0n")
+script = ExtResource("3_ak80f")
 
 [node name="mercuryimage" type="Sprite2D" parent="mercury"]
 position = Vector2(126, 123)
-texture = ExtResource("3_sr1gy")
+texture = ExtResource("4_6sn2o")
 
 [node name="star_container" type="HBoxContainer" parent="."]
 offset_left = 178.0
@@ -40,34 +41,36 @@ mouse_filter = 2
 [node name="star1" type="TextureRect" parent="star_container"]
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("5_nnj5f")
+texture = ExtResource("5_uhuk6")
 expand_mode = 2
 
 [node name="star2" type="TextureRect" parent="star_container"]
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("5_nnj5f")
+texture = ExtResource("5_uhuk6")
 expand_mode = 2
 
 [node name="star3" type="TextureRect" parent="star_container"]
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("5_nnj5f")
+texture = ExtResource("5_uhuk6")
 expand_mode = 2
 
 [node name="venus" type="TextureButton" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("6_16tqc")
 
 [node name="venusimage" type="Sprite2D" parent="venus"]
 position = Vector2(447.99997, 177)
 scale = Vector2(0.63946587, 0.63946587)
-texture = ExtResource("8_my82s")
+texture = ExtResource("7_iv3v4")
 
 [node name="lockicon" type="Sprite2D" parent="venus"]
 z_index = 1
 position = Vector2(444, 176)
 scale = Vector2(0.32512316, 0.32512316)
-texture = ExtResource("5_sr1gy")
+texture = ExtResource("8_krtnf")
 
 [connection signal="pressed" from="mercury" to="mercury" method="_on_pressed"]
+[connection signal="pressed" from="venus" to="venus" method="_on_pressed"]
