@@ -3,12 +3,15 @@ extends Node2D
 @onready var stars = [$star_container/star1, $star_container/star2, $star_container/star3]
 
 func _ready():
-	update_stars()
+	update_stars($mercury, global.mercury_stars)
+	update_stars($venus, global.venus_stars)
 
-func update_stars():
+func update_stars(planet_node: Node, star_count: int):
+	var container = planet_node.get_node("star_container")
+	var stars = container.get_children()
+
 	for i in range(stars.size()):
-		stars[i].modulate = Color(1, 1, 1, 1) if i < global.mercury_stars else Color (1, 1, 1, 0.3)
-
+		stars[i].modulate = Color(1, 1, 1, 1) if i < star_count else Color(1, 1, 1, 0.3)
 
 
 #ARROW KEYS

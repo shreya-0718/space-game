@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmhlv5c17pb3h"]
+[gd_scene load_steps=7 format=3 uid="uid://cmhlv5c17pb3h"]
 
 [ext_resource type="Script" uid="uid://dxg58er1iashs" path="res://scripts/levelpage.gd" id="1_nnj5f"]
 [ext_resource type="Texture2D" uid="uid://bjn0tqfvcv1bn" path="res://images/level_page/pixel_space_bckg.webp" id="2_nnj5f"]
 [ext_resource type="Texture2D" uid="uid://bktfvbnjv1fa6" path="res://images/intro_page/planet.png" id="3_sr1gy"]
 [ext_resource type="Script" uid="uid://ctqkhov7l71o3" path="res://scripts/mercury.gd" id="4_hji0n"]
 [ext_resource type="Texture2D" uid="uid://ck1ylfdoydefx" path="res://images/level_page/star.png" id="5_nnj5f"]
+[ext_resource type="Script" uid="uid://bk7f0x4slvsm0" path="res://scripts/venus.gd" id="6_sr1gy"]
 
 [node name="LevelPageNode" type="Node2D"]
 script = ExtResource("1_nnj5f")
@@ -18,36 +19,72 @@ texture = ExtResource("2_nnj5f")
 position = Vector2(478, 325)
 
 [node name="mercury" type="TextureButton" parent="."]
-offset_left = 124.0
-offset_top = 262.0
-offset_right = 365.0
-offset_bottom = 501.0
+offset_left = 78.0
+offset_top = 305.0
+offset_right = 319.0
+offset_bottom = 544.0
 texture_normal = ExtResource("3_sr1gy")
 script = ExtResource("4_hji0n")
 
-[node name="star_container" type="HBoxContainer" parent="."]
-offset_left = 178.0
-offset_top = 504.0
-offset_right = 306.0
-offset_bottom = 544.0
+[node name="star_container" type="HBoxContainer" parent="mercury"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 242.0
+offset_right = 182.0
+offset_bottom = 282.0
 mouse_filter = 2
 
-[node name="star1" type="TextureRect" parent="star_container"]
+[node name="star1" type="TextureRect" parent="mercury/star_container"]
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("5_nnj5f")
 expand_mode = 2
 
-[node name="star2" type="TextureRect" parent="star_container"]
+[node name="star2" type="TextureRect" parent="mercury/star_container"]
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("5_nnj5f")
 expand_mode = 2
 
-[node name="star3" type="TextureRect" parent="star_container"]
+[node name="star3" type="TextureRect" parent="mercury/star_container"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("5_nnj5f")
+expand_mode = 2
+
+[node name="venus" type="TextureButton" parent="."]
+offset_left = 393.0
+offset_top = 94.0
+offset_right = 634.0
+offset_bottom = 333.0
+texture_normal = ExtResource("3_sr1gy")
+script = ExtResource("6_sr1gy")
+
+[node name="star_container" type="HBoxContainer" parent="venus"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 242.0
+offset_right = 182.0
+offset_bottom = 282.0
+mouse_filter = 2
+
+[node name="star1" type="TextureRect" parent="venus/star_container"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("5_nnj5f")
+expand_mode = 2
+
+[node name="star2" type="TextureRect" parent="venus/star_container"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("5_nnj5f")
+expand_mode = 2
+
+[node name="star3" type="TextureRect" parent="venus/star_container"]
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("5_nnj5f")
 expand_mode = 2
 
 [connection signal="pressed" from="mercury" to="mercury" method="_on_pressed"]
+[connection signal="pressed" from="venus" to="venus" method="_on_pressed"]

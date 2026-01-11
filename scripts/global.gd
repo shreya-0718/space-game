@@ -1,6 +1,7 @@
 extends Node2D
 
 var mercury_stars: int = 0
+var venus_stars: int = 0
 
 var gravity = 34
 var move_speed = 100
