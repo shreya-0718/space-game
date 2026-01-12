@@ -1,11 +1,11 @@
 [gd_scene load_steps=16 format=4 uid="uid://d30n18ft2jng7"]
 
 [ext_resource type="Texture2D" uid="uid://u0xdit51o8mk" path="res://images/mercury/mercury_tileset.png" id="1_7rm5h"]
-[ext_resource type="Script" uid="uid://cwo21gqf1hn1r" path="res://mercurylevel.gd" id="1_hny5o"]
+[ext_resource type="Script" uid="uid://cwo21gqf1hn1r" path="res://scripts/mercurylevel.gd" id="1_hny5o"]
 [ext_resource type="Texture2D" uid="uid://dpswc71tjbx6u" path="res://images/mercury/astronaut.png" id="2_1y6ab"]
 [ext_resource type="Script" uid="uid://dbdp1iwy628d6" path="res://scripts/astronaut.gd" id="2_doqmq"]
 [ext_resource type="Texture2D" uid="uid://ck1ylfdoydefx" path="res://images/level_page/star.png" id="3_wv0ba"]
-[ext_resource type="Script" uid="uid://bpkfgwxoiplt0" path="res://star_1.gd" id="4_2ndqr"]
+[ext_resource type="Script" uid="uid://12rlcnsbuggt" path="res://scripts/star_1.gd" id="4_2ndqr"]
 [ext_resource type="Script" uid="uid://bdosl6d7hvmur" path="res://scripts/star_2.gd" id="6_w3gva"]
 [ext_resource type="Script" uid="uid://cpx3qiakoyr26" path="res://scripts/star_3.gd" id="7_hny5o"]
 [ext_resource type="Script" uid="uid://cs7lu74ly1jac" path="res://scripts/end.gd" id="8_3ogdj"]
