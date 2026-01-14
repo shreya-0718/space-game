@@ -14,7 +14,7 @@ func _physics_process(delta):
 
 	velocity.x = direction * move_speed
 
-	var gravity : float = Global.mercury_gravity   
+	var gravity : float = Global.venus_gravity   
 
 	if Input.is_action_pressed("glide") and not is_on_floor() and velocity.y > 0:
 		velocity.y += gravity * glide_gravity_scale * delta
