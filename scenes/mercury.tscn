@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://d30n18ft2jng7"]
+[gd_scene load_steps=33 format=4 uid="uid://d30n18ft2jng7"]
 
 [ext_resource type="Texture2D" uid="uid://u0xdit51o8mk" path="res://images/mercury/mercury_tileset.png" id="1_7rm5h"]
 [ext_resource type="Script" uid="uid://cwo21gqf1hn1r" path="res://scripts/mercurylevel.gd" id="1_hny5o"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" uid="uid://dlaxqvogxis5r" path="res://scenes/iceskates.gd" id="15_vhrc5"]
 [ext_resource type="Texture2D" uid="uid://bf1417yva3ltu" path="res://images/mercury/iceskates.png" id="16_vrg72"]
 [ext_resource type="Texture2D" uid="uid://bqubey0spgbql" path="res://images/mercury/raincoat.png" id="17_vrg72"]
+[ext_resource type="Script" uid="uid://bptu7s4cg0q3w" path="res://scenes/waterfall.gd" id="18_a4sud"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gaff4"]
 texture = ExtResource("1_7rm5h")
@@ -317,12 +318,6 @@ size = Vector2(769, 129)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qt3vr"]
 size = Vector2(1087.625, 126.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r5swh"]
-size = Vector2(192, 5291.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vrg72"]
-size = Vector2(321, 63)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhrc5"]
 size = Vector2(114.5, 359)
 
@@ -334,6 +329,12 @@ radius = 136.0588
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a4sud"]
 size = Vector2(247, 58)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikbxa"]
+size = Vector2(322.5, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tyflu"]
+size = Vector2(215, 4986)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_hny5o")
@@ -468,14 +469,6 @@ shape = SubResource("RectangleShape2D_fmi03")
 position = Vector2(12254.1875, 896.75)
 shape = SubResource("RectangleShape2D_qt3vr")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="water"]
-position = Vector2(15200, -1876.75)
-shape = SubResource("RectangleShape2D_r5swh")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="water"]
-position = Vector2(15199.5, 800.5)
-shape = SubResource("RectangleShape2D_vrg72")
-
 [node name="checkpoint" type="Area2D" parent="."]
 position = Vector2(9373, 736)
 script = ExtResource("11_bym06")
@@ -576,6 +569,17 @@ layout_mode = 2
 texture = ExtResource("17_vrg72")
 expand_mode = 2
 
+[node name="waterfall" type="Area2D" parent="."]
+script = ExtResource("18_a4sud")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="waterfall"]
+position = Vector2(15202.25, 798)
+shape = SubResource("RectangleShape2D_ikbxa")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="waterfall"]
+position = Vector2(15199.5, -1707)
+shape = SubResource("RectangleShape2D_tyflu")
+
 [connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
 [connection signal="body_entered" from="star2" to="star2" method="_on_body_entered"]
 [connection signal="body_entered" from="star3" to="star3" method="_on_body_entered"]
@@ -586,3 +590,4 @@ expand_mode = 2
 [connection signal="body_entered" from="zoomin" to="zoomin" method="_on_body_entered"]
 [connection signal="body_entered" from="iceskates" to="iceskates" method="_on_body_entered"]
 [connection signal="body_exited" from="iceskates" to="iceskates" method="_on_body_exited"]
+[connection signal="body_entered" from="waterfall" to="waterfall" method="_on_body_entered"]
