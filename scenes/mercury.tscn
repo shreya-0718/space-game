@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://d30n18ft2jng7"]
+[gd_scene load_steps=28 format=4 uid="uid://d30n18ft2jng7"]
 
 [ext_resource type="Texture2D" uid="uid://u0xdit51o8mk" path="res://images/mercury/mercury_tileset.png" id="1_7rm5h"]
 [ext_resource type="Script" uid="uid://cwo21gqf1hn1r" path="res://scripts/mercurylevel.gd" id="1_hny5o"]
@@ -12,6 +12,8 @@
 [ext_resource type="Script" uid="uid://2731iaul2b00" path="res://scenes/water.gd" id="10_qt3vr"]
 [ext_resource type="Script" uid="uid://divqlbjtujjl3" path="res://scenes/checkpoint.gd" id="11_bym06"]
 [ext_resource type="Texture2D" uid="uid://c82mv17yv7jiu" path="res://images/mercury/flag.png" id="12_r5swh"]
+[ext_resource type="Script" uid="uid://bhrlqb6juuy2a" path="res://scenes/zoomout.gd" id="13_bym06"]
+[ext_resource type="Script" uid="uid://clw7wi0msuovm" path="res://scenes/zoomin.gd" id="14_r5swh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gaff4"]
 texture = ExtResource("1_7rm5h")
@@ -309,8 +311,23 @@ size = Vector2(103, 82)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fmi03"]
 size = Vector2(769, 129)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qt3vr"]
+size = Vector2(1087.625, 126.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r5swh"]
+size = Vector2(192, 5291.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vrg72"]
+size = Vector2(321, 63)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhrc5"]
 size = Vector2(114.5, 359)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a4sud"]
+radius = 46.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ikbxa"]
+radius = 136.0588
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_hny5o")
@@ -321,7 +338,7 @@ tile_map_data = PackedByteArray("AAAOAAgAAAACAAMAAAANAAgAAAABAAMAAAAMAAgAAAAAAAM
 tile_set = SubResource("TileSet_1y6ab")
 
 [node name="astronaut" type="CharacterBody2D" parent="." groups=["astronaut"]]
-position = Vector2(9223, 799)
+position = Vector2(11404, 799)
 script = ExtResource("2_doqmq")
 
 [node name="Sprite2D" type="Sprite2D" parent="astronaut"]
@@ -377,12 +394,12 @@ position = Vector2(1931, 451)
 script = ExtResource("7_hny5o")
 
 [node name="Sprite2D" type="Sprite2D" parent="star3"]
-position = Vector2(10770.804, 959.75)
+position = Vector2(9594.804, 278.75)
 scale = Vector2(0.19088668, 0.19088668)
 texture = ExtResource("3_wv0ba")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="star3"]
-position = Vector2(10773.804, 960.75)
+position = Vector2(9597.804, 279.75)
 shape = SubResource("RectangleShape2D_w3gva")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -441,6 +458,18 @@ script = ExtResource("10_qt3vr")
 position = Vector2(10624.5, 1215.5)
 shape = SubResource("RectangleShape2D_fmi03")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="water"]
+position = Vector2(12254.1875, 896.75)
+shape = SubResource("RectangleShape2D_qt3vr")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="water"]
+position = Vector2(15200, -1876.75)
+shape = SubResource("RectangleShape2D_r5swh")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="water"]
+position = Vector2(15199.5, 800.5)
+shape = SubResource("RectangleShape2D_vrg72")
+
 [node name="checkpoint" type="Area2D" parent="."]
 position = Vector2(9373, 736)
 script = ExtResource("11_bym06")
@@ -484,9 +513,25 @@ mouse_filter = 2
 texture = ExtResource("3_wv0ba")
 expand_mode = 2
 
+[node name="zoomout" type="Area2D" parent="."]
+position = Vector2(11637, 768)
+script = ExtResource("13_bym06")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zoomout"]
+shape = SubResource("CircleShape2D_a4sud")
+
+[node name="zoomin" type="Area2D" parent="."]
+script = ExtResource("14_r5swh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zoomin"]
+position = Vector2(12909, 748)
+shape = SubResource("CircleShape2D_ikbxa")
+
 [connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
 [connection signal="body_entered" from="star2" to="star2" method="_on_body_entered"]
 [connection signal="body_entered" from="star3" to="star3" method="_on_body_entered"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="body_entered" from="water" to="water" method="_on_body_entered"]
 [connection signal="body_entered" from="checkpoint" to="checkpoint" method="_on_body_entered"]
+[connection signal="body_entered" from="zoomout" to="zoomout" method="_on_body_entered"]
+[connection signal="body_entered" from="zoomin" to="zoomin" method="_on_body_entered"]
