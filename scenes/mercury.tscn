@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://d30n18ft2jng7"]
+[gd_scene load_steps=32 format=4 uid="uid://d30n18ft2jng7"]
 
 [ext_resource type="Texture2D" uid="uid://u0xdit51o8mk" path="res://images/mercury/mercury_tileset.png" id="1_7rm5h"]
 [ext_resource type="Script" uid="uid://cwo21gqf1hn1r" path="res://scripts/mercurylevel.gd" id="1_hny5o"]
@@ -14,6 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://c82mv17yv7jiu" path="res://images/mercury/flag.png" id="12_r5swh"]
 [ext_resource type="Script" uid="uid://bhrlqb6juuy2a" path="res://scenes/zoomout.gd" id="13_bym06"]
 [ext_resource type="Script" uid="uid://clw7wi0msuovm" path="res://scenes/zoomin.gd" id="14_r5swh"]
+[ext_resource type="Script" uid="uid://dlaxqvogxis5r" path="res://scenes/iceskates.gd" id="15_vhrc5"]
+[ext_resource type="Texture2D" uid="uid://bf1417yva3ltu" path="res://images/mercury/iceskates.png" id="16_vrg72"]
+[ext_resource type="Texture2D" uid="uid://bqubey0spgbql" path="res://images/mercury/raincoat.png" id="17_vrg72"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gaff4"]
 texture = ExtResource("1_7rm5h")
@@ -329,6 +332,9 @@ radius = 46.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_ikbxa"]
 radius = 136.0588
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a4sud"]
+size = Vector2(247, 58)
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_hny5o")
 
@@ -338,7 +344,7 @@ tile_map_data = PackedByteArray("AAAOAAgAAAACAAMAAAANAAgAAAABAAMAAAAMAAgAAAAAAAM
 tile_set = SubResource("TileSet_1y6ab")
 
 [node name="astronaut" type="CharacterBody2D" parent="." groups=["astronaut"]]
-position = Vector2(11404, 799)
+position = Vector2(11230, 927)
 script = ExtResource("2_doqmq")
 
 [node name="Sprite2D" type="Sprite2D" parent="astronaut"]
@@ -377,7 +383,7 @@ position = Vector2(1299.625, 462.375)
 shape = SubResource("RectangleShape2D_2ndqr")
 
 [node name="star2" type="Area2D" parent="."]
-position = Vector2(1934, 472)
+position = Vector2(1110, 460)
 script = ExtResource("6_w3gva")
 
 [node name="Sprite2D" type="Sprite2D" parent="star2"]
@@ -390,16 +396,16 @@ position = Vector2(7215.7983, 305.24994)
 shape = SubResource("RectangleShape2D_o7j63")
 
 [node name="star3" type="Area2D" parent="."]
-position = Vector2(1931, 451)
+position = Vector2(1107, 439)
 script = ExtResource("7_hny5o")
 
 [node name="Sprite2D" type="Sprite2D" parent="star3"]
-position = Vector2(9594.804, 278.75)
+position = Vector2(10169.804, 392.75)
 scale = Vector2(0.19088668, 0.19088668)
 texture = ExtResource("3_wv0ba")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="star3"]
-position = Vector2(9597.804, 279.75)
+position = Vector2(10172.804, 393.75)
 shape = SubResource("RectangleShape2D_w3gva")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -437,10 +443,10 @@ offset_bottom = 67.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="."]
-offset_left = 15594.0
-offset_top = 943.0
-offset_right = 15679.0
-offset_bottom = 974.0
+offset_left = 14738.0
+offset_top = 877.0
+offset_right = 14823.0
+offset_bottom = 908.0
 text = "end game"
 script = ExtResource("8_3ogdj")
 
@@ -527,6 +533,49 @@ script = ExtResource("14_r5swh")
 position = Vector2(12909, 748)
 shape = SubResource("CircleShape2D_ikbxa")
 
+[node name="iceskates" type="Area2D" parent="."]
+position = Vector2(-0.0009765625, 6.1035156e-05)
+scale = Vector2(1, 0.99999994)
+script = ExtResource("15_vhrc5")
+
+[node name="skatesimage" type="Sprite2D" parent="iceskates"]
+position = Vector2(11462.002, 790.00006)
+scale = Vector2(0.24183905, 0.22451329)
+texture = ExtResource("16_vrg72")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="iceskates"]
+position = Vector2(11451.501, 793.00037)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_a4sud")
+
+[node name="text" type="Label" parent="."]
+offset_left = 11327.0
+offset_top = 722.0
+offset_right = 11578.0
+offset_bottom = 771.0
+text = "Press \"E\" to equip the ice skates!
+"
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+
+[node name="powerups" type="HBoxContainer" parent="CanvasLayer3"]
+offset_left = 9.0
+offset_top = 549.0
+offset_right = 403.0
+offset_bottom = 639.0
+size_flags_stretch_ratio = 0.0
+
+[node name="skates" type="TextureRect" parent="CanvasLayer3/powerups"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("16_vrg72")
+expand_mode = 2
+
+[node name="raincoat" type="TextureRect" parent="CanvasLayer3/powerups"]
+layout_mode = 2
+texture = ExtResource("17_vrg72")
+expand_mode = 2
+
 [connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
 [connection signal="body_entered" from="star2" to="star2" method="_on_body_entered"]
 [connection signal="body_entered" from="star3" to="star3" method="_on_body_entered"]
@@ -535,3 +584,5 @@ shape = SubResource("CircleShape2D_ikbxa")
 [connection signal="body_entered" from="checkpoint" to="checkpoint" method="_on_body_entered"]
 [connection signal="body_entered" from="zoomout" to="zoomout" method="_on_body_entered"]
 [connection signal="body_entered" from="zoomin" to="zoomin" method="_on_body_entered"]
+[connection signal="body_entered" from="iceskates" to="iceskates" method="_on_body_entered"]
+[connection signal="body_exited" from="iceskates" to="iceskates" method="_on_body_exited"]

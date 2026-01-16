@@ -26,11 +26,17 @@ func update_stars():
 	for i in range(stars.size()):
 		stars[i].modulate = Color(1, 1, 1, 1) if i < global.mercury_stars else Color(1, 1, 1, 0.3)
 
-	
+func update_powerups():
+	var container = get_node("CanvasLayer3/powerups")
+	var powerups = container.get_children()
+	for i in range(powerups.size()):
+		powerups[0].modulate = Color(1, 1, 1, 1) if global.ice_skates > 0 else Color(1, 1, 1, 0)
+		powerups[1].modulate = Color(1, 1, 1, 1) if global.raincoat > 0 else Color(1, 1, 1, 0)
 
 func _process(delta):
 	update_progress_bar()
 	update_stars()
+	update_powerups()
 	progress_bar.visible = true
 
 func update_progress_bar():
@@ -50,3 +56,7 @@ func update_progress_bar():
 	
 	progress_bar.value = progress
 	
+
+
+func _on_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

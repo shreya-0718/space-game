@@ -3,6 +3,8 @@ extends Node2D
 var mercury_stars: int = 0
 var venus_stars: int = 0
 
+var ice_skates: int = 0
+var raincoat: int = 0
 
 var mercury_gravity = 34
 var venus_gravity = 900
