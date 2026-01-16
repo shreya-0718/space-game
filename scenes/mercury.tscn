@@ -364,12 +364,12 @@ position = Vector2(1934, 472)
 script = ExtResource("6_w3gva")
 
 [node name="Sprite2D" type="Sprite2D" parent="star2"]
-position = Vector2(6289.298, -113.49988)
+position = Vector2(7217.298, 304.49997)
 scale = Vector2(0.17487687, 0.17487685)
 texture = ExtResource("3_wv0ba")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="star2"]
-position = Vector2(6287.7983, -112.74994)
+position = Vector2(7215.7983, 305.24994)
 shape = SubResource("RectangleShape2D_o7j63")
 
 [node name="star3" type="Area2D" parent="."]
@@ -456,6 +456,33 @@ shape = SubResource("RectangleShape2D_vhrc5")
 
 [node name="spawnpoint" type="Marker2D" parent="."]
 position = Vector2(9433, 774)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="star_container" type="HBoxContainer" parent="CanvasLayer2"]
+offset_left = 772.0
+offset_top = 25.0
+offset_right = 900.0
+offset_bottom = 65.0
+mouse_filter = 2
+
+[node name="star1" type="TextureRect" parent="CanvasLayer2/star_container"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("3_wv0ba")
+expand_mode = 2
+
+[node name="star2" type="TextureRect" parent="CanvasLayer2/star_container"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("3_wv0ba")
+expand_mode = 2
+
+[node name="star3" type="TextureRect" parent="CanvasLayer2/star_container"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("3_wv0ba")
+expand_mode = 2
 
 [connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
 [connection signal="body_entered" from="star2" to="star2" method="_on_body_entered"]

@@ -18,10 +18,19 @@ func _ready():
 	var fill = progress_bar.get_theme_stylebox("fill")
 	fill.bg_color = Color.RED
 	progress_bar.value = 50
+
+	
+func update_stars():
+	var container = get_node("CanvasLayer2/star_container") 
+	var stars = container.get_children()
+	for i in range(stars.size()):
+		stars[i].modulate = Color(1, 1, 1, 1) if i < global.mercury_stars else Color(1, 1, 1, 0.3)
+
 	
 
 func _process(delta):
 	update_progress_bar()
+	update_stars()
 	progress_bar.visible = true
 
 func update_progress_bar():
