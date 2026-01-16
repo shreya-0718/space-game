@@ -7,6 +7,13 @@ var venus_stars: int = 0
 var mercury_gravity = 34
 var venus_gravity = 900
 
-var move_speed = 100
+var move_speed = 500
 var jump_force = 80.0
 var glide_gravity_scale := 0.25 
+
+var checkpoint_position: Vector2
+var checkpoint_scene: String
+
+func reset_checkpoint():
+	checkpoint_position = Vector2.ZERO
+	checkpoint_scene = ""

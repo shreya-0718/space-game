@@ -27,3 +27,12 @@ func _physics_process(delta):
 		velocity.y = 0
 	
 	move_and_slide()
+
+func die():
+	respawn()
+
+func respawn():
+	var spawnpoint = get_node("../spawnpoint") 
+	
+	if spawnpoint:
+		position = spawnpoint.position

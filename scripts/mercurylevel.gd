@@ -19,6 +19,7 @@ func _ready():
 	fill.bg_color = Color.RED
 	progress_bar.value = 50
 	
+
 func _process(delta):
 	update_progress_bar()
 	progress_bar.visible = true
@@ -28,18 +29,14 @@ func update_progress_bar():
 	var start_x = level_start.position.x
 	var end_x = level_end.position.x
 	
-	print("player", player_x)
-	print("start", start_x)
-	print("end", end_x)
+	
 	
 	if end_x == start_x:
 		return
 	
 	
 	var progress = abs(100* (player_x - start_x) / (end_x - start_x))
-	print()
-	print(progress)
-	print()
+	
 	# progress = clamp(progress, 5, 10)
 	
 	progress_bar.value = progress
