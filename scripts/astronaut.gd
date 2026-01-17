@@ -21,7 +21,7 @@ func _physics_process(delta):
 	elif not is_on_floor():
 		velocity.y += gravity * delta
 
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump"):
 		velocity.y = -jump_force
 	elif is_on_floor():
 		velocity.y = 0
@@ -31,7 +31,7 @@ func _physics_process(delta):
 func die():
 	respawn()
 
-func respawn():
+func respawn(): 
 	var spawnpoint = get_node("../spawnpoint") 
 	if spawnpoint:
 		position = spawnpoint.position

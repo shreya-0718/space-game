@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dpswc71tjbx6u" path="res://images/mercury/astronaut.png" id="2_1y6ab"]
 [ext_resource type="Script" uid="uid://dbdp1iwy628d6" path="res://scripts/astronaut.gd" id="2_doqmq"]
 [ext_resource type="Texture2D" uid="uid://ck1ylfdoydefx" path="res://images/level_page/star.png" id="3_wv0ba"]
-[ext_resource type="Script" uid="uid://12rlcnsbuggt" path="res://scripts/star_1.gd" id="4_2ndqr"]
+[ext_resource type="Script" uid="uid://bpkfgwxoiplt0" path="res://scripts/star_1.gd" id="4_2ndqr"]
 [ext_resource type="Script" uid="uid://bdosl6d7hvmur" path="res://scripts/star_2.gd" id="6_w3gva"]
 [ext_resource type="Script" uid="uid://cpx3qiakoyr26" path="res://scripts/star_3.gd" id="7_hny5o"]
 [ext_resource type="Script" uid="uid://cs7lu74ly1jac" path="res://scripts/end.gd" id="8_3ogdj"]
@@ -17,7 +17,7 @@
 [ext_resource type="Script" uid="uid://dlaxqvogxis5r" path="res://scenes/iceskates.gd" id="15_vhrc5"]
 [ext_resource type="Texture2D" uid="uid://bf1417yva3ltu" path="res://images/mercury/iceskates.png" id="16_vrg72"]
 [ext_resource type="Texture2D" uid="uid://bqubey0spgbql" path="res://images/mercury/raincoat.png" id="17_vrg72"]
-[ext_resource type="Script" uid="uid://bptu7s4cg0q3w" path="res://scenes/waterfall.gd" id="18_a4sud"]
+[ext_resource type="Script" path="res://scenes/waterfall.gd" id="18_a4sud"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gaff4"]
 texture = ExtResource("1_7rm5h")
@@ -345,7 +345,7 @@ tile_map_data = PackedByteArray("AAAOAAgAAAACAAMAAAANAAgAAAABAAMAAAAMAAgAAAAAAAM
 tile_set = SubResource("TileSet_1y6ab")
 
 [node name="astronaut" type="CharacterBody2D" parent="." groups=["astronaut"]]
-position = Vector2(11230, 927)
+position = Vector2(1225, 398)
 script = ExtResource("2_doqmq")
 
 [node name="Sprite2D" type="Sprite2D" parent="astronaut"]
