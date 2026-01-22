@@ -1,11 +1,11 @@
-[gd_scene load_steps=33 format=4 uid="uid://d30n18ft2jng7"]
+[gd_scene load_steps=40 format=4 uid="uid://d30n18ft2jng7"]
 
 [ext_resource type="Texture2D" uid="uid://u0xdit51o8mk" path="res://images/mercury/mercury_tileset.png" id="1_7rm5h"]
 [ext_resource type="Script" uid="uid://cwo21gqf1hn1r" path="res://scripts/mercurylevel.gd" id="1_hny5o"]
 [ext_resource type="Texture2D" uid="uid://dpswc71tjbx6u" path="res://images/mercury/astronaut.png" id="2_1y6ab"]
 [ext_resource type="Script" uid="uid://dbdp1iwy628d6" path="res://scripts/astronaut.gd" id="2_doqmq"]
 [ext_resource type="Texture2D" uid="uid://ck1ylfdoydefx" path="res://images/level_page/star.png" id="3_wv0ba"]
-[ext_resource type="Script" uid="uid://bpkfgwxoiplt0" path="res://scripts/star_1.gd" id="4_2ndqr"]
+[ext_resource type="Script" uid="uid://12rlcnsbuggt" path="res://scripts/star_1.gd" id="4_2ndqr"]
 [ext_resource type="Script" uid="uid://bdosl6d7hvmur" path="res://scripts/star_2.gd" id="6_w3gva"]
 [ext_resource type="Script" uid="uid://cpx3qiakoyr26" path="res://scripts/star_3.gd" id="7_hny5o"]
 [ext_resource type="Script" uid="uid://cs7lu74ly1jac" path="res://scripts/end.gd" id="8_3ogdj"]
@@ -17,7 +17,14 @@
 [ext_resource type="Script" uid="uid://dlaxqvogxis5r" path="res://scenes/iceskates.gd" id="15_vhrc5"]
 [ext_resource type="Texture2D" uid="uid://bf1417yva3ltu" path="res://images/mercury/iceskates.png" id="16_vrg72"]
 [ext_resource type="Texture2D" uid="uid://bqubey0spgbql" path="res://images/mercury/raincoat.png" id="17_vrg72"]
-[ext_resource type="Script" path="res://scenes/waterfall.gd" id="18_a4sud"]
+[ext_resource type="Script" uid="uid://bptu7s4cg0q3w" path="res://scenes/waterfall.gd" id="18_a4sud"]
+[ext_resource type="Texture2D" uid="uid://xpgswcyexgr2" path="res://images/mercury/left arrow key.png" id="19_tyflu"]
+[ext_resource type="Texture2D" uid="uid://00wmv0q1o4mp" path="res://images/mercury/a key.png" id="20_3y1sc"]
+[ext_resource type="Texture2D" uid="uid://dbvu7ouepiuad" path="res://images/mercury/right arrow key.png" id="21_15pus"]
+[ext_resource type="Texture2D" uid="uid://bmnknduyrubew" path="res://images/mercury/d key.png" id="22_08hs2"]
+[ext_resource type="Texture2D" uid="uid://0w2wafarem3y" path="res://images/mercury/up arrow key.png" id="23_ah2sd"]
+[ext_resource type="Texture2D" uid="uid://bpu7uok0vi7sm" path="res://images/mercury/w key.png" id="24_jy2og"]
+[ext_resource type="Script" uid="uid://rkxlm13rfg36" path="res://scenes/skiptutorial.gd" id="25_jy2og"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gaff4"]
 texture = ExtResource("1_7rm5h")
@@ -345,7 +352,7 @@ tile_map_data = PackedByteArray("AAAOAAgAAAACAAMAAAANAAgAAAABAAMAAAAMAAgAAAAAAAM
 tile_set = SubResource("TileSet_1y6ab")
 
 [node name="astronaut" type="CharacterBody2D" parent="." groups=["astronaut"]]
-position = Vector2(1225, 398)
+position = Vector2(1578, 469)
 script = ExtResource("2_doqmq")
 
 [node name="Sprite2D" type="Sprite2D" parent="astronaut"]
@@ -375,12 +382,12 @@ position = Vector2(35, -16)
 script = ExtResource("4_2ndqr")
 
 [node name="Sprite2D" type="Sprite2D" parent="star1"]
-position = Vector2(1300.2981, 463.5)
+position = Vector2(2084.298, 353.5)
 scale = Vector2(0.17487687, 0.17487685)
 texture = ExtResource("3_wv0ba")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="star1"]
-position = Vector2(1299.625, 462.375)
+position = Vector2(2083.625, 352.375)
 shape = SubResource("RectangleShape2D_2ndqr")
 
 [node name="star2" type="Area2D" parent="."]
@@ -580,6 +587,92 @@ shape = SubResource("RectangleShape2D_ikbxa")
 position = Vector2(15199.5, -1707)
 shape = SubResource("RectangleShape2D_tyflu")
 
+[node name="left" type="Node2D" parent="."]
+
+[node name="tutorialL" type="Label" parent="left"]
+offset_left = 1378.0
+offset_top = 279.0
+offset_right = 1522.0
+offset_bottom = 432.0
+text = "			Press 
+
+or	
+
+to move left!
+"
+horizontal_alignment = 1
+
+[node name="leftarrow" type="Sprite2D" parent="left"]
+position = Vector2(1395, 346.00003)
+scale = Vector2(0.3786583, 0.37865818)
+texture = ExtResource("19_tyflu")
+
+[node name="akey" type="Sprite2D" parent="left"]
+position = Vector2(1503, 347)
+scale = Vector2(0.7107058, 0.7594972)
+texture = ExtResource("20_3y1sc")
+
+[node name="right" type="Node2D" parent="."]
+
+[node name="tutorialR" type="Label" parent="right"]
+offset_left = 1067.0
+offset_top = 279.0
+offset_right = 1211.0
+offset_bottom = 432.0
+text = "			Press 
+
+or	
+
+to move right!
+"
+horizontal_alignment = 1
+
+[node name="rightarrow" type="Sprite2D" parent="right"]
+position = Vector2(1083, 347.00003)
+scale = Vector2(0.379, 0.379)
+texture = ExtResource("21_15pus")
+
+[node name="dkey" type="Sprite2D" parent="right"]
+position = Vector2(1186, 348)
+scale = Vector2(0.711, 0.759)
+texture = ExtResource("22_08hs2")
+
+[node name="up" type="Node2D" parent="."]
+
+[node name="tutorialU" type="Label" parent="up"]
+offset_left = 1487.0
+offset_top = 279.0
+offset_right = 1631.0
+offset_bottom = 432.0
+text = "			Press 
+
+or	
+
+to jump up!
+"
+horizontal_alignment = 1
+
+[node name="uparrow" type="Sprite2D" parent="up"]
+position = Vector2(1507, 346)
+scale = Vector2(0.379, 0.379)
+texture = ExtResource("23_ah2sd")
+
+[node name="wkey" type="Sprite2D" parent="up"]
+position = Vector2(1609, 343)
+scale = Vector2(0.711, 0.759)
+texture = ExtResource("24_jy2og")
+
+[node name="CanvasLayer4" type="CanvasLayer" parent="."]
+
+[node name="skiptutorial" type="Button" parent="CanvasLayer4"]
+offset_left = 801.0
+offset_top = 562.0
+offset_right = 906.0
+offset_bottom = 593.0
+text = "Skip Tutorial
+"
+script = ExtResource("25_jy2og")
+
 [connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
 [connection signal="body_entered" from="star2" to="star2" method="_on_body_entered"]
 [connection signal="body_entered" from="star3" to="star3" method="_on_body_entered"]
@@ -591,3 +684,4 @@ shape = SubResource("RectangleShape2D_tyflu")
 [connection signal="body_entered" from="iceskates" to="iceskates" method="_on_body_entered"]
 [connection signal="body_exited" from="iceskates" to="iceskates" method="_on_body_exited"]
 [connection signal="body_entered" from="waterfall" to="waterfall" method="_on_body_entered"]
+[connection signal="pressed" from="CanvasLayer4/skiptutorial" to="CanvasLayer4/skiptutorial" method="_on_pressed"]

@@ -35,3 +35,33 @@ func respawn():
 	var spawnpoint = get_node("../spawnpoint") 
 	if spawnpoint:
 		position = spawnpoint.position
+
+#tutorial - very confusing thing but it worked out - probably can write it shorter but who cares since we are running out of time
+@onready var left = get_node("../left")
+@onready var right = get_node("../right")
+@onready var up = get_node("../up")
+@onready var triggeredL = false
+@onready var triggeredR = false
+@onready var triggeredU = false
+@onready var following = false
+@onready var continuing = false
+
+func _ready():
+	right.visible = false
+	up.visible = false
+
+func _process(delta):
+	if Input.is_action_just_pressed("left") and not triggeredL:
+		following = true
+		triggeredL = true
+		left.queue_free()
+		right.visible = true
+	if Input.is_action_just_pressed("right") and not triggeredR and following:
+		continuing = true
+		triggeredR = true
+		right.queue_free()
+		up.visible = true
+	if Input.is_action_just_pressed("jump") and not triggeredU and following and continuing:
+		triggeredU = true
+		up.queue_free()
+	
