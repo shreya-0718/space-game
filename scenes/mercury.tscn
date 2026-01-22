@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://d30n18ft2jng7"]
+[gd_scene load_steps=44 format=4 uid="uid://d30n18ft2jng7"]
 
 [ext_resource type="Texture2D" uid="uid://u0xdit51o8mk" path="res://images/mercury/mercury_tileset.png" id="1_7rm5h"]
 [ext_resource type="Script" uid="uid://cwo21gqf1hn1r" path="res://scripts/mercurylevel.gd" id="1_hny5o"]
@@ -25,6 +25,10 @@
 [ext_resource type="Texture2D" uid="uid://0w2wafarem3y" path="res://images/mercury/up arrow key.png" id="23_ah2sd"]
 [ext_resource type="Texture2D" uid="uid://bpu7uok0vi7sm" path="res://images/mercury/w key.png" id="24_jy2og"]
 [ext_resource type="Script" uid="uid://rkxlm13rfg36" path="res://scenes/skiptutorial.gd" id="25_jy2og"]
+[ext_resource type="Texture2D" uid="uid://b5bjhds3sk166" path="res://images/mercury/back.png" id="26_sggbm"]
+[ext_resource type="Script" uid="uid://xhnj7qwvf34d" path="res://scenes/back.gd" id="27_s7w1k"]
+[ext_resource type="Script" uid="uid://qcgrioupnspr" path="res://scenes/yes.gd" id="28_s7w1k"]
+[ext_resource type="Script" uid="uid://dqc0rww00brfs" path="res://scenes/no.gd" id="29_nh86p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gaff4"]
 texture = ExtResource("1_7rm5h")
@@ -662,6 +666,19 @@ position = Vector2(1609, 343)
 scale = Vector2(0.711, 0.759)
 texture = ExtResource("24_jy2og")
 
+[node name="CanvasLayer5" type="CanvasLayer" parent="."]
+
+[node name="back" type="Button" parent="CanvasLayer5"]
+z_index = 1
+offset_left = 13.000008
+offset_top = 10.0
+offset_right = 873.0
+offset_bottom = 424.0
+scale = Vector2(0.15, 0.15)
+action_mode = 0
+icon = ExtResource("26_sggbm")
+script = ExtResource("27_s7w1k")
+
 [node name="CanvasLayer4" type="CanvasLayer" parent="."]
 
 [node name="skiptutorial" type="Button" parent="CanvasLayer4"]
@@ -672,6 +689,41 @@ offset_bottom = 593.0
 text = "Skip Tutorial
 "
 script = ExtResource("25_jy2og")
+
+[node name="CanvasLayer6" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="dim" type="ColorRect" parent="CanvasLayer6"]
+offset_left = -9.0
+offset_right = 1007.0
+offset_bottom = 710.0
+color = Color(0, 0, 0, 0)
+
+[node name="usure?" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="usure?"]
+offset_left = 223.0
+offset_top = 194.0
+offset_right = 774.0
+offset_bottom = 388.0
+theme_override_font_sizes/font_size = 37
+text = "Are you sure you want to exit?"
+
+[node name="yes" type="Button" parent="usure?"]
+offset_left = 349.0
+offset_top = 265.0
+offset_right = 385.0
+offset_bottom = 296.0
+text = "YES"
+script = ExtResource("28_s7w1k")
+
+[node name="NO" type="Button" parent="usure?"]
+offset_left = 579.0
+offset_top = 266.0
+offset_right = 613.0
+offset_bottom = 297.0
+text = "NO"
+script = ExtResource("29_nh86p")
 
 [connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
 [connection signal="body_entered" from="star2" to="star2" method="_on_body_entered"]
@@ -684,4 +736,7 @@ script = ExtResource("25_jy2og")
 [connection signal="body_entered" from="iceskates" to="iceskates" method="_on_body_entered"]
 [connection signal="body_exited" from="iceskates" to="iceskates" method="_on_body_exited"]
 [connection signal="body_entered" from="waterfall" to="waterfall" method="_on_body_entered"]
+[connection signal="pressed" from="CanvasLayer5/back" to="CanvasLayer5/back" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer4/skiptutorial" to="CanvasLayer4/skiptutorial" method="_on_pressed"]
+[connection signal="pressed" from="usure?/yes" to="usure?/yes" method="_on_pressed"]
+[connection signal="pressed" from="usure?/NO" to="usure?/NO" method="_on_pressed"]

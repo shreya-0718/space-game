@@ -46,9 +46,13 @@ func respawn():
 @onready var following = false
 @onready var continuing = false
 
+#for back button
+@onready var usure = get_node("../usure?")
+
 func _ready():
 	right.visible = false
 	up.visible = false
+	usure.visible = false
 
 func _process(delta):
 	if Input.is_action_just_pressed("left") and not triggeredL:

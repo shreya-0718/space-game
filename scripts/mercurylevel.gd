@@ -56,7 +56,3 @@ func update_progress_bar():
 	
 	progress_bar.value = progress
 	
-
-
-func _on_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.

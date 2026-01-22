@@ -19,3 +19,13 @@ var checkpoint_scene: String
 func reset_checkpoint():
 	checkpoint_position = Vector2.ZERO
 	checkpoint_scene = ""
+	
+	
+#dimming screen
+@onready var dim = $CanvasLayer6/dim
+	
+func dim_screen(duration: float = 1.0):
+	print(dim)
+	var tween = create_tween()
+	tween.tween_property(dim.modulate, "a", 0.5, duration)
+	
