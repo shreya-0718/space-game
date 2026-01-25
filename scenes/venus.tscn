@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://coby6v58b1q4i"]
+[gd_scene load_steps=13 format=4 uid="uid://coby6v58b1q4i"]
 
 [ext_resource type="Texture2D" uid="uid://t5a80xk1jlyr" path="res://images/venus/tileset.png" id="2_dmmqf"]
 [ext_resource type="Script" uid="uid://3gw8v86fyuak" path="res://scripts/astronaut_venus.gd" id="2_xwevf"]
 [ext_resource type="Texture2D" uid="uid://dpswc71tjbx6u" path="res://images/mercury/astronaut.png" id="3_8pnlm"]
 [ext_resource type="Texture2D" uid="uid://brv006ny5qfs6" path="res://images/venus/clouds/cloud1.png" id="4_8pnlm"]
 [ext_resource type="Texture2D" uid="uid://bdrfsbunprwb0" path="res://images/venus/clouds/cloud2.png" id="5_ma66e"]
+[ext_resource type="Texture2D" uid="uid://c67naoxxoha21" path="res://images/venus/clouds/cloud6.png" id="6_x8lov"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xwevf"]
 texture = ExtResource("2_dmmqf")
@@ -323,10 +324,13 @@ size = Vector2(8, 16)
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_ma66e"]
 custom_solver_bias = 0.619
-points = PackedVector2Array(12.999999, -6.5, 0, -9.5, -6.999999, -6.5, -10.999998, -6.5, -17.999996, 0.5, -10.999998, 8.5, -3.9999993, 6.5, -0.9999995, 9.5, 6.999999, 6.5, 13.999999, 4.5, 17.999996, -1.5)
+points = PackedVector2Array(12.999999, -6.5, 2, -6.5, -6.999999, -6.5, -10.999998, -6.5, -17.999996, 0.5, -10.999998, 8.5, -3.9999993, 6.5, -0.9999995, 9.5, 6.999999, 6.5, 13.999999, 4.5, 17.999996, -1.5)
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_x8lov"]
 points = PackedVector2Array(-30.999996, 0, -26.999996, 4, -10, 4, -6, 0, -10, -4, -12.999996, -2, -17.999996, -4, -22.999996, -2, -25.999996, -4)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_kv6tc"]
+points = PackedVector2Array(-42.999992, 31, -18.999992, 31, -17.999992, 28, -19.999992, 26, -42.999992, 23, -47.999992, 25, -46.999992, 28)
 
 [node name="Venus" type="Node"]
 
@@ -388,3 +392,23 @@ texture = ExtResource("5_ma66e")
 position = Vector2(47, -23)
 scale = Vector2(1.0000001, 1)
 shape = SubResource("ConvexPolygonShape2D_x8lov")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="start_clouds"]
+position = Vector2(63, 418)
+
+[node name="Sprite2D" type="Sprite2D" parent="start_clouds/StaticBody2D3"]
+position = Vector2(16, 3)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_x8lov")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="start_clouds/StaticBody2D3"]
+position = Vector2(47, -23)
+scale = Vector2(1.0000001, 1)
+shape = SubResource("ConvexPolygonShape2D_kv6tc")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="start_clouds"]
+position = Vector2(63, 418)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="start_clouds/StaticBody2D4"]
+position = Vector2(47, -23)
+scale = Vector2(1.0000001, 1)
