@@ -1,11 +1,10 @@
 extends Node
 
+func _process(delta):
+	update_stars()
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func update_stars():
+	var container = get_node("CanvasLayer2/star_container") 
+	var stars = container.get_children()
+	for i in range(stars.size()):
+		stars[i].modulate = Color(1, 1, 1, 1) if i < global.venus_stars else Color(1, 1, 1, 0.3)

@@ -3,6 +3,7 @@ extends Node2D
 @onready var stars = [$star_container/star1, $star_container/star2, $star_container/star3]
 @onready var venus = get_node("venus")
 @onready var lock = get_node("lock")
+
 func _ready():
 	update_stars($mercury, global.mercury_stars)
 	update_stars($venus, global.venus_stars)
@@ -17,9 +18,11 @@ func update_stars(planet_node: Node, star_count: int):
 func check_locked():
 	venus.modulate = Color(0.5, 0.5, 0.5, 1.0)
 	lock.visible = true
+	venus.disabled = true
 	if global.mercury_stars >= 2:
 		venus.modulate = Color.WHITE
 		lock.visible = false
+		venus.disabled = false
 		
 
 #ARROW KEYS

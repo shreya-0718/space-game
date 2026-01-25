@@ -20,6 +20,8 @@ func reset_checkpoint():
 	checkpoint_position = Vector2.ZERO
 	checkpoint_scene = ""
 	
+#for raincoat
+var pressed = false
 	
 #dimming screen
 @onready var dim = $CanvasLayer6/dim

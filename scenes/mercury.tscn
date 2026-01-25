@@ -1,11 +1,11 @@
-[gd_scene load_steps=46 format=4 uid="uid://d30n18ft2jng7"]
+[gd_scene load_steps=47 format=4 uid="uid://d30n18ft2jng7"]
 
 [ext_resource type="Texture2D" uid="uid://u0xdit51o8mk" path="res://images/mercury/mercury_tileset.png" id="1_7rm5h"]
 [ext_resource type="Script" uid="uid://cwo21gqf1hn1r" path="res://scripts/mercurylevel.gd" id="1_hny5o"]
 [ext_resource type="Texture2D" uid="uid://dpswc71tjbx6u" path="res://images/mercury/astronaut.png" id="2_1y6ab"]
 [ext_resource type="Script" uid="uid://dbdp1iwy628d6" path="res://scripts/astronaut.gd" id="2_doqmq"]
 [ext_resource type="Texture2D" uid="uid://ck1ylfdoydefx" path="res://images/level_page/star.png" id="3_wv0ba"]
-[ext_resource type="Script" uid="uid://12rlcnsbuggt" path="res://scripts/star_1.gd" id="4_2ndqr"]
+[ext_resource type="Script" uid="uid://bpkfgwxoiplt0" path="res://scripts/star_1.gd" id="4_2ndqr"]
 [ext_resource type="Script" uid="uid://bdosl6d7hvmur" path="res://scripts/star_2.gd" id="6_w3gva"]
 [ext_resource type="Script" uid="uid://cpx3qiakoyr26" path="res://scripts/star_3.gd" id="7_hny5o"]
 [ext_resource type="Script" uid="uid://cs7lu74ly1jac" path="res://scripts/end.gd" id="8_3ogdj"]
@@ -30,6 +30,7 @@
 [ext_resource type="Script" uid="uid://qcgrioupnspr" path="res://scenes/yes.gd" id="28_s7w1k"]
 [ext_resource type="Script" uid="uid://dqc0rww00brfs" path="res://scenes/no.gd" id="29_nh86p"]
 [ext_resource type="Script" uid="uid://bljkajtu3jhk" path="res://scenes/raincoat.gd" id="30_nh86p"]
+[ext_resource type="Script" uid="uid://do1xtcauqt5b1" path="res://scenes/hint.gd" id="31_p3g0t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gaff4"]
 texture = ExtResource("1_7rm5h")
@@ -360,7 +361,7 @@ tile_map_data = PackedByteArray("AAAOAAgAAAACAAMAAAANAAgAAAABAAMAAAAMAAgAAAAAAAM
 tile_set = SubResource("TileSet_1y6ab")
 
 [node name="astronaut" type="CharacterBody2D" parent="." groups=["astronaut"]]
-position = Vector2(1578, 469)
+position = Vector2(13487, 767)
 script = ExtResource("2_doqmq")
 
 [node name="Sprite2D" type="Sprite2D" parent="astronaut"]
@@ -395,7 +396,7 @@ scale = Vector2(0.17487687, 0.17487685)
 texture = ExtResource("3_wv0ba")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="star1"]
-position = Vector2(2083.625, 352.375)
+position = Vector2(2087, 355)
 shape = SubResource("RectangleShape2D_2ndqr")
 
 [node name="star2" type="Area2D" parent="."]
@@ -403,12 +404,12 @@ position = Vector2(1110, 460)
 script = ExtResource("6_w3gva")
 
 [node name="Sprite2D" type="Sprite2D" parent="star2"]
-position = Vector2(7217.298, 304.49997)
+position = Vector2(7082.298, -85.5)
 scale = Vector2(0.17487687, 0.17487685)
 texture = ExtResource("3_wv0ba")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="star2"]
-position = Vector2(7215.7983, 305.24994)
+position = Vector2(7080.7983, -84.75006)
 shape = SubResource("RectangleShape2D_o7j63")
 
 [node name="star3" type="Area2D" parent="."]
@@ -688,9 +689,10 @@ metadata/_edit_use_anchors_ = true
 layer = 0
 
 [node name="dim" type="ColorRect" parent="CanvasLayer6"]
-offset_left = -9.0
-offset_right = 1007.0
-offset_bottom = 710.0
+offset_left = -4.0
+offset_top = -15.0
+offset_right = 1012.0
+offset_bottom = 695.0
 color = Color(0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 
@@ -736,19 +738,28 @@ script = ExtResource("25_jy2og")
 metadata/_edit_use_anchors_ = true
 
 [node name="raincoat" type="Area2D" parent="."]
+position = Vector2(13932, 720)
 script = ExtResource("30_nh86p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="raincoat"]
-position = Vector2(14163.5, 678.625)
+position = Vector2(3, -20)
 shape = SubResource("RectangleShape2D_p3g0t")
 
 [node name="Label" type="Label" parent="raincoat"]
-offset_left = 14035.0
-offset_top = 611.0
-offset_right = 14437.0
-offset_bottom = 777.0
+offset_left = -79.0
+offset_top = -111.0
+offset_right = 853.0
+offset_bottom = 245.0
 text = "Press \"enter\" to win a special prize!
 "
+
+[node name="hint" type="Label" parent="."]
+offset_left = 14669.0
+offset_top = 623.0
+offset_right = 15037.0
+offset_bottom = 978.0
+text = "To pass the waterfall, you may need a raincoat! "
+script = ExtResource("31_p3g0t")
 
 [connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
 [connection signal="body_entered" from="star2" to="star2" method="_on_body_entered"]

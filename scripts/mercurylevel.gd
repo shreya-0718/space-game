@@ -16,7 +16,6 @@ func _ready():
 	fill.bg_color = Color.RED
 	progress_bar.value = 50
 
-	
 func update_stars():
 	var container = get_node("CanvasLayer2/star_container") 
 	var stars = container.get_children()
@@ -40,15 +39,9 @@ func update_progress_bar():
 	var player_x = astronaut.position.x
 	var start_x = level_start.position.x
 	var end_x = level_end.position.x
-	
-	
-	
 	if end_x == start_x:
 		return
-	
-	
 	var progress = abs(100* (player_x - start_x) / (end_x - start_x))
-	
 	# progress = clamp(progress, 5, 10)
 	
 	progress_bar.value = progress

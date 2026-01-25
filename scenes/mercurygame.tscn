@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://x3d4qg7e5eww"]
+[gd_scene load_steps=2 format=3 uid="uid://x3d4qg7e5eww"]
+
+[ext_resource type="Script" uid="uid://cdls16r2xij4r" path="res://scenes/proxybutton.gd" id="1_b86wp"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 398.0
+offset_top = 255.0
+offset_right = 666.0
+offset_bottom = 286.0
+text = "played game and got the raincoat: click here
+"
+script = ExtResource("1_b86wp")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
