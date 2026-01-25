@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://d30n18ft2jng7"]
+[gd_scene load_steps=46 format=4 uid="uid://d30n18ft2jng7"]
 
 [ext_resource type="Texture2D" uid="uid://u0xdit51o8mk" path="res://images/mercury/mercury_tileset.png" id="1_7rm5h"]
 [ext_resource type="Script" uid="uid://cwo21gqf1hn1r" path="res://scripts/mercurylevel.gd" id="1_hny5o"]
@@ -29,6 +29,7 @@
 [ext_resource type="Script" uid="uid://xhnj7qwvf34d" path="res://scenes/back.gd" id="27_s7w1k"]
 [ext_resource type="Script" uid="uid://qcgrioupnspr" path="res://scenes/yes.gd" id="28_s7w1k"]
 [ext_resource type="Script" uid="uid://dqc0rww00brfs" path="res://scenes/no.gd" id="29_nh86p"]
+[ext_resource type="Script" uid="uid://bljkajtu3jhk" path="res://scenes/raincoat.gd" id="30_nh86p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gaff4"]
 texture = ExtResource("1_7rm5h")
@@ -346,6 +347,9 @@ size = Vector2(322.5, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tyflu"]
 size = Vector2(215, 4986)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p3g0t"]
+size = Vector2(1087, 278.75)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_hny5o")
@@ -678,6 +682,46 @@ scale = Vector2(0.15, 0.15)
 action_mode = 0
 icon = ExtResource("26_sggbm")
 script = ExtResource("27_s7w1k")
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer6" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="dim" type="ColorRect" parent="CanvasLayer6"]
+offset_left = -9.0
+offset_right = 1007.0
+offset_bottom = 710.0
+color = Color(0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="usure?" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="usure?"]
+offset_left = 223.0
+offset_top = 194.0
+offset_right = 774.0
+offset_bottom = 388.0
+theme_override_font_sizes/font_size = 37
+text = "Are you sure you want to exit?"
+metadata/_edit_use_anchors_ = true
+
+[node name="yes" type="Button" parent="usure?"]
+offset_left = 349.0
+offset_top = 265.0
+offset_right = 385.0
+offset_bottom = 296.0
+text = "YES"
+script = ExtResource("28_s7w1k")
+metadata/_edit_use_anchors_ = true
+
+[node name="NO" type="Button" parent="usure?"]
+offset_left = 579.0
+offset_top = 266.0
+offset_right = 613.0
+offset_bottom = 297.0
+text = "NO"
+script = ExtResource("29_nh86p")
+metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer4" type="CanvasLayer" parent="."]
 
@@ -689,41 +733,22 @@ offset_bottom = 593.0
 text = "Skip Tutorial
 "
 script = ExtResource("25_jy2og")
+metadata/_edit_use_anchors_ = true
 
-[node name="CanvasLayer6" type="CanvasLayer" parent="."]
-layer = 0
+[node name="raincoat" type="Area2D" parent="."]
+script = ExtResource("30_nh86p")
 
-[node name="dim" type="ColorRect" parent="CanvasLayer6"]
-offset_left = -9.0
-offset_right = 1007.0
-offset_bottom = 710.0
-color = Color(0, 0, 0, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="raincoat"]
+position = Vector2(14163.5, 678.625)
+shape = SubResource("RectangleShape2D_p3g0t")
 
-[node name="usure?" type="CanvasLayer" parent="."]
-
-[node name="Label" type="Label" parent="usure?"]
-offset_left = 223.0
-offset_top = 194.0
-offset_right = 774.0
-offset_bottom = 388.0
-theme_override_font_sizes/font_size = 37
-text = "Are you sure you want to exit?"
-
-[node name="yes" type="Button" parent="usure?"]
-offset_left = 349.0
-offset_top = 265.0
-offset_right = 385.0
-offset_bottom = 296.0
-text = "YES"
-script = ExtResource("28_s7w1k")
-
-[node name="NO" type="Button" parent="usure?"]
-offset_left = 579.0
-offset_top = 266.0
-offset_right = 613.0
-offset_bottom = 297.0
-text = "NO"
-script = ExtResource("29_nh86p")
+[node name="Label" type="Label" parent="raincoat"]
+offset_left = 14035.0
+offset_top = 611.0
+offset_right = 14437.0
+offset_bottom = 777.0
+text = "Press \"enter\" to win a special prize!
+"
 
 [connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
 [connection signal="body_entered" from="star2" to="star2" method="_on_body_entered"]
@@ -737,6 +762,7 @@ script = ExtResource("29_nh86p")
 [connection signal="body_exited" from="iceskates" to="iceskates" method="_on_body_exited"]
 [connection signal="body_entered" from="waterfall" to="waterfall" method="_on_body_entered"]
 [connection signal="pressed" from="CanvasLayer5/back" to="CanvasLayer5/back" method="_on_pressed"]
-[connection signal="pressed" from="CanvasLayer4/skiptutorial" to="CanvasLayer4/skiptutorial" method="_on_pressed"]
 [connection signal="pressed" from="usure?/yes" to="usure?/yes" method="_on_pressed"]
 [connection signal="pressed" from="usure?/NO" to="usure?/NO" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer4/skiptutorial" to="CanvasLayer4/skiptutorial" method="_on_pressed"]
+[connection signal="body_entered" from="raincoat" to="raincoat" method="_on_body_entered"]

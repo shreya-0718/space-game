@@ -8,9 +8,6 @@ extends Node2D
 func _ready():
 	await get_tree().process_frame
 
-	print("Parent size:", progress_bar.get_parent().size)
-	print("Bar size:", progress_bar.size)
-	
 	progress_bar.add_theme_color_override("font_color", Color.WHITE)
 	progress_bar.add_theme_stylebox_override("background", StyleBoxFlat.new())
 	progress_bar.add_theme_stylebox_override("fill", StyleBoxFlat.new())

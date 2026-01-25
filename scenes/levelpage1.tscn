@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmhlv5c17pb3h"]
+[gd_scene load_steps=8 format=3 uid="uid://cmhlv5c17pb3h"]
 
 [ext_resource type="Script" uid="uid://dxg58er1iashs" path="res://scripts/levelpage.gd" id="1_nnj5f"]
 [ext_resource type="Texture2D" uid="uid://bjn0tqfvcv1bn" path="res://images/level_page/pixel_space_bckg.webp" id="2_nnj5f"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://ctqkhov7l71o3" path="res://scripts/mercury.gd" id="4_hji0n"]
 [ext_resource type="Texture2D" uid="uid://ck1ylfdoydefx" path="res://images/level_page/star.png" id="5_nnj5f"]
 [ext_resource type="Script" uid="uid://bk7f0x4slvsm0" path="res://scripts/venus.gd" id="6_sr1gy"]
+[ext_resource type="Texture2D" uid="uid://bi1d457bj8157" path="res://images/level_page/lock.png" id="7_hji0n"]
 
 [node name="LevelPageNode" type="Node2D"]
 script = ExtResource("1_nnj5f")
@@ -85,6 +86,11 @@ layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("5_nnj5f")
 expand_mode = 2
+
+[node name="lock" type="Sprite2D" parent="."]
+position = Vector2(513, 202)
+scale = Vector2(0.4014778, 0.40147784)
+texture = ExtResource("7_hji0n")
 
 [connection signal="pressed" from="mercury" to="mercury" method="_on_pressed"]
 [connection signal="pressed" from="venus" to="venus" method="_on_pressed"]
