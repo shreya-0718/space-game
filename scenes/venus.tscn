@@ -1,6 +1,6 @@
-[gd_scene load_steps=21 format=4 uid="uid://coby6v58b1q4i"]
+[gd_scene load_steps=25 format=4 uid="uid://coby6v58b1q4i"]
 
-[ext_resource type="Script" uid="uid://btf600oknlj52" path="res://scenes/venuslevel.gd" id="1_js3pr"]
+[ext_resource type="Script" uid="uid://btf600oknlj52" path="res://scripts/venuslevel.gd" id="1_js3pr"]
 [ext_resource type="Texture2D" uid="uid://t5a80xk1jlyr" path="res://images/venus/tileset.png" id="2_dmmqf"]
 [ext_resource type="Script" uid="uid://3gw8v86fyuak" path="res://scripts/astronaut_venus.gd" id="2_xwevf"]
 [ext_resource type="Texture2D" uid="uid://dpswc71tjbx6u" path="res://images/mercury/astronaut.png" id="3_8pnlm"]
@@ -11,6 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://ck1ylfdoydefx" path="res://images/level_page/star.png" id="9_cglxo"]
 [ext_resource type="Script" uid="uid://bdosl6d7hvmur" path="res://scripts/star_2.gd" id="10_ud6k2"]
 [ext_resource type="Script" uid="uid://cpx3qiakoyr26" path="res://scripts/star_3.gd" id="11_426g8"]
+[ext_resource type="Texture2D" uid="uid://b5bjhds3sk166" path="res://images/mercury/back.png" id="12_426g8"]
+[ext_resource type="Script" uid="uid://xhnj7qwvf34d" path="res://scripts/back.gd" id="13_nuv3h"]
+[ext_resource type="Script" uid="uid://qcgrioupnspr" path="res://scripts/yes.gd" id="14_y3sbn"]
+[ext_resource type="Script" uid="uid://dqc0rww00brfs" path="res://scripts/no.gd" id="15_ya5ls"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xwevf"]
 texture = ExtResource("2_dmmqf")
@@ -494,6 +498,103 @@ mouse_filter = 2
 texture = ExtResource("9_cglxo")
 expand_mode = 2
 
+[node name="CanvasLayer5" type="CanvasLayer" parent="."]
+
+[node name="back" type="Button" parent="CanvasLayer5"]
+z_index = 1
+offset_left = 13.000008
+offset_top = 10.0
+offset_right = 873.0
+offset_bottom = 424.0
+scale = Vector2(0.15, 0.15)
+action_mode = 0
+icon = ExtResource("12_426g8")
+script = ExtResource("13_nuv3h")
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer6" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="dim" type="ColorRect" parent="CanvasLayer6"]
+offset_left = -4.0
+offset_top = -15.0
+offset_right = 1012.0
+offset_bottom = 695.0
+color = Color(0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="usure?" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="usure?"]
+offset_left = 223.0
+offset_top = 194.0
+offset_right = 774.0
+offset_bottom = 388.0
+theme_override_font_sizes/font_size = 37
+text = "Are you sure you want to exit?"
+metadata/_edit_use_anchors_ = true
+
+[node name="yes" type="Button" parent="usure?"]
+offset_left = 349.0
+offset_top = 265.0
+offset_right = 385.0
+offset_bottom = 296.0
+text = "YES"
+script = ExtResource("14_y3sbn")
+metadata/_edit_use_anchors_ = true
+
+[node name="NO" type="Button" parent="usure?"]
+offset_left = 579.0
+offset_top = 266.0
+offset_right = 613.0
+offset_bottom = 297.0
+text = "NO"
+script = ExtResource("15_ya5ls")
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchor_right = 0.45000002
+anchor_bottom = 0.062000003
+offset_left = 414.0
+offset_top = 25.0
+offset_right = 137.99997
+offset_bottom = 53.32
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 6.4038467
+anchor_top = 0.014705882
+anchor_right = 6.4038467
+anchor_bottom = 0.014705882
+offset_left = -1026.0
+offset_top = -8.0
+offset_right = -834.0
+offset_bottom = 72.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 6.0
+offset_right = 138.0
+offset_bottom = 67.0
+metadata/_edit_use_anchors_ = true
+
+[node name="levelstart" type="Marker2D" parent="."]
+position = Vector2(-76, 512)
+
+[node name="levelend" type="Marker2D" parent="."]
+position = Vector2(6020, 395)
+
 [connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
 [connection signal="body_entered" from="star2" to="star2" method="_on_body_entered"]
 [connection signal="body_entered" from="star3" to="star3" method="_on_body_entered"]
+[connection signal="pressed" from="CanvasLayer5/back" to="CanvasLayer5/back" method="_on_pressed"]
+[connection signal="pressed" from="usure?/yes" to="usure?/yes" method="_on_pressed"]
+[connection signal="pressed" from="usure?/NO" to="usure?/NO" method="_on_pressed"]

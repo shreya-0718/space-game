@@ -4,7 +4,7 @@ extends Button
 
 func _on_pressed():
 	dim_screen()
-	check_surety()
+	check_sureness()
 	
 
 @onready var dim = get_node("../../CanvasLayer6/dim")
@@ -15,7 +15,7 @@ func dim_screen():
 	color.a = 0.8
 	dim.color = color
 
-func check_surety():
+func check_sureness():
 	usure.visible = true
 
 	

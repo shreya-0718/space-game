@@ -1,5 +1,7 @@
 extends Node
 
+@onready var usure = get_node("usure?")
+
 func _process(delta):
 	update_stars()
 
@@ -8,3 +10,7 @@ func update_stars():
 	var stars = container.get_children()
 	for i in range(stars.size()):
 		stars[i].modulate = Color(1, 1, 1, 1) if i < global.venus_stars else Color(1, 1, 1, 0.3)
+
+func _ready():
+	usure.visible = false
+	
