@@ -15,11 +15,12 @@ func update_stars(planet_node: Node, star_count: int):
 
 	for i in range(stars.size()):
 		stars[i].modulate = Color(1, 1, 1, 1) if i < star_count else Color(1, 1, 1, 0.3)
+
 func check_locked():
 	venus.modulate = Color(0.5, 0.5, 0.5, 1.0)
 	lock.visible = true
 	venus.disabled = true
-	if global.mercury_stars >= 2:
+	if global.passedmercury:
 		venus.modulate = Color.WHITE
 		lock.visible = false
 		venus.disabled = false

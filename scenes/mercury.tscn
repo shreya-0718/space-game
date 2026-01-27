@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://d30n18ft2jng7"]
+[gd_scene load_steps=50 format=4 uid="uid://d30n18ft2jng7"]
 
 [ext_resource type="Texture2D" uid="uid://u0xdit51o8mk" path="res://images/mercury/mercury_tileset.png" id="1_7rm5h"]
 [ext_resource type="Script" uid="uid://cwo21gqf1hn1r" path="res://scripts/mercurylevel.gd" id="1_hny5o"]
@@ -31,6 +31,8 @@
 [ext_resource type="Script" uid="uid://dqc0rww00brfs" path="res://scenes/no.gd" id="29_nh86p"]
 [ext_resource type="Script" uid="uid://bljkajtu3jhk" path="res://scenes/raincoat.gd" id="30_nh86p"]
 [ext_resource type="Script" uid="uid://do1xtcauqt5b1" path="res://scenes/hint.gd" id="31_p3g0t"]
+[ext_resource type="Script" uid="uid://bdbbq62f8kbmt" path="res://scenes/crystal.gd" id="32_vujqb"]
+[ext_resource type="Texture2D" uid="uid://etwdh3mmkjfq" path="res://images/mercury/crystal.png" id="33_ta7jb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gaff4"]
 texture = ExtResource("1_7rm5h")
@@ -350,7 +352,10 @@ size = Vector2(322.5, 64)
 size = Vector2(215, 4986)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p3g0t"]
-size = Vector2(1087, 278.75)
+size = Vector2(1483, 278.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2115d"]
+size = Vector2(126, 135)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_hny5o")
@@ -361,7 +366,7 @@ tile_map_data = PackedByteArray("AAAOAAgAAAACAAMAAAANAAgAAAABAAMAAAAMAAgAAAAAAAM
 tile_set = SubResource("TileSet_1y6ab")
 
 [node name="astronaut" type="CharacterBody2D" parent="." groups=["astronaut"]]
-position = Vector2(13487, 767)
+position = Vector2(1356, 467)
 script = ExtResource("2_doqmq")
 
 [node name="Sprite2D" type="Sprite2D" parent="astronaut"]
@@ -471,7 +476,7 @@ script = ExtResource("8_3ogdj")
 position = Vector2(1042, 454)
 
 [node name="levelend" type="Marker2D" parent="."]
-position = Vector2(15933, 642)
+position = Vector2(15722, 645)
 
 [node name="water" type="Area2D" parent="."]
 z_index = 1
@@ -742,7 +747,7 @@ position = Vector2(13932, 720)
 script = ExtResource("30_nh86p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="raincoat"]
-position = Vector2(3, -20)
+position = Vector2(384.5, -20)
 shape = SubResource("RectangleShape2D_p3g0t")
 
 [node name="Label" type="Label" parent="raincoat"]
@@ -761,6 +766,21 @@ offset_bottom = 978.0
 text = "To pass the waterfall, you may need a raincoat! "
 script = ExtResource("31_p3g0t")
 
+[node name="crystal" type="Area2D" parent="."]
+script = ExtResource("32_vujqb")
+
+[node name="crystalimage" type="Sprite2D" parent="crystal"]
+position = Vector2(15728.001, 737)
+scale = Vector2(0.48938993, 0.48938996)
+texture = ExtResource("33_ta7jb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="crystal"]
+position = Vector2(15727, 738.5)
+shape = SubResource("RectangleShape2D_2115d")
+
+[node name="removetutorial" type="Marker2D" parent="."]
+position = Vector2(3233, 195)
+
 [connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
 [connection signal="body_entered" from="star2" to="star2" method="_on_body_entered"]
 [connection signal="body_entered" from="star3" to="star3" method="_on_body_entered"]
@@ -777,3 +797,4 @@ script = ExtResource("31_p3g0t")
 [connection signal="pressed" from="usure?/NO" to="usure?/NO" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer4/skiptutorial" to="CanvasLayer4/skiptutorial" method="_on_pressed"]
 [connection signal="body_entered" from="raincoat" to="raincoat" method="_on_body_entered"]
+[connection signal="body_entered" from="crystal" to="crystal" method="_on_body_entered"]

@@ -9,7 +9,7 @@ var raincoat: int = 0
 var mercury_gravity = 60
 var venus_gravity = 90
 
-var move_speed = 100
+var move_speed = 200
 var jump_force = 100.0
 var glide_gravity_scale := 0.25 
 
@@ -22,6 +22,9 @@ func reset_checkpoint():
 	
 #for raincoat
 var pressed = false
+
+#for locked levels
+var passedmercury = false
 	
 #dimming screen
 @onready var dim = $CanvasLayer6/dim

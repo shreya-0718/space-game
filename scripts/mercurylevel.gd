@@ -45,4 +45,3 @@ func update_progress_bar():
 	# progress = clamp(progress, 5, 10)
 	
 	progress_bar.value = progress
-	
