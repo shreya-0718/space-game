@@ -6,6 +6,7 @@ extends Button
 @onready var button = get_node("../../CanvasLayer4/skiptutorial")
 @onready var astronaut= get_node("../../astronaut")
 @onready var check = get_node("../../removetutorial")
+
 func _on_pressed():
 	left.visible = false
 	right.visible = false

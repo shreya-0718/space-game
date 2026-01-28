@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://chbx0ute5ugu4"]
 
 [ext_resource type="Script" uid="uid://dee610l7noxbf" path="res://scripts/intro.gd" id="1_tipki"]
-[ext_resource type="Texture2D" uid="uid://cu1dxf3k1oevi" path="res://images/intro_page/background.jpg" id="2_85g3d"]
+[ext_resource type="Texture2D" uid="uid://dx11r03vxy72s" path="res://images/intro_page/title page bckg.jpeg" id="2_tipki"]
 [ext_resource type="Texture2D" uid="uid://dcwy03pb2d3bh" path="res://images/intro_page/galactico.png" id="3_choun"]
 [ext_resource type="Texture2D" uid="uid://c4c5142sg16ju" path="res://images/intro_page/spaceship.png" id="4_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://bktfvbnjv1fa6" path="res://images/intro_page/planet.png" id="5_eb6dy"]
@@ -15,9 +15,9 @@
 script = ExtResource("1_tipki")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(490.5, 333)
-scale = Vector2(2.53727, 3.05455)
-texture = ExtResource("2_85g3d")
+position = Vector2(478.09024, 382.7585)
+scale = Vector2(0.5995115, 0.7217355)
+texture = ExtResource("2_tipki")
 
 [node name="Button" type="Button" parent="."]
 z_index = 1000

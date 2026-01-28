@@ -32,7 +32,7 @@ var scroll_speed := 400
 @onready var camera = $Camera2D
 
 #Details: for level page background
-#Background X = ?
+#Background X = 1600
 #Background Y must be 640, x can be anything to fit the pictures
 #Dimensions of camera = (960, 640)
 #clamp MAX = Background X - 480
@@ -46,7 +46,7 @@ func _process(delta):
 
 	camera.position += move * scroll_speed * delta
 	
-	camera.position.x = clamp(camera.position.x, 480, 1200)
+	camera.position.x = clamp(camera.position.x, 480, 2132.8)
 	camera.position.y = 320
 	
 #SCROLLING
@@ -67,4 +67,4 @@ func _input(event):
 	if event is InputEventMouseMotion and dragging:
 		camera.position.x -= event.relative.x * drag_speed
 	camera.position.y = 320
-	camera.position.x = clamp(camera.position.x, 480, 1200)
+	camera.position.x = clamp(camera.position.x, 480, 2132.8)

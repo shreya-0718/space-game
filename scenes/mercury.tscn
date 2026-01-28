@@ -665,6 +665,7 @@ or
 to jump up!
 "
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="uparrow" type="Sprite2D" parent="up"]
 position = Vector2(1507, 346)
