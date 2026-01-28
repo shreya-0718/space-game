@@ -8,10 +8,14 @@ extends Button
 @onready var check = get_node("../../removetutorial")
 
 func _on_pressed():
-	left.visible = false
-	right.visible = false
-	up.visible = false
-	button.visible = false
+	if left:
+		left.queue_free()
+	if right:
+		right.queue_free()
+	if up:
+		up.queue_free()
+	if button:
+		button.queue_free()
 
 func _process(delta):
 	if astronaut.position.x >= check.position.x:
