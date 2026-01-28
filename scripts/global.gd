@@ -5,11 +5,12 @@ var venus_stars: int = 0
 
 var ice_skates: int = 0
 var raincoat: int = 0
+var boots: int = 0
 
 var mercury_gravity = 60
 var venus_gravity = 90
 
-var move_speed = 600
+var move_speed = 300
 var jump_force = 100.0
 var glide_gravity_scale := 0.25 
 
