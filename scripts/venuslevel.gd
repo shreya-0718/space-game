@@ -12,6 +12,6 @@ func update_stars():
 		stars[i].modulate = Color(1, 1, 1, 1) if i < global.venus_stars else Color(1, 1, 1, 0.3)
 
 func _ready():
-	print("Ready venus")
+	print("Ready Venus")
 	usure.visible = false
 	
