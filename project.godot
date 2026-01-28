@@ -29,6 +29,10 @@ window/size/viewport_height=640
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
+[global_group]
+
+astronaut=""
+
 [input]
 
 left={

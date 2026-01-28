@@ -3,7 +3,8 @@ extends Node2D
 @onready var stars = [$star_container/star1, $star_container/star2, $star_container/star3]
 @onready var venus = get_node("venus")
 @onready var lock = get_node("lock")
-
+@onready var rocket = get_node("rocket")
+@onready var venusspot = get_node("venussspot")
 func _ready():
 	update_stars($mercury, global.mercury_stars)
 	update_stars($venus, global.venus_stars)
@@ -22,6 +23,7 @@ func check_locked():
 	venus.disabled = true
 	if global.passedmercury:
 		venus.modulate = Color.WHITE
+		rocket.global_position = venusspot.global_position
 		lock.visible = false
 		venus.disabled = false
 		
@@ -30,12 +32,6 @@ func check_locked():
 var scroll_speed := 400
 
 @onready var camera = $Camera2D
-
-#Details: for level page background
-#Background X = 1600
-#Background Y must be 640, x can be anything to fit the pictures
-#Dimensions of camera = (960, 640)
-#clamp MAX = Background X - 480
 
 func _process(delta):
 	var move := Vector2.ZERO

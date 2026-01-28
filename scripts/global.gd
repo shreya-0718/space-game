@@ -23,6 +23,7 @@ func reset_checkpoint():
 	
 #for raincoat
 var pressed = false
+var entered = false
 
 #for locked levels
 var passedmercury = false

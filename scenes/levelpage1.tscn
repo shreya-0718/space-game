@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmhlv5c17pb3h"]
+[gd_scene load_steps=9 format=3 uid="uid://cmhlv5c17pb3h"]
 
 [ext_resource type="Script" uid="uid://dxg58er1iashs" path="res://scripts/levelpage.gd" id="1_nnj5f"]
 [ext_resource type="Texture2D" uid="uid://ca8b72ctem8wc" path="res://images/level_page/levelpage bckg.jpeg" id="2_hji0n"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ck1ylfdoydefx" path="res://images/level_page/star.png" id="5_nnj5f"]
 [ext_resource type="Script" uid="uid://bk7f0x4slvsm0" path="res://scripts/venus.gd" id="6_sr1gy"]
 [ext_resource type="Texture2D" uid="uid://bi1d457bj8157" path="res://images/level_page/lock.png" id="7_hji0n"]
+[ext_resource type="Texture2D" uid="uid://b8jjj2napxh6n" path="res://images/level_page/rocket.png" id="8_igw7c"]
 
 [node name="LevelPageNode" type="Node2D"]
 script = ExtResource("1_nnj5f")
@@ -55,9 +56,9 @@ expand_mode = 2
 
 [node name="venus" type="TextureButton" parent="."]
 offset_left = 746.0
-offset_top = 92.0
+offset_top = 110.0
 offset_right = 987.0
-offset_bottom = 331.0
+offset_bottom = 349.0
 texture_normal = ExtResource("3_sr1gy")
 script = ExtResource("6_sr1gy")
 
@@ -88,9 +89,27 @@ texture = ExtResource("5_nnj5f")
 expand_mode = 2
 
 [node name="lock" type="Sprite2D" parent="."]
-position = Vector2(866, 200)
+position = Vector2(866.00006, 218)
 scale = Vector2(0.4014778, 0.40147784)
 texture = ExtResource("7_hji0n")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 717.0
+offset_top = 445.0
+offset_right = 987.0
+offset_bottom = 622.0
+theme_override_font_sizes/font_size = 25
+text = "Press the arrow keys or drag with two fingers to discover all the planets!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="rocket" type="Sprite2D" parent="."]
+position = Vector2(547, 274)
+scale = Vector2(0.17487682, 0.17487682)
+texture = ExtResource("8_igw7c")
+
+[node name="venusspot" type="Marker2D" parent="."]
+position = Vector2(870, 58)
 
 [connection signal="pressed" from="mercury" to="mercury" method="_on_pressed"]
 [connection signal="pressed" from="venus" to="venus" method="_on_pressed"]

@@ -43,6 +43,7 @@ func _process(delta):
 func check():
 	if slider.position.x >= goodstart and slider.position.x <= goodend:
 		get_tree().change_scene_to_file("res://scenes/mercury.tscn")
+		print("hi")
 		global.entered = true
 		global.raincoat = 1
 		global.pressed = true

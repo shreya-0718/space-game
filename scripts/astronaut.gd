@@ -4,15 +4,12 @@ var move_speed : float = Global.move_speed
 var jump_force : float = Global.jump_force
 var glide_gravity_scale : float = Global.glide_gravity_scale 
 
-
 func _physics_process(delta):
 	var direction = 0.0
 	if Input.is_action_pressed("left"):
 			direction -= 1
 	if Input.is_action_pressed("right"):
 			direction += 1
-	
-	
 
 	velocity.x = direction * move_speed
 
