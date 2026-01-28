@@ -724,10 +724,10 @@ text = "Press \"E\" to equip the boots!"
 [node name="CanvasLayer4" type="CanvasLayer" parent="."]
 
 [node name="powerups" type="HBoxContainer" parent="CanvasLayer4"]
-offset_left = 9.0
-offset_top = 592.0
-offset_right = 144.0
-offset_bottom = 630.0
+offset_left = 10.0
+offset_top = 580.0
+offset_right = 194.28947
+offset_bottom = 627.0
 size_flags_stretch_ratio = 0.0
 
 [node name="skates" type="TextureRect" parent="CanvasLayer4/powerups"]

@@ -4,18 +4,18 @@ extends Node2D
 @onready var progress_bar = $CanvasLayer/Control/ProgressBar
 @onready var level_start = $levelstart
 @onready var level_end = $levelend
+@onready var spot = $spawnpoint2
 
 func _ready():
 	await get_tree().process_frame
-
+	if global.entered:
+		astronaut.global_position = spot.global_position
 	progress_bar.add_theme_color_override("font_color", Color.WHITE)
 	progress_bar.add_theme_stylebox_override("background", StyleBoxFlat.new())
 	progress_bar.add_theme_stylebox_override("fill", StyleBoxFlat.new())
-
 	var fill = progress_bar.get_theme_stylebox("fill")
 	fill.bg_color = Color.RED
 	progress_bar.value = 50
-	
 
 func update_stars():
 	var container = get_node("CanvasLayer2/star_container") 
@@ -35,6 +35,10 @@ func _process(delta):
 	update_stars()
 	update_powerups()
 	progress_bar.visible = true
+	'''
+	if global.passedmercury:
+		await two secs and then get tree chagne scene to file 
+	'''
 
 func update_progress_bar():
 	var player_x = astronaut.position.x

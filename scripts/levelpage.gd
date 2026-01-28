@@ -4,7 +4,7 @@ extends Node2D
 @onready var venus = get_node("venus")
 @onready var lock = get_node("lock")
 @onready var rocket = get_node("rocket")
-@onready var venusspot = get_node("venussspot")
+@onready var venusspot = get_node("venusspot")
 func _ready():
 	update_stars($mercury, global.mercury_stars)
 	update_stars($venus, global.venus_stars)
