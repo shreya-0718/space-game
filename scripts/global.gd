@@ -25,7 +25,11 @@ var pressed = false
 
 #for locked levels
 var passedmercury = false
-	
+
+#for returning to position after mini game on mercury
+
+var entered = false
+
 #dimming screen
 @onready var dim = $CanvasLayer6/dim
 	

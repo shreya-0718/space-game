@@ -391,7 +391,7 @@ tile_map_data = PackedByteArray("AAAOAAgAAAACAAMAAAANAAgAAAABAAMAAAAMAAgAAAAAAAM
 tile_set = SubResource("TileSet_1y6ab")
 
 [node name="astronaut" type="CharacterBody2D" parent="."]
-position = Vector2(1321, 364)
+position = Vector2(13728, 731.51636)
 script = ExtResource("2_doqmq")
 
 [node name="Sprite2D" type="Sprite2D" parent="astronaut"]
@@ -624,7 +624,7 @@ to move left!
 horizontal_alignment = 1
 
 [node name="leftarrow" type="Sprite2D" parent="left"]
-position = Vector2(1395, 346.00003)
+position = Vector2(13802, 713.5164)
 scale = Vector2(0.3786583, 0.37865818)
 texture = ExtResource("19_tyflu")
 
@@ -787,6 +787,9 @@ shape = SubResource("RectangleShape2D_2115d")
 
 [node name="removetutorial" type="Marker2D" parent="."]
 position = Vector2(3233, 195)
+
+[node name="spawnpoint2" type="Marker2D" parent="."]
+position = Vector2(14297, 722)
 
 [connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
 [connection signal="body_entered" from="star2" to="star2" method="_on_body_entered"]

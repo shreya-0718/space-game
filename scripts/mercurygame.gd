@@ -30,6 +30,7 @@ var speed = 600
 var direction = 1
 
 
+
 func _process(delta):
 	slider.position.x += speed * direction * delta
 	if slider.position.x <= stopleft:
@@ -42,6 +43,7 @@ func _process(delta):
 func check():
 	if slider.position.x >= goodstart and slider.position.x <= goodend:
 		get_tree().change_scene_to_file("res://scenes/mercury.tscn")
+		global.entered = true
 		global.raincoat = 1
 		global.pressed = true
 	else:

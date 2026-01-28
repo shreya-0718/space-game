@@ -15,6 +15,7 @@ func _ready():
 	var fill = progress_bar.get_theme_stylebox("fill")
 	fill.bg_color = Color.RED
 	progress_bar.value = 50
+	
 
 func update_stars():
 	var container = get_node("CanvasLayer2/star_container") 

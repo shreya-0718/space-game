@@ -16,7 +16,7 @@ func _process(delta):
 	if global.pressed:
 		text.visible = false
 		global.raincoat += 1
-	
+
 
 		
 	
