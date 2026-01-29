@@ -35,11 +35,10 @@ func _process(delta):
 	update_stars()
 	update_powerups()
 	progress_bar.visible = true
-	'''
 	if global.passedmercury:
-		await two secs and then get tree chagne scene to file 
-	'''
-
+		await get_tree().create_timer(2.0).timeout
+		get_tree().change_scene_to_file("res://scenes/levelpage1.tscn")
+	
 func update_progress_bar():
 	var player_x = astronaut.position.x
 	var start_x = level_start.position.x
