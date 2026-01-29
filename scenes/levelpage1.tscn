@@ -13,7 +13,7 @@
 script = ExtResource("1_nnj5f")
 
 [node name="Backgroundtemp" type="Sprite2D" parent="."]
-position = Vector2(1574.8627, 327.10596)
+position = Vector2(1457, 317)
 scale = Vector2(1.9688674, 1.3329)
 texture = ExtResource("2_hji0n")
 
