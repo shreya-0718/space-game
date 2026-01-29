@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://ca8b72ctem8wc" path="res://images/level_page/levelpage bckg.jpeg" id="2_hji0n"]
 [ext_resource type="Texture2D" uid="uid://bktfvbnjv1fa6" path="res://images/intro_page/planet.png" id="3_sr1gy"]
 [ext_resource type="Script" uid="uid://ctqkhov7l71o3" path="res://scripts/mercury.gd" id="4_hji0n"]
-[ext_resource type="Texture2D" uid="uid://ck1ylfdoydefx" path="res://images/level_page/star.png" id="5_nnj5f"]
+[ext_resource type="Texture2D" uid="uid://ck1ylfdoydefx" path="res://images/level_page/star_gold.png" id="5_nnj5f"]
 [ext_resource type="Script" uid="uid://bk7f0x4slvsm0" path="res://scripts/venus.gd" id="6_sr1gy"]
 [ext_resource type="Texture2D" uid="uid://bi1d457bj8157" path="res://images/level_page/lock.png" id="7_hji0n"]
-[ext_resource type="Texture2D" uid="uid://b8jjj2napxh6n" path="res://images/level_page/rocket.png" id="8_igw7c"]
+[ext_resource type="Texture2D" uid="uid://dpn03rcfnt7rx" path="res://images/level_page/Rocket.png" id="8_igw7c"]
 
 [node name="LevelPageNode" type="Node2D"]
 script = ExtResource("1_nnj5f")

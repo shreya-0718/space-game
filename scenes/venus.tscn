@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bdrfsbunprwb0" path="res://images/venus/clouds/cloud2.png" id="5_ma66e"]
 [ext_resource type="Texture2D" uid="uid://c67naoxxoha21" path="res://images/venus/clouds/cloud6.png" id="6_x8lov"]
 [ext_resource type="Script" uid="uid://bpkfgwxoiplt0" path="res://scripts/star.gd" id="8_vb6dn"]
-[ext_resource type="Texture2D" uid="uid://ck1ylfdoydefx" path="res://images/level_page/star.png" id="9_cglxo"]
+[ext_resource type="Texture2D" uid="uid://ck1ylfdoydefx" path="res://images/level_page/star_gold.png" id="9_cglxo"]
 [ext_resource type="Texture2D" uid="uid://b5bjhds3sk166" path="res://images/mercury/back.png" id="12_426g8"]
 [ext_resource type="Script" path="res://scripts/back.gd" id="13_nuv3h"]
 [ext_resource type="Script" path="res://scripts/reverse.gd" id="14_426g8"]
