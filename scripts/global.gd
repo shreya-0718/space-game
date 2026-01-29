@@ -17,10 +17,8 @@ var glide_gravity_scale := 0.25
 var checkpoint_position: Vector2
 var checkpoint_scene: String
 
-func reset_checkpoint():
-	checkpoint_position = Vector2.ZERO
-	checkpoint_scene = ""
-	
+var num_jumps = 0
+
 #for raincoat
 var pressed = false
 var entered = false

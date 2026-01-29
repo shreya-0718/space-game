@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=4 uid="uid://d30n18ft2jng7"]
+[gd_scene load_steps=67 format=4 uid="uid://d30n18ft2jng7"]
 
 [ext_resource type="Script" uid="uid://cwo21gqf1hn1r" path="res://scripts/mercurylevel.gd" id="1_hny5o"]
 [ext_resource type="Script" uid="uid://dbdp1iwy628d6" path="res://scripts/astronaut.gd" id="2_doqmq"]
@@ -6,7 +6,9 @@
 [ext_resource type="Script" uid="uid://bpkfgwxoiplt0" path="res://scripts/star.gd" id="4_2ndqr"]
 [ext_resource type="Texture2D" uid="uid://c6lcngf4allxb" path="res://images/mercury/new_tileset.png" id="4_p3g0t"]
 [ext_resource type="Texture2D" uid="uid://6w055ero2apx" path="res://images/mercury/mercury 1 bckg.jpeg" id="5_ta7jb"]
+[ext_resource type="Texture2D" uid="uid://bb1gfokfp7haf" path="res://images/astronaut/Jump.png" id="6_p3g0t"]
 [ext_resource type="Texture2D" uid="uid://dinfwcjgv1w8y" path="res://images/astronaut/Idle.png" id="7_p3g0t"]
+[ext_resource type="Texture2D" uid="uid://fkikxsr143iv" path="res://images/astronaut/Run.png" id="7_u28sr"]
 [ext_resource type="Script" path="res://scripts/water.gd" id="9_p3g0t"]
 [ext_resource type="Texture2D" uid="uid://c82mv17yv7jiu" path="res://images/mercury/flag.png" id="12_r5swh"]
 [ext_resource type="Script" path="res://scripts/zoomout.gd" id="12_vujqb"]
@@ -178,6 +180,38 @@ region = Rect2(4096, 0, 2048, 2048)
 atlas = ExtResource("7_p3g0t")
 region = Rect2(6144, 0, 2048, 2048)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3d36"]
+atlas = ExtResource("6_p3g0t")
+region = Rect2(0, 0, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bta1w"]
+atlas = ExtResource("6_p3g0t")
+region = Rect2(2048, 0, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wl840"]
+atlas = ExtResource("6_p3g0t")
+region = Rect2(4096, 0, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttpuh"]
+atlas = ExtResource("6_p3g0t")
+region = Rect2(6144, 0, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdyme"]
+atlas = ExtResource("7_u28sr")
+region = Rect2(0, 0, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5bp8"]
+atlas = ExtResource("7_u28sr")
+region = Rect2(2048, 0, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ub8gw"]
+atlas = ExtResource("7_u28sr")
+region = Rect2(4096, 0, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jalw5"]
+atlas = ExtResource("7_u28sr")
+region = Rect2(6144, 0, 2048, 2048)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_utlqg"]
 animations = [{
 "frames": [{
@@ -196,6 +230,40 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3d36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bta1w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wl840")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttpuh")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cdyme")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e5bp8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ub8gw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jalw5")
+}],
+"loop": false,
+"name": &"run",
+"speed": 7.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ndqr"]
@@ -341,8 +409,10 @@ drag_bottom_margin = 0.08
 position = Vector2(-26, 3)
 scale = Vector2(0.062744245, 0.062744245)
 sprite_frames = SubResource("SpriteFrames_utlqg")
-animation = &"idle"
-frame_progress = 0.17479107
+animation = &"jump"
+autoplay = "idle"
+frame = 3
+frame_progress = 1.0
 
 [node name="star1" type="Area2D" parent="."]
 position = Vector2(35, -16)
