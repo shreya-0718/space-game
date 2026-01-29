@@ -3,32 +3,39 @@ extends CharacterBody2D
 var move_speed : float = Global.move_speed
 var jump_force : float = Global.jump_force
 var glide_gravity_scale : float = Global.glide_gravity_scale 
+@onready var anim = $AnimatedSprite2D
 
 
 func _physics_process(delta):
 	var direction = 0.0
-	if Input.is_action_pressed("left"):
-		if not global.reverse:
-			direction -= 1
-		if global.reverse:
-			direction +=1
-	if Input.is_action_pressed("right"):
-		if not global.reverse:
-			direction += 1
-		if global.reverse:
-			direction -= 1
+	var input = Input.get_axis("left", "right")
+	
+	if global.reverse:
+		input = Input.get_axis("right", "left")
 
-	velocity.x = direction * move_speed
+	if input != 0:
+		anim.flip_h = input < 0
 
-	var gravity : float = Global.venus_gravity   
+	if is_on_floor():
+		Global.num_jumps = 0
+		if input == 0:
+			anim.play("idle")
+		else:
+			anim.play("run")
 
-	if Input.is_action_pressed("glide") and not is_on_floor() and velocity.y > 0:
+	velocity.x = input * move_speed
+
+	var gravity : float = Global.mercury_gravity   
+
+	if Input.is_action_pressed("space") and Input.is_action_pressed("jump") and not is_on_floor():
 		velocity.y += gravity * glide_gravity_scale * delta
 	elif not is_on_floor():
 		velocity.y += gravity * delta
 
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and not Input.is_action_pressed("space") and Global.num_jumps < 2:
 		velocity.y = -jump_force
+		anim.play("jump")
+		Global.num_jumps += 1
 	elif is_on_floor():
 		velocity.y = 0
 	
