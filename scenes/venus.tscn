@@ -10,18 +10,18 @@
 [ext_resource type="Script" uid="uid://bpkfgwxoiplt0" path="res://scripts/star.gd" id="8_vb6dn"]
 [ext_resource type="Texture2D" uid="uid://ck1ylfdoydefx" path="res://images/level_page/star_gold.png" id="9_cglxo"]
 [ext_resource type="Texture2D" uid="uid://b5bjhds3sk166" path="res://images/mercury/back.png" id="12_426g8"]
-[ext_resource type="Script" path="res://scripts/back.gd" id="13_nuv3h"]
-[ext_resource type="Script" path="res://scripts/reverse.gd" id="14_426g8"]
+[ext_resource type="Script" uid="uid://xhnj7qwvf34d" path="res://scripts/back.gd" id="13_nuv3h"]
+[ext_resource type="Script" uid="uid://djsaoebormi7i" path="res://scripts/reverse.gd" id="14_426g8"]
 [ext_resource type="Texture2D" uid="uid://fowk4mbm2awj" path="res://images/venus/venus bckg.jpeg" id="14_ud6k2"]
-[ext_resource type="Script" path="res://scripts/yes.gd" id="14_y3sbn"]
-[ext_resource type="Script" path="res://scripts/getready.gd" id="15_426g8"]
-[ext_resource type="Script" path="res://scripts/no.gd" id="15_ya5ls"]
-[ext_resource type="Script" path="res://scripts/getout.gd" id="16_nuv3h"]
-[ext_resource type="Script" path="res://scripts/boots.gd" id="17_ya5ls"]
+[ext_resource type="Script" uid="uid://qcgrioupnspr" path="res://scripts/yes.gd" id="14_y3sbn"]
+[ext_resource type="Script" uid="uid://dwim2a5wbgywa" path="res://scripts/getready.gd" id="15_426g8"]
+[ext_resource type="Script" uid="uid://dqc0rww00brfs" path="res://scripts/no.gd" id="15_ya5ls"]
+[ext_resource type="Script" uid="uid://ck3f1altrgk2b" path="res://scripts/getout.gd" id="16_nuv3h"]
+[ext_resource type="Script" uid="uid://cp5vbbje4v4qv" path="res://scripts/boots.gd" id="17_ya5ls"]
 [ext_resource type="Texture2D" uid="uid://dtkmf3eh3nf3r" path="res://images/venus/boots.png" id="18_lepuu"]
 [ext_resource type="Texture2D" uid="uid://bf1417yva3ltu" path="res://images/mercury/iceskates.png" id="19_jjhkc"]
 [ext_resource type="Texture2D" uid="uid://bqubey0spgbql" path="res://images/mercury/raincoat.png" id="20_8u8nx"]
-[ext_resource type="Script" path="res://scripts/barrier.gd" id="22_yc0rh"]
+[ext_resource type="Script" uid="uid://c442tqbkww5lr" path="res://scripts/barrier.gd" id="22_yc0rh"]
 [ext_resource type="Texture2D" uid="uid://c8i0kfhhmu6bl" path="res://images/venus/checkpoint.png" id="23_tjbme"]
 [ext_resource type="Texture2D" uid="uid://u675rjigxrfo" path="res://images/venus/clouds/cloud9.png" id="24_rbi8o"]
 
@@ -207,13 +207,13 @@ size = Vector2(83.5625, 108.99999)
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_ma66e"]
 custom_solver_bias = 0.619
-points = PackedVector2Array(12.999999, -6.5, 2, -6.5, -6.999999, -6.5, -10.999998, -6.5, -17.999996, 0.5, -10.999998, 8.5, -3.9999993, 6.5, -0.9999995, 9.5, 6.999999, 6.5, 13.999999, 4.5, 17.999996, -1.5)
+points = PackedVector2Array(70.999985, -37, 31, -39, 18, -31, 10, -8, -10, -6, -30.999992, 0, -49.999992, 20, 151.99998, 26, 119.999985, -4, 92.999985, -15, 84.999985, -29)
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_x8lov"]
-points = PackedVector2Array(-30.999996, 0, -26.999996, 4, -10, 4, -6, 0, -10, -4, -12.999996, -2, -17.999996, -4, -22.999996, -2, -25.999996, -4)
+points = PackedVector2Array(-86, 3, 86.99997, 40, 113.99997, -1, 65.99997, -27, 53, -12, 31, -37, 0, -37, -21, -14, -38, -30)
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_kv6tc"]
-points = PackedVector2Array(-42.999992, 31, -18.999992, 31, -17.999992, 28, -19.999992, 26, -42.999992, 23, -47.999992, 25, -46.999992, 28)
+points = PackedVector2Array(-8, 126, 194.99997, 90, 174, 67, -19.999992, 26, -43, 21, -65, 42, -51, 101)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nuv3h"]
 size = Vector2(37, 37)
@@ -240,7 +240,7 @@ size = Vector2(12.5, 2130)
 size = Vector2(87, 41)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yc0rh"]
-size = Vector2(145, 116)
+size = Vector2(844.5, 602)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nykqm"]
 size = Vector2(12, 725)
@@ -254,7 +254,7 @@ tile_map_data = PackedByteArray("AADz/x0AAAAAAAIAAADz/x4AAAAAAAMAAADz/x8AAAAAAAQ
 tile_set = SubResource("TileSet_tjbme")
 
 [node name="astronaut" type="CharacterBody2D" parent="." unique_id=1639798012 groups=["astronaut"]]
-position = Vector2(200, 2096)
+position = Vector2(-337, 2194)
 script = ExtResource("2_xwevf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="astronaut" unique_id=1271940607]
@@ -283,46 +283,46 @@ animation = &"idle"
 [node name="start_clouds" type="Node2D" parent="." unique_id=1048130702]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="start_clouds" unique_id=169343787]
-position = Vector2(13, 480)
+position = Vector2(-550, 2109)
 
 [node name="Cloud1" type="Sprite2D" parent="start_clouds/StaticBody2D" unique_id=381732272]
-position = Vector2(-6.999998, 4)
-scale = Vector2(0.28214285, 0.2821429)
+position = Vector2(122.139275, -84.625015)
+scale = Vector2(1.5482143, 1.5482146)
 texture = ExtResource("4_8pnlm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="start_clouds/StaticBody2D" unique_id=876052407]
-position = Vector2(-7, 5.5)
+position = Vector2(74, -107)
 scale = Vector2(1.0000001, 1)
 shape = SubResource("ConvexPolygonShape2D_ma66e")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="start_clouds" unique_id=727021992]
-position = Vector2(13, 480)
+position = Vector2(-454, 2112)
 
 [node name="Cloud2" type="Sprite2D" parent="start_clouds/StaticBody2D2" unique_id=1638612154]
-position = Vector2(29.000004, -21.999996)
-scale = Vector2(0.2648809, 0.26488093)
+position = Vector2(293, -180.99998)
+scale = Vector2(2.1662197, 2.16622)
 texture = ExtResource("5_ma66e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="start_clouds/StaticBody2D2" unique_id=1872056500]
-position = Vector2(47, -23)
+position = Vector2(273, -192)
 scale = Vector2(1.0000001, 1)
 shape = SubResource("ConvexPolygonShape2D_x8lov")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="start_clouds" unique_id=411500143]
-position = Vector2(63, 418)
+position = Vector2(-329, 2091)
 
 [node name="Sprite2D" type="Sprite2D" parent="start_clouds/StaticBody2D3" unique_id=1465788919]
-position = Vector2(16, 3)
-scale = Vector2(0.2, 0.2)
+position = Vector2(465, -260.00006)
+scale = Vector2(1.6636372, 1.6636372)
 texture = ExtResource("6_x8lov")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="start_clouds/StaticBody2D3" unique_id=694068937]
-position = Vector2(47, -23)
+position = Vector2(379, -343)
 scale = Vector2(1.0000001, 1)
 shape = SubResource("ConvexPolygonShape2D_kv6tc")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="start_clouds" unique_id=1228939676]
-position = Vector2(63, 418)
+position = Vector2(-500, 2047)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="start_clouds/StaticBody2D4" unique_id=368915822]
 position = Vector2(47, -23)
@@ -333,12 +333,12 @@ position = Vector2(35, -16)
 script = ExtResource("8_vb6dn")
 
 [node name="Sprite2D" type="Sprite2D" parent="star1" unique_id=1169951622]
-position = Vector2(842.298, 957.5)
-scale = Vector2(0.09, 0.09)
+position = Vector2(3303.71, 3851.27)
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("9_cglxo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="star1" unique_id=1507399940]
-position = Vector2(842.5, 958.5)
+position = Vector2(3350, 3852)
 shape = SubResource("RectangleShape2D_nuv3h")
 
 [node name="star2" type="Area2D" parent="." unique_id=1982611030]
@@ -484,7 +484,7 @@ offset_bottom = 67.0
 metadata/_edit_use_anchors_ = true
 
 [node name="levelstart" type="Marker2D" parent="." unique_id=1995184843]
-position = Vector2(-76, 512)
+position = Vector2(-39, 2009)
 
 [node name="levelend" type="Marker2D" parent="." unique_id=1722316947]
 position = Vector2(6020, 395)
@@ -498,7 +498,7 @@ scale = Vector2(0.7081103, 0.70811033)
 texture = ExtResource("14_ud6k2")
 
 [node name="reverse" type="Area2D" parent="." unique_id=1253039089]
-position = Vector2(2287, 383)
+position = Vector2(7901, 1787)
 script = ExtResource("14_426g8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="reverse" unique_id=1413653901]
@@ -506,15 +506,17 @@ position = Vector2(38, 40)
 shape = SubResource("RectangleShape2D_lepuu")
 
 [node name="stop2" type="Marker2D" parent="." unique_id=2119107543]
-position = Vector2(2857, 586)
+position = Vector2(8471, 1990)
 
 [node name="gateentry" type="StaticBody2D" parent="." unique_id=112524245]
+position = Vector2(5614, 1404)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="gateentry" unique_id=843251292]
 position = Vector2(2005, 211)
 shape = SubResource("RectangleShape2D_jjhkc")
 
 [node name="getready" type="Area2D" parent="." unique_id=1420882592]
+position = Vector2(5614, 1404)
 script = ExtResource("15_426g8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="getready" unique_id=399901753]
@@ -522,10 +524,10 @@ position = Vector2(1906, 442)
 shape = SubResource("CircleShape2D_8u8nx")
 
 [node name="Label" type="Label" parent="." unique_id=2099922111]
-offset_left = 1896.0
-offset_top = 387.0
-offset_right = 1990.0
-offset_bottom = 514.0
+offset_left = 7510.0
+offset_top = 1791.0
+offset_right = 7604.0
+offset_bottom = 1918.0
 theme_override_font_sizes/font_size = 5
 text = "Venus is the only planet that spins backwards! Press \"enter\" to continue, but beware ... its backwards!
 "
@@ -533,26 +535,27 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="reversedim" type="ColorRect" parent="." unique_id=1165280574]
-offset_left = 2008.0
-offset_top = 6.0
-offset_right = 2644.0
-offset_bottom = 1301.0
+offset_left = 7622.0
+offset_top = 1410.0
+offset_right = 8258.0
+offset_bottom = 2705.0
 color = Color(0, 0, 0, 0.5882353)
 
 [node name="stop1" type="Marker2D" parent="." unique_id=584387230]
-position = Vector2(2197, 591)
+position = Vector2(7811, 1995)
 
 [node name="gateexit" type="StaticBody2D" parent="." unique_id=188885112]
+position = Vector2(5614, 1404)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="gateexit" unique_id=612429025]
 position = Vector2(2651, 347)
 shape = SubResource("RectangleShape2D_426g8")
 
 [node name="Label2" type="Label" parent="." unique_id=182455996]
-offset_left = 2556.0
-offset_top = 424.0
-offset_right = 2645.0
-offset_bottom = 525.0
+offset_left = 8170.0
+offset_top = 1828.0
+offset_right = 8259.0
+offset_bottom = 1929.0
 theme_override_font_sizes/font_size = 5
 text = "Press space to exit!
 "
@@ -560,7 +563,7 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="getout" type="Area2D" parent="." unique_id=1789268362]
-position = Vector2(2530, 421)
+position = Vector2(8144, 1825)
 script = ExtResource("16_nuv3h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="getout" unique_id=621144418]
@@ -571,12 +574,13 @@ shape = SubResource("RectangleShape2D_8u8nx")
 script = ExtResource("17_ya5ls")
 
 [node name="Boots" type="Sprite2D" parent="boots" unique_id=434626075]
-position = Vector2(74.5, 413.50003)
-scale = Vector2(0.036945805, 0.036945805)
+position = Vector2(116, 1769.0001)
+rotation = 0.23561946
+scale = Vector2(0.24137928, 0.24137928)
 texture = ExtResource("18_lepuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="boots" unique_id=1260537463]
-position = Vector2(50.5, 444)
+position = Vector2(-169, 1887)
 shape = SubResource("RectangleShape2D_yc0rh")
 
 [node name="Label3" type="Label" parent="." unique_id=2142008046]
@@ -636,7 +640,7 @@ scale = Vector2(0.31034482, 0.31034482)
 texture = ExtResource("23_tjbme")
 
 [node name="spawnpoint" type="Marker2D" parent="." unique_id=1907074208]
-position = Vector2(2781, 430)
+position = Vector2(7814, 1654)
 
 [node name="acid rain" type="Area2D" parent="." unique_id=1030431441]
 
