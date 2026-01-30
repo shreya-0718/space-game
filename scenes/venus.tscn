@@ -9,19 +9,22 @@
 [ext_resource type="Texture2D" uid="uid://c67naoxxoha21" path="res://images/venus/clouds/cloud6.png" id="6_x8lov"]
 [ext_resource type="Script" uid="uid://bpkfgwxoiplt0" path="res://scripts/star.gd" id="8_vb6dn"]
 [ext_resource type="Texture2D" uid="uid://ck1ylfdoydefx" path="res://images/level_page/star_gold.png" id="9_cglxo"]
-[ext_resource type="Texture2D" uid="uid://b5bjhds3sk166" path="res://images/mercury/back.png" id="12_426g8"]
+[ext_resource type="Script" uid="uid://cjk32o1i0eccm" path="res://scripts/star_venus.gd" id="10_cv1ld"]
+[ext_resource type="Texture2D" uid="uid://jhfm2ksvvw6r" path="res://images/level_page/gray_star.png" id="11_y812g"]
+[ext_resource type="Texture2D" uid="uid://s45jw16jj73u" path="res://images/level_page/star.png" id="12_0uv3g"]
+[ext_resource type="Texture2D" uid="uid://cleyhsn86koph" path="res://images/level_page/Back.png" id="13_mx30g"]
 [ext_resource type="Script" uid="uid://xhnj7qwvf34d" path="res://scripts/back.gd" id="13_nuv3h"]
-[ext_resource type="Script" path="res://scripts/reverse.gd" id="14_426g8"]
+[ext_resource type="Script" uid="uid://djsaoebormi7i" path="res://scripts/reverse.gd" id="14_426g8"]
 [ext_resource type="Texture2D" uid="uid://fowk4mbm2awj" path="res://images/venus/venus bckg.jpeg" id="14_ud6k2"]
-[ext_resource type="Script" path="res://scripts/yes.gd" id="14_y3sbn"]
-[ext_resource type="Script" path="res://scripts/getready.gd" id="15_426g8"]
-[ext_resource type="Script" path="res://scripts/no.gd" id="15_ya5ls"]
-[ext_resource type="Script" path="res://scripts/getout.gd" id="16_nuv3h"]
-[ext_resource type="Script" path="res://scripts/boots.gd" id="17_ya5ls"]
+[ext_resource type="Script" uid="uid://qcgrioupnspr" path="res://scripts/yes.gd" id="14_y3sbn"]
+[ext_resource type="Script" uid="uid://dwim2a5wbgywa" path="res://scripts/getready.gd" id="15_426g8"]
+[ext_resource type="Script" uid="uid://dqc0rww00brfs" path="res://scripts/no.gd" id="15_ya5ls"]
+[ext_resource type="Script" uid="uid://ck3f1altrgk2b" path="res://scripts/getout.gd" id="16_nuv3h"]
+[ext_resource type="Script" uid="uid://cp5vbbje4v4qv" path="res://scripts/boots.gd" id="17_ya5ls"]
 [ext_resource type="Texture2D" uid="uid://dtkmf3eh3nf3r" path="res://images/venus/boots.png" id="18_lepuu"]
 [ext_resource type="Texture2D" uid="uid://bf1417yva3ltu" path="res://images/mercury/iceskates.png" id="19_jjhkc"]
 [ext_resource type="Texture2D" uid="uid://bqubey0spgbql" path="res://images/mercury/raincoat.png" id="20_8u8nx"]
-[ext_resource type="Script" path="res://scripts/barrier.gd" id="22_yc0rh"]
+[ext_resource type="Script" uid="uid://c442tqbkww5lr" path="res://scripts/barrier.gd" id="22_yc0rh"]
 [ext_resource type="Texture2D" uid="uid://c8i0kfhhmu6bl" path="res://images/venus/checkpoint.png" id="23_tjbme"]
 [ext_resource type="Texture2D" uid="uid://u675rjigxrfo" path="res://images/venus/clouds/cloud9.png" id="24_rbi8o"]
 
@@ -205,15 +208,14 @@ sources/0 = SubResource("TileSetAtlasSource_wwsvu")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ma66e"]
 size = Vector2(83.5625, 108.99999)
 
-[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_ma66e"]
-custom_solver_bias = 0.619
-points = PackedVector2Array(70.999985, -37, 31, -39, 18, -31, 10, -8, -10, -6, -30.999992, 0, -49.999992, 20, 151.99998, 26, 119.999985, -4, 92.999985, -15, 84.999985, -29)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tjbme"]
+size = Vector2(180.99995, 65)
 
-[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_x8lov"]
-points = PackedVector2Array(-86, 3, 86.99997, 40, 113.99997, -1, 65.99997, -27, 53, -12, 31, -37, 0, -37, -21, -14, -38, -30)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rbi8o"]
+size = Vector2(186.99998, 35)
 
-[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_kv6tc"]
-points = PackedVector2Array(-8, 126, 194.99997, 90, 174, 67, -19.999992, 26, -43, 21, -65, 42, -51, 101)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wwsvu"]
+size = Vector2(254.49995, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nuv3h"]
 size = Vector2(37, 37)
@@ -225,22 +227,22 @@ size = Vector2(41.5, 47.25)
 size = Vector2(40.5, 37)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lepuu"]
-size = Vector2(634, 214)
+size = Vector2(2256.5, 1510)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jjhkc"]
-size = Vector2(6, 850)
+size = Vector2(13, 850)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8u8nx"]
-radius = 96.540146
+radius = 327.00153
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_426g8"]
-size = Vector2(12.5, 2130)
+size = Vector2(28, 2130)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8u8nx"]
-size = Vector2(87, 41)
+size = Vector2(371, 365)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yc0rh"]
-size = Vector2(844.5, 602)
+size = Vector2(552.25, 394)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nykqm"]
 size = Vector2(12, 725)
@@ -254,7 +256,7 @@ tile_map_data = PackedByteArray("AADz/x0AAAAAAAIAAADz/x4AAAAAAAMAAADz/x8AAAAAAAQ
 tile_set = SubResource("TileSet_tjbme")
 
 [node name="astronaut" type="CharacterBody2D" parent="." unique_id=1639798012 groups=["astronaut"]]
-position = Vector2(-337, 2194)
+position = Vector2(7682, 2060)
 script = ExtResource("2_xwevf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="astronaut" unique_id=1271940607]
@@ -291,9 +293,9 @@ scale = Vector2(1.5482143, 1.5482146)
 texture = ExtResource("4_8pnlm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="start_clouds/StaticBody2D" unique_id=876052407]
-position = Vector2(74, -107)
+position = Vector2(124.5, -64)
 scale = Vector2(1.0000001, 1)
-shape = SubResource("ConvexPolygonShape2D_ma66e")
+shape = SubResource("RectangleShape2D_tjbme")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="start_clouds" unique_id=727021992]
 position = Vector2(-454, 2112)
@@ -304,9 +306,9 @@ scale = Vector2(2.1662197, 2.16622)
 texture = ExtResource("5_ma66e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="start_clouds/StaticBody2D2" unique_id=1872056500]
-position = Vector2(273, -192)
+position = Vector2(293.5, -184.5)
 scale = Vector2(1.0000001, 1)
-shape = SubResource("ConvexPolygonShape2D_x8lov")
+shape = SubResource("RectangleShape2D_rbi8o")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="start_clouds" unique_id=411500143]
 position = Vector2(-329, 2091)
@@ -317,9 +319,9 @@ scale = Vector2(1.6636372, 1.6636372)
 texture = ExtResource("6_x8lov")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="start_clouds/StaticBody2D3" unique_id=694068937]
-position = Vector2(379, -343)
+position = Vector2(449, -228)
 scale = Vector2(1.0000001, 1)
-shape = SubResource("ConvexPolygonShape2D_kv6tc")
+shape = SubResource("RectangleShape2D_wwsvu")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="start_clouds" unique_id=1228939676]
 position = Vector2(-500, 2047)
@@ -375,23 +377,26 @@ offset_top = 25.0
 offset_right = 900.0
 offset_bottom = 65.0
 mouse_filter = 2
+script = ExtResource("10_cv1ld")
+gray_star = ExtResource("11_y812g")
+gold_star = ExtResource("12_0uv3g")
 
 [node name="star1" type="TextureRect" parent="CanvasLayer2/star_container" unique_id=1951758727]
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("9_cglxo")
+texture = ExtResource("11_y812g")
 expand_mode = 2
 
 [node name="star2" type="TextureRect" parent="CanvasLayer2/star_container" unique_id=150528684]
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("9_cglxo")
+texture = ExtResource("11_y812g")
 expand_mode = 2
 
 [node name="star3" type="TextureRect" parent="CanvasLayer2/star_container" unique_id=1746940294]
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("9_cglxo")
+texture = ExtResource("11_y812g")
 expand_mode = 2
 
 [node name="CanvasLayer5" type="CanvasLayer" parent="." unique_id=141653743]
@@ -402,9 +407,9 @@ offset_left = 13.000008
 offset_top = 10.0
 offset_right = 873.0
 offset_bottom = 424.0
-scale = Vector2(0.15, 0.15)
+scale = Vector2(0.08, 0.08)
 action_mode = 0
-icon = ExtResource("12_426g8")
+icon = ExtResource("13_mx30g")
 script = ExtResource("13_nuv3h")
 metadata/_edit_use_anchors_ = true
 
@@ -502,17 +507,17 @@ position = Vector2(7901, 1787)
 script = ExtResource("14_426g8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="reverse" unique_id=1413653901]
-position = Vector2(38, 40)
+position = Vector2(1083.75, 108)
 shape = SubResource("RectangleShape2D_lepuu")
 
 [node name="stop2" type="Marker2D" parent="." unique_id=2119107543]
-position = Vector2(8471, 1990)
+position = Vector2(10675, 1984)
 
 [node name="gateentry" type="StaticBody2D" parent="." unique_id=112524245]
 position = Vector2(5614, 1404)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="gateentry" unique_id=843251292]
-position = Vector2(2005, 211)
+position = Vector2(2237.5, 211)
 shape = SubResource("RectangleShape2D_jjhkc")
 
 [node name="getready" type="Area2D" parent="." unique_id=1420882592]
@@ -525,38 +530,38 @@ shape = SubResource("CircleShape2D_8u8nx")
 
 [node name="Label" type="Label" parent="." unique_id=2099922111]
 offset_left = 7510.0
-offset_top = 1791.0
-offset_right = 7604.0
-offset_bottom = 1918.0
-theme_override_font_sizes/font_size = 5
+offset_top = 1594.0
+offset_right = 7810.0
+offset_bottom = 1721.0
+theme_override_font_sizes/font_size = 16
 text = "Venus is the only planet that spins backwards! Press \"enter\" to continue, but beware ... its backwards!
 "
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="reversedim" type="ColorRect" parent="." unique_id=1165280574]
-offset_left = 7622.0
-offset_top = 1410.0
-offset_right = 8258.0
+offset_left = 7858.0
+offset_top = 1171.0
+offset_right = 10111.0
 offset_bottom = 2705.0
 color = Color(0, 0, 0, 0.5882353)
 
 [node name="stop1" type="Marker2D" parent="." unique_id=584387230]
-position = Vector2(7811, 1995)
+position = Vector2(8382, 2036)
 
 [node name="gateexit" type="StaticBody2D" parent="." unique_id=188885112]
 position = Vector2(5614, 1404)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="gateexit" unique_id=612429025]
-position = Vector2(2651, 347)
+position = Vector2(4481, 347)
 shape = SubResource("RectangleShape2D_426g8")
 
 [node name="Label2" type="Label" parent="." unique_id=182455996]
-offset_left = 8170.0
-offset_top = 1828.0
-offset_right = 8259.0
-offset_bottom = 1929.0
-theme_override_font_sizes/font_size = 5
+offset_left = 9723.0
+offset_top = 1681.0
+offset_right = 10106.0
+offset_bottom = 1782.0
+theme_override_font_sizes/font_size = 16
 text = "Press space to exit!
 "
 horizontal_alignment = 1
@@ -567,7 +572,7 @@ position = Vector2(8144, 1825)
 script = ExtResource("16_nuv3h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="getout" unique_id=621144418]
-position = Vector2(67.5, 23.5)
+position = Vector2(1768, -106)
 shape = SubResource("RectangleShape2D_8u8nx")
 
 [node name="boots" type="Area2D" parent="." unique_id=933547142]
@@ -580,15 +585,15 @@ scale = Vector2(0.24137928, 0.24137928)
 texture = ExtResource("18_lepuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="boots" unique_id=1260537463]
-position = Vector2(-169, 1887)
+position = Vector2(-2.875, 1800)
 shape = SubResource("RectangleShape2D_yc0rh")
 
 [node name="Label3" type="Label" parent="." unique_id=2142008046]
-offset_left = 42.0
-offset_top = 400.0
-offset_right = 261.0
-offset_bottom = 423.0
-theme_override_font_sizes/font_size = 5
+offset_left = 7.0
+offset_top = 1613.0
+offset_right = 226.0
+offset_bottom = 1636.0
+theme_override_font_sizes/font_size = 16
 text = "Press \"E\" to equip the boots!"
 
 [node name="CanvasLayer4" type="CanvasLayer" parent="." unique_id=1581005649]
@@ -635,26 +640,26 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="checkpoint" type="Sprite2D" parent="." unique_id=1856006004]
-position = Vector2(2738, 434)
-scale = Vector2(0.31034482, 0.31034482)
+position = Vector2(10463, 1788.0001)
+scale = Vector2(0.69950604, 0.69950604)
 texture = ExtResource("23_tjbme")
 
 [node name="spawnpoint" type="Marker2D" parent="." unique_id=1907074208]
-position = Vector2(7814, 1654)
+position = Vector2(10508, 1820)
 
 [node name="acid rain" type="Area2D" parent="." unique_id=1030431441]
 
 [node name="cloudimage" type="Sprite2D" parent="acid rain" unique_id=1178059253]
-position = Vector2(3019, 359)
-scale = Vector2(2.0172138, 1.0803572)
+position = Vector2(11050.001, 1628)
+scale = Vector2(3.1008408, 1.6607144)
 texture = ExtResource("24_rbi8o")
 
 [node name="Label" type="Label" parent="acid rain" unique_id=1788628878]
-offset_left = 2823.0
-offset_top = 353.0
-offset_right = 2892.0
-offset_bottom = 398.0
-theme_override_font_sizes/font_size = 6
+offset_left = 10543.0
+offset_top = 1659.0
+offset_right = 10802.0
+offset_bottom = 1734.0
+theme_override_font_sizes/font_size = 16
 text = "Beware of acid rain ... good thing you have your raincoat from earlier!"
 horizontal_alignment = 1
 autowrap_mode = 2

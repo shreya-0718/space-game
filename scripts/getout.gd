@@ -5,19 +5,20 @@ extends Area2D
 @onready var stop2 = get_node("../stop2")
 @onready var text2 = get_node("../Label2")
 
-var player_entered = false
+var player_getout = false
 
 func _ready():
 	text2.visible = false
 	
 func _on_body_entered(body):
-	text2.visible = true
-	player_entered = true
+	if body.name == "astronaut":
+		text2.visible = true
+		player_getout = true
 
 func _process(delta):
-	if player_entered and Input.is_action_just_pressed("space"):
+	if player_getout and Input.is_action_pressed("space"):
 		astro.global_position = stop2.global_position
-		text2.visible = false
+		text2.visible =false
 		dim_screen()
 		
 
