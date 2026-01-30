@@ -6,16 +6,7 @@ extends Node2D
 @onready var rocket = get_node("rocket")
 @onready var venusspot = get_node("venusspot")
 func _ready():
-	update_stars($mercury, global.mercury_stars)
-	update_stars($venus, global.venus_stars)
 	check_locked()
-
-func update_stars(planet_node: Node, star_count: int):
-	var container = planet_node.get_node("star_container")
-	var stars = container.get_children()
-
-	for i in range(stars.size()):
-		stars[i].modulate = Color(1, 1, 1, 1) if i < star_count else Color(1, 1, 1, 0.3)
 
 func check_locked():
 	venus.modulate = Color(0.5, 0.5, 0.5, 1.0)
@@ -26,7 +17,6 @@ func check_locked():
 		rocket.global_position = venusspot.global_position
 		lock.visible = false
 		venus.disabled = false
-		
 
 #ARROW KEYS
 var scroll_speed := 400

@@ -1,14 +1,17 @@
-[gd_scene load_steps=10 format=3 uid="uid://cmhlv5c17pb3h"]
+[gd_scene load_steps=13 format=3 uid="uid://cmhlv5c17pb3h"]
 
 [ext_resource type="Script" uid="uid://dxg58er1iashs" path="res://scripts/levelpage.gd" id="1_nnj5f"]
 [ext_resource type="Texture2D" uid="uid://ca8b72ctem8wc" path="res://images/level_page/levelpage bckg.jpeg" id="2_hji0n"]
 [ext_resource type="Texture2D" uid="uid://csceso8y5ohmf" path="res://images/level_page/mercury.png" id="3_my82s"]
 [ext_resource type="Script" uid="uid://ctqkhov7l71o3" path="res://scripts/mercury.gd" id="4_hji0n"]
+[ext_resource type="Script" uid="uid://c652gsgdeft2x" path="res://scripts/star_mercury.gd" id="5_j4n7u"]
 [ext_resource type="Texture2D" uid="uid://s45jw16jj73u" path="res://images/level_page/star.png" id="5_my82s"]
+[ext_resource type="Texture2D" uid="uid://jhfm2ksvvw6r" path="res://images/level_page/gray_star.png" id="6_rskdi"]
 [ext_resource type="Script" uid="uid://bk7f0x4slvsm0" path="res://scripts/venus.gd" id="6_sr1gy"]
 [ext_resource type="Texture2D" uid="uid://72j4m58ia32a" path="res://images/level_page/venus.png" id="6_ya3mj"]
 [ext_resource type="Texture2D" uid="uid://bi1d457bj8157" path="res://images/level_page/lock.png" id="7_hji0n"]
 [ext_resource type="Texture2D" uid="uid://dpn03rcfnt7rx" path="res://images/level_page/rocket.png" id="8_igw7c"]
+[ext_resource type="Script" uid="uid://cjk32o1i0eccm" path="res://scripts/star_venus.gd" id="10_ogrnp"]
 
 [node name="LevelPageNode" type="Node2D"]
 script = ExtResource("1_nnj5f")
@@ -38,23 +41,26 @@ offset_top = 555.04346
 offset_right = 2686.4446
 offset_bottom = 739.1305
 mouse_filter = 2
+script = ExtResource("5_j4n7u")
+gray_star = ExtResource("6_rskdi")
+gold_star = ExtResource("5_my82s")
 
 [node name="star1" type="TextureRect" parent="mercury/star_container"]
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("5_my82s")
+texture = ExtResource("6_rskdi")
 expand_mode = 2
 
 [node name="star2" type="TextureRect" parent="mercury/star_container"]
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("5_my82s")
+texture = ExtResource("6_rskdi")
 expand_mode = 2
 
 [node name="star3" type="TextureRect" parent="mercury/star_container"]
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("5_my82s")
+texture = ExtResource("6_rskdi")
 expand_mode = 2
 
 [node name="venus" type="TextureButton" parent="."]
@@ -66,32 +72,6 @@ scale = Vector2(0.23, 0.23)
 texture_normal = ExtResource("6_ya3mj")
 stretch_mode = 0
 script = ExtResource("6_sr1gy")
-
-[node name="star_container" type="HBoxContainer" parent="venus"]
-layout_mode = 0
-offset_left = 162.69556
-offset_top = 828.95654
-offset_right = 2794.6956
-offset_bottom = 1012.95654
-mouse_filter = 2
-
-[node name="star1" type="TextureRect" parent="venus/star_container"]
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("5_my82s")
-expand_mode = 2
-
-[node name="star2" type="TextureRect" parent="venus/star_container"]
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("5_my82s")
-expand_mode = 2
-
-[node name="star3" type="TextureRect" parent="venus/star_container"]
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("5_my82s")
-expand_mode = 2
 
 [node name="lock" type="Sprite2D" parent="."]
 position = Vector2(503.99997, 229)
@@ -115,6 +95,34 @@ texture = ExtResource("8_igw7c")
 
 [node name="venusspot" type="Marker2D" parent="."]
 position = Vector2(495, 116)
+
+[node name="star_container" type="HBoxContainer" parent="."]
+offset_left = 442.41998
+offset_top = 317.66
+offset_right = 5979.42
+offset_bottom = 359.66
+mouse_filter = 2
+script = ExtResource("10_ogrnp")
+gray_star = ExtResource("6_rskdi")
+gold_star = ExtResource("5_my82s")
+
+[node name="star1" type="TextureRect" parent="star_container"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("6_rskdi")
+expand_mode = 2
+
+[node name="star2" type="TextureRect" parent="star_container"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("6_rskdi")
+expand_mode = 2
+
+[node name="star3" type="TextureRect" parent="star_container"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("6_rskdi")
+expand_mode = 2
 
 [connection signal="pressed" from="mercury" to="mercury" method="_on_pressed"]
 [connection signal="pressed" from="venus" to="venus" method="_on_pressed"]

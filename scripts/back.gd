@@ -1,12 +1,9 @@
 extends Button
 
-
-
 func _on_pressed():
 	dim_screen()
 	check_sureness()
 	
-
 @onready var dim = get_node("../../CanvasLayer6/dim")
 @onready var usure = get_node("../../usure?")
 

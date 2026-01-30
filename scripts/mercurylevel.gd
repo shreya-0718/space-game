@@ -5,7 +5,7 @@ extends Node2D
 @onready var level_start = $levelstart
 @onready var level_end = $levelend
 @onready var spot = $spawnpoint2
-
+@onready var powerups = $CanvasLayer3/powerups
 func _ready():
 	await get_tree().process_frame
 	if global.entered:
@@ -16,13 +16,9 @@ func _ready():
 	var fill = progress_bar.get_theme_stylebox("fill")
 	fill.bg_color = Color.RED
 	progress_bar.value = 50
-
-func update_stars():
-	var container = get_node("CanvasLayer2/star_container") 
-	var stars = container.get_children()
-	for i in range(stars.size()):
-		stars[i].modulate = Color(1, 1, 1, 1) if i < global.mercury_stars else Color(1, 1, 1, 0.3)
-
+	powerups.visible = false
+	
+			
 func update_powerups():
 	var container = get_node("CanvasLayer3/powerups")
 	var powerups = container.get_children()
@@ -32,7 +28,6 @@ func update_powerups():
 
 func _process(delta):
 	update_progress_bar()
-	update_stars()
 	update_powerups()
 	progress_bar.visible = true
 	if global.passedmercury:
