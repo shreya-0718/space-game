@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=16 format=3 uid="uid://cj042qejdnd52"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://cj042qejdnd52"]
 
 [ext_resource type="Texture2D" uid="uid://dinfwcjgv1w8y" path="res://images/astronaut/Idle.png" id="1_ompn2"]
 [ext_resource type="Texture2D" uid="uid://bb1gfokfp7haf" path="res://images/astronaut/Jump.png" id="2_evcfu"]
