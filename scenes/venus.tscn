@@ -27,6 +27,8 @@
 [ext_resource type="Script" uid="uid://c442tqbkww5lr" path="res://scripts/barrier.gd" id="22_yc0rh"]
 [ext_resource type="Texture2D" uid="uid://c8i0kfhhmu6bl" path="res://images/venus/checkpoint.png" id="23_tjbme"]
 [ext_resource type="Texture2D" uid="uid://u675rjigxrfo" path="res://images/venus/clouds/cloud9.png" id="24_rbi8o"]
+[ext_resource type="Script" uid="uid://2731iaul2b00" path="res://scripts/water.gd" id="28_y812g"]
+[ext_resource type="Texture2D" uid="uid://cybe6au0sik6f" path="res://images/venus/snow.png" id="29_0uv3g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wwsvu"]
 texture = ExtResource("3_rbi8o")
@@ -247,6 +249,17 @@ size = Vector2(552.25, 394)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nykqm"]
 size = Vector2(12, 725)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_y812g"]
+a = Vector2(4745, 254)
+b = Vector2(4802, 315)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0uv3g"]
+a = Vector2(4672, 313)
+b = Vector2(4730, 251)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0uv3g"]
+size = Vector2(257.5, 135)
+
 [node name="Venus" type="Node" unique_id=1230036420]
 script = ExtResource("1_8u8nx")
 
@@ -256,7 +269,7 @@ tile_map_data = PackedByteArray("AADz/x0AAAAAAAIAAADz/x4AAAAAAAMAAADz/x8AAAAAAAQ
 tile_set = SubResource("TileSet_tjbme")
 
 [node name="astronaut" type="CharacterBody2D" parent="." unique_id=1639798012 groups=["astronaut"]]
-position = Vector2(7682, 2060)
+position = Vector2(1626, 2156)
 script = ExtResource("2_xwevf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="astronaut" unique_id=1271940607]
@@ -497,7 +510,7 @@ position = Vector2(6020, 395)
 [node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=924980141]
 layer = -50209482
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer3" unique_id=477625522]
+[node name="bckg" type="Sprite2D" parent="CanvasLayer3" unique_id=477625522]
 position = Vector2(485.37802, 321.3125)
 scale = Vector2(0.7081103, 0.70811033)
 texture = ExtResource("14_ud6k2")
@@ -525,7 +538,7 @@ position = Vector2(5614, 1404)
 script = ExtResource("15_426g8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="getready" unique_id=399901753]
-position = Vector2(1906, 442)
+position = Vector2(2165, 1899)
 shape = SubResource("CircleShape2D_8u8nx")
 
 [node name="Label" type="Label" parent="." unique_id=2099922111]
@@ -626,7 +639,7 @@ expand_mode = 2
 script = ExtResource("22_yc0rh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="barrier" unique_id=262235551]
-position = Vector2(423, 269)
+position = Vector2(1656, 1880)
 shape = SubResource("RectangleShape2D_nykqm")
 
 [node name="Label4" type="Label" parent="barrier" unique_id=1948265480]
@@ -665,6 +678,43 @@ text = "Beware of acid rain ... good thing you have your raincoat from earlier!"
 horizontal_alignment = 1
 autowrap_mode = 2
 
+[node name="metal snow" type="Area2D" parent="." unique_id=340112706]
+script = ExtResource("28_y812g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="metal snow" unique_id=2094727370]
+shape = SubResource("SegmentShape2D_y812g")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="metal snow" unique_id=2085649749]
+shape = SubResource("SegmentShape2D_0uv3g")
+
+[node name="Label4" type="Label" parent="metal snow" unique_id=1655089793]
+offset_left = 4561.0
+offset_top = 145.0
+offset_right = 4923.0
+offset_bottom = 194.0
+text = "Venus has metal snow - which can be poisonous @shreya what is the right thing?"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="snowimage" type="Sprite2D" parent="metal snow" unique_id=1142858664]
+position = Vector2(4733.5, 285.00003)
+scale = Vector2(0.34320536, 0.19211827)
+texture = ExtResource("29_0uv3g")
+
+[node name="lava" type="Area2D" parent="." unique_id=389592706]
+script = ExtResource("28_y812g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lava" unique_id=1102220236]
+position = Vector2(127.5, 2177.5)
+shape = SubResource("RectangleShape2D_0uv3g")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="lava" unique_id=488696905]
+position = Vector2(576.25, 2176)
+shape = SubResource("RectangleShape2D_0uv3g")
+
+[node name="startpoint" type="Marker2D" parent="." unique_id=188094749]
+position = Vector2(1605, 2105)
+
 [connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
 [connection signal="body_entered" from="star2" to="star2" method="_on_body_entered"]
 [connection signal="body_entered" from="star3" to="star3" method="_on_body_entered"]
@@ -678,3 +728,5 @@ autowrap_mode = 2
 [connection signal="body_entered" from="getout" to="getout" method="_on_body_entered"]
 [connection signal="body_entered" from="boots" to="boots" method="_on_body_entered"]
 [connection signal="body_exited" from="boots" to="boots" method="_on_body_exited"]
+[connection signal="body_entered" from="metal snow" to="metal snow" method="_on_body_entered"]
+[connection signal="body_entered" from="lava" to="lava" method="_on_body_entered"]
