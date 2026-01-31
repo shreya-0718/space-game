@@ -14,8 +14,8 @@ var move_speed = 300
 var jump_force = 100.0
 var glide_gravity_scale := 0.25 
 
-var checkpoint_position: Vector2
-var checkpoint_scene: String
+#for checkpoint
+var passedcheckpoint = false
 
 var num_jumps = 0
 

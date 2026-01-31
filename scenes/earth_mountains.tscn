@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cp0nvaqjom7jq"]
+
+[ext_resource type="Texture2D" uid="uid://cxq7oosbqoasd" path="res://images/earth/mountains bckg.jpeg" id="1_23mwf"]
+
+[node name="Node2D" type="Node2D" unique_id=1849760801]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1269889931]
+position = Vector2(481.39615, 320.625)
+scale = Vector2(0.776124, 0.776124)
+texture = ExtResource("1_23mwf")

@@ -1,16 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://x3d4qg7e5eww"]
+[gd_scene format=3 uid="uid://x3d4qg7e5eww"]
 
 [ext_resource type="Script" uid="uid://cybohyg412588" path="res://scripts/mercurygame.gd" id="1_fa4wg"]
+[ext_resource type="Texture2D" uid="uid://dx11r03vxy72s" path="res://images/intro_page/title page bckg.jpeg" id="2_ffyet"]
 [ext_resource type="Texture2D" uid="uid://e7gmweavhepf" path="res://images/mercuryminigame/sliderbargradient.png" id="3_8xc5v"]
 [ext_resource type="Script" uid="uid://bk24p387msmw1" path="res://scenes/again.gd" id="4_8xc5v"]
 [ext_resource type="Texture2D" uid="uid://vnxfacbuhnoo" path="res://images/mercuryminigame/slider.png" id="4_ffyet"]
+[ext_resource type="Texture2D" uid="uid://n8j5kmhhcdi8" path="res://images/mercuryminigame/retry.png" id="5_vmtrl"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=1863724316]
 script = ExtResource("1_fa4wg")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=821984660]
 
-[node name="bar" type="TextureRect" parent="CanvasLayer"]
+[node name="bckg" type="Sprite2D" parent="CanvasLayer" unique_id=106774389]
+position = Vector2(478.0019, 316.25)
+scale = Vector2(0.5983993, 0.5983993)
+texture = ExtResource("2_ffyet")
+
+[node name="bar" type="TextureRect" parent="CanvasLayer" unique_id=343286979]
 z_index = 1
 offset_left = 119.0
 offset_top = -62.0
@@ -18,35 +25,41 @@ offset_right = 815.0
 offset_bottom = 344.0
 texture = ExtResource("3_8xc5v")
 
-[node name="slider" type="Sprite2D" parent="CanvasLayer"]
+[node name="slider" type="Sprite2D" parent="CanvasLayer" unique_id=49292140]
 z_index = 1
 position = Vector2(230.00002, 106)
 scale = Vector2(1.1451613, 2.011628)
 texture = ExtResource("4_ffyet")
 
-[node name="start" type="Marker2D" parent="CanvasLayer"]
+[node name="start" type="Marker2D" parent="CanvasLayer" unique_id=1018571806]
 z_index = 1
 position = Vector2(404, 106)
 
-[node name="end" type="Marker2D" parent="CanvasLayer"]
+[node name="end" type="Marker2D" parent="CanvasLayer" unique_id=402952261]
 z_index = 1
 position = Vector2(526, 108)
 
-[node name="stop1" type="Marker2D" parent="CanvasLayer"]
+[node name="stop1" type="Marker2D" parent="CanvasLayer" unique_id=1268221845]
 z_index = 1
 position = Vector2(211, 109)
 
-[node name="stop2" type="Marker2D" parent="CanvasLayer"]
+[node name="stop2" type="Marker2D" parent="CanvasLayer" unique_id=513175557]
 z_index = 1
 position = Vector2(699, 110)
 
-[node name="again" type="Button" parent="CanvasLayer"]
-z_index = 1
-offset_left = 424.0
-offset_top = 451.0
-offset_right = 501.0
-offset_bottom = 482.0
-text = "try again"
+[node name="again" type="TextureButton" parent="CanvasLayer" unique_id=1319016067]
+offset_left = 360.0
+offset_top = 298.0
+offset_right = 585.0
+offset_bottom = 523.0
+texture_normal = ExtResource("5_vmtrl")
 script = ExtResource("4_8xc5v")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1115053217]
+offset_left = 289.0
+offset_top = 371.0
+offset_right = 662.0
+offset_bottom = 394.0
+text = "You got a raincoat (it will be very useful later on)"
 
 [connection signal="pressed" from="CanvasLayer/again" to="CanvasLayer/again" method="_on_pressed"]

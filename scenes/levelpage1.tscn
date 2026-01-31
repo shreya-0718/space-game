@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cmhlv5c17pb3h"]
+[gd_scene format=3 uid="uid://cmhlv5c17pb3h"]
 
 [ext_resource type="Script" uid="uid://dxg58er1iashs" path="res://scripts/levelpage.gd" id="1_nnj5f"]
 [ext_resource type="Texture2D" uid="uid://ca8b72ctem8wc" path="res://images/level_page/levelpage bckg.jpeg" id="2_hji0n"]
@@ -13,18 +13,18 @@
 [ext_resource type="Texture2D" uid="uid://dpn03rcfnt7rx" path="res://images/level_page/rocket.png" id="8_igw7c"]
 [ext_resource type="Script" uid="uid://cjk32o1i0eccm" path="res://scripts/star_venus.gd" id="10_ogrnp"]
 
-[node name="LevelPageNode" type="Node2D"]
+[node name="LevelPageNode" type="Node2D" unique_id=248879711]
 script = ExtResource("1_nnj5f")
 
-[node name="Backgroundtemp" type="Sprite2D" parent="."]
+[node name="Backgroundtemp" type="Sprite2D" parent="." unique_id=2085109668]
 position = Vector2(1059.453, 326.99997)
 scale = Vector2(1.4431835, 1.3329)
 texture = ExtResource("2_hji0n")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=701173378]
 position = Vector2(478, 325)
 
-[node name="mercury" type="TextureButton" parent="."]
+[node name="mercury" type="TextureButton" parent="." unique_id=836756131]
 offset_left = 224.0
 offset_top = 304.0
 offset_right = 823.0
@@ -34,7 +34,7 @@ texture_normal = ExtResource("3_my82s")
 stretch_mode = 0
 script = ExtResource("4_hji0n")
 
-[node name="star_container" type="HBoxContainer" parent="mercury"]
+[node name="star_container" type="HBoxContainer" parent="mercury" unique_id=465891399]
 layout_mode = 0
 offset_left = 54.0
 offset_top = 555.04346
@@ -45,25 +45,25 @@ script = ExtResource("5_j4n7u")
 gray_star = ExtResource("6_rskdi")
 gold_star = ExtResource("5_my82s")
 
-[node name="star1" type="TextureRect" parent="mercury/star_container"]
+[node name="star1" type="TextureRect" parent="mercury/star_container" unique_id=1429674832]
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("6_rskdi")
 expand_mode = 2
 
-[node name="star2" type="TextureRect" parent="mercury/star_container"]
+[node name="star2" type="TextureRect" parent="mercury/star_container" unique_id=2080316558]
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("6_rskdi")
 expand_mode = 2
 
-[node name="star3" type="TextureRect" parent="mercury/star_container"]
+[node name="star3" type="TextureRect" parent="mercury/star_container" unique_id=380761339]
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("6_rskdi")
 expand_mode = 2
 
-[node name="venus" type="TextureButton" parent="."]
+[node name="venus" type="TextureButton" parent="." unique_id=1429480208]
 offset_left = 409.0
 offset_top = 129.0
 offset_right = 1215.0
@@ -73,12 +73,12 @@ texture_normal = ExtResource("6_ya3mj")
 stretch_mode = 0
 script = ExtResource("6_sr1gy")
 
-[node name="lock" type="Sprite2D" parent="."]
+[node name="lock" type="Sprite2D" parent="." unique_id=1885293211]
 position = Vector2(503.99997, 229)
 scale = Vector2(0.24753693, 0.24753697)
 texture = ExtResource("7_hji0n")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=163333192]
 offset_left = 478.0
 offset_top = 431.0
 offset_right = 748.0
@@ -88,15 +88,15 @@ text = "Press the arrow keys or drag with two fingers to discover all the planet
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="rocket" type="Sprite2D" parent="."]
+[node name="rocket" type="Sprite2D" parent="." unique_id=2069861278]
 position = Vector2(295, 285)
 scale = Vector2(0.033019736, 0.033019736)
 texture = ExtResource("8_igw7c")
 
-[node name="venusspot" type="Marker2D" parent="."]
-position = Vector2(495, 116)
+[node name="venusspot" type="Marker2D" parent="." unique_id=1372876940]
+position = Vector2(504, 122)
 
-[node name="star_container" type="HBoxContainer" parent="."]
+[node name="star_container" type="HBoxContainer" parent="." unique_id=356723442]
 offset_left = 442.41998
 offset_top = 317.66
 offset_right = 5979.42
@@ -106,23 +106,37 @@ script = ExtResource("10_ogrnp")
 gray_star = ExtResource("6_rskdi")
 gold_star = ExtResource("5_my82s")
 
-[node name="star1" type="TextureRect" parent="star_container"]
+[node name="star1" type="TextureRect" parent="star_container" unique_id=369725195]
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("6_rskdi")
 expand_mode = 2
 
-[node name="star2" type="TextureRect" parent="star_container"]
+[node name="star2" type="TextureRect" parent="star_container" unique_id=1980779337]
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("6_rskdi")
 expand_mode = 2
 
-[node name="star3" type="TextureRect" parent="star_container"]
+[node name="star3" type="TextureRect" parent="star_container" unique_id=1547545321]
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("6_rskdi")
 expand_mode = 2
+
+[node name="Label2" type="Label" parent="." unique_id=1166381760]
+offset_left = 264.0
+offset_top = 477.0
+offset_right = 348.0
+offset_bottom = 534.0
+text = "Mercury"
+
+[node name="Label3" type="Label" parent="." unique_id=263877019]
+offset_left = 475.0
+offset_top = 360.0
+offset_right = 559.0
+offset_bottom = 383.0
+text = "Venus"
 
 [connection signal="pressed" from="mercury" to="mercury" method="_on_pressed"]
 [connection signal="pressed" from="venus" to="venus" method="_on_pressed"]

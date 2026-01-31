@@ -285,7 +285,7 @@ animation = &"idle"
 [node name="start_clouds" type="Node2D" parent="." unique_id=1048130702]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="start_clouds" unique_id=169343787]
-position = Vector2(-550, 2109)
+position = Vector2(-252, 2112)
 
 [node name="Cloud1" type="Sprite2D" parent="start_clouds/StaticBody2D" unique_id=381732272]
 position = Vector2(122.139275, -84.625015)
@@ -298,7 +298,7 @@ scale = Vector2(1.0000001, 1)
 shape = SubResource("RectangleShape2D_tjbme")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="start_clouds" unique_id=727021992]
-position = Vector2(-454, 2112)
+position = Vector2(-664, 2115)
 
 [node name="Cloud2" type="Sprite2D" parent="start_clouds/StaticBody2D2" unique_id=1638612154]
 position = Vector2(293, -180.99998)
@@ -311,7 +311,7 @@ scale = Vector2(1.0000001, 1)
 shape = SubResource("RectangleShape2D_rbi8o")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="start_clouds" unique_id=411500143]
-position = Vector2(-329, 2091)
+position = Vector2(-1061, 2025)
 
 [node name="Sprite2D" type="Sprite2D" parent="start_clouds/StaticBody2D3" unique_id=1465788919]
 position = Vector2(465, -260.00006)
@@ -511,7 +511,7 @@ position = Vector2(1083.75, 108)
 shape = SubResource("RectangleShape2D_lepuu")
 
 [node name="stop2" type="Marker2D" parent="." unique_id=2119107543]
-position = Vector2(10675, 1984)
+position = Vector2(10543, 1990)
 
 [node name="gateentry" type="StaticBody2D" parent="." unique_id=112524245]
 position = Vector2(5614, 1404)
@@ -547,7 +547,7 @@ offset_bottom = 2705.0
 color = Color(0, 0, 0, 0.5882353)
 
 [node name="stop1" type="Marker2D" parent="." unique_id=584387230]
-position = Vector2(8382, 2036)
+position = Vector2(8288, 2036)
 
 [node name="gateexit" type="StaticBody2D" parent="." unique_id=188885112]
 position = Vector2(5614, 1404)
@@ -576,6 +576,7 @@ position = Vector2(1768, -106)
 shape = SubResource("RectangleShape2D_8u8nx")
 
 [node name="boots" type="Area2D" parent="." unique_id=933547142]
+position = Vector2(-725, -60)
 script = ExtResource("17_ya5ls")
 
 [node name="Boots" type="Sprite2D" parent="boots" unique_id=434626075]
@@ -585,14 +586,14 @@ scale = Vector2(0.24137928, 0.24137928)
 texture = ExtResource("18_lepuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="boots" unique_id=1260537463]
-position = Vector2(-2.875, 1800)
+position = Vector2(218, 1902)
 shape = SubResource("RectangleShape2D_yc0rh")
 
 [node name="Label3" type="Label" parent="." unique_id=2142008046]
-offset_left = 7.0
-offset_top = 1613.0
-offset_right = 226.0
-offset_bottom = 1636.0
+offset_left = -721.0
+offset_top = 1573.0
+offset_right = -502.0
+offset_bottom = 1596.0
 theme_override_font_sizes/font_size = 16
 text = "Press \"E\" to equip the boots!"
 
@@ -629,12 +630,12 @@ position = Vector2(423, 269)
 shape = SubResource("RectangleShape2D_nykqm")
 
 [node name="Label4" type="Label" parent="barrier" unique_id=1948265480]
-offset_left = 335.0
-offset_top = 468.0
-offset_right = 414.0
-offset_bottom = 569.0
+offset_left = 1431.0
+offset_top = 1940.0002
+offset_right = 1641.4302
+offset_bottom = 2041.0002
 rotation = 0.004504407
-theme_override_font_sizes/font_size = 6
+theme_override_font_sizes/font_size = 16
 text = "Mountains here are too slippery... find some boots to help you climb!"
 horizontal_alignment = 1
 autowrap_mode = 2
