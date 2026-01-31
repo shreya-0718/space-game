@@ -32,8 +32,6 @@ func _ready():
 var speed = 600
 var direction = 1
 
-
-
 func _process(delta):
 	slider.position.x += speed * direction * delta
 	if slider.position.x <= stopleft:
