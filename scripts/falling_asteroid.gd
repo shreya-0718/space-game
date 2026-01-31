@@ -32,3 +32,5 @@ func _process(delta):
 func _on_body_exited(body):
 	if body.name == "astronaut":
 		entered = false
+	if body.name == "StaticBody2D":
+		body.visible = false

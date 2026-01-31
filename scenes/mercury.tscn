@@ -10,16 +10,16 @@
 [ext_resource type="SpriteFrames" uid="uid://cj042qejdnd52" path="res://images/astronaut/astronaut_animation.tres" id="5_s7w1k"]
 [ext_resource type="Texture2D" uid="uid://6w055ero2apx" path="res://images/mercury/mercury 1 bckg.jpeg" id="5_ta7jb"]
 [ext_resource type="TileSet" uid="uid://bubbasbgvh4mc" path="res://images/mercury/mercury_tileset.tres" id="5_vujqb"]
-[ext_resource type="Script" path="res://scripts/water.gd" id="9_p3g0t"]
-[ext_resource type="Script" path="res://scenes/checkpoint.gd" id="11_u28sr"]
+[ext_resource type="Script" uid="uid://2731iaul2b00" path="res://scripts/water.gd" id="9_p3g0t"]
+[ext_resource type="Script" uid="uid://bveutufglpxep" path="res://scenes/checkpoint.gd" id="11_u28sr"]
 [ext_resource type="Texture2D" uid="uid://c82mv17yv7jiu" path="res://images/mercury/flag.png" id="12_r5swh"]
-[ext_resource type="Script" path="res://scripts/zoomout.gd" id="12_vujqb"]
-[ext_resource type="Script" path="res://scripts/zoomin.gd" id="13_ta7jb"]
-[ext_resource type="Script" path="res://scripts/iceskates.gd" id="14_2115d"]
+[ext_resource type="Script" uid="uid://bhrlqb6juuy2a" path="res://scripts/zoomout.gd" id="12_vujqb"]
+[ext_resource type="Script" uid="uid://clw7wi0msuovm" path="res://scripts/zoomin.gd" id="13_ta7jb"]
+[ext_resource type="Script" uid="uid://dlaxqvogxis5r" path="res://scripts/iceskates.gd" id="14_2115d"]
 [ext_resource type="Texture2D" uid="uid://7wk5vmcbsxsv" path="res://images/mercury/left arrow.png" id="16_s7w1k"]
 [ext_resource type="Texture2D" uid="uid://bf1417yva3ltu" path="res://images/mercury/iceskates.png" id="16_vrg72"]
 [ext_resource type="Texture2D" uid="uid://bo05i8wgk88g6" path="res://images/mercury/a.png" id="17_s7w1k"]
-[ext_resource type="Script" path="res://scripts/waterfall.gd" id="17_utlqg"]
+[ext_resource type="Script" uid="uid://bptu7s4cg0q3w" path="res://scripts/waterfall.gd" id="17_utlqg"]
 [ext_resource type="Texture2D" uid="uid://bqubey0spgbql" path="res://images/mercury/raincoat.png" id="17_vrg72"]
 [ext_resource type="Texture2D" uid="uid://d3m14m6hbki5g" path="res://images/mercury/right arrow.png" id="18_nh86p"]
 [ext_resource type="Texture2D" uid="uid://cu4b2k0q5kxi7" path="res://images/mercury/d.png" id="19_p3g0t"]
@@ -28,10 +28,10 @@
 [ext_resource type="Texture2D" uid="uid://cleyhsn86koph" path="res://images/level_page/Back.png" id="22_ta7jb"]
 [ext_resource type="Script" uid="uid://rkxlm13rfg36" path="res://scripts/skiptutorial.gd" id="25_jy2og"]
 [ext_resource type="Script" uid="uid://xhnj7qwvf34d" path="res://scripts/back.gd" id="27_s7w1k"]
-[ext_resource type="Script" path="res://scripts/yes.gd" id="28_s7w1k"]
-[ext_resource type="Script" path="res://scripts/no.gd" id="29_nh86p"]
+[ext_resource type="Script" uid="uid://qcgrioupnspr" path="res://scripts/yes.gd" id="28_s7w1k"]
+[ext_resource type="Script" uid="uid://dqc0rww00brfs" path="res://scripts/no.gd" id="29_nh86p"]
 [ext_resource type="Script" uid="uid://7curksp74rrb" path="res://scenes/raincoat.gd" id="30_nh86p"]
-[ext_resource type="Script" path="res://scripts/crystal.gd" id="32_vujqb"]
+[ext_resource type="Script" uid="uid://bdbbq62f8kbmt" path="res://scripts/crystal.gd" id="32_vujqb"]
 [ext_resource type="Texture2D" uid="uid://etwdh3mmkjfq" path="res://images/mercury/crystal.png" id="33_ta7jb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_doqmq"]
@@ -669,7 +669,7 @@ position = Vector2(14572, 689)
 script = ExtResource("9_p3g0t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="crater" unique_id=1856694934]
-position = Vector2(4252.75, 931.5)
+position = Vector2(4255, 1017)
 shape = SubResource("RectangleShape2D_vujqb")
 
 [node name="startpoint" type="Marker2D" parent="." unique_id=911174768]

@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://bi1d457bj8157" path="res://images/level_page/lock.png" id="7_hji0n"]
 [ext_resource type="Texture2D" uid="uid://dpn03rcfnt7rx" path="res://images/level_page/rocket.png" id="8_igw7c"]
 [ext_resource type="Script" uid="uid://cjk32o1i0eccm" path="res://scripts/star_venus.gd" id="10_ogrnp"]
+[ext_resource type="Texture2D" uid="uid://cxtcpcqql3w5a" path="res://images/level_page/earth.png" id="13_2pjr8"]
+[ext_resource type="Script" uid="uid://b0rwuv2aj47lg" path="res://scripts/star_earth.gd" id="14_ryp5e"]
 
 [node name="LevelPageNode" type="Node2D" unique_id=248879711]
 script = ExtResource("1_nnj5f")
@@ -79,10 +81,10 @@ scale = Vector2(0.24753693, 0.24753697)
 texture = ExtResource("7_hji0n")
 
 [node name="Label" type="Label" parent="." unique_id=163333192]
-offset_left = 478.0
-offset_top = 431.0
-offset_right = 748.0
-offset_bottom = 608.0
+offset_left = 381.0
+offset_top = 442.0
+offset_right = 651.0
+offset_bottom = 619.0
 theme_override_font_sizes/font_size = 25
 text = "Press the arrow keys or drag with two fingers to discover all the planets!"
 horizontal_alignment = 1
@@ -137,6 +139,46 @@ offset_top = 360.0
 offset_right = 559.0
 offset_bottom = 383.0
 text = "Venus"
+
+[node name="earth" type="TextureButton" parent="." unique_id=346432855]
+offset_left = 650.0
+offset_top = 300.0
+offset_right = 1520.0
+offset_bottom = 1137.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("13_2pjr8")
+
+[node name="starcontainer" type="HBoxContainer" parent="." unique_id=782465867]
+offset_left = 667.0
+offset_top = 461.0
+offset_right = 807.7
+offset_bottom = 503.0
+script = ExtResource("14_ryp5e")
+gray_star = ExtResource("6_rskdi")
+gold_star = ExtResource("5_my82s")
+
+[node name="star1" type="TextureRect" parent="starcontainer" unique_id=1308580315]
+layout_mode = 2
+texture = ExtResource("6_rskdi")
+expand_mode = 2
+
+[node name="star2" type="TextureRect" parent="starcontainer" unique_id=1922573176]
+layout_mode = 2
+texture = ExtResource("6_rskdi")
+expand_mode = 2
+
+[node name="star3" type="TextureRect" parent="starcontainer" unique_id=707344627]
+layout_mode = 2
+texture = ExtResource("6_rskdi")
+expand_mode = 2
+
+[node name="earthspot" type="Marker2D" parent="." unique_id=990555681]
+position = Vector2(733, 291)
+
+[node name="lock2" type="Sprite2D" parent="." unique_id=1685419961]
+position = Vector2(736, 386)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("7_hji0n")
 
 [connection signal="pressed" from="mercury" to="mercury" method="_on_pressed"]
 [connection signal="pressed" from="venus" to="venus" method="_on_pressed"]

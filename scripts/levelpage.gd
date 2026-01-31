@@ -5,19 +5,41 @@ extends Node2D
 @onready var lock = get_node("lock")
 @onready var rocket = get_node("rocket")
 @onready var venusspot = get_node("venusspot")
+@onready var earth = get_node("earth")
+@onready var lock2 = get_node("lock2")
+@onready var earthspot = get_node("earthspot")
+
+var mercurydone = false
+var venusdone = false
 func _ready():
-	check_locked()
+	check_venus()
+	check_earth()
+	
 
-func check_locked():
-	venus.modulate = Color(0.5, 0.5, 0.5, 1.0)
-	lock.visible = true
-	venus.disabled = true
-	if global.passedmercury:
-		venus.modulate = Color.WHITE
-		rocket.global_position = venusspot.global_position
-		lock.visible = false
-		venus.disabled = false
-
+func check_venus():
+	if not mercurydone:
+		venus.modulate = Color(0.5, 0.5, 0.5, 1.0)
+		lock.visible = true
+		venus.disabled = true
+		if global.passedmercury:
+			venus.modulate = Color.WHITE
+			rocket.global_position = venusspot.global_position
+			lock.visible = false
+			venus.disabled = false
+			mercurydone = true
+		
+func check_earth():
+	if not venusdone:
+		earth.modulate = Color(0.5, 0.5, 0.5, 1.0)
+		lock2.visible = true
+		earth.disabled = true
+		if global.passedvenus:
+			earth.modulate = Color.WHITE
+			rocket.global_position = earthspot.global_position
+			lock2.visible = false
+			earth.disabled = false
+			venusdone = true
+		
 #ARROW KEYS
 var scroll_speed := 400
 

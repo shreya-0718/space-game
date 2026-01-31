@@ -9,6 +9,7 @@ func _on_body_entered(body):
 		crystal.visible = false
 		label.visible = true
 		global.passedmercury = true
+		global.passedvenus = true
 		
 	
 		

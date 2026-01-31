@@ -2,6 +2,7 @@ extends Node2D
 
 var mercury_stars: int = 0
 var venus_stars: int = 0
+var earth_stars: int = 0
 
 var ice_skates: int = 0
 var raincoat: int = 0
@@ -25,6 +26,7 @@ var entered = false
 
 #for locked levels
 var passedmercury = false
+var passedvenus = false
 
 
 #for reverse movement on venus

@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var label = get_node("../Label3")
+@onready var label = get_node("../Label4")
 @onready var boots = get_node("../boots/Boots")
 
 var player__inside = false
