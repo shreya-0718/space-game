@@ -32,6 +32,8 @@
 [ext_resource type="Script" uid="uid://dlswbpc0iqdbx" path="res://scripts/moving_cloud.gd" id="30_yd4sw"]
 [ext_resource type="Texture2D" uid="uid://c3txyq867g8md" path="res://images/venus/clouds/cloud4.png" id="31_yd4sw"]
 [ext_resource type="Script" uid="uid://dtf3v7lf7lx2j" path="res://scripts/thunder_cloud.gd" id="32_m310k"]
+[ext_resource type="Script" uid="uid://d16iriehslnbv" path="res://scripts/falling_asteroid.gd" id="33_xe2my"]
+[ext_resource type="Texture2D" uid="uid://dafxm5ie3v3j8" path="res://images/intro_page/asteroid1.png" id="34_y1d7a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wwsvu"]
 texture = ExtResource("3_rbi8o")
@@ -276,7 +278,13 @@ size = Vector2(170.625, 46.25)
 size = Vector2(1661.5625, 52.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rxmr8"]
-size = Vector2(1555, 141)
+size = Vector2(1555, 51)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0bbd5"]
+size = Vector2(287, 111)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_msgdu"]
+size = Vector2(2281.75, 974.5)
 
 [node name="Venus" type="Node" unique_id=1230036420]
 script = ExtResource("1_8u8nx")
@@ -786,8 +794,40 @@ position = Vector2(12817.219, 1425)
 shape = SubResource("RectangleShape2D_yes2q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="thunder cloud" unique_id=84911960]
-position = Vector2(12880.5, 1381.5)
+position = Vector2(12880.5, 1426.5)
 shape = SubResource("RectangleShape2D_rxmr8")
+
+[node name="Label" type="Label" parent="thunder cloud" unique_id=2117566743]
+offset_left = 12132.0
+offset_top = 1198.0
+offset_right = 12767.0
+offset_bottom = 1696.0
+text = "Lightning clouds in Venus can strike you at any time... watch out! @shreya pls help
+"
+
+[node name="falling asteroid" type="Area2D" parent="." unique_id=1862639616]
+script = ExtResource("33_xe2my")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="falling asteroid" unique_id=922373039]
+
+[node name="asteroid" type="Sprite2D" parent="falling asteroid/StaticBody2D" unique_id=1823814950]
+position = Vector2(13635, 1021.99994)
+scale = Vector2(0.48102662, 0.48102662)
+texture = ExtResource("34_y1d7a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="falling asteroid/StaticBody2D" unique_id=137824929]
+position = Vector2(13644, 1059)
+shape = SubResource("RectangleShape2D_0bbd5")
+
+[node name="startlocation" type="Marker2D" parent="falling asteroid" unique_id=67880451]
+position = Vector2(14472, 1838)
+
+[node name="endlocation" type="Marker2D" parent="falling asteroid" unique_id=498623370]
+position = Vector2(13633, 1009)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="falling asteroid" unique_id=1027501378]
+position = Vector2(13972, 1365)
+shape = SubResource("RectangleShape2D_msgdu")
 
 [connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
 [connection signal="body_entered" from="star2" to="star2" method="_on_body_entered"]
@@ -808,3 +848,5 @@ shape = SubResource("RectangleShape2D_rxmr8")
 [connection signal="body_exited" from="moving cloud" to="moving cloud" method="_on_body_exited"]
 [connection signal="body_entered" from="thunder cloud" to="thunder cloud" method="_on_body_entered"]
 [connection signal="body_exited" from="thunder cloud" to="thunder cloud" method="_on_body_exited"]
+[connection signal="body_entered" from="falling asteroid" to="falling asteroid" method="_on_body_entered"]
+[connection signal="body_exited" from="falling asteroid" to="falling asteroid" method="_on_body_exited"]
