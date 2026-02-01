@@ -24,7 +24,7 @@ func _physics_process(delta):
 
 	var gravity : float = Global.mercury_gravity   
 
-	if Input.is_action_pressed("space") and Input.is_action_pressed("jump") and not is_on_floor():
+	if Input.is_action_pressed("space") and Input.is_action_pressed("jump") and not is_on_floor() and velocity.y > 0:
 		velocity.y += gravity * glide_gravity_scale * delta
 	elif not is_on_floor():
 		velocity.y += gravity * delta

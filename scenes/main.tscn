@@ -1,9 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://chbx0ute5ugu4"]
+[gd_scene format=3 uid="uid://chbx0ute5ugu4"]
 
 [ext_resource type="Script" uid="uid://dee610l7noxbf" path="res://scripts/intro.gd" id="1_tipki"]
 [ext_resource type="Texture2D" uid="uid://dx11r03vxy72s" path="res://images/intro_page/title page bckg.jpeg" id="2_tipki"]
 [ext_resource type="Texture2D" uid="uid://dcwy03pb2d3bh" path="res://images/intro_page/galactico.png" id="3_choun"]
-[ext_resource type="Texture2D" uid="uid://dpn03rcfnt7rx" path="res://images/level_page/rocket.png" id="4_tipki"]
+[ext_resource type="Texture2D" uid="uid://dpn03rcfnt7rx" path="res://images/level_page/Rocket.png" id="4_tipki"]
 [ext_resource type="Texture2D" uid="uid://bktfvbnjv1fa6" path="res://images/intro_page/planet.png" id="5_eb6dy"]
 [ext_resource type="Texture2D" uid="uid://dafxm5ie3v3j8" path="res://images/intro_page/asteroid1.png" id="6_trceg"]
 [ext_resource type="Texture2D" uid="uid://pgnejyrg0poe" path="res://images/intro_page/comet empty.png" id="7_85g3d"]
@@ -11,15 +11,15 @@
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ayt76"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=1042716078]
 script = ExtResource("1_tipki")
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="." unique_id=1847228510]
 position = Vector2(478.09024, 382.7585)
 scale = Vector2(0.5995115, 0.7217355)
 texture = ExtResource("2_tipki")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=60508847]
 z_index = 1000
 offset_left = 230.0
 offset_top = 504.0
@@ -30,47 +30,47 @@ text = "PLAY"
 icon = SubResource("PlaceholderTexture2D_ayt76")
 metadata/_edit_use_anchors_ = true
 
-[node name="Galactico" type="Sprite2D" parent="."]
+[node name="Galactico" type="Sprite2D" parent="." unique_id=1656612232]
 position = Vector2(483, 146)
 scale = Vector2(3.22131, 3.22131)
 texture = ExtResource("3_choun")
 
-[node name="spaceship" type="Sprite2D" parent="."]
+[node name="spaceship" type="Sprite2D" parent="." unique_id=1698813751]
 position = Vector2(508.99994, 362.99988)
 rotation = -1.39626
 scale = Vector2(0.1300362, 0.13487884)
 texture = ExtResource("4_tipki")
 
-[node name="window" type="Marker2D" parent="spaceship"]
+[node name="window" type="Marker2D" parent="spaceship" unique_id=344802849]
 position = Vector2(-4.8672643, -240.0822)
 
-[node name="planet" type="Sprite2D" parent="."]
+[node name="planet" type="Sprite2D" parent="." unique_id=232175328]
 position = Vector2(113.99999, 507.00003)
 scale = Vector2(0.540272, 0.540272)
 texture = ExtResource("5_eb6dy")
 
-[node name="asteroid1" type="Sprite2D" parent="."]
+[node name="asteroid1" type="Sprite2D" parent="." unique_id=38416270]
 position = Vector2(257, 384)
 scale = Vector2(0.30971, 0.30971)
 texture = ExtResource("6_trceg")
 
-[node name="asteroid2" type="Sprite2D" parent="."]
+[node name="asteroid2" type="Sprite2D" parent="." unique_id=616932141]
 position = Vector2(108.00003, 176.00006)
 rotation = -1.3002703
 scale = Vector2(0.23908715, 0.23908715)
 texture = ExtResource("7_85g3d")
 
-[node name="comet" type="Sprite2D" parent="."]
+[node name="comet" type="Sprite2D" parent="." unique_id=1616160944]
 position = Vector2(835.998, 368.6371)
 rotation = 0.0052359877
 scale = Vector2(0.2642578, 0.26425788)
 texture = ExtResource("8_choun")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=960471019]
 visible = false
 position = Vector2(479, 319)
 
-[node name="WhiteRect" type="ColorRect" parent="."]
+[node name="WhiteRect" type="ColorRect" parent="." unique_id=733347060]
 modulate = Color(1, 1, 1, 0)
 z_index = 991
 offset_left = -3.0
