@@ -35,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://dafxm5ie3v3j8" path="res://images/intro_page/asteroid1.png" id="34_y1d7a"]
 [ext_resource type="Script" uid="uid://bdbbq62f8kbmt" path="res://scripts/crystal.gd" id="35_rxmr8"]
 [ext_resource type="Texture2D" uid="uid://etwdh3mmkjfq" path="res://images/mercury/crystal.png" id="36_0bbd5"]
+[ext_resource type="FontFile" uid="uid://dqp5kyy7yyosk" path="res://pixelfont.ttf" id="36_rxmr8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wwsvu"]
 texture = ExtResource("3_rbi8o")
@@ -851,7 +852,8 @@ offset_left = 15353.0
 offset_top = 1471.0
 offset_right = 15552.0
 offset_bottom = 1815.0
-text = "One of the crystal's pieces has been found... explore the rest to find more! "
+theme_override_fonts/font = ExtResource("36_rxmr8")
+text = "ONE OF THE CRYSTAL'S PIECES HAS BEEN FOUND "
 autowrap_mode = 2
 
 [connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
