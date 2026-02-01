@@ -4,6 +4,14 @@ var move_speed : float = Global.move_speed
 var jump_force : float = Global.jump_force
 var glide_gravity_scale : float = Global.glide_gravity_scale 
 @onready var anim = $AnimatedSprite2D
+@export var zoom_level = Vector2(0.5, 0.5) 
+
+
+@onready var cam = get_node("Camera2D")
+
+func _ready():
+	if cam:
+		cam.zoom = zoom_level  
 
 
 func _physics_process(delta):

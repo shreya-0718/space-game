@@ -300,7 +300,7 @@ tile_map_data = PackedByteArray("AADz/x0AAAAAAAIAAADz/x4AAAAAAAMAAADz/x8AAAAAAAQ
 tile_set = SubResource("TileSet_tjbme")
 
 [node name="astronaut" type="CharacterBody2D" parent="." unique_id=1639798012 groups=["astronaut"]]
-position = Vector2(11564, 1929)
+position = Vector2(1638, 2178)
 script = ExtResource("2_xwevf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="astronaut" unique_id=1271940607]
@@ -785,6 +785,7 @@ position = Vector2(-1497, 497)
 shape = SubResource("RectangleShape2D_y1d7a")
 
 [node name="thunder cloud" type="Area2D" parent="." unique_id=1923514268]
+position = Vector2(9, 0)
 script = ExtResource("32_m310k")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="thunder cloud" unique_id=1620922721]

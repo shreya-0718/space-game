@@ -39,11 +39,13 @@ func _physics_process(delta):
 	move_and_slide()
 
 func die():
+	await get_tree().create_timer(2.0).timeout
 	var startpoint = get_node("../startpoint")
 	if startpoint:
 		position = startpoint.position
 
 func respawn(): 
+	await get_tree().create_timer(2.0).timeout
 	var spawnpoint = get_node("../spawnpoint") 
 	if spawnpoint:
 		position = spawnpoint.position

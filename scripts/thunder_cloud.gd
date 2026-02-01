@@ -9,7 +9,7 @@ var entered = false
 func _process(delta):
 	if entered:
 		time += delta
-		if time >= 4.5:
+		if time >= 2:
 			time = 0.0  
 			astro.respawn()
 

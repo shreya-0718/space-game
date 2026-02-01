@@ -10,12 +10,12 @@
 [ext_resource type="SpriteFrames" uid="uid://cj042qejdnd52" path="res://images/astronaut/astronaut_animation.tres" id="5_s7w1k"]
 [ext_resource type="Texture2D" uid="uid://6w055ero2apx" path="res://images/mercury/mercury 1 bckg.jpeg" id="5_ta7jb"]
 [ext_resource type="TileSet" uid="uid://bubbasbgvh4mc" path="res://images/mercury/mercury_tileset.tres" id="5_vujqb"]
-[ext_resource type="Script" path="res://scripts/water.gd" id="9_p3g0t"]
-[ext_resource type="Script" path="res://scenes/checkpoint.gd" id="11_u28sr"]
+[ext_resource type="Script" uid="uid://2731iaul2b00" path="res://scripts/water.gd" id="9_p3g0t"]
+[ext_resource type="Script" uid="uid://bveutufglpxep" path="res://scenes/checkpoint.gd" id="11_u28sr"]
 [ext_resource type="Texture2D" uid="uid://c82mv17yv7jiu" path="res://images/mercury/flag.png" id="12_r5swh"]
-[ext_resource type="Script" path="res://scripts/zoomout.gd" id="12_vujqb"]
-[ext_resource type="Script" path="res://scripts/zoomin.gd" id="13_ta7jb"]
-[ext_resource type="Script" path="res://scripts/iceskates.gd" id="14_2115d"]
+[ext_resource type="Script" uid="uid://bhrlqb6juuy2a" path="res://scripts/zoomout.gd" id="12_vujqb"]
+[ext_resource type="Script" uid="uid://clw7wi0msuovm" path="res://scripts/zoomin.gd" id="13_ta7jb"]
+[ext_resource type="Script" uid="uid://dlaxqvogxis5r" path="res://scripts/iceskates.gd" id="14_2115d"]
 [ext_resource type="Texture2D" uid="uid://7wk5vmcbsxsv" path="res://images/mercury/left arrow.png" id="16_s7w1k"]
 [ext_resource type="Texture2D" uid="uid://bf1417yva3ltu" path="res://images/mercury/iceskates.png" id="16_vrg72"]
 [ext_resource type="Texture2D" uid="uid://bo05i8wgk88g6" path="res://images/mercury/a.png" id="17_s7w1k"]
@@ -28,8 +28,8 @@
 [ext_resource type="Texture2D" uid="uid://cleyhsn86koph" path="res://images/level_page/Back.png" id="22_ta7jb"]
 [ext_resource type="Script" uid="uid://rkxlm13rfg36" path="res://scripts/skiptutorial.gd" id="25_jy2og"]
 [ext_resource type="Script" uid="uid://xhnj7qwvf34d" path="res://scripts/back.gd" id="27_s7w1k"]
-[ext_resource type="Script" path="res://scripts/yes.gd" id="28_s7w1k"]
-[ext_resource type="Script" path="res://scripts/no.gd" id="29_nh86p"]
+[ext_resource type="Script" uid="uid://qcgrioupnspr" path="res://scripts/yes.gd" id="28_s7w1k"]
+[ext_resource type="Script" uid="uid://dqc0rww00brfs" path="res://scripts/no.gd" id="29_nh86p"]
 [ext_resource type="Script" uid="uid://7curksp74rrb" path="res://scenes/raincoat.gd" id="30_nh86p"]
 [ext_resource type="Script" uid="uid://bdbbq62f8kbmt" path="res://scripts/crystal.gd" id="32_vujqb"]
 [ext_resource type="Texture2D" uid="uid://etwdh3mmkjfq" path="res://images/mercury/crystal.png" id="33_ta7jb"]
@@ -134,6 +134,12 @@ size = Vector2(126, 135)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vujqb"]
 size = Vector2(736.5, 114.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ta7jb"]
+size = Vector2(519, 142)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utlqg"]
+size = Vector2(447.5, 148.5)
 
 [node name="Node2D" type="Node2D" unique_id=1854650023]
 script = ExtResource("1_hny5o")
@@ -727,6 +733,17 @@ offset_bottom = 950.0
 text = "One of the crystal's pieces has been found... explore the rest to find more! "
 autowrap_mode = 2
 
+[node name="ice" type="Area2D" parent="." unique_id=1511407814]
+script = ExtResource("9_p3g0t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ice" unique_id=1603779953]
+position = Vector2(7034.5, 584)
+shape = SubResource("RectangleShape2D_ta7jb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ice" unique_id=2101443162]
+position = Vector2(7709.25, 585.25)
+shape = SubResource("RectangleShape2D_utlqg")
+
 [connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
 [connection signal="body_entered" from="star2" to="star2" method="_on_body_entered"]
 [connection signal="body_entered" from="star3" to="star3" method="_on_body_entered"]
@@ -744,3 +761,4 @@ autowrap_mode = 2
 [connection signal="body_entered" from="raincoat" to="raincoat" method="_on_body_entered"]
 [connection signal="body_entered" from="crystal" to="crystal" method="_on_body_entered"]
 [connection signal="body_entered" from="crater" to="crater" method="_on_body_entered"]
+[connection signal="body_entered" from="ice" to="ice" method="_on_body_entered"]
