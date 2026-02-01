@@ -61,11 +61,17 @@ radius = 46.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_vujqb"]
 radius = 310.4658
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_2115d"]
+radius = 191.5098
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_ikbxa"]
 radius = 136.0588
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ta7jb"]
-radius = 438.28873
+radius = 203.80627
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_utlqg"]
+radius = 148.08444
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a4sud"]
 size = Vector2(587.5, 599.0002)
@@ -225,7 +231,7 @@ position = Vector2(7377.0376, -129.71307)
 shape = SubResource("RectangleShape2D_o7j63")
 
 [node name="star3" type="Area2D" parent="." unique_id=1489653492]
-position = Vector2(1107, 439)
+position = Vector2(961, 611)
 script = ExtResource("4_2ndqr")
 
 [node name="Sprite2D" type="Sprite2D" parent="star3" unique_id=202810117]
@@ -325,6 +331,10 @@ shape = SubResource("CircleShape2D_a4sud")
 position = Vector2(-5273, -784)
 shape = SubResource("CircleShape2D_vujqb")
 
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="zoomout" unique_id=204542931]
+position = Vector2(-1695, 82)
+shape = SubResource("CircleShape2D_2115d")
+
 [node name="zoomin" type="Area2D" parent="." unique_id=1041483668]
 script = ExtResource("13_ta7jb")
 
@@ -335,6 +345,10 @@ shape = SubResource("CircleShape2D_ikbxa")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="zoomin" unique_id=1726779935]
 position = Vector2(8507, 457)
 shape = SubResource("CircleShape2D_ta7jb")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="zoomin" unique_id=212241256]
+position = Vector2(11335, 822)
+shape = SubResource("CircleShape2D_utlqg")
 
 [node name="iceskates" type="Area2D" parent="." unique_id=963182669]
 position = Vector2(-0.0009765625, 6.1035156e-05)
@@ -347,7 +361,7 @@ scale = Vector2(0.438423, 0.40701362)
 texture = ExtResource("16_vrg72")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="iceskates" unique_id=425754984]
-position = Vector2(11483.251, 685.4999)
+position = Vector2(11887.001, 759)
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_a4sud")
 

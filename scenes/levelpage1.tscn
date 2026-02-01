@@ -81,10 +81,10 @@ scale = Vector2(0.24753693, 0.24753697)
 texture = ExtResource("7_hji0n")
 
 [node name="Label" type="Label" parent="." unique_id=163333192]
-offset_left = 381.0
-offset_top = 442.0
-offset_right = 651.0
-offset_bottom = 619.0
+offset_left = 616.0
+offset_top = 66.0
+offset_right = 901.0
+offset_bottom = 291.0
 theme_override_font_sizes/font_size = 25
 text = "Press the arrow keys or drag with two fingers to discover all the planets!"
 horizontal_alignment = 1
