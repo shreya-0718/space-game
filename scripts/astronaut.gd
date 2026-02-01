@@ -65,11 +65,10 @@ func respawn():
 @onready var usure = get_node("../usure?")
 
 func _ready():
-	right.visible = false
-	up.visible = false
 	usure.visible = false
 
 func _process(delta):
+	"""
 	if left and Input.is_action_just_pressed("left") and not triggeredL:
 		following = true
 		triggeredL = true
@@ -84,5 +83,5 @@ func _process(delta):
 		triggeredU = true
 		up.queue_free()
 		skiptutorial.queue_free()
-		
+		"""
 	
