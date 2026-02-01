@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://cleyhsn86koph" path="res://images/level_page/Back.png" id="22_ta7jb"]
 [ext_resource type="Script" uid="uid://xhnj7qwvf34d" path="res://scripts/back.gd" id="27_s7w1k"]
 [ext_resource type="Script" path="res://scripts/yes.gd" id="28_s7w1k"]
+[ext_resource type="LabelSettings" uid="uid://erqtt0c1y5lk" path="res://custom_font.tres" id="28_vujqb"]
 [ext_resource type="Script" path="res://scripts/no.gd" id="29_nh86p"]
 [ext_resource type="Script" uid="uid://7curksp74rrb" path="res://scenes/raincoat.gd" id="30_nh86p"]
 [ext_resource type="Script" uid="uid://bdbbq62f8kbmt" path="res://scripts/crystal.gd" id="32_vujqb"]
@@ -377,6 +378,7 @@ offset_right = 11578.0
 offset_bottom = 771.0
 text = "Press \"E\" to equip the ice skates!
 "
+label_settings = ExtResource("28_vujqb")
 
 [node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=1848539569]
 
@@ -519,12 +521,14 @@ offset_left = 1071.56
 offset_top = 277.0
 offset_right = 1215.56
 offset_bottom = 430.0
-text = "			Press 
+text = "			PRESS
 
-or	
 
-to move left!
-"
+OR	
+
+
+TO MOVE LEFT!"
+label_settings = ExtResource("28_vujqb")
 horizontal_alignment = 1
 
 [node name="leftarrow" type="Sprite2D" parent="left" unique_id=1597151840]
@@ -551,6 +555,7 @@ or
 
 to move right!
 "
+label_settings = ExtResource("28_vujqb")
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -568,16 +573,19 @@ texture = ExtResource("19_p3g0t")
 position = Vector2(-268, -111)
 
 [node name="tutorialU" type="Label" parent="up" unique_id=1302635364]
-offset_left = 1496.4503
-offset_top = 284.0
-offset_right = 1640.4503
-offset_bottom = 437.0
-text = "			Press 
+offset_left = 1495.0
+offset_top = 278.0
+offset_right = 1639.0
+offset_bottom = 435.0
+text = "			PRESS
 
-or	
 
-to jump up!
+OR
+
+
+TO JUMP UP!
 "
+label_settings = ExtResource("28_vujqb")
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -628,6 +636,7 @@ offset_right = 774.0
 offset_bottom = 388.0
 theme_override_font_sizes/font_size = 37
 text = "Are you sure you want to exit?"
+label_settings = ExtResource("28_vujqb")
 metadata/_edit_use_anchors_ = true
 
 [node name="yes" type="Button" parent="usure?" unique_id=1029318690]
@@ -663,8 +672,8 @@ offset_left = -93.0
 offset_top = -47.0
 offset_right = 839.0
 offset_bottom = 309.0
-text = "Press \"enter\" to win a special prize!
-"
+text = "PRESS \"ENTER\" TO WIN A SPECIAL PRIZE!"
+label_settings = ExtResource("28_vujqb")
 
 [node name="hint" type="Label" parent="." unique_id=882501189]
 offset_left = 14669.0
@@ -672,6 +681,7 @@ offset_top = 623.0
 offset_right = 15037.0
 offset_bottom = 978.0
 text = "To pass the waterfall, you may need a raincoat! "
+label_settings = ExtResource("28_vujqb")
 
 [node name="crystal" type="Area2D" parent="." unique_id=1524925558]
 script = ExtResource("32_vujqb")
@@ -707,6 +717,7 @@ offset_top = 333.0
 offset_right = 4248.0
 offset_bottom = 841.0
 text = "Mercury has very deep craters: watch out!"
+label_settings = ExtResource("28_vujqb")
 
 [node name="Label2" type="Label" parent="." unique_id=1350548246]
 offset_left = 10425.0
@@ -714,6 +725,7 @@ offset_top = 946.0
 offset_right = 10711.0
 offset_bottom = 1240.0
 text = "Mercury's water ponds freeze immediately into ice: don't get stuck! "
+label_settings = ExtResource("28_vujqb")
 horizontal_alignment = 1
 autowrap_mode = 3
 
