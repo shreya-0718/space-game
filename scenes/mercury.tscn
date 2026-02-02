@@ -181,7 +181,7 @@ tile_map_data = PackedByteArray("AAApHWkGAAAAAAYAAAAqHWkGAAABAAYAAAArHWkGAAACAAY
 tile_set = ExtResource("5_vujqb")
 
 [node name="astronaut" type="CharacterBody2D" parent="." unique_id=1606066007 groups=["astronaut"]]
-position = Vector2(1317, 367)
+position = Vector2(1372, 391)
 script = ExtResource("2_doqmq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="astronaut" unique_id=1665997636]
@@ -372,12 +372,11 @@ scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_a4sud")
 
 [node name="text" type="Label" parent="." unique_id=1245064247]
-offset_left = 11327.0
-offset_top = 722.0
-offset_right = 11578.0
-offset_bottom = 771.0
-text = "Press \"E\" to equip the ice skates!
-"
+offset_left = 11230.0
+offset_top = 681.0
+offset_right = 11790.0
+offset_bottom = 781.0
+text = "PRESS \"E\" TO EQUIP ICE SKATES."
 label_settings = ExtResource("28_vujqb")
 
 [node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=1848539569]
@@ -517,15 +516,12 @@ frame_progress = 0.90160733
 [node name="left" type="Node2D" parent="." unique_id=416745509]
 
 [node name="tutorialL" type="Label" parent="left" unique_id=1528146382]
-offset_left = 1071.56
-offset_top = 277.0
-offset_right = 1215.56
-offset_bottom = 430.0
+offset_left = 1034.0
+offset_top = 253.0
+offset_right = 1266.0
+offset_bottom = 565.0
 text = "			PRESS
-
-
 OR	
-
 
 TO MOVE LEFT!"
 label_settings = ExtResource("28_vujqb")
@@ -537,7 +533,7 @@ scale = Vector2(0.08, 0.08)
 texture = ExtResource("16_s7w1k")
 
 [node name="akey" type="Sprite2D" parent="left" unique_id=1483207175]
-position = Vector2(1196.56, 345)
+position = Vector2(1215, 346.00003)
 scale = Vector2(0.075, 0.08)
 texture = ExtResource("17_s7w1k")
 
@@ -545,27 +541,25 @@ texture = ExtResource("17_s7w1k")
 position = Vector2(445, -108)
 
 [node name="tutorialR" type="Label" parent="right" unique_id=1425677866]
-offset_left = 946.48
-offset_top = 385.0
-offset_right = 1090.48
-offset_bottom = 538.0
-text = "			Press 
+offset_left = 981.0
+offset_top = 369.0
+offset_right = 1229.0
+offset_bottom = 681.0
+text = "			PRESS
+OR
 
-or	
-
-to move right!
-"
+TO MOVE RIGHT!"
 label_settings = ExtResource("28_vujqb")
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="rightarrow" type="Sprite2D" parent="right" unique_id=43624466]
-position = Vector2(962.48, 453.00003)
+position = Vector2(1038.48, 458.00003)
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("18_nh86p")
 
 [node name="dkey" type="Sprite2D" parent="right" unique_id=2054492596]
-position = Vector2(1065.48, 454)
+position = Vector2(1171, 460.00003)
 scale = Vector2(0.075, 0.08)
 texture = ExtResource("19_p3g0t")
 
@@ -573,15 +567,12 @@ texture = ExtResource("19_p3g0t")
 position = Vector2(-268, -111)
 
 [node name="tutorialU" type="Label" parent="up" unique_id=1302635364]
-offset_left = 1495.0
-offset_top = 278.0
-offset_right = 1639.0
-offset_bottom = 435.0
+offset_left = 1523.0
+offset_top = 254.0
+offset_right = 1710.0
+offset_bottom = 611.0
 text = "			PRESS
-
-
 OR
-
 
 TO JUMP UP!
 "
@@ -590,12 +581,12 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="uparrow" type="Sprite2D" parent="up" unique_id=1959206356]
-position = Vector2(1509.4503, 350)
+position = Vector2(1550, 355.00003)
 scale = Vector2(0.08039825, 0.08039825)
 texture = ExtResource("20_u28sr")
 
 [node name="wkey" type="Sprite2D" parent="up" unique_id=63546968]
-position = Vector2(1618.4503, 348)
+position = Vector2(1687.0001, 354.00003)
 scale = Vector2(0.075, 0.08)
 texture = ExtResource("21_vujqb")
 
@@ -630,12 +621,12 @@ metadata/_edit_use_anchors_ = true
 [node name="usure?" type="CanvasLayer" parent="." unique_id=1427205372]
 
 [node name="Label" type="Label" parent="usure?" unique_id=1628210120]
-offset_left = 223.0
-offset_top = 194.0
-offset_right = 774.0
-offset_bottom = 388.0
+offset_left = 206.0
+offset_top = 193.0
+offset_right = 757.0
+offset_bottom = 387.0
 theme_override_font_sizes/font_size = 37
-text = "Are you sure you want to exit?"
+text = "ARE YOU SURE YOU WANT TO LEAVE?"
 label_settings = ExtResource("28_vujqb")
 metadata/_edit_use_anchors_ = true
 
@@ -676,11 +667,12 @@ text = "PRESS \"ENTER\" TO WIN A SPECIAL PRIZE!"
 label_settings = ExtResource("28_vujqb")
 
 [node name="hint" type="Label" parent="." unique_id=882501189]
-offset_left = 14669.0
-offset_top = 623.0
-offset_right = 15037.0
-offset_bottom = 978.0
-text = "To pass the waterfall, you may need a raincoat! "
+offset_left = 14648.0
+offset_top = 549.0
+offset_right = 15465.0
+offset_bottom = 895.0
+text = "TO PASS THE WATERFALL, 
+YOU MAY NEED A RAINCOAT!"
 label_settings = ExtResource("28_vujqb")
 
 [node name="crystal" type="Area2D" parent="." unique_id=1524925558]
@@ -712,29 +704,31 @@ shape = SubResource("RectangleShape2D_vujqb")
 position = Vector2(1205, 345)
 
 [node name="Label" type="Label" parent="." unique_id=641456667]
-offset_left = 3923.0
-offset_top = 333.0
-offset_right = 4248.0
-offset_bottom = 841.0
-text = "Mercury has very deep craters: watch out!"
+offset_left = 3858.0
+offset_top = 266.0
+offset_right = 4419.0
+offset_bottom = 774.0
+text = "MERCURY HAS VERY DEEP CRATERS... 
+WATCH OUT!"
 label_settings = ExtResource("28_vujqb")
 
 [node name="Label2" type="Label" parent="." unique_id=1350548246]
-offset_left = 10425.0
-offset_top = 946.0
-offset_right = 10711.0
-offset_bottom = 1240.0
-text = "Mercury's water ponds freeze immediately into ice: don't get stuck! "
+offset_left = 10099.0
+offset_top = 639.0
+offset_right = 10627.0
+offset_bottom = 933.0
+text = "MERCURY'S WATER PONDS FREEZE IMMEDIATELY INTO ICE. DON'T GET STUCK!"
 label_settings = ExtResource("28_vujqb")
 horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="Label3" type="Label" parent="." unique_id=74234236]
-offset_left = 15686.0
-offset_top = 653.0
-offset_right = 15911.0
-offset_bottom = 950.0
-text = "One of the crystal's pieces has been found... explore the rest to find more! "
+offset_left = 15812.0
+offset_top = 617.0
+offset_right = 16331.0
+offset_bottom = 914.0
+text = "YOU FOUND A CRYSTAL SHARD... EXPLORE THE REST OF THE SOLAR SYSTEM TO FIND THE OTHERS!"
+label_settings = ExtResource("28_vujqb")
 autowrap_mode = 2
 
 [node name="ice" type="Area2D" parent="." unique_id=1511407814]
