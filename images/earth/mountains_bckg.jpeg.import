@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlv6cxutw6q0t"
-path="res://.godot/imported/water bckg.jpeg-235289b426aabace75f4be0aac3e24b2.ctex"
+uid="uid://cxq7oosbqoasd"
+path="res://.godot/imported/mountains_bckg.jpeg-108f4c69a6c8bad84d028b15b5b53249.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/earth/water bckg.jpeg"
-dest_files=["res://.godot/imported/water bckg.jpeg-235289b426aabace75f4be0aac3e24b2.ctex"]
+source_file="res://images/earth/mountains_bckg.jpeg"
+dest_files=["res://.godot/imported/mountains_bckg.jpeg-108f4c69a6c8bad84d028b15b5b53249.ctex"]
 
 [params]
 

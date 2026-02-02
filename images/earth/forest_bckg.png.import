@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxq7oosbqoasd"
-path="res://.godot/imported/mountains bckg.jpeg-7857a21ad9db7bd183ff0245f5a7d0bc.ctex"
+uid="uid://r2ihhnkulfkd"
+path="res://.godot/imported/forest_bckg.png-f6ff088988209f1ce7e31a2feba604e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/earth/mountains bckg.jpeg"
-dest_files=["res://.godot/imported/mountains bckg.jpeg-7857a21ad9db7bd183ff0245f5a7d0bc.ctex"]
+source_file="res://images/earth/forest_bckg.png"
+dest_files=["res://.godot/imported/forest_bckg.png-f6ff088988209f1ce7e31a2feba604e2.ctex"]
 
 [params]
 

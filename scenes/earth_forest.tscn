@@ -1,0 +1,24 @@
+[gd_scene format=4 uid="uid://dits3j663hc6s"]
+
+[ext_resource type="TileSet" uid="uid://cyvifln6rropl" path="res://images/earth_and_mars.tres" id="1_3xw40"]
+[ext_resource type="Texture2D" uid="uid://cy7s7rlxscae" path="res://images/earth/Screenshot 2026-02-01 191752.png" id="2_7y1v2"]
+[ext_resource type="Texture2D" uid="uid://r2ihhnkulfkd" path="res://images/earth/forest_bckg.png" id="3_l4fgh"]
+
+[node name="EarthForest" type="Node2D" unique_id=1138506274]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2051168973]
+
+[node name="ForestBckg" type="Sprite2D" parent="CanvasLayer" unique_id=1554373511]
+position = Vector2(480.99997, 323)
+scale = Vector2(0.66907215, 0.66907215)
+texture = ExtResource("3_l4fgh")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=136832624]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAAEACQAAAAAAA0AAAAFACQAAAAAAA0AAAAGACQAAAAAAA0AAAAHACQAAAAAAA0AAAAIACQAAAAAAA0AAAAJACQAAAAAAA0AAAAAAAkAAAAAAAwAAAAAAAoAAAAAAA0AAAABAAkAAAABAAwAAAABAAoAAAABAA0AAAACAAkAAAACAAwAAAACAAoAAAACAA0AAAADAAkAAAADAAwAAAADAAoAAAADAA0AAAAEAAkAAAAAAAwAAAAEAAoAAAAAAA0AAAAFAAkAAAABAAwAAAAFAAoAAAABAA0AAAAGAAkAAAACAAwAAAAGAAoAAAACAA0AAAAHAAkAAAADAAwAAAAHAAoAAAADAA0AAAAIAAkAAAAAAAwAAAAIAAoAAAAAAA0AAAAJAAkAAAABAAwAAAAJAAoAAAABAA0AAAAKAAkAAAACAAwAAAAKAAoAAAACAA0AAAALAAkAAAADAAwAAAALAAoAAAADAA0AAAAMAAkAAAAAAAwAAAAMAAoAAAAAAA0AAAANAAkAAAABAAwAAAANAAoAAAABAA0AAAAOAAkAAAACAAwAAAAOAAoAAAACAA0AAAAPAAkAAAADAAwAAAAPAAoAAAADAA0AAAA=")
+tile_set = ExtResource("1_3xw40")
+
+[node name="Screenshot20260201191752" type="Sprite2D" parent="." unique_id=449075007]
+position = Vector2(-1444, 567.99994)
+scale = Vector2(2.293006, 2.2930064)
+texture = ExtResource("2_7y1v2")

@@ -611,10 +611,10 @@ metadata/_edit_use_anchors_ = true
 layer = 0
 
 [node name="dim" type="ColorRect" parent="CanvasLayer6" unique_id=191347337]
-offset_left = -31.0
-offset_top = -19.0
-offset_right = 985.0
-offset_bottom = 691.0
+offset_left = -125.0
+offset_top = -2.0
+offset_right = 891.0
+offset_bottom = 708.0
 color = Color(0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 
