@@ -14,24 +14,24 @@
 [ext_resource type="Texture2D" uid="uid://cleyhsn86koph" path="res://images/level_page/Back.png" id="13_mx30g"]
 [ext_resource type="Script" uid="uid://xhnj7qwvf34d" path="res://scripts/back.gd" id="13_nuv3h"]
 [ext_resource type="Texture2D" uid="uid://bhlphiy3b48wm" path="res://images/mercury/yes.png" id="14_8b3eq"]
-[ext_resource type="Script" uid="uid://djsaoebormi7i" path="res://scripts/reverse.gd" id="14_426g8"]
+[ext_resource type="Script" path="res://scripts/reverse.gd" id="14_426g8"]
 [ext_resource type="Texture2D" uid="uid://fowk4mbm2awj" path="res://images/venus/venus bckg.jpeg" id="14_ud6k2"]
-[ext_resource type="Script" uid="uid://qcgrioupnspr" path="res://scripts/yes.gd" id="14_y3sbn"]
-[ext_resource type="Script" uid="uid://dwim2a5wbgywa" path="res://scripts/getready.gd" id="15_426g8"]
-[ext_resource type="Script" uid="uid://dqc0rww00brfs" path="res://scripts/no.gd" id="15_ya5ls"]
+[ext_resource type="Script" path="res://scripts/yes.gd" id="14_y3sbn"]
+[ext_resource type="Script" path="res://scripts/getready.gd" id="15_426g8"]
+[ext_resource type="Script" path="res://scripts/no.gd" id="15_ya5ls"]
 [ext_resource type="Script" uid="uid://ck3f1altrgk2b" path="res://scripts/getout.gd" id="16_nuv3h"]
 [ext_resource type="Texture2D" uid="uid://dnpwjnt6jtdpm" path="res://images/mercury/no.png" id="16_qs1d7"]
 [ext_resource type="Script" uid="uid://cp5vbbje4v4qv" path="res://scripts/boots.gd" id="17_ya5ls"]
 [ext_resource type="Texture2D" uid="uid://dtkmf3eh3nf3r" path="res://images/venus/boots.png" id="18_lepuu"]
 [ext_resource type="Texture2D" uid="uid://bf1417yva3ltu" path="res://images/mercury/iceskates.png" id="19_jjhkc"]
 [ext_resource type="Texture2D" uid="uid://bqubey0spgbql" path="res://images/mercury/raincoat.png" id="20_8u8nx"]
-[ext_resource type="Script" uid="uid://c442tqbkww5lr" path="res://scripts/barrier.gd" id="22_yc0rh"]
+[ext_resource type="Script" path="res://scripts/barrier.gd" id="22_yc0rh"]
 [ext_resource type="Texture2D" uid="uid://c8i0kfhhmu6bl" path="res://images/venus/checkpoint.png" id="23_tjbme"]
 [ext_resource type="Texture2D" uid="uid://u675rjigxrfo" path="res://images/venus/clouds/cloud9.png" id="24_rbi8o"]
-[ext_resource type="Script" uid="uid://2731iaul2b00" path="res://scripts/water.gd" id="28_y812g"]
-[ext_resource type="Script" uid="uid://1m3u7ghoal0i" path="res://scripts/lava.gd" id="29_0bbd5"]
+[ext_resource type="Script" path="res://scripts/water.gd" id="28_y812g"]
+[ext_resource type="Script" path="res://scripts/lava.gd" id="29_0bbd5"]
 [ext_resource type="Texture2D" uid="uid://cybe6au0sik6f" path="res://images/venus/snow.png" id="29_0uv3g"]
-[ext_resource type="Script" uid="uid://dlswbpc0iqdbx" path="res://scripts/moving_cloud.gd" id="30_yd4sw"]
+[ext_resource type="Script" path="res://scripts/moving_cloud.gd" id="30_yd4sw"]
 [ext_resource type="Texture2D" uid="uid://c3txyq867g8md" path="res://images/venus/clouds/cloud4.png" id="31_yd4sw"]
 [ext_resource type="Script" uid="uid://dtf3v7lf7lx2j" path="res://scripts/thunder_cloud.gd" id="32_m310k"]
 [ext_resource type="Script" uid="uid://d16iriehslnbv" path="res://scripts/falling_asteroid.gd" id="33_xe2my"]
@@ -39,7 +39,7 @@
 [ext_resource type="Script" uid="uid://bdbbq62f8kbmt" path="res://scripts/crystal.gd" id="35_rxmr8"]
 [ext_resource type="Texture2D" uid="uid://etwdh3mmkjfq" path="res://images/mercury/crystal.png" id="36_0bbd5"]
 [ext_resource type="FontFile" uid="uid://dqp5kyy7yyosk" path="res://pixelfont.ttf" id="36_rxmr8"]
-[ext_resource type="Script" uid="uid://dj6j8nbybw55c" path="res://scripts/lava_respawn.gd" id="37_msgdu"]
+[ext_resource type="Script" path="res://scripts/lava_respawn.gd" id="37_msgdu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wwsvu"]
 texture = ExtResource("3_rbi8o")
@@ -673,6 +673,8 @@ offset_left = 10.0
 offset_top = 545.0
 offset_right = 453.14893
 offset_bottom = 627.0
+scale = Vector2(1.3, 1.3)
+pivot_offset_ratio = Vector2(0, 0.4)
 size_flags_stretch_ratio = 0.0
 
 [node name="skates" type="TextureRect" parent="CanvasLayer4/powerups" unique_id=1677628472]

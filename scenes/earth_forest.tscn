@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://dits3j663hc6s"]
 
 [ext_resource type="TileSet" uid="uid://cyvifln6rropl" path="res://images/earth_and_mars.tres" id="1_3xw40"]
-[ext_resource type="Script" path="res://scripts/earth_forest.gd" id="1_d6008"]
+[ext_resource type="Script" uid="uid://d1dkxihom1wv" path="res://scripts/earth_forest.gd" id="1_d6008"]
 [ext_resource type="Texture2D" uid="uid://cy7s7rlxscae" path="res://images/earth/Screenshot 2026-02-01 191752.png" id="2_7y1v2"]
 [ext_resource type="Texture2D" uid="uid://r2ihhnkulfkd" path="res://images/earth/forest_bckg.png" id="3_l4fgh"]
 [ext_resource type="Texture2D" uid="uid://c830son4x1yls" path="res://images/earth_and_mars.png" id="4_l4fgh"]
