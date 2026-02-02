@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt18laqd7qtdw"
-path="res://.godot/imported/Planets.png-d5cfda0eb1506c000b1536fc0b7100dd.ctex"
+uid="uid://cw7xggv5gnbxx"
+path="res://.godot/imported/checkpointwhite.png-0837e2e73bca163286ba4ec67512f385.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/level_page/Planets.png"
-dest_files=["res://.godot/imported/Planets.png-d5cfda0eb1506c000b1536fc0b7100dd.ctex"]
+source_file="res://images/mercury/checkpointwhite.png"
+dest_files=["res://.godot/imported/checkpointwhite.png-0837e2e73bca163286ba4ec67512f385.ctex"]
 
 [params]
 

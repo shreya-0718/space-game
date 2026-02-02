@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3bwlrfdsrdwe"
-path="res://.godot/imported/wasd keys.png-c89d4512cde306c3e8a77d46dc32ed57.ctex"
+uid="uid://vhjnv10kglhi"
+path="res://.godot/imported/longcloud.png-1bb71eb91ccb8d9346faea548c112c3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/mercury/wasd keys.png"
-dest_files=["res://.godot/imported/wasd keys.png-c89d4512cde306c3e8a77d46dc32ed57.ctex"]
+source_file="res://images/venus/longcloud.png"
+dest_files=["res://.godot/imported/longcloud.png-1bb71eb91ccb8d9346faea548c112c3e.ctex"]
 
 [params]
 

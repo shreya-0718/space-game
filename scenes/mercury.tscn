@@ -150,10 +150,10 @@ script = ExtResource("1_hny5o")
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=210713866]
 
 [node name="star_container" type="HBoxContainer" parent="CanvasLayer2" unique_id=1801979046]
-offset_left = 755.8
-offset_top = 24.0
-offset_right = 969.0
-offset_bottom = 76.0
+offset_left = 753.8
+offset_top = 25.0
+offset_right = 967.0
+offset_bottom = 77.0
 mouse_filter = 2
 script = ExtResource("2_p3g0t")
 gray_star = ExtResource("3_u28sr")
@@ -619,10 +619,10 @@ layer = 0
 anchors_preset = -1
 anchor_top = -0.0921875
 anchor_right = 0.114583336
-offset_left = -125.0
-offset_top = -2.0
-offset_right = 891.0
-offset_bottom = 708.0
+offset_left = -378.0
+offset_top = -15.0
+offset_right = 638.0
+offset_bottom = 695.0
 color = Color(0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 

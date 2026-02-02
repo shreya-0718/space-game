@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5bjhds3sk166"
-path="res://.godot/imported/back.png-bc2ea2c35c12b0e29b4f90d3278bb5ad.ctex"
+uid="uid://cyhibd6xhj537"
+path="res://.godot/imported/boots.png-c0bb39761f9f800ce72eca73cd92c3b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/mercury/back.png"
-dest_files=["res://.godot/imported/back.png-bc2ea2c35c12b0e29b4f90d3278bb5ad.ctex"]
+source_file="res://images/mercury/boots.png"
+dest_files=["res://.godot/imported/boots.png-c0bb39761f9f800ce72eca73cd92c3b1.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjn0tqfvcv1bn"
-path="res://.godot/imported/pixel_space_bckg.webp-0d870da6af589d443b4f75ef92d01b43.ctex"
+uid="uid://deu7uxo3jqdry"
+path="res://.godot/imported/cloud2.png-dd630c1bdc65df89fc3c51055ad1db73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/level_page/pixel_space_bckg.webp"
-dest_files=["res://.godot/imported/pixel_space_bckg.webp-0d870da6af589d443b4f75ef92d01b43.ctex"]
+source_file="res://images/venus/cloud2.png"
+dest_files=["res://.godot/imported/cloud2.png-dd630c1bdc65df89fc3c51055ad1db73.ctex"]
 
 [params]
 

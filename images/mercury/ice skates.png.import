@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpswc71tjbx6u"
-path="res://.godot/imported/astronaut.png-a51e23a5d955dd4d641640861ebf1f3d.ctex"
+uid="uid://rmooxlwdh2h"
+path="res://.godot/imported/ice skates.png-d298bae9eade8d83a9f301a59a8cf850.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/mercury/astronaut.png"
-dest_files=["res://.godot/imported/astronaut.png-a51e23a5d955dd4d641640861ebf1f3d.ctex"]
+source_file="res://images/mercury/ice skates.png"
+dest_files=["res://.godot/imported/ice skates.png-d298bae9eade8d83a9f301a59a8cf850.ctex"]
 
 [params]
 

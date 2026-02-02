@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbvu7ouepiuad"
-path="res://.godot/imported/right arrow key.png-c86ba614ae648b8a473d75c1e004dfa4.ctex"
+uid="uid://dflw0otk4n3jm"
+path="res://.godot/imported/cloud3.png-981e93d1bc21572d7b6d99216bb1b273.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/mercury/right arrow key.png"
-dest_files=["res://.godot/imported/right arrow key.png-c86ba614ae648b8a473d75c1e004dfa4.ctex"]
+source_file="res://images/venus/cloud3.png"
+dest_files=["res://.godot/imported/cloud3.png-981e93d1bc21572d7b6d99216bb1b273.ctex"]
 
 [params]
 

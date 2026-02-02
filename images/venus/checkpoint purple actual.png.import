@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpu7uok0vi7sm"
-path="res://.godot/imported/w key.png-a9fe694b6da5928220f5a2843e6a3be9.ctex"
+uid="uid://bhulmtu3pyhkh"
+path="res://.godot/imported/checkpoint purple actual.png-3c3c827c9baeb720da32280c54912b84.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/mercury/w key.png"
-dest_files=["res://.godot/imported/w key.png-a9fe694b6da5928220f5a2843e6a3be9.ctex"]
+source_file="res://images/venus/checkpoint purple actual.png"
+dest_files=["res://.godot/imported/checkpoint purple actual.png-3c3c827c9baeb720da32280c54912b84.ctex"]
 
 [params]
 

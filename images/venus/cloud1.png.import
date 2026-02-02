@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xpgswcyexgr2"
-path="res://.godot/imported/left arrow key.png-06d5e8e2652d17403ac498544076373d.ctex"
+uid="uid://mowmrxxbqlby"
+path="res://.godot/imported/cloud1.png-9a116e7995b40a3a7ae602eabf11c501.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/mercury/left arrow key.png"
-dest_files=["res://.godot/imported/left arrow key.png-06d5e8e2652d17403ac498544076373d.ctex"]
+source_file="res://images/venus/cloud1.png"
+dest_files=["res://.godot/imported/cloud1.png-9a116e7995b40a3a7ae602eabf11c501.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn2v0t2gvm4kc"
-path="res://.godot/imported/asteroid2.png-7445ec4ae29af6815bbe66f4db7982be.ctex"
+uid="uid://brib7m4ylkkap"
+path="res://.godot/imported/raincoats.png-94360238fd4f57cc38777a88ae3a146a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/intro_page/asteroid2.png"
-dest_files=["res://.godot/imported/asteroid2.png-7445ec4ae29af6815bbe66f4db7982be.ctex"]
+source_file="res://images/mercury/raincoats.png"
+dest_files=["res://.godot/imported/raincoats.png-94360238fd4f57cc38777a88ae3a146a.ctex"]
 
 [params]
 
