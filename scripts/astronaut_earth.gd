@@ -26,9 +26,9 @@ func _physics_process(delta):
 
 	var gravity : float = Global.earth_gravity   
 
-	if Input.is_action_pressed("space") and Input.is_action_pressed("jump") and not is_on_floor():
+	if Input.is_action_pressed("space") and Input.is_action_pressed("jump") and not is_on_floor() and not Global.climbing:
 		velocity.y += gravity * glide_gravity_scale * delta
-	elif not is_on_floor():
+	elif not is_on_floor() and not global.climbing:
 		velocity.y += gravity * delta
 
 	if Input.is_action_just_pressed("jump") and not Input.is_action_pressed("space") and Global.num_jumps < 1:
@@ -45,6 +45,7 @@ func die():
 	var startpoint = get_node("../startpoint")
 	if startpoint:
 		position = startpoint.position
+	
 
 func respawn(): 
 	await get_tree().create_timer(1.0).timeout

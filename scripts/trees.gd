@@ -1,6 +1,6 @@
 extends Area2D
 
-var speed = 250
+var speedd = 250
 var direction = -1 #up
 
 @onready var astronaut = get_node("../../astronaut")
@@ -17,13 +17,14 @@ func _process(delta):
 	if entered:
 		if Input.is_action_pressed("space"):
 			pressed = true
+			global.earth_gravity = 0
 			astronaut.global_position = startposition.global_position
 			await get_tree().create_timer(0.1).timeout
 	if pressed:
-		astronaut.global_position.y += speed * direction * delta
+		global.climbing = true
+		astronaut.global_position.y += speedd * direction * delta
 	if astronaut.global_position.y <= climbpoint.global_position.y:
-		speed = 0
-
+		speedd = 0
 func _on_body_exited(body):
 	if body.name == "astronaut":
 		entered = false

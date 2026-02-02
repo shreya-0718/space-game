@@ -5,8 +5,8 @@ var direction = 1 #up
 
 @onready var astronaut = get_node("../../astronaut")
 @onready var just = get_node("../../astronaut/AnimatedSprite2D")
-@onready var climbpoint = get_node("climbpoint")
-@onready var startposition = get_node("startposition")
+@onready var climbpoint = get_node("climbpoint2")
+@onready var startposition = get_node("startposition2")
 var entered = false
 var pressed = false
 

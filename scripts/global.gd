@@ -33,6 +33,7 @@ var passedearth = false
 
 #for earth
 var seashells: int = 0
+var climbing = false
 
 #for reverse movement on venus
 var reverse = false
