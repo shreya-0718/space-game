@@ -12,9 +12,9 @@
 [ext_resource type="SpriteFrames" uid="uid://cj042qejdnd52" path="res://images/astronaut/astronaut_animation.tres" id="9_lf2vo"]
 [ext_resource type="LabelSettings" uid="uid://erqtt0c1y5lk" path="res://custom_font.tres" id="9_tx6xe"]
 [ext_resource type="Texture2D" uid="uid://bhlphiy3b48wm" path="res://images/mercury/yes.png" id="10_0ln5e"]
-[ext_resource type="Script" uid="uid://qcgrioupnspr" path="res://scripts/yes.gd" id="11_lccmr"]
+[ext_resource type="Script" path="res://scripts/yes.gd" id="11_lccmr"]
 [ext_resource type="Texture2D" uid="uid://dnpwjnt6jtdpm" path="res://images/mercury/no.png" id="12_jxaag"]
-[ext_resource type="Script" uid="uid://dqc0rww00brfs" path="res://scripts/no.gd" id="13_drqgp"]
+[ext_resource type="Script" path="res://scripts/no.gd" id="13_drqgp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jxaag"]
 size = Vector2(349, 263)
@@ -83,6 +83,7 @@ theme_override_font_sizes/font_size = 25
 text = "PRESS \"SPACE\" TO CLIMB UP THE TREE"
 horizontal_alignment = 1
 autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="climbpoint" type="Marker2D" parent="Node2D2/trees" unique_id=951211346]
 position = Vector2(461, -285)
@@ -153,7 +154,6 @@ drag_top_margin = 0.0
 drag_right_margin = 0.35
 drag_bottom_margin = 0.41
 editor_draw_drag_margin = true
-metadata/_edit_lock_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="astronaut" unique_id=13652280]
 position = Vector2(-320.24997, -12.249954)
@@ -208,10 +208,10 @@ layer = 0
 anchors_preset = -1
 anchor_top = -0.0921875
 anchor_right = 0.114583336
-offset_left = -23.0
-offset_top = 754.0
-offset_right = 993.0
-offset_bottom = 1464.0
+offset_left = -110.0
+offset_top = -17.0
+offset_right = 906.0
+offset_bottom = 693.0
 color = Color(0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 
@@ -231,6 +231,7 @@ theme_override_font_sizes/font_size = 30
 text = "RAINFORESTS ARE FULL OF TREACHEROUS QUICKSAND - DON'T GET STUCK!"
 horizontal_alignment = 1
 autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="CanvasLayer5/back" to="CanvasLayer5/back" method="_on_pressed"]
 [connection signal="body_entered" from="Node2D2/trees" to="Node2D2/trees" method="_on_body_entered"]
