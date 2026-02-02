@@ -16,10 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://dnpwjnt6jtdpm" path="res://images/mercury/no.png" id="12_jxaag"]
 [ext_resource type="Script" uid="uid://dqc0rww00brfs" path="res://scripts/no.gd" id="13_drqgp"]
 [ext_resource type="Script" uid="uid://1m3u7ghoal0i" path="res://scripts/lava.gd" id="16_jxaag"]
-[ext_resource type="Script" uid="uid://i7hqods8ykxy" path="res://scripts/platform.gd" id="17_drqgp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jxaag"]
-size = Vector2(349, 263)
+size = Vector2(548, 263)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drqgp"]
 size = Vector2(377.875, 224)
@@ -27,17 +26,14 @@ size = Vector2(377.875, 224)
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_lccmr"]
 points = PackedVector2Array(579, 39, 601, -79, 614, -36, 676, -3, 797, 37, 927, 69, 1042, 82, 1212, 87, 1361, 68, 1468, 40, 1578, -18, 1618, -50, 1573, 91, 1135, 157)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvat7"]
+size = Vector2(193.5, 19)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tcu1f"]
 size = Vector2(83.5625, 108.99999)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tr1rt"]
 size = Vector2(1097, 101.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvat7"]
-size = Vector2(200, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8g57r"]
-size = Vector2(146, 72)
 
 [node name="EarthForest" type="Node2D" unique_id=1138506274]
 
@@ -93,7 +89,7 @@ scale = Vector2(1.0234537, 1.0234536)
 texture = ExtResource("8_pqjif")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/trees" unique_id=271306107]
-position = Vector2(401.5, 386.5)
+position = Vector2(302, 386.5)
 shape = SubResource("RectangleShape2D_jxaag")
 
 [node name="Label" type="Label" parent="Node2D2/trees" unique_id=1268917550]
@@ -152,6 +148,13 @@ position = Vector2(1810, 463)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/bridge" unique_id=820959287]
 shape = SubResource("ConvexPolygonShape2D_lccmr")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D2" unique_id=982160404]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/StaticBody2D" unique_id=1841344935]
+position = Vector2(471, -5)
+shape = SubResource("RectangleShape2D_nvat7")
+one_way_collision = true
 
 [node name="astronaut" type="CharacterBody2D" parent="." unique_id=562307866 groups=["astronaut"]]
 position = Vector2(451, 353)
@@ -243,19 +246,6 @@ horizontal_alignment = 1
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="platformarea" type="Area2D" parent="." unique_id=627442360]
-script = ExtResource("17_drqgp")
-
-[node name="platform" type="StaticBody2D" parent="platformarea" unique_id=1979006605]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platformarea/platform" unique_id=513699046]
-position = Vector2(471, 8)
-shape = SubResource("RectangleShape2D_nvat7")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platformarea" unique_id=2033990294]
-position = Vector2(477, -88)
-shape = SubResource("RectangleShape2D_8g57r")
-
 [connection signal="pressed" from="CanvasLayer5/back" to="CanvasLayer5/back" method="_on_pressed"]
 [connection signal="body_entered" from="Node2D2/trees" to="Node2D2/trees" method="_on_body_entered"]
 [connection signal="body_exited" from="Node2D2/trees" to="Node2D2/trees" method="_on_body_exited"]
@@ -264,4 +254,3 @@ shape = SubResource("RectangleShape2D_8g57r")
 [connection signal="pressed" from="usure?/yes" to="usure?/yes" method="_on_pressed"]
 [connection signal="pressed" from="usure?/NO" to="usure?/NO" method="_on_pressed"]
 [connection signal="body_entered" from="quicksand" to="quicksand" method="_on_body_entered"]
-[connection signal="body_entered" from="platformarea" to="platformarea" method="_on_body_entered"]

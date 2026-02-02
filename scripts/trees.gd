@@ -17,7 +17,6 @@ func _process(delta):
 	if entered:
 		if Input.is_action_pressed("space"):
 			pressed = true
-			global.earth_gravity = 0
 			astronaut.global_position = startposition.global_position
 			await get_tree().create_timer(0.1).timeout
 	if pressed:
@@ -25,6 +24,7 @@ func _process(delta):
 		astronaut.global_position.y += speedd * direction * delta
 	if astronaut.global_position.y <= climbpoint.global_position.y:
 		speedd = 0
+		global.climbing = false
 func _on_body_exited(body):
 	if body.name == "astronaut":
 		entered = false
