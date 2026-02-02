@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpn03rcfnt7rx"
-path="res://.godot/imported/rocket.png-20d29c1fb714b4226954b7a82ed92028.ctex"
+uid="uid://d0e57w2pv5nna"
+path="res://.godot/imported/extraplanet.png-7eca3ef7336f816190827628e8426a1c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/level_page/rocket.png"
-dest_files=["res://.godot/imported/rocket.png-20d29c1fb714b4226954b7a82ed92028.ctex"]
+source_file="res://images/mercury/extraplanet.png"
+dest_files=["res://.godot/imported/extraplanet.png-7eca3ef7336f816190827628e8426a1c.ctex"]
 
 [params]
 

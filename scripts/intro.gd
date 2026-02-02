@@ -8,7 +8,7 @@ extends Node2D
 	"planet": {"node": $planet, "depth": 50.0},
 	"comet": {"node": $comet, "depth": 3},
 	"Galactico": {"node": $Galactico, "depth": 0.5},
-	"Button": {"node": $Button, "depth": 0.5}
+	"playbutton": {"node": $playbutton, "depth": 0.5}
 }
 
 var rocking_names = ["spaceship", "asteroid1", "asteroid2", "planet", "comet"]
@@ -82,7 +82,7 @@ func _update_parallax(progress):
 
 	cam.zoom = Vector2(1.0 + eased * 0.2, 1.0 + eased * 0.2)
 
-func _on_button_pressed():
+func _on_playbutton_pressed():
 	print("Clicked on button")
 	camera_dolly_in(1.5)
 
