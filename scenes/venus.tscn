@@ -380,7 +380,7 @@ scale = Vector2(1.0000001, 1)
 shape = SubResource("RectangleShape2D_rbi8o")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="start_clouds" unique_id=411500143]
-position = Vector2(-1061, 2025)
+position = Vector2(-1063, 2048)
 
 [node name="Sprite2D" type="Sprite2D" parent="start_clouds/StaticBody2D3" unique_id=1465788919]
 position = Vector2(465, -260.00006)
@@ -644,7 +644,7 @@ position = Vector2(1768, -106)
 shape = SubResource("RectangleShape2D_8u8nx")
 
 [node name="boots" type="Area2D" parent="." unique_id=933547142]
-position = Vector2(-725, -60)
+position = Vector2(-725, -42)
 script = ExtResource("17_ya5ls")
 
 [node name="Boots" type="Sprite2D" parent="boots" unique_id=434626075]

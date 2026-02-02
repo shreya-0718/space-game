@@ -73,4 +73,13 @@ position = Vector2(165.99998, 171.00002)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("8_rpx5n")
 
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=412010273]
+offset_left = 162.0
+offset_top = 19.0
+offset_right = 824.0
+offset_bottom = 60.0
+theme_override_fonts/font = ExtResource("7_rpx5n")
+theme_override_font_sizes/font_size = 30
+text = "PRESS \"SPACE\" WHEN THE MARKER IS IN THE GREEN ZONE!"
+
 [connection signal="pressed" from="CanvasLayer/again" to="CanvasLayer/again" method="_on_pressed"]

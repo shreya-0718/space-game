@@ -12,7 +12,7 @@ func _process(delta):
 		get_tree().change_scene_to_file("res://scenes/mercurygame.tscn")
 	if global.pressed:
 		text.visible = false
-		global.raincoat += 1
+		
 	
 
 		

@@ -78,7 +78,7 @@ radius = 203.80627
 radius = 148.08444
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a4sud"]
-size = Vector2(587.5, 599.0002)
+size = Vector2(1028.75, 599.0002)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikbxa"]
 size = Vector2(322.5, 64)
@@ -375,20 +375,20 @@ scale = Vector2(1, 0.99999994)
 script = ExtResource("14_2115d")
 
 [node name="skatesimage" type="Sprite2D" parent="iceskates" unique_id=2045798551]
-position = Vector2(11481.001, 632)
+position = Vector2(11481, 684.99994)
 scale = Vector2(0.1, 0.102)
 texture = ExtResource("18_r3d36")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="iceskates" unique_id=425754984]
-position = Vector2(11887.001, 759)
+position = Vector2(11666.376, 759)
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_a4sud")
 
 [node name="text" type="Label" parent="." unique_id=1245064247]
 offset_left = 11229.0
-offset_top = 522.0
+offset_top = 575.0
 offset_right = 11789.0
-offset_bottom = 622.0
+offset_bottom = 675.0
 text = "PRESS \"E\" TO EQUIP ICE SKATES."
 label_settings = ExtResource("28_vujqb")
 
@@ -721,7 +721,7 @@ position = Vector2(4255, 1017.25)
 shape = SubResource("RectangleShape2D_vujqb")
 
 [node name="startpoint" type="Marker2D" parent="." unique_id=911174768]
-position = Vector2(1205, 345)
+position = Vector2(1342, 345)
 
 [node name="Label" type="Label" parent="." unique_id=641456667]
 offset_left = 3858.0

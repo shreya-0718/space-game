@@ -24,6 +24,7 @@ func _process(delta):
 	if player_inside and Input.is_action_just_pressed("equip") and not interacted:
 		label.visible = false
 		global.ice_skates += 1
+		print("hello")
 		skates.queue_free()
 		interacted = true
 	
