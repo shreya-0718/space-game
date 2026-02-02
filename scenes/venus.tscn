@@ -13,12 +13,14 @@
 [ext_resource type="Texture2D" uid="uid://s45jw16jj73u" path="res://images/level_page/star.png" id="12_0uv3g"]
 [ext_resource type="Texture2D" uid="uid://cleyhsn86koph" path="res://images/level_page/Back.png" id="13_mx30g"]
 [ext_resource type="Script" uid="uid://xhnj7qwvf34d" path="res://scripts/back.gd" id="13_nuv3h"]
+[ext_resource type="Texture2D" uid="uid://bhlphiy3b48wm" path="res://images/mercury/yes.png" id="14_8b3eq"]
 [ext_resource type="Script" uid="uid://djsaoebormi7i" path="res://scripts/reverse.gd" id="14_426g8"]
 [ext_resource type="Texture2D" uid="uid://fowk4mbm2awj" path="res://images/venus/venus bckg.jpeg" id="14_ud6k2"]
 [ext_resource type="Script" uid="uid://qcgrioupnspr" path="res://scripts/yes.gd" id="14_y3sbn"]
 [ext_resource type="Script" uid="uid://dwim2a5wbgywa" path="res://scripts/getready.gd" id="15_426g8"]
 [ext_resource type="Script" uid="uid://dqc0rww00brfs" path="res://scripts/no.gd" id="15_ya5ls"]
 [ext_resource type="Script" uid="uid://ck3f1altrgk2b" path="res://scripts/getout.gd" id="16_nuv3h"]
+[ext_resource type="Texture2D" uid="uid://dnpwjnt6jtdpm" path="res://images/mercury/no.png" id="16_qs1d7"]
 [ext_resource type="Script" uid="uid://cp5vbbje4v4qv" path="res://scripts/boots.gd" id="17_ya5ls"]
 [ext_resource type="Texture2D" uid="uid://dtkmf3eh3nf3r" path="res://images/venus/boots.png" id="18_lepuu"]
 [ext_resource type="Texture2D" uid="uid://bf1417yva3ltu" path="res://images/mercury/iceskates.png" id="19_jjhkc"]
@@ -260,10 +262,10 @@ size = Vector2(12, 725)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_y812g"]
 a = Vector2(4745, 254)
-b = Vector2(4802, 315)
+b = Vector2(4857, 367)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_0uv3g"]
-a = Vector2(4672, 313)
+a = Vector2(4617, 368)
 b = Vector2(4730, 251)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0uv3g"]
@@ -494,25 +496,29 @@ offset_left = 223.0
 offset_top = 194.0
 offset_right = 774.0
 offset_bottom = 388.0
+theme_override_fonts/font = ExtResource("36_rxmr8")
 theme_override_font_sizes/font_size = 37
-text = "Are you sure you want to exit?"
+text = "ARE YOU SURE YOU WANT TO EXIT?
+"
 metadata/_edit_use_anchors_ = true
 
 [node name="yes" type="Button" parent="usure?" unique_id=139625334]
-offset_left = 349.0
+offset_left = 250.0
 offset_top = 265.0
-offset_right = 385.0
-offset_bottom = 296.0
-text = "YES"
+offset_right = 2317.0
+offset_bottom = 1280.0
+scale = Vector2(0.1, 0.1)
+icon = ExtResource("14_8b3eq")
 script = ExtResource("14_y3sbn")
 metadata/_edit_use_anchors_ = true
 
 [node name="NO" type="Button" parent="usure?" unique_id=1162909845]
-offset_left = 579.0
+offset_left = 500.0
 offset_top = 266.0
-offset_right = 613.0
-offset_bottom = 297.0
-text = "NO"
+offset_right = 2740.0
+offset_bottom = 1298.0
+scale = Vector2(0.1, 0.1)
+icon = ExtResource("16_qs1d7")
 script = ExtResource("15_ya5ls")
 metadata/_edit_use_anchors_ = true
 
@@ -591,13 +597,13 @@ position = Vector2(1888, 343)
 shape = SubResource("CircleShape2D_8u8nx")
 
 [node name="Label" type="Label" parent="." unique_id=2099922111]
-offset_left = 7510.0
-offset_top = 1594.0
-offset_right = 7810.0
-offset_bottom = 1721.0
-theme_override_font_sizes/font_size = 16
-text = "Venus is the only planet that spins backwards! Press \"enter\" to continue, but beware ... its backwards!
-"
+offset_left = 7476.0
+offset_top = 1601.0
+offset_right = 7843.0
+offset_bottom = 1755.0
+theme_override_fonts/font = ExtResource("36_rxmr8")
+theme_override_font_sizes/font_size = 25
+text = "VENUS IS THE ONLY PLANET THAT SPINS BACKWARDS! PRESS \"ENTER\" TO CONTINUE, BUT BEWARE ... ITS BACKWARDS!"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -652,12 +658,13 @@ position = Vector2(218, 1902)
 shape = SubResource("RectangleShape2D_yc0rh")
 
 [node name="Label4" type="Label" parent="." unique_id=2142008046]
-offset_left = -721.0
-offset_top = 1573.0
-offset_right = -502.0
-offset_bottom = 1596.0
-theme_override_font_sizes/font_size = 16
-text = "Press \"E\" to equip the boots!"
+offset_left = -739.0
+offset_top = 1568.0
+offset_right = -366.0
+offset_bottom = 1609.0
+theme_override_fonts/font = ExtResource("36_rxmr8")
+theme_override_font_sizes/font_size = 30
+text = "PRESS \"E\" TO EQUIP THE BOOTS!"
 
 [node name="CanvasLayer4" type="CanvasLayer" parent="." unique_id=1581005649]
 
@@ -719,12 +726,13 @@ scale = Vector2(3.1008408, 1.6607144)
 texture = ExtResource("24_rbi8o")
 
 [node name="Label" type="Label" parent="acid rain" unique_id=1788628878]
-offset_left = 10543.0
-offset_top = 1659.0
-offset_right = 10802.0
-offset_bottom = 1734.0
-theme_override_font_sizes/font_size = 16
-text = "Beware of acid rain ... good thing you have your raincoat from earlier!"
+offset_left = 10434.0
+offset_top = 1587.0
+offset_right = 10823.0
+offset_bottom = 1704.0
+theme_override_fonts/font = ExtResource("36_rxmr8")
+theme_override_font_sizes/font_size = 35
+text = "BEWARE OF ACID RAIN ... GOOD THING YOU HAVE YOUR RAINCOAT FROM EARLIER!"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -738,17 +746,19 @@ shape = SubResource("SegmentShape2D_y812g")
 shape = SubResource("SegmentShape2D_0uv3g")
 
 [node name="Label4" type="Label" parent="metal snow" unique_id=1655089793]
-offset_left = 4561.0
-offset_top = 145.0
-offset_right = 4923.0
-offset_bottom = 194.0
-text = "Venus has metal snow - which can be poisonous @shreya what is the right thing?"
+offset_left = 4560.0
+offset_top = 79.0
+offset_right = 4922.0
+offset_bottom = 143.0
+theme_override_fonts/font = ExtResource("36_rxmr8")
+theme_override_font_sizes/font_size = 25
+text = "VENUS HAS METAL SNOW - WHICH CAN BE POISONOUS "
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="snowimage" type="Sprite2D" parent="metal snow" unique_id=1142858664]
-position = Vector2(4733.5, 285.00003)
-scale = Vector2(0.34320536, 0.19211827)
+position = Vector2(4737.865, 317.5305)
+scale = Vector2(0.6206777, 0.34744078)
 texture = ExtResource("29_0uv3g")
 
 [node name="lava die" type="Area2D" parent="." unique_id=389592706]
@@ -835,12 +845,13 @@ position = Vector2(12880.5, 1426.5)
 shape = SubResource("RectangleShape2D_rxmr8")
 
 [node name="Label" type="Label" parent="thunder cloud" unique_id=2117566743]
-offset_left = 12132.0
-offset_top = 1198.0
-offset_right = 12767.0
-offset_bottom = 1696.0
-text = "Lightning clouds in Venus can strike you at any time... watch out! @shreya pls help
-"
+offset_left = 12313.0
+offset_top = 1181.0
+offset_right = 13303.0
+offset_bottom = 1679.0
+theme_override_fonts/font = ExtResource("36_rxmr8")
+theme_override_font_sizes/font_size = 35
+text = "LIGHTNING CLOUDS IN VENUS CAN STRIKE YOU AT ANY TIME...WATCH OUT! "
 
 [node name="falling asteroid" type="Area2D" parent="." unique_id=1862639616]
 script = ExtResource("33_xe2my")
@@ -878,11 +889,14 @@ position = Vector2(15222, 1547)
 shape = SubResource("RectangleShape2D_oc4cm")
 
 [node name="Label3" type="Label" parent="." unique_id=932830159]
-offset_left = 16283.0
-offset_top = 1480.0
-offset_right = 16482.0
-offset_bottom = 1824.0
-text = "One of the crystal's pieces has been found... explore the rest to find more! "
+offset_left = 16231.0
+offset_top = 1495.0
+offset_right = 16695.0
+offset_bottom = 1839.0
+theme_override_fonts/font = ExtResource("36_rxmr8")
+theme_override_font_sizes/font_size = 35
+text = "ONE OF THE CRYSTAL'S PIECES HAS BEEN FOUND ... EXPLORE THE REST TO FIND MORE! "
+horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="lava respawn" type="Area2D" parent="." unique_id=982045222]
