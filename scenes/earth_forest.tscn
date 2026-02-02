@@ -30,6 +30,9 @@ size = Vector2(271.75, 19)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8g57r"]
 size = Vector2(124.5, 87.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_batua"]
+size = Vector2(299.5, 22)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tcu1f"]
 size = Vector2(83.5625, 108.99999)
 
@@ -140,7 +143,7 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="startposition2" type="Marker2D" parent="Node2D2/trees2" unique_id=30028084]
-position = Vector2(1788, 3)
+position = Vector2(2063, -28)
 
 [node name="climbpoint2" type="Marker2D" parent="Node2D2/trees2" unique_id=1862115626]
 position = Vector2(1810, 463)
@@ -161,6 +164,13 @@ shape = SubResource("RectangleShape2D_8g57r")
 
 [node name="bridgepoint" type="Marker2D" parent="Node2D2/bridge" unique_id=2047316513]
 position = Vector2(1983, -43)
+
+[node name="block" type="StaticBody2D" parent="Node2D2" unique_id=1304796263]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/block" unique_id=136949910]
+position = Vector2(1734, 31)
+shape = SubResource("RectangleShape2D_batua")
+one_way_collision_margin = 0.0
 
 [node name="astronaut" type="CharacterBody2D" parent="." unique_id=562307866 groups=["astronaut"]]
 position = Vector2(451, 353)

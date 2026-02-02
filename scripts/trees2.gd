@@ -7,6 +7,7 @@ var direction = 1 #up
 @onready var just = get_node("../../astronaut/AnimatedSprite2D")
 @onready var climbpoint = get_node("climbpoint2")
 @onready var startposition = get_node("startposition2")
+@onready var block = get_node("../block/CollisionShape2D")
 var entered = false
 var pressed = false
 
@@ -18,11 +19,14 @@ func _process(delta):
 	if entered:
 		if Input.is_action_pressed("space"):
 			pressed = true
+			if block:
+				block.queue_free()
 			astronaut.global_position = startposition.global_position
 			global.earth_gravity = 0
 			await get_tree().create_timer(0.1).timeout
 	if pressed:
 		global.earth_gravity = 0
+		global.climbing = true 
 		astronaut.global_position.y += speed * direction * delta
 	if astronaut.global_position.y >= climbpoint.global_position.y:
 		speed = 0
