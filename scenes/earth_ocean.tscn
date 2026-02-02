@@ -38,6 +38,9 @@ size = Vector2(103, 107)
 [sub_resource type="CircleShape2D" id="CircleShape2D_6j36a"]
 radius = 88.051125
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6j36a"]
+size = Vector2(38.5, 651)
+
 [node name="EarthOcean" type="Node2D" unique_id=695108042]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1032321450]
@@ -80,7 +83,7 @@ position = Vector2(0.00024414063, -6.1035156e-05)
 shape = SubResource("RectangleShape2D_k007f")
 
 [node name="Area2D3" type="Area2D" parent="seashells" unique_id=957168805]
-position = Vector2(1009, 273)
+position = Vector2(1119, 208)
 scale = Vector2(0.26715708, 0.26715708)
 
 [node name="shell" type="Sprite2D" parent="seashells/Area2D3" unique_id=1595003064]
@@ -91,7 +94,7 @@ position = Vector2(0.00024414063, -6.1035156e-05)
 shape = SubResource("RectangleShape2D_k007f")
 
 [node name="Area2D4" type="Area2D" parent="seashells" unique_id=274572241]
-position = Vector2(1233, 193)
+position = Vector2(1531, 120)
 scale = Vector2(0.26715708, 0.26715708)
 
 [node name="shell" type="Sprite2D" parent="seashells/Area2D4" unique_id=902105180]
@@ -102,7 +105,7 @@ position = Vector2(0.00024414063, -6.1035156e-05)
 shape = SubResource("RectangleShape2D_k007f")
 
 [node name="Area2D5" type="Area2D" parent="seashells" unique_id=1274154356]
-position = Vector2(1511, 377.00003)
+position = Vector2(1862, 327)
 scale = Vector2(0.26715708, 0.26715708)
 
 [node name="shell" type="Sprite2D" parent="seashells/Area2D5" unique_id=261696712]
@@ -115,20 +118,21 @@ shape = SubResource("RectangleShape2D_k007f")
 [node name="jellyfishies" type="Node2D" parent="." unique_id=469655064]
 
 [node name="Area2D" type="Area2D" parent="jellyfishies" unique_id=1093647486]
+position = Vector2(51, -67)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="jellyfishies/Area2D" unique_id=233579577]
 position = Vector2(660, 268.00003)
 scale = Vector2(0.42578125, 0.42578125)
 sprite_frames = SubResource("SpriteFrames_pha60")
 autoplay = "default"
-frame_progress = 0.8781842
+frame_progress = 0.34490967
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="jellyfishies/Area2D" unique_id=1881013942]
 position = Vector2(659.5, 268.5)
 shape = SubResource("RectangleShape2D_blcji")
 
 [node name="Area2D2" type="Area2D" parent="jellyfishies" unique_id=965611357]
-position = Vector2(443, -107)
+position = Vector2(589, -132)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="jellyfishies/Area2D2" unique_id=380862237]
 position = Vector2(660, 268.00003)
@@ -142,7 +146,7 @@ position = Vector2(659.5, 268.5)
 shape = SubResource("RectangleShape2D_blcji")
 
 [node name="Area2D3" type="Area2D" parent="jellyfishies" unique_id=825821125]
-position = Vector2(671, 80)
+position = Vector2(1028, 145)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="jellyfishies/Area2D3" unique_id=295273193]
 position = Vector2(660, 268.00003)
@@ -166,3 +170,23 @@ texture = ExtResource("5_4ykf2")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1376275530]
 position = Vector2(138, 188)
 shape = SubResource("CircleShape2D_6j36a")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=6460025]
+position = Vector2(423, 120)
+limit_left = 11
+limit_top = -9997307
+limit_right = 16382
+limit_bottom = 638
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
+drag_vertical_enabled = true
+drag_top_margin = 0.4
+drag_bottom_margin = 0.08
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=142236243]
+position = Vector2(133, 189)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1097647002]
+position = Vector2(1966.75, 300.5)
+shape = SubResource("RectangleShape2D_6j36a")

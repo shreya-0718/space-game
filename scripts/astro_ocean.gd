@@ -3,46 +3,18 @@ extends CharacterBody2D
 var move_speed : float = Global.move_speed
 var jump_force : float = Global.jump_force
 var glide_gravity_scale : float = Global.glide_gravity_scale 
-@onready var anim = $AnimatedSprite2D
-@export var zoom_level = Vector2(0.5, 0.5) 
-
-
-@onready var cam = get_node("Camera2D")
-
-func _ready():
-	if cam:
-		cam.zoom = zoom_level  
-
 
 func _physics_process(delta):
-	var direction = 0.0
-	var input = Input.get_axis("left", "right")
-	
-	if global.reverse:
-		input = Input.get_axis("right", "left")
 
-	if input != 0:
-		anim.flip_h = input < 0
+	velocity.x = move_speed * .5
 
-	if is_on_floor():
-		Global.num_jumps = 0
-		if input == 0:
-			anim.play("idle")
-		else:
-			anim.play("run")
+	var gravity : float = Global.earth_gravity   
 
-	velocity.x = input * move_speed
-
-	var gravity : float = Global.mercury_gravity   
-
-	if Input.is_action_pressed("space") and Input.is_action_pressed("jump") and not is_on_floor():
-		velocity.y += gravity * glide_gravity_scale * delta
-	elif not is_on_floor():
+	if not is_on_floor():
 		velocity.y += gravity * delta
 
-	if Input.is_action_just_pressed("jump") and not Input.is_action_pressed("space") and Global.num_jumps < 1:
+	if Input.is_action_just_pressed("jump"):
 		velocity.y = -jump_force
-		anim.play("jump")
 		Global.num_jumps += 1
 	elif is_on_floor():
 		velocity.y = 0
@@ -56,6 +28,7 @@ func die():
 		position = startpoint.position
 
 func respawn(): 
+	#dont respawn in earth tho
 	await get_tree().create_timer(1.0).timeout
 	var spawnpoint = get_node("../spawnpoint") 
 	if spawnpoint:
