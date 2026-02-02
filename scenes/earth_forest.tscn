@@ -1,17 +1,22 @@
 [gd_scene format=4 uid="uid://dits3j663hc6s"]
 
 [ext_resource type="Texture2D" uid="uid://r2ihhnkulfkd" path="res://images/earth/forest_bckg.png" id="3_l4fgh"]
-[ext_resource type="Script" uid="uid://cj344vnwccvwc" path="res://scripts/astronaut_earth.gd" id="6_pqjif"]
+[ext_resource type="Script" uid="uid://btlqayda8gfug" path="res://scripts/trees.gd" id="4_0ln5e"]
+[ext_resource type="FontFile" uid="uid://dqp5kyy7yyosk" path="res://pixelfont.ttf" id="6_lccmr"]
+[ext_resource type="Script" path="res://scripts/astronaut_earth.gd" id="6_pqjif"]
 [ext_resource type="Texture2D" uid="uid://cleyhsn86koph" path="res://images/level_page/Back.png" id="6_vt45y"]
 [ext_resource type="Script" uid="uid://xhnj7qwvf34d" path="res://scripts/back.gd" id="7_pqjif"]
 [ext_resource type="Texture2D" uid="uid://b84h1hki10wk8" path="res://images/earth/trees.png" id="8_pqjif"]
-[ext_resource type="TileSet" uid="uid://bk0c4lhwcbjmp" path="res://images/earth_tileset.tres" id="9_jipjx"]
+[ext_resource type="TileSet" uid="uid://drufa7oy3tfua" path="res://images/earth_tileset.tres" id="9_jipjx"]
 [ext_resource type="SpriteFrames" uid="uid://cj042qejdnd52" path="res://images/astronaut/astronaut_animation.tres" id="9_lf2vo"]
 [ext_resource type="LabelSettings" uid="uid://erqtt0c1y5lk" path="res://custom_font.tres" id="9_tx6xe"]
 [ext_resource type="Texture2D" uid="uid://bhlphiy3b48wm" path="res://images/mercury/yes.png" id="10_0ln5e"]
-[ext_resource type="Script" path="res://scripts/yes.gd" id="11_lccmr"]
+[ext_resource type="Script" uid="uid://qcgrioupnspr" path="res://scripts/yes.gd" id="11_lccmr"]
 [ext_resource type="Texture2D" uid="uid://dnpwjnt6jtdpm" path="res://images/mercury/no.png" id="12_jxaag"]
-[ext_resource type="Script" path="res://scripts/no.gd" id="13_drqgp"]
+[ext_resource type="Script" uid="uid://dqc0rww00brfs" path="res://scripts/no.gd" id="13_drqgp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jxaag"]
+size = Vector2(349, 263)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tcu1f"]
 size = Vector2(83.5625, 108.99999)
@@ -46,10 +51,34 @@ metadata/_edit_use_anchors_ = true
 [node name="Node2D2" type="Node2D" parent="." unique_id=802987158]
 z_index = -3
 
-[node name="Trees" type="Sprite2D" parent="Node2D2" unique_id=2029496762]
+[node name="trees" type="Area2D" parent="Node2D2" unique_id=1563594051]
+script = ExtResource("4_0ln5e")
+
+[node name="Trees" type="Sprite2D" parent="Node2D2/trees" unique_id=2029496762]
 position = Vector2(952, 69)
 scale = Vector2(1.0234537, 1.0234536)
 texture = ExtResource("8_pqjif")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/trees" unique_id=271306107]
+position = Vector2(401.5, 386.5)
+shape = SubResource("RectangleShape2D_jxaag")
+
+[node name="Label" type="Label" parent="Node2D2/trees" unique_id=1268917550]
+offset_left = 240.0
+offset_top = 284.0
+offset_right = 403.0
+offset_bottom = 378.0
+theme_override_fonts/font = ExtResource("6_lccmr")
+theme_override_font_sizes/font_size = 25
+text = "PRESS \"SPACE\" TO CLIMB UP THE TREE"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="climbpoint" type="Marker2D" parent="Node2D2/trees" unique_id=951211346]
+position = Vector2(454, -46)
+
+[node name="startposition" type="Marker2D" parent="Node2D2/trees" unique_id=1190495930]
+position = Vector2(478, 432)
 
 [node name="Trees2" type="Sprite2D" parent="Node2D2" unique_id=678849679]
 position = Vector2(3421, 101.00001)
@@ -62,7 +91,7 @@ scale = Vector2(1.0474575, 1.0474572)
 texture = ExtResource("8_pqjif")
 
 [node name="astronaut" type="CharacterBody2D" parent="." unique_id=562307866 groups=["astronaut"]]
-position = Vector2(450, 499)
+position = Vector2(446, 493)
 script = ExtResource("6_pqjif")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="astronaut" unique_id=1393332757]
@@ -135,13 +164,15 @@ layer = 0
 anchors_preset = -1
 anchor_top = -0.0921875
 anchor_right = 0.114583336
-offset_left = -80.0
-offset_top = -9.0
-offset_right = 936.0
-offset_bottom = 701.0
+offset_left = -23.0
+offset_top = 754.0
+offset_right = 993.0
+offset_bottom = 1464.0
 color = Color(0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="CanvasLayer5/back" to="CanvasLayer5/back" method="_on_pressed"]
+[connection signal="body_entered" from="Node2D2/trees" to="Node2D2/trees" method="_on_body_entered"]
+[connection signal="body_exited" from="Node2D2/trees" to="Node2D2/trees" method="_on_body_exited"]
 [connection signal="pressed" from="usure?/yes" to="usure?/yes" method="_on_pressed"]
 [connection signal="pressed" from="usure?/NO" to="usure?/NO" method="_on_pressed"]

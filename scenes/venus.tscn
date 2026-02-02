@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://3gw8v86fyuak" path="res://scripts/astronaut_venus.gd" id="2_xwevf"]
 [ext_resource type="Texture2D" uid="uid://bi1oh0o01du7t" path="res://images/venus/venus_tileset.png" id="3_rbi8o"]
 [ext_resource type="SpriteFrames" uid="uid://cj042qejdnd52" path="res://images/astronaut/astronaut_animation.tres" id="4_tjbme"]
-[ext_resource type="Texture2D" uid="uid://bdrfsbunprwb0" path="res://images/venus/clouds/cloud2.png" id="5_ma66e"]
 [ext_resource type="Texture2D" uid="uid://mowmrxxbqlby" path="res://images/venus/cloud1.png" id="5_mkknp"]
 [ext_resource type="Texture2D" uid="uid://bcb3o5xd4i1d5" path="res://images/venus/cloud2 actual.png" id="6_r4phb"]
 [ext_resource type="Texture2D" uid="uid://dflw0otk4n3jm" path="res://images/venus/cloud3.png" id="7_tboo7"]
@@ -24,7 +23,6 @@
 [ext_resource type="Texture2D" uid="uid://dnpwjnt6jtdpm" path="res://images/mercury/no.png" id="16_qs1d7"]
 [ext_resource type="Script" uid="uid://cp5vbbje4v4qv" path="res://scripts/boots.gd" id="17_ya5ls"]
 [ext_resource type="Script" uid="uid://c442tqbkww5lr" path="res://scripts/barrier.gd" id="22_yc0rh"]
-[ext_resource type="Texture2D" uid="uid://u675rjigxrfo" path="res://images/venus/clouds/cloud9.png" id="24_rbi8o"]
 [ext_resource type="Texture2D" uid="uid://cyhibd6xhj537" path="res://images/mercury/boots.png" id="24_tdsfh"]
 [ext_resource type="Texture2D" uid="uid://rmooxlwdh2h" path="res://images/mercury/ice skates.png" id="25_lflb7"]
 [ext_resource type="Texture2D" uid="uid://brib7m4ylkkap" path="res://images/mercury/raincoats.png" id="26_hcxwc"]
@@ -32,14 +30,14 @@
 [ext_resource type="Script" uid="uid://1m3u7ghoal0i" path="res://scripts/lava.gd" id="29_0bbd5"]
 [ext_resource type="Texture2D" uid="uid://cybe6au0sik6f" path="res://images/venus/snow.png" id="29_0uv3g"]
 [ext_resource type="Script" uid="uid://dlswbpc0iqdbx" path="res://scripts/moving_cloud.gd" id="30_yd4sw"]
-[ext_resource type="Texture2D" uid="uid://c3txyq867g8md" path="res://images/venus/clouds/cloud4.png" id="31_yd4sw"]
 [ext_resource type="Script" uid="uid://dtf3v7lf7lx2j" path="res://scripts/thunder_cloud.gd" id="32_m310k"]
+[ext_resource type="Texture2D" uid="uid://vhjnv10kglhi" path="res://images/venus/longcloud.png" id="33_qs1d7"]
 [ext_resource type="Script" uid="uid://d16iriehslnbv" path="res://scripts/falling_asteroid.gd" id="33_xe2my"]
 [ext_resource type="Texture2D" uid="uid://dafxm5ie3v3j8" path="res://images/intro_page/asteroid1.png" id="34_y1d7a"]
 [ext_resource type="Script" uid="uid://bdbbq62f8kbmt" path="res://scripts/crystal.gd" id="35_rxmr8"]
-[ext_resource type="Texture2D" uid="uid://etwdh3mmkjfq" path="res://images/mercury/crystal.png" id="36_0bbd5"]
 [ext_resource type="FontFile" uid="uid://dqp5kyy7yyosk" path="res://pixelfont.ttf" id="36_rxmr8"]
 [ext_resource type="Script" uid="uid://dj6j8nbybw55c" path="res://scripts/lava_respawn.gd" id="37_msgdu"]
+[ext_resource type="Texture2D" uid="uid://cqhqynqsnulje" path="res://images/mercury/shard.png" id="37_yxsa8"]
 [ext_resource type="Script" uid="uid://bveutufglpxep" path="res://scripts/checkpoint.gd" id="41_1usnl"]
 [ext_resource type="Texture2D" uid="uid://cw7xggv5gnbxx" path="res://images/mercury/checkpointwhite.png" id="42_7ffta"]
 [ext_resource type="Texture2D" uid="uid://bhulmtu3pyhkh" path="res://images/venus/checkpoint purple actual.png" id="43_yr85m"]
@@ -788,13 +786,13 @@ position = Vector2(1605, 2105)
 script = ExtResource("30_yd4sw")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="moving cloud" unique_id=1431591882]
-position = Vector2(11901, 1697)
+position = Vector2(11962.999, 1705)
 scale = Vector2(0.6575981, 0.6171882)
 
 [node name="movingcloud" type="Sprite2D" parent="moving cloud/StaticBody2D" unique_id=1983327419]
 position = Vector2(3.040987, 3.2404938)
-scale = Vector2(1.971453, 1.971453)
-texture = ExtResource("31_yd4sw")
+scale = Vector2(2, 2)
+texture = ExtResource("6_r4phb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="moving cloud/StaticBody2D" unique_id=341412292]
 position = Vector2(19.769531, 43.006348)
@@ -815,8 +813,8 @@ position = Vector2(13198, 1278)
 
 [node name="Sprite2D" type="Sprite2D" parent="static cloud" unique_id=1904900208]
 position = Vector2(-1493, 477)
-scale = Vector2(1.4687495, 1.4687498)
-texture = ExtResource("24_rbi8o")
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("5_mkknp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="static cloud" unique_id=347121142]
 position = Vector2(-1497, 497)
@@ -830,8 +828,8 @@ script = ExtResource("32_m310k")
 
 [node name="Sprite2D" type="Sprite2D" parent="thunder cloud/StaticBody2D" unique_id=984639063]
 position = Vector2(12908.388, 1409.0001)
-scale = Vector2(16.329947, 3.7797618)
-texture = ExtResource("5_ma66e")
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("33_qs1d7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="thunder cloud/StaticBody2D" unique_id=1483453267]
 position = Vector2(12817.219, 1425)
@@ -874,12 +872,13 @@ position = Vector2(14805.641, 1674.9688)
 shape = SubResource("RectangleShape2D_msgdu")
 
 [node name="crystal" type="Area2D" parent="." unique_id=96708250]
-position = Vector2(1234, 108)
+position = Vector2(1230, 168)
 script = ExtResource("35_rxmr8")
 
 [node name="crystalimage" type="Sprite2D" parent="crystal" unique_id=2061845864]
 position = Vector2(15226.5, 1549)
-texture = ExtResource("36_0bbd5")
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("37_yxsa8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="crystal" unique_id=523541254]
 position = Vector2(15222, 1547)
