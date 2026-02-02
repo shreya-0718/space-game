@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cleyhsn86koph" path="res://images/level_page/Back.png" id="6_vt45y"]
 [ext_resource type="Script" uid="uid://df1pespjgxir7" path="res://scripts/trees2.gd" id="7_lccmr"]
 [ext_resource type="Script" uid="uid://xhnj7qwvf34d" path="res://scripts/back.gd" id="7_pqjif"]
+[ext_resource type="Script" uid="uid://brbyk2hl5l3gx" path="res://scripts/bridge.gd" id="8_drqgp"]
 [ext_resource type="Texture2D" uid="uid://b84h1hki10wk8" path="res://images/earth/trees.png" id="8_pqjif"]
 [ext_resource type="TileSet" uid="uid://drufa7oy3tfua" path="res://images/earth_tileset.tres" id="9_jipjx"]
 [ext_resource type="SpriteFrames" uid="uid://cj042qejdnd52" path="res://images/astronaut/astronaut_animation.tres" id="9_lf2vo"]
@@ -23,11 +24,11 @@ size = Vector2(548, 263)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drqgp"]
 size = Vector2(377.875, 224)
 
-[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_lccmr"]
-points = PackedVector2Array(579, 39, 601, -79, 614, -36, 676, -3, 797, 37, 927, 69, 1042, 82, 1212, 87, 1361, 68, 1468, 40, 1578, -18, 1618, -50, 1573, 91, 1135, 157)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nvat7"]
-size = Vector2(193.5, 19)
+size = Vector2(271.75, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8g57r"]
+size = Vector2(124.5, 87.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tcu1f"]
 size = Vector2(83.5625, 108.99999)
@@ -108,7 +109,7 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(474, -75)
 
 [node name="startposition" type="Marker2D" parent="Node2D2/trees" unique_id=1190495930]
-position = Vector2(784, 408)
+position = Vector2(808, 410)
 
 [node name="Trees3" type="Sprite2D" parent="Node2D2" unique_id=11793639]
 position = Vector2(5990, 132.00002)
@@ -144,17 +145,22 @@ position = Vector2(1788, 3)
 [node name="climbpoint2" type="Marker2D" parent="Node2D2/trees2" unique_id=1862115626]
 position = Vector2(1810, 463)
 
-[node name="bridge" type="StaticBody2D" parent="Node2D2" unique_id=1019739781]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/bridge" unique_id=820959287]
-shape = SubResource("ConvexPolygonShape2D_lccmr")
-
 [node name="StaticBody2D" type="StaticBody2D" parent="Node2D2" unique_id=982160404]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/StaticBody2D" unique_id=1841344935]
-position = Vector2(471, -9)
+position = Vector2(510.125, -9)
 shape = SubResource("RectangleShape2D_nvat7")
 one_way_collision = true
+
+[node name="bridge" type="Area2D" parent="Node2D2" unique_id=1095531125]
+script = ExtResource("8_drqgp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/bridge" unique_id=87153690]
+position = Vector2(665, -42)
+shape = SubResource("RectangleShape2D_8g57r")
+
+[node name="bridgepoint" type="Marker2D" parent="Node2D2/bridge" unique_id=2047316513]
+position = Vector2(1983, -43)
 
 [node name="astronaut" type="CharacterBody2D" parent="." unique_id=562307866 groups=["astronaut"]]
 position = Vector2(451, 353)
@@ -251,6 +257,7 @@ metadata/_edit_use_anchors_ = true
 [connection signal="body_exited" from="Node2D2/trees" to="Node2D2/trees" method="_on_body_exited"]
 [connection signal="body_entered" from="Node2D2/trees2" to="Node2D2/trees2" method="_on_body_entered"]
 [connection signal="body_exited" from="Node2D2/trees2" to="Node2D2/trees2" method="_on_body_exited"]
+[connection signal="body_entered" from="Node2D2/bridge" to="Node2D2/bridge" method="_on_body_entered"]
 [connection signal="pressed" from="usure?/yes" to="usure?/yes" method="_on_pressed"]
 [connection signal="pressed" from="usure?/NO" to="usure?/NO" method="_on_pressed"]
 [connection signal="body_entered" from="quicksand" to="quicksand" method="_on_body_entered"]
