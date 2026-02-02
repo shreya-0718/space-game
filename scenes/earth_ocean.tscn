@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://drufa7oy3tfua" path="res://images/earth_tileset.tres" id="1_5q57j"]
 [ext_resource type="Texture2D" uid="uid://cen5qm47wnojw" path="res://images/earth/ocean_bckg.png" id="1_e1u4y"]
-[ext_resource type="Script" uid="uid://cv1o28afdj1jl" path="res://scripts/seashells.gd" id="3_pha60"]
+[ext_resource type="Script" path="res://scripts/seashells.gd" id="3_pha60"]
 [ext_resource type="Texture2D" uid="uid://im8akvumht5l" path="res://images/earth/shell.png" id="3_uwlb3"]
 [ext_resource type="Texture2D" uid="uid://c830son4x1yls" path="res://images/earth_and_mars.png" id="4_k007f"]
 [ext_resource type="Texture2D" uid="uid://bu87tim2nh1nr" path="res://images/earth/Astrointheocean.png" id="5_4ykf2"]
@@ -45,6 +45,9 @@ radius = 88.051125
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6j36a"]
 size = Vector2(57, 651)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m6xug"]
+size = Vector2(2790, 75)
 
 [node name="EarthOcean" type="Node2D" unique_id=695108042]
 
@@ -147,7 +150,7 @@ shape = SubResource("RectangleShape2D_k007f")
 [node name="jellyfishies" type="Node2D" parent="." unique_id=469655064]
 
 [node name="Area2D" type="Area2D" parent="jellyfishies" unique_id=1093647486]
-position = Vector2(51, -67)
+position = Vector2(269, 189)
 script = ExtResource("7_sntt1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="jellyfishies/Area2D" unique_id=233579577]
@@ -237,6 +240,13 @@ text = "YOU NEED FIVE SEASHELLS TO PASS!"
 horizontal_alignment = 1
 autowrap_mode = 2
 
+[node name="Area2D" type="Area2D" parent="." unique_id=1146448664]
+script = ExtResource("7_sntt1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=815211568]
+position = Vector2(1321, 552.5)
+shape = SubResource("RectangleShape2D_m6xug")
+
 [connection signal="body_entered" from="seashells/Area2D" to="seashells/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="seashells/Area2D2" to="seashells/Area2D2" method="_on_body_entered"]
 [connection signal="body_entered" from="seashells/Area2D3" to="seashells/Area2D3" method="_on_body_entered"]
@@ -246,3 +256,4 @@ autowrap_mode = 2
 [connection signal="body_entered" from="jellyfishies/Area2D2" to="jellyfishies/Area2D2" method="_on_body_entered"]
 [connection signal="body_entered" from="jellyfishies/Area2D3" to="jellyfishies/Area2D3" method="_on_body_entered"]
 [connection signal="body_entered" from="end" to="end" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
