@@ -36,7 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://bhlphiy3b48wm" path="res://images/mercury/yes.png" id="30_utlqg"]
 [ext_resource type="Texture2D" uid="uid://dnpwjnt6jtdpm" path="res://images/mercury/no.png" id="32_kgyyi"]
 [ext_resource type="Script" uid="uid://bdbbq62f8kbmt" path="res://scripts/crystal.gd" id="32_vujqb"]
-[ext_resource type="Texture2D" uid="uid://etwdh3mmkjfq" path="res://images/mercury/crystal.png" id="33_ta7jb"]
+[ext_resource type="Texture2D" uid="uid://cqhqynqsnulje" path="res://images/mercury/shard.png" id="37_kgyyi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_doqmq"]
 size = Vector2(77, 109)
@@ -134,7 +134,7 @@ animations = [{
 size = Vector2(1483, 278.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2115d"]
-size = Vector2(126, 135)
+size = Vector2(126, 166.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vujqb"]
 size = Vector2(736.5, 114.5)
@@ -700,11 +700,11 @@ script = ExtResource("32_vujqb")
 
 [node name="crystalimage" type="Sprite2D" parent="crystal" unique_id=1618288219]
 position = Vector2(15728.001, 737)
-scale = Vector2(0.48938993, 0.48938996)
-texture = ExtResource("33_ta7jb")
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("37_kgyyi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="crystal" unique_id=1082307761]
-position = Vector2(15727, 738.5)
+position = Vector2(15730, 744.75)
 shape = SubResource("RectangleShape2D_2115d")
 
 [node name="removetutorial" type="Marker2D" parent="." unique_id=38920004]
