@@ -2,7 +2,8 @@
 
 [ext_resource type="TileSet" uid="uid://drufa7oy3tfua" path="res://images/earth_tileset.tres" id="1_5q57j"]
 [ext_resource type="Texture2D" uid="uid://cen5qm47wnojw" path="res://images/earth/ocean_bckg.png" id="1_e1u4y"]
-[ext_resource type="Script" path="res://scripts/seashells.gd" id="3_pha60"]
+[ext_resource type="Script" uid="uid://0a8dp3ewh228" path="res://scripts/earth_oceanlevel.gd" id="1_p82k6"]
+[ext_resource type="Script" uid="uid://cv1o28afdj1jl" path="res://scripts/seashells.gd" id="3_pha60"]
 [ext_resource type="Texture2D" uid="uid://im8akvumht5l" path="res://images/earth/shell.png" id="3_uwlb3"]
 [ext_resource type="Texture2D" uid="uid://c830son4x1yls" path="res://images/earth_and_mars.png" id="4_k007f"]
 [ext_resource type="Texture2D" uid="uid://bu87tim2nh1nr" path="res://images/earth/Astrointheocean.png" id="5_4ykf2"]
@@ -11,6 +12,8 @@
 [ext_resource type="FontFile" uid="uid://xd7jpriyd88y" path="res://number font.ttf" id="6_sntt1"]
 [ext_resource type="Script" uid="uid://bu32bl86ekrkv" path="res://scripts/jellyfish.gd" id="7_sntt1"]
 [ext_resource type="Script" uid="uid://ogqby4a3sev" path="res://scripts/oceanend.gd" id="11_m6xug"]
+[ext_resource type="Script" uid="uid://bdbbq62f8kbmt" path="res://scripts/crystal.gd" id="12_dxoki"]
+[ext_resource type="Texture2D" uid="uid://cqhqynqsnulje" path="res://images/mercury/shard.png" id="13_p82k6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k007f"]
 size = Vector2(239.5593, 239.55945)
@@ -49,7 +52,11 @@ size = Vector2(57, 651)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m6xug"]
 size = Vector2(2790, 75)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ybnj8"]
+size = Vector2(175, 167.5)
+
 [node name="EarthOcean" type="Node2D" unique_id=695108042]
+script = ExtResource("1_p82k6")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1032321450]
 z_index = 4
@@ -147,6 +154,28 @@ texture = ExtResource("3_uwlb3")
 position = Vector2(0.00024414063, -6.1035156e-05)
 shape = SubResource("RectangleShape2D_k007f")
 
+[node name="Label3" type="Label" parent="seashells" unique_id=810405258]
+offset_left = 305.0
+offset_top = 157.0
+offset_right = 603.0
+offset_bottom = 303.0
+theme_override_fonts/font = ExtResource("5_xeq0s")
+theme_override_font_sizes/font_size = 30
+text = "COLLECT THE SEASHELLS, BUT STAY AWAY FROM THE JELLYFISH!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label4" type="Label" parent="seashells" unique_id=974346905]
+offset_left = 1016.0
+offset_top = 367.0
+offset_right = 1347.0
+offset_bottom = 434.0
+theme_override_fonts/font = ExtResource("5_xeq0s")
+theme_override_font_sizes/font_size = 30
+text = "THE SPIKY CORAL WILL POP YOUR BUBBLE!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [node name="jellyfishies" type="Node2D" parent="." unique_id=469655064]
 
 [node name="Area2D" type="Area2D" parent="jellyfishies" unique_id=1093647486]
@@ -207,7 +236,7 @@ position = Vector2(138, 188)
 shape = SubResource("CircleShape2D_6j36a")
 
 [node name="Camera2D" type="Camera2D" parent="astronaut" unique_id=6460025]
-position = Vector2(423, 120)
+position = Vector2(400, 316)
 limit_left = 11
 limit_top = -9997307
 limit_right = 16382
@@ -246,6 +275,29 @@ script = ExtResource("7_sntt1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=815211568]
 position = Vector2(1321, 552.5)
 shape = SubResource("RectangleShape2D_m6xug")
+
+[node name="crystal" type="Area2D" parent="." unique_id=1782520734]
+script = ExtResource("12_dxoki")
+
+[node name="crystalimage" type="Sprite2D" parent="crystal" unique_id=981518613]
+position = Vector2(2499, 368)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("13_p82k6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="crystal" unique_id=36000527]
+position = Vector2(2506, 378)
+shape = SubResource("RectangleShape2D_ybnj8")
+
+[node name="Label3" type="Label" parent="." unique_id=1998937335]
+offset_left = 2296.0
+offset_top = 166.0
+offset_right = 2703.0
+offset_bottom = 286.0
+theme_override_fonts/font = ExtResource("5_xeq0s")
+theme_override_font_sizes/font_size = 30
+text = "ONE OF THE CRYSTAL'S PIECES HAS BEEN FOUND ... EXPLORE THE REST TO FIND MORE! "
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [connection signal="body_entered" from="seashells/Area2D" to="seashells/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="seashells/Area2D2" to="seashells/Area2D2" method="_on_body_entered"]
