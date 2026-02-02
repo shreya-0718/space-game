@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://cy7s7rlxscae" path="res://images/earth/Screenshot 2026-02-01 191752.png" id="2_7y1v2"]
 [ext_resource type="Texture2D" uid="uid://r2ihhnkulfkd" path="res://images/earth/forest_bckg.png" id="3_l4fgh"]
 [ext_resource type="Texture2D" uid="uid://c830son4x1yls" path="res://images/earth_and_mars.png" id="4_l4fgh"]
+[ext_resource type="Texture2D" uid="uid://cleyhsn86koph" path="res://images/level_page/Back.png" id="6_vt45y"]
+[ext_resource type="Script" uid="uid://xhnj7qwvf34d" path="res://scripts/back.gd" id="7_pqjif"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d6008"]
 atlas = ExtResource("4_l4fgh")
@@ -148,3 +150,22 @@ sprite_frames = SubResource("SpriteFrames_pqjif")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D" unique_id=202841407]
 libraries/ = SubResource("AnimationLibrary_vt45y")
+
+[node name="CanvasLayer5" type="CanvasLayer" parent="." unique_id=123623010]
+
+[node name="back" type="Button" parent="CanvasLayer5" unique_id=977241057]
+z_index = 1
+anchors_preset = -1
+anchor_right = 1.3145833
+anchor_bottom = 0.95
+offset_left = 9.999999
+offset_top = 10.0
+offset_right = 870.0
+offset_bottom = 424.0
+scale = Vector2(0.08, 0.08)
+action_mode = 0
+icon = ExtResource("6_vt45y")
+script = ExtResource("7_pqjif")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="CanvasLayer5/back" to="CanvasLayer5/back" method="_on_pressed"]
