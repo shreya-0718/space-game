@@ -50,7 +50,7 @@ radius = 88.051125
 size = Vector2(57, 651)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m6xug"]
-size = Vector2(2790, 75)
+size = Vector2(2371, 75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ybnj8"]
 size = Vector2(175, 167.5)
@@ -223,7 +223,7 @@ frame_progress = 0.90826327
 position = Vector2(659.5, 268.5)
 shape = SubResource("RectangleShape2D_blcji")
 
-[node name="astronaut" type="CharacterBody2D" parent="." unique_id=1958664301]
+[node name="astronaut" type="CharacterBody2D" parent="." unique_id=1958664301 groups=["astronaut"]]
 script = ExtResource("5_6j36a")
 
 [node name="Astrointheocean" type="Sprite2D" parent="astronaut" unique_id=1421702836]
@@ -273,7 +273,7 @@ autowrap_mode = 2
 script = ExtResource("7_sntt1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=815211568]
-position = Vector2(1321, 552.5)
+position = Vector2(1111.5, 552.5)
 shape = SubResource("RectangleShape2D_m6xug")
 
 [node name="crystal" type="Area2D" parent="." unique_id=1782520734]
@@ -309,3 +309,4 @@ autowrap_mode = 2
 [connection signal="body_entered" from="jellyfishies/Area2D3" to="jellyfishies/Area2D3" method="_on_body_entered"]
 [connection signal="body_entered" from="end" to="end" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="crystal" to="crystal" method="_on_body_entered"]
