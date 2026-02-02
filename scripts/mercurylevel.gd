@@ -25,7 +25,7 @@ func update_powerups():
 	for i in range(powerups.size()):
 		powerups[0].modulate = Color(1, 1, 1, 1) if global.ice_skates > 0 else Color(1, 1, 1, 0)
 		powerups[1].modulate = Color(1, 1, 1, 1) if global.raincoat > 0 else Color(1, 1, 1, 0)
-
+		
 func _process(delta):
 	update_progress_bar()
 	update_powerups()

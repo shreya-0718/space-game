@@ -31,6 +31,7 @@ extends Node2D
 var mercurydone = false
 var venusdone = false
 var earthdone = false
+
 func _ready():
 	check_venus()
 	check_earth()
@@ -41,12 +42,11 @@ func _ready():
 	uranus.modulate = Color(0.5, 0.5, 0.5, 1.0)
 	pluto.modulate = Color(0.5, 0.5, 0.5, 1.0)
 	
-	
 func check_mars():
-		if not earthdone:
-			mars.modulate = Color(0.5, 0.5, 0.5, 1.0)
-			lock3.visible = true
-			mars.disabled = true
+	if not earthdone:
+		mars.modulate = Color(0.5, 0.5, 0.5, 1.0)
+		lock3.visible = true
+		mars.disabled = true
 		if global.passedearth:
 			mars.modulate = Color.WHITE
 			rocket.global_position = marsspot.global_position
