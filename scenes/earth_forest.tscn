@@ -1,12 +1,120 @@
 [gd_scene format=4 uid="uid://dits3j663hc6s"]
 
 [ext_resource type="TileSet" uid="uid://cyvifln6rropl" path="res://images/earth_and_mars.tres" id="1_3xw40"]
+[ext_resource type="Script" uid="uid://d1dkxihom1wv" path="res://scripts/earth_forest.gd" id="1_d6008"]
 [ext_resource type="Texture2D" uid="uid://cy7s7rlxscae" path="res://images/earth/Screenshot 2026-02-01 191752.png" id="2_7y1v2"]
 [ext_resource type="Texture2D" uid="uid://r2ihhnkulfkd" path="res://images/earth/forest_bckg.png" id="3_l4fgh"]
+[ext_resource type="Texture2D" uid="uid://c830son4x1yls" path="res://images/earth_and_mars.png" id="4_l4fgh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6008"]
+atlas = ExtResource("4_l4fgh")
+region = Rect2(512, 1536, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bt8d2"]
+atlas = ExtResource("4_l4fgh")
+region = Rect2(768, 1536, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vt45y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6008")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bt8d2")
+}],
+"loop": false,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vt45y"]
+atlas = ExtResource("4_l4fgh")
+region = Rect2(512, 1536, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4fgh"]
+atlas = ExtResource("4_l4fgh")
+region = Rect2(768, 1536, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pqjif"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vt45y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4fgh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="Animation" id="Animation_d6008"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D2:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+
+[sub_resource type="Animation" id="Animation_bt8d2"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D2:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vt45y"]
+_data = {
+&"RESET": SubResource("Animation_d6008"),
+&"new_animation": SubResource("Animation_bt8d2")
+}
 
 [node name="EarthForest" type="Node2D" unique_id=1138506274]
+script = ExtResource("1_d6008")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2051168973]
+layer = -5
 
 [node name="ForestBckg" type="Sprite2D" parent="CanvasLayer" unique_id=1554373511]
 position = Vector2(480.99997, 323)
@@ -15,10 +123,28 @@ texture = ExtResource("3_l4fgh")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=136832624]
 scale = Vector2(0.5, 0.5)
-tile_map_data = PackedByteArray("AAAEACQAAAAAAA0AAAAFACQAAAAAAA0AAAAGACQAAAAAAA0AAAAHACQAAAAAAA0AAAAIACQAAAAAAA0AAAAJACQAAAAAAA0AAAAAAAkAAAAAAAwAAAAAAAoAAAAAAA0AAAABAAkAAAABAAwAAAABAAoAAAABAA0AAAACAAkAAAACAAwAAAACAAoAAAACAA0AAAADAAkAAAADAAwAAAADAAoAAAADAA0AAAAEAAkAAAAAAAwAAAAEAAoAAAAAAA0AAAAFAAkAAAABAAwAAAAFAAoAAAABAA0AAAAGAAkAAAACAAwAAAAGAAoAAAACAA0AAAAHAAkAAAADAAwAAAAHAAoAAAADAA0AAAAIAAkAAAAAAAwAAAAIAAoAAAAAAA0AAAAJAAkAAAABAAwAAAAJAAoAAAABAA0AAAAKAAkAAAACAAwAAAAKAAoAAAACAA0AAAALAAkAAAADAAwAAAALAAoAAAADAA0AAAAMAAkAAAAAAAwAAAAMAAoAAAAAAA0AAAANAAkAAAABAAwAAAANAAoAAAABAA0AAAAOAAkAAAACAAwAAAAOAAoAAAACAA0AAAAPAAkAAAADAAwAAAAPAAoAAAADAA0AAAA=")
+tile_map_data = PackedByteArray("AAAEACQAAAAAAA0AAAAFACQAAAAAAA0AAAAGACQAAAAAAA0AAAAHACQAAAAAAA0AAAAIACQAAAAAAA0AAAAJACQAAAAAAA0AAAAAAAkAAAAAAA0AAAABAAkAAAABAA0AAAACAAkAAAACAA0AAAADAAkAAAADAA0AAAAEAAkAAAAAAA0AAAAFAAkAAAABAA0AAAAGAAkAAAACAA0AAAAHAAkAAAADAA0AAAAIAAkAAAAAAA0AAAAJAAkAAAABAA0AAAAKAAkAAAAEAA0AAAALAAkAAAAFAA0AAAAMAAkAAAAGAA0AAAANAAkAAAAHAA0AAAAOAAkAAAAEAA0AAAAPAAkAAAAFAA0AAAAAAAgAAAAAAAwAAAABAAgAAAABAAwAAAACAAgAAAACAAwAAAADAAgAAAADAAwAAAAEAAgAAAAAAAwAAAAFAAgAAAABAAwAAAAGAAgAAAACAAwAAAAHAAgAAAADAAwAAAAIAAgAAAAAAAwAAAAJAAgAAAABAAwAAAAKAAgAAAAEAAwAAAALAAgAAAAFAAwAAAAMAAgAAAAGAAwAAAANAAgAAAAHAAwAAAAOAAgAAAAEAAwAAAAPAAgAAAAFAAwAAAAQAAgAAAAGAAwAAAAQAAkAAAAGAA0AAAARAAgAAAAHAAwAAAARAAkAAAAHAA0AAAASAAgAAAAAAAwAAAASAAkAAAAAAA0AAAATAAgAAAABAAwAAAATAAkAAAABAA0AAAAUAAgAAAACAAwAAAAUAAkAAAACAA0AAAAVAAgAAAADAAwAAAAVAAkAAAADAA0AAAAWAAgAAAAAAAwAAAAWAAkAAAAAAA0AAAAXAAgAAAABAAwAAAAXAAkAAAABAA0AAAAYAAgAAAACAAwAAAAYAAkAAAACAA0AAAAZAAgAAAADAAwAAAAZAAkAAAADAA0AAAA=")
 tile_set = ExtResource("1_3xw40")
 
 [node name="Screenshot20260201191752" type="Sprite2D" parent="." unique_id=449075007]
 position = Vector2(-1444, 567.99994)
 scale = Vector2(2.293006, 2.2930064)
 texture = ExtResource("2_7y1v2")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=466009222]
+visible = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D" unique_id=1296145980]
+position = Vector2(668, 572)
+scale = Vector2(0.5625, 0.5625)
+sprite_frames = SubResource("SpriteFrames_vt45y")
+frame = 1
+frame_progress = 0.74932134
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Node2D" unique_id=592814446]
+position = Vector2(809, 572)
+scale = Vector2(0.5625, 0.5625)
+sprite_frames = SubResource("SpriteFrames_pqjif")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D" unique_id=202841407]
+libraries/ = SubResource("AnimationLibrary_vt45y")

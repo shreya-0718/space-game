@@ -516,10 +516,10 @@ frame_progress = 0.90160733
 [node name="left" type="Node2D" parent="." unique_id=416745509]
 
 [node name="tutorialL" type="Label" parent="left" unique_id=1528146382]
-offset_left = 1034.0
-offset_top = 253.0
-offset_right = 1266.0
-offset_bottom = 565.0
+offset_left = 1041.0
+offset_top = 275.0
+offset_right = 1273.0
+offset_bottom = 587.0
 text = "			PRESS
 OR	
 
@@ -528,12 +528,12 @@ label_settings = ExtResource("28_vujqb")
 horizontal_alignment = 1
 
 [node name="leftarrow" type="Sprite2D" parent="left" unique_id=1597151840]
-position = Vector2(1083.56, 343.51642)
+position = Vector2(1090.56, 365.51642)
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("16_s7w1k")
 
 [node name="akey" type="Sprite2D" parent="left" unique_id=1483207175]
-position = Vector2(1215, 346.00003)
+position = Vector2(1222, 368.00003)
 scale = Vector2(0.075, 0.08)
 texture = ExtResource("17_s7w1k")
 
@@ -541,10 +541,10 @@ texture = ExtResource("17_s7w1k")
 position = Vector2(445, -108)
 
 [node name="tutorialR" type="Label" parent="right" unique_id=1425677866]
-offset_left = 981.0
-offset_top = 369.0
-offset_right = 1229.0
-offset_bottom = 681.0
+offset_left = 988.0
+offset_top = 391.0
+offset_right = 1236.0
+offset_bottom = 703.0
 text = "			PRESS
 OR
 
@@ -554,12 +554,12 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="rightarrow" type="Sprite2D" parent="right" unique_id=43624466]
-position = Vector2(1038.48, 458.00003)
+position = Vector2(1045.48, 480.00003)
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("18_nh86p")
 
 [node name="dkey" type="Sprite2D" parent="right" unique_id=2054492596]
-position = Vector2(1171, 460.00003)
+position = Vector2(1178, 482.00003)
 scale = Vector2(0.075, 0.08)
 texture = ExtResource("19_p3g0t")
 
@@ -567,10 +567,10 @@ texture = ExtResource("19_p3g0t")
 position = Vector2(-268, -111)
 
 [node name="tutorialU" type="Label" parent="up" unique_id=1302635364]
-offset_left = 1523.0
-offset_top = 254.0
-offset_right = 1710.0
-offset_bottom = 611.0
+offset_left = 1530.0
+offset_top = 276.0
+offset_right = 1717.0
+offset_bottom = 633.0
 text = "			PRESS
 OR
 
@@ -581,12 +581,12 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="uparrow" type="Sprite2D" parent="up" unique_id=1959206356]
-position = Vector2(1550, 355.00003)
+position = Vector2(1557, 377.00003)
 scale = Vector2(0.08039825, 0.08039825)
 texture = ExtResource("20_u28sr")
 
 [node name="wkey" type="Sprite2D" parent="up" unique_id=63546968]
-position = Vector2(1687.0001, 354.00003)
+position = Vector2(1694.0001, 376.00003)
 scale = Vector2(0.075, 0.08)
 texture = ExtResource("21_vujqb")
 
