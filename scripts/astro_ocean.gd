@@ -33,3 +33,8 @@ func respawn():
 	var spawnpoint = get_node("../spawnpoint") 
 	if spawnpoint:
 		position = spawnpoint.position
+
+@onready var number = get_node("../CanvasLayer/Label2")
+
+func _process(delta):
+	number.text = str(global.seashells)

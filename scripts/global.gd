@@ -31,6 +31,8 @@ var passedmercury = false
 var passedvenus = false
 var passedearth = false
 
+#for earth
+var seashells: int = 0
 
 #for reverse movement on venus
 var reverse = false
