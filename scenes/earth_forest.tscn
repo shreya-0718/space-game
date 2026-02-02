@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dnpwjnt6jtdpm" path="res://images/mercury/no.png" id="12_jxaag"]
 [ext_resource type="Script" uid="uid://dqc0rww00brfs" path="res://scripts/no.gd" id="13_drqgp"]
 [ext_resource type="Script" uid="uid://1m3u7ghoal0i" path="res://scripts/lava.gd" id="16_jxaag"]
+[ext_resource type="Script" uid="uid://i7hqods8ykxy" path="res://scripts/platform.gd" id="17_drqgp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jxaag"]
 size = Vector2(349, 263)
@@ -31,6 +32,12 @@ size = Vector2(83.5625, 108.99999)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tr1rt"]
 size = Vector2(1097, 101.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvat7"]
+size = Vector2(200, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8g57r"]
+size = Vector2(146, 72)
 
 [node name="EarthForest" type="Node2D" unique_id=1138506274]
 
@@ -236,6 +243,19 @@ horizontal_alignment = 1
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
+[node name="platformarea" type="Area2D" parent="." unique_id=627442360]
+script = ExtResource("17_drqgp")
+
+[node name="platform" type="StaticBody2D" parent="platformarea" unique_id=1979006605]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platformarea/platform" unique_id=513699046]
+position = Vector2(471, 8)
+shape = SubResource("RectangleShape2D_nvat7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platformarea" unique_id=2033990294]
+position = Vector2(477, -88)
+shape = SubResource("RectangleShape2D_8g57r")
+
 [connection signal="pressed" from="CanvasLayer5/back" to="CanvasLayer5/back" method="_on_pressed"]
 [connection signal="body_entered" from="Node2D2/trees" to="Node2D2/trees" method="_on_body_entered"]
 [connection signal="body_exited" from="Node2D2/trees" to="Node2D2/trees" method="_on_body_exited"]
@@ -244,3 +264,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="usure?/yes" to="usure?/yes" method="_on_pressed"]
 [connection signal="pressed" from="usure?/NO" to="usure?/NO" method="_on_pressed"]
 [connection signal="body_entered" from="quicksand" to="quicksand" method="_on_body_entered"]
+[connection signal="body_entered" from="platformarea" to="platformarea" method="_on_body_entered"]
