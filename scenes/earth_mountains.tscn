@@ -1,10 +1,58 @@
 [gd_scene format=3 uid="uid://cp0nvaqjom7jq"]
 
 [ext_resource type="Texture2D" uid="uid://cxq7oosbqoasd" path="res://images/earth/mountains_bckg.jpeg" id="1_23mwf"]
+[ext_resource type="Texture2D" uid="uid://buyghuvy0b55s" path="res://images/earth/mountains.png" id="2_2m1x3"]
+[ext_resource type="Script" uid="uid://cj344vnwccvwc" path="res://scripts/astronaut_earth.gd" id="3_6e1ma"]
+[ext_resource type="SpriteFrames" uid="uid://cj042qejdnd52" path="res://images/astronaut/astronaut_animation.tres" id="4_tkyih"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_shu3f"]
+size = Vector2(83.5625, 108.99999)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_6e1ma"]
+points = PackedVector2Array(-1, 626, 490, 431, 1035, -49, 1218, -221, 1324, -172, 1413, 180, 1740, 35, 1796, 38, 1909, 220, 2054, 449, 2131, 450, 2250, 532, 2770, 53, 2877, 49, 2957, 158, 3304, -211, 3440, -209, 3588, 253, 3785, 428, 4187, 75, 4298, 88, 4468, 477, 4704, 647)
 
 [node name="Node2D" type="Node2D" unique_id=1849760801]
 
-[node name="bckg" type="Sprite2D" parent="." unique_id=1269889931]
+[node name="astronaut" type="CharacterBody2D" parent="." unique_id=148895223 groups=["astronaut"]]
+position = Vector2(450, 499)
+script = ExtResource("3_6e1ma")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="astronaut" unique_id=1493533135]
+position = Vector2(-322.78125, -159.5)
+shape = SubResource("RectangleShape2D_shu3f")
+
+[node name="Camera2D" type="Camera2D" parent="astronaut" unique_id=753369619]
+position = Vector2(-118, -187)
+limit_left = 5
+limit_top = -9998823
+limit_right = 6273
+limit_bottom = 640
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
+drag_vertical_enabled = true
+drag_top_margin = 0.4
+drag_bottom_margin = 0.08
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="astronaut" unique_id=1739384626]
+position = Vector2(-319, -159.00003)
+scale = Vector2(0.06225588, 0.06225588)
+sprite_frames = ExtResource("4_tkyih")
+animation = &"idle"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=843613540]
+
+[node name="Mountains" type="Sprite2D" parent="StaticBody2D" unique_id=1978448272]
+position = Vector2(2234, 139)
+texture = ExtResource("2_2m1x3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1003084661]
+shape = SubResource("ConvexPolygonShape2D_6e1ma")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=997259790]
+layer = -7
+
+[node name="bckg" type="Sprite2D" parent="CanvasLayer" unique_id=1269889931]
 position = Vector2(481.39615, 320.625)
 scale = Vector2(0.776124, 0.776124)
 texture = ExtResource("1_23mwf")
