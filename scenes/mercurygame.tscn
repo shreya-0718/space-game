@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cybohyg412588" path="res://scripts/mercurygame.gd" id="1_fa4wg"]
 [ext_resource type="Texture2D" uid="uid://dx11r03vxy72s" path="res://images/intro_page/title page bckg.jpeg" id="2_ffyet"]
 [ext_resource type="Texture2D" uid="uid://ctybmnfixfakw" path="res://images/mercuryminigame/gradient.png" id="3_vmtrl"]
-[ext_resource type="Script" uid="uid://bk24p387msmw1" path="res://scenes/again.gd" id="4_8xc5v"]
+[ext_resource type="Script" uid="uid://bk24p387msmw1" path="res://scripts/again.gd" id="4_8xc5v"]
 [ext_resource type="Texture2D" uid="uid://vnxfacbuhnoo" path="res://images/mercuryminigame/slider.png" id="4_ffyet"]
 [ext_resource type="Texture2D" uid="uid://n8j5kmhhcdi8" path="res://images/mercuryminigame/retry.png" id="5_vmtrl"]
 [ext_resource type="FontFile" uid="uid://dqp5kyy7yyosk" path="res://pixelfont.ttf" id="7_rpx5n"]
