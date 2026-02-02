@@ -3,9 +3,40 @@
 [ext_resource type="TileSet" uid="uid://bk0c4lhwcbjmp" path="res://images/earth_tileset.tres" id="1_5q57j"]
 [ext_resource type="Texture2D" uid="uid://cen5qm47wnojw" path="res://images/earth/ocean_bckg.png" id="1_e1u4y"]
 [ext_resource type="Texture2D" uid="uid://im8akvumht5l" path="res://images/earth/shell.png" id="3_uwlb3"]
+[ext_resource type="Texture2D" uid="uid://c830son4x1yls" path="res://images/earth_and_mars.png" id="4_k007f"]
+[ext_resource type="Texture2D" uid="uid://bu87tim2nh1nr" path="res://images/earth/Astrointheocean.png" id="5_4ykf2"]
+[ext_resource type="Script" uid="uid://mv7vhqfk0rk2" path="res://scripts/astro_ocean.gd" id="5_6j36a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k007f"]
 size = Vector2(239.5593, 239.55945)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ykf2"]
+atlas = ExtResource("4_k007f")
+region = Rect2(512, 1792, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6j36a"]
+atlas = ExtResource("4_k007f")
+region = Rect2(768, 1792, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pha60"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ykf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6j36a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_blcji"]
+size = Vector2(103, 107)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6j36a"]
+radius = 88.051125
 
 [node name="EarthOcean" type="Node2D" unique_id=695108042]
 
@@ -80,3 +111,58 @@ texture = ExtResource("3_uwlb3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="seashells/Area2D5" unique_id=282515494]
 position = Vector2(0.00024414063, -6.1035156e-05)
 shape = SubResource("RectangleShape2D_k007f")
+
+[node name="jellyfishies" type="Node2D" parent="." unique_id=469655064]
+
+[node name="Area2D" type="Area2D" parent="jellyfishies" unique_id=1093647486]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="jellyfishies/Area2D" unique_id=233579577]
+position = Vector2(660, 268.00003)
+scale = Vector2(0.42578125, 0.42578125)
+sprite_frames = SubResource("SpriteFrames_pha60")
+autoplay = "default"
+frame_progress = 0.8781842
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jellyfishies/Area2D" unique_id=1881013942]
+position = Vector2(659.5, 268.5)
+shape = SubResource("RectangleShape2D_blcji")
+
+[node name="Area2D2" type="Area2D" parent="jellyfishies" unique_id=965611357]
+position = Vector2(443, -107)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="jellyfishies/Area2D2" unique_id=380862237]
+position = Vector2(660, 268.00003)
+scale = Vector2(0.42578125, 0.42578125)
+sprite_frames = SubResource("SpriteFrames_pha60")
+autoplay = "default"
+frame_progress = 0.90826327
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jellyfishies/Area2D2" unique_id=1538237819]
+position = Vector2(659.5, 268.5)
+shape = SubResource("RectangleShape2D_blcji")
+
+[node name="Area2D3" type="Area2D" parent="jellyfishies" unique_id=825821125]
+position = Vector2(671, 80)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="jellyfishies/Area2D3" unique_id=295273193]
+position = Vector2(660, 268.00003)
+scale = Vector2(0.42578125, 0.42578125)
+sprite_frames = SubResource("SpriteFrames_pha60")
+autoplay = "default"
+frame_progress = 0.90826327
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jellyfishies/Area2D3" unique_id=1981706585]
+position = Vector2(659.5, 268.5)
+shape = SubResource("RectangleShape2D_blcji")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1958664301]
+script = ExtResource("5_6j36a")
+
+[node name="Astrointheocean" type="Sprite2D" parent="CharacterBody2D" unique_id=1421702836]
+position = Vector2(138, 188)
+scale = Vector2(0.06938739, 0.06938739)
+texture = ExtResource("5_4ykf2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1376275530]
+position = Vector2(138, 188)
+shape = SubResource("CircleShape2D_6j36a")

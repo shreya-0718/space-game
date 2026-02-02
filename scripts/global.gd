@@ -11,6 +11,7 @@ var boots: int = 0
 
 var mercury_gravity = 60
 var venus_gravity = 90
+var earth_gravity = 90
 
 var move_speed = 300
 var jump_force = 100.0
