@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cp0nvaqjom7jq"]
 
-[ext_resource type="Texture2D" uid="uid://cxq7oosbqoasd" path="res://images/earth/mountains bckg.jpeg" id="1_23mwf"]
+[ext_resource type="Texture2D" uid="uid://cxq7oosbqoasd" path="res://images/earth/mountains_bckg.jpeg" id="1_23mwf"]
 
 [node name="Node2D" type="Node2D" unique_id=1849760801]
 
