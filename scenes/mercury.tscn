@@ -196,7 +196,7 @@ tile_map_data = PackedByteArray("AAApHWkGAAAAAAYAAAAqHWkGAAABAAYAAAArHWkGAAACAAY
 tile_set = ExtResource("5_vujqb")
 
 [node name="astronaut" type="CharacterBody2D" parent="." unique_id=1606066007 groups=["astronaut"]]
-position = Vector2(11264, 861)
+position = Vector2(1419, 382)
 script = ExtResource("2_doqmq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="astronaut" unique_id=1665997636]
@@ -639,10 +639,10 @@ layer = 0
 anchors_preset = -1
 anchor_top = -0.0921875
 anchor_right = 0.114583336
-offset_left = -378.0
-offset_top = -15.0
-offset_right = 638.0
-offset_bottom = 695.0
+offset_left = -98.0
+offset_top = -2.0
+offset_right = 918.0
+offset_bottom = 708.0
 color = Color(0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 

@@ -5,13 +5,14 @@ extends Node2D
 	"window": {"node": $spaceship/window, "depth": 100000000},
 	"asteroid1": {"node": $asteroid1, "depth": 1.7},
 	"asteroid2": {"node": $asteroid2, "depth": 0.8},
+	"asteroid3": {"node": $asteroid3, "depth": 1.8},
 	"planet": {"node": $planet, "depth": 50.0},
 	"comet": {"node": $comet, "depth": 3},
 	"Galactico": {"node": $Galactico, "depth": 0.5},
 	"playbutton": {"node": $playbutton, "depth": 0.5}
 }
 
-var rocking_names = ["spaceship", "asteroid1", "asteroid2", "planet", "comet"]
+var rocking_names = ["spaceship", "asteroid1", "asteroid2", "asteroid3", "planet", "comet"]
 
 @onready var cam := $Camera2D
 @onready var white := $WhiteRect
@@ -96,7 +97,7 @@ func _on_playbutton_pressed():
 	w.tween_property($WhiteRect, "modulate:a", 1.0, 0.8)
 	await w.finished
 	
-	get_tree().change_scene_to_file("res://scenes/levelpage1.tscn")
+	get_tree().change_scene_to_file("res://scenes/intro_story.tscn")
 	
 	# move this code to inside-rocket scene instead:
 	var w2 = create_tween()

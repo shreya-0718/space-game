@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dee610l7noxbf" path="res://scripts/intro.gd" id="1_tipki"]
 [ext_resource type="Texture2D" uid="uid://dx11r03vxy72s" path="res://images/intro_page/title page bckg.jpeg" id="2_tipki"]
-[ext_resource type="Texture2D" uid="uid://dcwy03pb2d3bh" path="res://images/intro_page/galactico.png" id="3_choun"]
-[ext_resource type="Texture2D" uid="uid://dpn03rcfnt7rx" path="res://images/level_page/rocket.png" id="4_tipki"]
+[ext_resource type="Texture2D" uid="uid://biy1rfn2t1mtg" path="res://images/Title.png" id="3_choun"]
+[ext_resource type="Texture2D" uid="uid://dpn03rcfnt7rx" path="res://images/level_page/Rocket.png" id="4_tipki"]
 [ext_resource type="Texture2D" uid="uid://d0e57w2pv5nna" path="res://images/mercury/extraplanet.png" id="5_85g3d"]
 [ext_resource type="Texture2D" uid="uid://djtm0jbe6x6n8" path="res://images/intro_page/meteroiddd.png" id="6_choun"]
 [ext_resource type="Texture2D" uid="uid://pgnejyrg0poe" path="res://images/intro_page/comet empty.png" id="7_85g3d"]
@@ -24,26 +24,26 @@ scale = Vector2(0.5995115, 0.7217355)
 texture = ExtResource("2_tipki")
 
 [node name="Galactico" type="Sprite2D" parent="." unique_id=1656612232]
-position = Vector2(483, 146)
-scale = Vector2(3.22131, 3.22131)
+position = Vector2(471.41998, 164.58)
+scale = Vector2(0.085654296, 0.085654296)
 texture = ExtResource("3_choun")
 
 [node name="spaceship" type="Sprite2D" parent="." unique_id=1698813751]
-position = Vector2(532, 344)
-rotation = -1.39626
-scale = Vector2(0.1300362, 0.13487884)
+position = Vector2(558.00006, 375)
+rotation = -1.2374384
+scale = Vector2(0.09826478, 0.10192423)
 texture = ExtResource("4_tipki")
 
 [node name="window" type="Marker2D" parent="spaceship" unique_id=344802849]
 position = Vector2(-4.8672643, -240.0822)
 
 [node name="planet" type="Sprite2D" parent="." unique_id=232175328]
-position = Vector2(305.00003, 338.00003)
+position = Vector2(179, 508)
 scale = Vector2(0.16470577, 0.15992483)
 texture = ExtResource("5_85g3d")
 
 [node name="asteroid1" type="Sprite2D" parent="." unique_id=38416270]
-position = Vector2(171, 464)
+position = Vector2(283, 361)
 scale = Vector2(0.09559605, 0.09559605)
 texture = ExtResource("6_choun")
 
@@ -54,7 +54,7 @@ scale = Vector2(0.18596497, 0.18596496)
 texture = ExtResource("7_85g3d")
 
 [node name="comet" type="Sprite2D" parent="." unique_id=1616160944]
-position = Vector2(835.998, 368.6371)
+position = Vector2(815.00006, 484.99997)
 rotation = 0.0052359877
 scale = Vector2(0.2642578, 0.26425788)
 texture = ExtResource("8_choun")
@@ -89,5 +89,11 @@ offset_bottom = 1345.0
 theme_override_font_sizes/font_size = 20
 text = "PLAY!"
 label_settings = SubResource("LabelSettings_ya4ey")
+
+[node name="asteroid3" type="Sprite2D" parent="." unique_id=701597589]
+position = Vector2(808, 185)
+rotation = -1.2217305
+scale = Vector2(0.09948468, 0.09948468)
+texture = ExtResource("6_choun")
 
 [connection signal="pressed" from="playbutton" to="." method="_on_playbutton_pressed"]
