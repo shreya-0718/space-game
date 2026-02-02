@@ -13,28 +13,31 @@
 [ext_resource type="Texture2D" uid="uid://s45jw16jj73u" path="res://images/level_page/star.png" id="12_0uv3g"]
 [ext_resource type="Texture2D" uid="uid://cleyhsn86koph" path="res://images/level_page/Back.png" id="13_mx30g"]
 [ext_resource type="Script" uid="uid://xhnj7qwvf34d" path="res://scripts/back.gd" id="13_nuv3h"]
-[ext_resource type="Script" path="res://scripts/reverse.gd" id="14_426g8"]
+[ext_resource type="Script" uid="uid://djsaoebormi7i" path="res://scripts/reverse.gd" id="14_426g8"]
 [ext_resource type="Texture2D" uid="uid://fowk4mbm2awj" path="res://images/venus/venus bckg.jpeg" id="14_ud6k2"]
-[ext_resource type="Script" path="res://scripts/yes.gd" id="14_y3sbn"]
-[ext_resource type="Script" path="res://scripts/getready.gd" id="15_426g8"]
-[ext_resource type="Script" path="res://scripts/no.gd" id="15_ya5ls"]
+[ext_resource type="Script" uid="uid://qcgrioupnspr" path="res://scripts/yes.gd" id="14_y3sbn"]
+[ext_resource type="Script" uid="uid://dwim2a5wbgywa" path="res://scripts/getready.gd" id="15_426g8"]
+[ext_resource type="Script" uid="uid://dqc0rww00brfs" path="res://scripts/no.gd" id="15_ya5ls"]
 [ext_resource type="Script" uid="uid://ck3f1altrgk2b" path="res://scripts/getout.gd" id="16_nuv3h"]
 [ext_resource type="Script" uid="uid://cp5vbbje4v4qv" path="res://scripts/boots.gd" id="17_ya5ls"]
 [ext_resource type="Texture2D" uid="uid://dtkmf3eh3nf3r" path="res://images/venus/boots.png" id="18_lepuu"]
 [ext_resource type="Texture2D" uid="uid://bf1417yva3ltu" path="res://images/mercury/iceskates.png" id="19_jjhkc"]
 [ext_resource type="Texture2D" uid="uid://bqubey0spgbql" path="res://images/mercury/raincoat.png" id="20_8u8nx"]
-[ext_resource type="Script" path="res://scripts/barrier.gd" id="22_yc0rh"]
+[ext_resource type="Script" uid="uid://c442tqbkww5lr" path="res://scripts/barrier.gd" id="22_yc0rh"]
 [ext_resource type="Texture2D" uid="uid://c8i0kfhhmu6bl" path="res://images/venus/checkpoint.png" id="23_tjbme"]
 [ext_resource type="Texture2D" uid="uid://u675rjigxrfo" path="res://images/venus/clouds/cloud9.png" id="24_rbi8o"]
-[ext_resource type="Script" path="res://scripts/water.gd" id="28_y812g"]
+[ext_resource type="Script" uid="uid://2731iaul2b00" path="res://scripts/water.gd" id="28_y812g"]
+[ext_resource type="Script" uid="uid://1m3u7ghoal0i" path="res://scripts/lava.gd" id="29_0bbd5"]
 [ext_resource type="Texture2D" uid="uid://cybe6au0sik6f" path="res://images/venus/snow.png" id="29_0uv3g"]
-[ext_resource type="Script" path="res://scripts/moving_cloud.gd" id="30_yd4sw"]
+[ext_resource type="Script" uid="uid://dlswbpc0iqdbx" path="res://scripts/moving_cloud.gd" id="30_yd4sw"]
 [ext_resource type="Texture2D" uid="uid://c3txyq867g8md" path="res://images/venus/clouds/cloud4.png" id="31_yd4sw"]
 [ext_resource type="Script" uid="uid://dtf3v7lf7lx2j" path="res://scripts/thunder_cloud.gd" id="32_m310k"]
 [ext_resource type="Script" uid="uid://d16iriehslnbv" path="res://scripts/falling_asteroid.gd" id="33_xe2my"]
 [ext_resource type="Texture2D" uid="uid://dafxm5ie3v3j8" path="res://images/intro_page/asteroid1.png" id="34_y1d7a"]
 [ext_resource type="Script" uid="uid://bdbbq62f8kbmt" path="res://scripts/crystal.gd" id="35_rxmr8"]
 [ext_resource type="Texture2D" uid="uid://etwdh3mmkjfq" path="res://images/mercury/crystal.png" id="36_0bbd5"]
+[ext_resource type="FontFile" uid="uid://dqp5kyy7yyosk" path="res://pixelfont.ttf" id="36_rxmr8"]
+[ext_resource type="Script" uid="uid://dj6j8nbybw55c" path="res://scripts/lava_respawn.gd" id="37_msgdu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wwsvu"]
 texture = ExtResource("3_rbi8o")
@@ -226,13 +229,13 @@ size = Vector2(186.99998, 35)
 size = Vector2(254.49995, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nuv3h"]
-size = Vector2(362.75, 346.75)
+size = Vector2(179.375, 188.375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3sbn"]
-size = Vector2(41.5, 47.25)
+size = Vector2(148.75, 169.625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ya5ls"]
-size = Vector2(40.5, 37)
+size = Vector2(905.88086, 999.999)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lepuu"]
 size = Vector2(2256.5, 1510)
@@ -266,6 +269,15 @@ b = Vector2(4730, 251)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0uv3g"]
 size = Vector2(257.5, 135)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qs1d7"]
+size = Vector2(580.5, 171.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxsa8"]
+size = Vector2(192, 133)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mkknp"]
+size = Vector2(191, 132)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m310k"]
 size = Vector2(288.9336, 47.126465)
 
@@ -282,13 +294,19 @@ size = Vector2(1661.5625, 52.5)
 size = Vector2(1555, 51)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0bbd5"]
-size = Vector2(287, 111)
+size = Vector2(245, 145)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8b3eq"]
+size = Vector2(35, 154.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_msgdu"]
-size = Vector2(1854.875, 828.25)
+size = Vector2(2284.7188, 640.0625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oc4cm"]
 size = Vector2(238, 274)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4phb"]
+size = Vector2(4103.5, 186)
 
 [node name="Venus" type="Node" unique_id=1230036420]
 script = ExtResource("1_8u8nx")
@@ -299,7 +317,7 @@ tile_map_data = PackedByteArray("AADz/x0AAAAAAAIAAADz/x4AAAAAAAMAAADz/x8AAAAAAAQ
 tile_set = SubResource("TileSet_tjbme")
 
 [node name="astronaut" type="CharacterBody2D" parent="." unique_id=1639798012 groups=["astronaut"]]
-position = Vector2(11849, 1842)
+position = Vector2(1650, 2163)
 script = ExtResource("2_xwevf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="astronaut" unique_id=1271940607]
@@ -310,7 +328,7 @@ shape = SubResource("RectangleShape2D_ma66e")
 position = Vector2(-118, -187)
 limit_left = -1005
 limit_top = -9998823
-limit_right = 16641
+limit_right = 31994
 limit_bottom = 4206
 limit_smoothed = true
 position_smoothing_enabled = true
@@ -379,11 +397,11 @@ script = ExtResource("8_vb6dn")
 
 [node name="Sprite2D" type="Sprite2D" parent="star1" unique_id=1169951622]
 position = Vector2(3462, 3806)
-scale = Vector2(0.35, 0.35)
+scale = Vector2(0.17, 0.17)
 texture = ExtResource("12_0uv3g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="star1" unique_id=1507399940]
-position = Vector2(3466.625, 3798.625)
+position = Vector2(3450, 3817)
 shape = SubResource("RectangleShape2D_nuv3h")
 
 [node name="star2" type="Area2D" parent="." unique_id=1982611030]
@@ -391,12 +409,12 @@ position = Vector2(1110, 460)
 script = ExtResource("8_vb6dn")
 
 [node name="Sprite2D" type="Sprite2D" parent="star2" unique_id=1431476497]
-position = Vector2(-770.29, 55.27002)
-scale = Vector2(0.09, 0.09)
+position = Vector2(11756, 769)
+scale = Vector2(0.17, 0.17)
 texture = ExtResource("12_0uv3g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="star2" unique_id=1601021733]
-position = Vector2(-769, 57)
+position = Vector2(11754.625, 770.1875)
 shape = SubResource("RectangleShape2D_y3sbn")
 
 [node name="star3" type="Area2D" parent="." unique_id=455871965]
@@ -404,12 +422,13 @@ position = Vector2(1107, 439)
 script = ExtResource("8_vb6dn")
 
 [node name="Sprite2D" type="Sprite2D" parent="star3" unique_id=2092742172]
-position = Vector2(1092.7098, -61.730003)
-scale = Vector2(0.09, 0.09)
+position = Vector2(6155.08, 1432.0802)
+scale = Vector2(0.17, 0.17)
 texture = ExtResource("12_0uv3g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="star3" unique_id=1934971434]
-position = Vector2(1093.6563, -62.98001)
+position = Vector2(6152, 1431)
+scale = Vector2(0.17, 0.17)
 shape = SubResource("RectangleShape2D_ya5ls")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=2030743177]
@@ -460,10 +479,10 @@ metadata/_edit_use_anchors_ = true
 layer = 0
 
 [node name="dim" type="ColorRect" parent="CanvasLayer6" unique_id=1969969928]
-offset_left = -4.0
-offset_top = -15.0
-offset_right = 1012.0
-offset_bottom = 695.0
+offset_left = -22.0
+offset_top = -34.0
+offset_right = 994.0
+offset_bottom = 676.0
 color = Color(0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 
@@ -535,13 +554,13 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(-39, 2009)
 
 [node name="levelend" type="Marker2D" parent="." unique_id=1722316947]
-position = Vector2(6020, 395)
+position = Vector2(12148, 1134)
 
 [node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=924980141]
 layer = -50209482
 
 [node name="bckg" type="Sprite2D" parent="CanvasLayer3" unique_id=477625522]
-position = Vector2(485.37802, 321.3125)
+position = Vector2(491, 327)
 scale = Vector2(0.7081103, 0.70811033)
 texture = ExtResource("14_ud6k2")
 
@@ -584,9 +603,9 @@ autowrap_mode = 2
 
 [node name="reversedim" type="ColorRect" parent="." unique_id=1165280574]
 offset_left = 7858.0
-offset_top = 1171.0
+offset_top = 1179.0
 offset_right = 10111.0
-offset_bottom = 2705.0
+offset_bottom = 2713.0
 color = Color(0, 0, 0, 0.5882353)
 
 [node name="stop1" type="Marker2D" parent="." unique_id=584387230]
@@ -673,13 +692,14 @@ position = Vector2(1656, 1880)
 shape = SubResource("RectangleShape2D_nykqm")
 
 [node name="Label4" type="Label" parent="barrier" unique_id=1948265480]
-offset_left = 1431.0
-offset_top = 1940.0002
-offset_right = 1641.4302
-offset_bottom = 2041.0002
+offset_left = 1405.0001
+offset_top = 1819.0001
+offset_right = 1641.1747
+offset_bottom = 1991.0001
 rotation = 0.004504407
-theme_override_font_sizes/font_size = 16
-text = "Mountains here are too slippery... find some boots to help you climb!"
+theme_override_fonts/font = ExtResource("36_rxmr8")
+theme_override_font_sizes/font_size = 30
+text = "MOUNTAINS HERE ARE TOO SLIPPERY... FIND SOME BOOTS TO HELP YOU CLIMB!"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -731,16 +751,28 @@ position = Vector2(4733.5, 285.00003)
 scale = Vector2(0.34320536, 0.19211827)
 texture = ExtResource("29_0uv3g")
 
-[node name="lava" type="Area2D" parent="." unique_id=389592706]
-script = ExtResource("28_y812g")
+[node name="lava die" type="Area2D" parent="." unique_id=389592706]
+script = ExtResource("29_0bbd5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="lava" unique_id=1102220236]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lava die" unique_id=1102220236]
 position = Vector2(127.5, 2177.5)
 shape = SubResource("RectangleShape2D_0uv3g")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="lava" unique_id=488696905]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="lava die" unique_id=488696905]
 position = Vector2(576.25, 2176)
 shape = SubResource("RectangleShape2D_0uv3g")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="lava die" unique_id=1514937525]
+position = Vector2(4640.75, 4037.25)
+shape = SubResource("RectangleShape2D_qs1d7")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="lava die" unique_id=2112978416]
+position = Vector2(8351, 1916.5)
+shape = SubResource("RectangleShape2D_yxsa8")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="lava die" unique_id=1193518963]
+position = Vector2(9628.5, 1915)
+shape = SubResource("RectangleShape2D_mkknp")
 
 [node name="startpoint" type="Marker2D" parent="." unique_id=188094749]
 position = Vector2(1605, 2105)
@@ -762,7 +794,7 @@ position = Vector2(19.769531, 43.006348)
 shape = SubResource("RectangleShape2D_m310k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="moving cloud" unique_id=2101011675]
-position = Vector2(11897, 1641)
+position = Vector2(11987, 1649)
 shape = SubResource("RectangleShape2D_xe2my")
 
 [node name="endlocation" type="Marker2D" parent="moving cloud" unique_id=161834997]
@@ -772,7 +804,7 @@ position = Vector2(11925, 1400)
 position = Vector2(11913, 1744)
 
 [node name="static cloud" type="StaticBody2D" parent="." unique_id=670608430]
-position = Vector2(13184, 1280)
+position = Vector2(13198, 1278)
 
 [node name="Sprite2D" type="Sprite2D" parent="static cloud" unique_id=1904900208]
 position = Vector2(-1493, 477)
@@ -814,24 +846,23 @@ text = "Lightning clouds in Venus can strike you at any time... watch out! @shre
 script = ExtResource("33_xe2my")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="falling asteroid" unique_id=922373039]
+position = Vector2(-187, 116)
 
 [node name="asteroid" type="Sprite2D" parent="falling asteroid/StaticBody2D" unique_id=1823814950]
-position = Vector2(13635, 1021.99994)
+position = Vector2(14030, 1303.75)
 scale = Vector2(0.48102662, 0.48102662)
 texture = ExtResource("34_y1d7a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="falling asteroid/StaticBody2D" unique_id=137824929]
-position = Vector2(13644, 1059)
+position = Vector2(14032.5, 1316.5)
 shape = SubResource("RectangleShape2D_0bbd5")
 
-[node name="startlocation" type="Marker2D" parent="falling asteroid" unique_id=67880451]
-position = Vector2(14472, 1838)
-
-[node name="endlocation" type="Marker2D" parent="falling asteroid" unique_id=498623370]
-position = Vector2(13633, 1009)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="falling asteroid/StaticBody2D" unique_id=1948753343]
+position = Vector2(13931, 1309)
+shape = SubResource("RectangleShape2D_8b3eq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="falling asteroid" unique_id=1027501378]
-position = Vector2(14185.4375, 1291.875)
+position = Vector2(14805.641, 1674.9688)
 shape = SubResource("RectangleShape2D_msgdu")
 
 [node name="crystal" type="Area2D" parent="." unique_id=96708250]
@@ -839,20 +870,27 @@ position = Vector2(1234, 108)
 script = ExtResource("35_rxmr8")
 
 [node name="crystalimage" type="Sprite2D" parent="crystal" unique_id=2061845864]
-position = Vector2(15528.5, 1545)
+position = Vector2(15226.5, 1549)
 texture = ExtResource("36_0bbd5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="crystal" unique_id=523541254]
-position = Vector2(15524, 1543)
+position = Vector2(15222, 1547)
 shape = SubResource("RectangleShape2D_oc4cm")
 
 [node name="Label3" type="Label" parent="." unique_id=932830159]
-offset_left = 16585.0
-offset_top = 1476.0
-offset_right = 16784.0
-offset_bottom = 1820.0
+offset_left = 16283.0
+offset_top = 1480.0
+offset_right = 16482.0
+offset_bottom = 1824.0
 text = "One of the crystal's pieces has been found... explore the rest to find more! "
 autowrap_mode = 2
+
+[node name="lava respawn" type="Area2D" parent="." unique_id=982045222]
+script = ExtResource("37_msgdu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lava respawn" unique_id=575747088]
+position = Vector2(13887.25, 1931)
+shape = SubResource("RectangleShape2D_r4phb")
 
 [connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
 [connection signal="body_entered" from="star2" to="star2" method="_on_body_entered"]
@@ -868,7 +906,7 @@ autowrap_mode = 2
 [connection signal="body_entered" from="boots" to="boots" method="_on_body_entered"]
 [connection signal="body_exited" from="boots" to="boots" method="_on_body_exited"]
 [connection signal="body_entered" from="metal snow" to="metal snow" method="_on_body_entered"]
-[connection signal="body_entered" from="lava" to="lava" method="_on_body_entered"]
+[connection signal="body_entered" from="lava die" to="lava die" method="_on_body_entered"]
 [connection signal="body_entered" from="moving cloud" to="moving cloud" method="_on_body_entered"]
 [connection signal="body_exited" from="moving cloud" to="moving cloud" method="_on_body_exited"]
 [connection signal="body_entered" from="thunder cloud" to="thunder cloud" method="_on_body_entered"]
@@ -876,3 +914,4 @@ autowrap_mode = 2
 [connection signal="body_entered" from="falling asteroid" to="falling asteroid" method="_on_body_entered"]
 [connection signal="body_exited" from="falling asteroid" to="falling asteroid" method="_on_body_exited"]
 [connection signal="body_entered" from="crystal" to="crystal" method="_on_body_entered"]
+[connection signal="body_entered" from="lava respawn" to="lava respawn" method="_on_body_entered"]

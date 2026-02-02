@@ -4,6 +4,9 @@ extends Node
 
 func _process(delta):
 	update_powerups()
+	if global.passedvenus:
+		await get_tree().create_timer(1.5).timeout
+		get_tree().change_scene_to_file("res://scenes/levelpage1.tscn")
 
 func update_powerups():
 	var container = get_node("CanvasLayer4/powerups")

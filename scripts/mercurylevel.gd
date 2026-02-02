@@ -31,7 +31,7 @@ func _process(delta):
 	update_powerups()
 	progress_bar.visible = true
 	if global.passedmercury:
-		await get_tree().create_timer(2.0).timeout
+		await get_tree().create_timer(1.5).timeout
 		get_tree().change_scene_to_file("res://scenes/levelpage1.tscn")
 	
 func update_progress_bar():

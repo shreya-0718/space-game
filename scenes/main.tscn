@@ -3,13 +3,17 @@
 [ext_resource type="Script" uid="uid://dee610l7noxbf" path="res://scripts/intro.gd" id="1_tipki"]
 [ext_resource type="Texture2D" uid="uid://dx11r03vxy72s" path="res://images/intro_page/title page bckg.jpeg" id="2_tipki"]
 [ext_resource type="Texture2D" uid="uid://dcwy03pb2d3bh" path="res://images/intro_page/galactico.png" id="3_choun"]
-[ext_resource type="Texture2D" uid="uid://dpn03rcfnt7rx" path="res://images/level_page/Rocket.png" id="4_tipki"]
-[ext_resource type="Texture2D" uid="uid://bktfvbnjv1fa6" path="res://images/intro_page/planet.png" id="5_eb6dy"]
-[ext_resource type="Texture2D" uid="uid://dafxm5ie3v3j8" path="res://images/intro_page/asteroid1.png" id="6_trceg"]
+[ext_resource type="Texture2D" uid="uid://dpn03rcfnt7rx" path="res://images/level_page/rocket.png" id="4_tipki"]
+[ext_resource type="Texture2D" uid="uid://d0e57w2pv5nna" path="res://images/mercury/extraplanet.png" id="5_85g3d"]
+[ext_resource type="Texture2D" uid="uid://djtm0jbe6x6n8" path="res://images/intro_page/meteroiddd.png" id="6_choun"]
 [ext_resource type="Texture2D" uid="uid://pgnejyrg0poe" path="res://images/intro_page/comet empty.png" id="7_85g3d"]
 [ext_resource type="Texture2D" uid="uid://vocih1fdtl5k" path="res://images/intro_page/comet full.png" id="8_choun"]
+[ext_resource type="Texture2D" uid="uid://bwffkcaypxmm6" path="res://images/intro_page/play.png" id="9_ya4ey"]
+[ext_resource type="FontFile" uid="uid://dqp5kyy7yyosk" path="res://pixelfont.ttf" id="10_choun"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ayt76"]
+[sub_resource type="LabelSettings" id="LabelSettings_ya4ey"]
+font = ExtResource("10_choun")
+font_size = 300
 
 [node name="Node2D" type="Node2D" unique_id=1042716078]
 script = ExtResource("1_tipki")
@@ -19,24 +23,13 @@ position = Vector2(478.09024, 382.7585)
 scale = Vector2(0.5995115, 0.7217355)
 texture = ExtResource("2_tipki")
 
-[node name="Button" type="Button" parent="." unique_id=60508847]
-z_index = 1000
-offset_left = 230.0
-offset_top = 504.0
-offset_right = 380.0
-offset_bottom = 535.0
-scale = Vector2(3, 3)
-text = "PLAY"
-icon = SubResource("PlaceholderTexture2D_ayt76")
-metadata/_edit_use_anchors_ = true
-
 [node name="Galactico" type="Sprite2D" parent="." unique_id=1656612232]
 position = Vector2(483, 146)
 scale = Vector2(3.22131, 3.22131)
 texture = ExtResource("3_choun")
 
 [node name="spaceship" type="Sprite2D" parent="." unique_id=1698813751]
-position = Vector2(508.99994, 362.99988)
+position = Vector2(532, 344)
 rotation = -1.39626
 scale = Vector2(0.1300362, 0.13487884)
 texture = ExtResource("4_tipki")
@@ -45,19 +38,19 @@ texture = ExtResource("4_tipki")
 position = Vector2(-4.8672643, -240.0822)
 
 [node name="planet" type="Sprite2D" parent="." unique_id=232175328]
-position = Vector2(113.99999, 507.00003)
-scale = Vector2(0.540272, 0.540272)
-texture = ExtResource("5_eb6dy")
+position = Vector2(305.00003, 338.00003)
+scale = Vector2(0.16470577, 0.15992483)
+texture = ExtResource("5_85g3d")
 
 [node name="asteroid1" type="Sprite2D" parent="." unique_id=38416270]
-position = Vector2(257, 384)
-scale = Vector2(0.30971, 0.30971)
-texture = ExtResource("6_trceg")
+position = Vector2(171, 464)
+scale = Vector2(0.09559605, 0.09559605)
+texture = ExtResource("6_choun")
 
 [node name="asteroid2" type="Sprite2D" parent="." unique_id=616932141]
-position = Vector2(108.00003, 176.00006)
-rotation = -1.3002703
-scale = Vector2(0.23908715, 0.23908715)
+position = Vector2(130, 163)
+rotation = -1.8867009
+scale = Vector2(0.18596497, 0.18596496)
 texture = ExtResource("7_85g3d")
 
 [node name="comet" type="Sprite2D" parent="." unique_id=1616160944]
@@ -73,10 +66,28 @@ position = Vector2(479, 319)
 [node name="WhiteRect" type="ColorRect" parent="." unique_id=733347060]
 modulate = Color(1, 1, 1, 0)
 z_index = 991
-offset_left = -3.0
-offset_top = 1.0
-offset_right = 974.0
-offset_bottom = 656.0
+offset_left = -1.0
+offset_top = -14.0
+offset_right = 976.0
+offset_bottom = 641.0
 mouse_filter = 2
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="playbutton" type="TextureButton" parent="." unique_id=806455929]
+offset_left = 354.0
+offset_top = 479.0
+offset_right = 2451.0
+offset_bottom = 1502.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("9_ya4ey")
+
+[node name="Label" type="Label" parent="playbutton" unique_id=29634290]
+layout_mode = 0
+offset_left = 700.00006
+offset_top = 1030.0
+offset_right = 1335.0
+offset_bottom = 1345.0
+theme_override_font_sizes/font_size = 20
+text = "PLAY!"
+label_settings = SubResource("LabelSettings_ya4ey")
+
+[connection signal="pressed" from="playbutton" to="." method="_on_playbutton_pressed"]
