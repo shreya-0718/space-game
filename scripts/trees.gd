@@ -1,6 +1,6 @@
 extends Area2D
 
-var speedd = 250
+var speedd = 300
 var direction = -1 #up
 
 @onready var astronaut = get_node("../../astronaut")
