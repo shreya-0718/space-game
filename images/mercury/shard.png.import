@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf1417yva3ltu"
-path="res://.godot/imported/iceskates.png-3ffcf7413abccbec94c2e570f6d49c4e.ctex"
+uid="uid://cqhqynqsnulje"
+path="res://.godot/imported/shard.png-0fbfbbc1b41e2edbc8bd1bf6cebdf102.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/mercury/iceskates.png"
-dest_files=["res://.godot/imported/iceskates.png-3ffcf7413abccbec94c2e570f6d49c4e.ctex"]
+source_file="res://images/mercury/shard.png"
+dest_files=["res://.godot/imported/shard.png-0fbfbbc1b41e2edbc8bd1bf6cebdf102.ctex"]
 
 [params]
 
