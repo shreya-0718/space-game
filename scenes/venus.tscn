@@ -436,10 +436,10 @@ shape = SubResource("RectangleShape2D_ya5ls")
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=2030743177]
 
 [node name="star_container" type="HBoxContainer" parent="CanvasLayer2" unique_id=417899166]
-offset_left = 772.0
-offset_top = 25.0
-offset_right = 900.0
-offset_bottom = 65.0
+offset_left = 755.0
+offset_top = 20.0
+offset_right = 1005.6
+offset_bottom = 76.0
 mouse_filter = 2
 script = ExtResource("10_cv1ld")
 gray_star = ExtResource("11_y812g")
@@ -481,10 +481,10 @@ metadata/_edit_use_anchors_ = true
 layer = 0
 
 [node name="dim" type="ColorRect" parent="CanvasLayer6" unique_id=1969969928]
-offset_left = -22.0
-offset_top = -34.0
-offset_right = 994.0
-offset_bottom = 676.0
+offset_left = -8.0
+offset_top = -10.0
+offset_right = 1008.0
+offset_bottom = 700.0
 color = Color(0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 
@@ -566,7 +566,7 @@ position = Vector2(12148, 1134)
 layer = -50209482
 
 [node name="bckg" type="Sprite2D" parent="CanvasLayer3" unique_id=477625522]
-position = Vector2(491, 327)
+position = Vector2(486.99994, 332)
 scale = Vector2(0.7081103, 0.70811033)
 texture = ExtResource("14_ud6k2")
 
@@ -670,8 +670,8 @@ text = "PRESS \"E\" TO EQUIP THE BOOTS!"
 
 [node name="powerups" type="HBoxContainer" parent="CanvasLayer4" unique_id=915875787]
 offset_left = 10.0
-offset_top = 580.0
-offset_right = 194.28947
+offset_top = 545.0
+offset_right = 453.14893
 offset_bottom = 627.0
 size_flags_stretch_ratio = 0.0
 
