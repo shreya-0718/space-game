@@ -2,6 +2,10 @@
 
 [ext_resource type="TileSet" uid="uid://bk0c4lhwcbjmp" path="res://images/earth_tileset.tres" id="1_5q57j"]
 [ext_resource type="Texture2D" uid="uid://cen5qm47wnojw" path="res://images/earth/ocean_bckg.png" id="1_e1u4y"]
+[ext_resource type="Texture2D" uid="uid://im8akvumht5l" path="res://images/earth/shell.png" id="3_uwlb3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k007f"]
+size = Vector2(239.5593, 239.55945)
 
 [node name="EarthOcean" type="Node2D" unique_id=695108042]
 
@@ -19,3 +23,60 @@ z_index = -4096
 position = Vector2(476, 314)
 scale = Vector2(0.6725086, 0.65257734)
 texture = ExtResource("1_e1u4y")
+
+[node name="seashells" type="Node2D" parent="." unique_id=1921658778]
+
+[node name="Area2D" type="Area2D" parent="seashells" unique_id=764729268]
+position = Vector2(418, 94)
+scale = Vector2(0.26715708, 0.26715708)
+
+[node name="shell" type="Sprite2D" parent="seashells/Area2D" unique_id=1614837788]
+texture = ExtResource("3_uwlb3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="seashells/Area2D" unique_id=1395521561]
+position = Vector2(0.00024414063, -6.1035156e-05)
+shape = SubResource("RectangleShape2D_k007f")
+
+[node name="Area2D2" type="Area2D" parent="seashells" unique_id=655070599]
+position = Vector2(742, 421)
+scale = Vector2(0.26715708, 0.26715708)
+
+[node name="shell" type="Sprite2D" parent="seashells/Area2D2" unique_id=1180040918]
+texture = ExtResource("3_uwlb3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="seashells/Area2D2" unique_id=768960871]
+position = Vector2(0.00024414063, -6.1035156e-05)
+shape = SubResource("RectangleShape2D_k007f")
+
+[node name="Area2D3" type="Area2D" parent="seashells" unique_id=957168805]
+position = Vector2(1009, 273)
+scale = Vector2(0.26715708, 0.26715708)
+
+[node name="shell" type="Sprite2D" parent="seashells/Area2D3" unique_id=1595003064]
+texture = ExtResource("3_uwlb3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="seashells/Area2D3" unique_id=2021386491]
+position = Vector2(0.00024414063, -6.1035156e-05)
+shape = SubResource("RectangleShape2D_k007f")
+
+[node name="Area2D4" type="Area2D" parent="seashells" unique_id=274572241]
+position = Vector2(1233, 193)
+scale = Vector2(0.26715708, 0.26715708)
+
+[node name="shell" type="Sprite2D" parent="seashells/Area2D4" unique_id=902105180]
+texture = ExtResource("3_uwlb3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="seashells/Area2D4" unique_id=1588816313]
+position = Vector2(0.00024414063, -6.1035156e-05)
+shape = SubResource("RectangleShape2D_k007f")
+
+[node name="Area2D5" type="Area2D" parent="seashells" unique_id=1274154356]
+position = Vector2(1511, 377.00003)
+scale = Vector2(0.26715708, 0.26715708)
+
+[node name="shell" type="Sprite2D" parent="seashells/Area2D5" unique_id=261696712]
+texture = ExtResource("3_uwlb3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="seashells/Area2D5" unique_id=282515494]
+position = Vector2(0.00024414063, -6.1035156e-05)
+shape = SubResource("RectangleShape2D_k007f")
