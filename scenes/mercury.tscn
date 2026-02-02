@@ -10,12 +10,12 @@
 [ext_resource type="SpriteFrames" uid="uid://cj042qejdnd52" path="res://images/astronaut/astronaut_animation.tres" id="5_s7w1k"]
 [ext_resource type="Texture2D" uid="uid://6w055ero2apx" path="res://images/mercury/mercury 1 bckg.jpeg" id="5_ta7jb"]
 [ext_resource type="TileSet" uid="uid://bubbasbgvh4mc" path="res://images/mercury/mercury_tileset.tres" id="5_vujqb"]
-[ext_resource type="Script" path="res://scripts/water.gd" id="9_p3g0t"]
+[ext_resource type="Script" uid="uid://2731iaul2b00" path="res://scripts/water.gd" id="9_p3g0t"]
 [ext_resource type="FontFile" uid="uid://xd7jpriyd88y" path="res://number font.ttf" id="9_ta7jb"]
 [ext_resource type="Script" uid="uid://bveutufglpxep" path="res://scripts/checkpoint.gd" id="11_u28sr"]
-[ext_resource type="Script" path="res://scripts/zoomout.gd" id="12_vujqb"]
+[ext_resource type="Script" uid="uid://bhrlqb6juuy2a" path="res://scripts/zoomout.gd" id="12_vujqb"]
 [ext_resource type="Texture2D" uid="uid://cw7xggv5gnbxx" path="res://images/mercury/checkpointwhite.png" id="13_kgyyi"]
-[ext_resource type="Script" path="res://scripts/zoomin.gd" id="13_ta7jb"]
+[ext_resource type="Script" uid="uid://clw7wi0msuovm" path="res://scripts/zoomin.gd" id="13_ta7jb"]
 [ext_resource type="Script" uid="uid://dlaxqvogxis5r" path="res://scripts/iceskates.gd" id="14_2115d"]
 [ext_resource type="Texture2D" uid="uid://bhulmtu3pyhkh" path="res://images/venus/checkpoint purple actual.png" id="14_unkin"]
 [ext_resource type="Texture2D" uid="uid://7wk5vmcbsxsv" path="res://images/mercury/left arrow.png" id="16_s7w1k"]
@@ -29,9 +29,9 @@
 [ext_resource type="Texture2D" uid="uid://dcxh4y0hpldfq" path="res://images/mercury/w.png" id="21_vujqb"]
 [ext_resource type="Texture2D" uid="uid://cleyhsn86koph" path="res://images/level_page/Back.png" id="22_ta7jb"]
 [ext_resource type="Script" uid="uid://xhnj7qwvf34d" path="res://scripts/back.gd" id="27_s7w1k"]
-[ext_resource type="Script" path="res://scripts/yes.gd" id="28_s7w1k"]
+[ext_resource type="Script" uid="uid://qcgrioupnspr" path="res://scripts/yes.gd" id="28_s7w1k"]
 [ext_resource type="LabelSettings" uid="uid://erqtt0c1y5lk" path="res://custom_font.tres" id="28_vujqb"]
-[ext_resource type="Script" path="res://scripts/no.gd" id="29_nh86p"]
+[ext_resource type="Script" uid="uid://dqc0rww00brfs" path="res://scripts/no.gd" id="29_nh86p"]
 [ext_resource type="Script" uid="uid://7curksp74rrb" path="res://scenes/raincoat.gd" id="30_nh86p"]
 [ext_resource type="Texture2D" uid="uid://bhlphiy3b48wm" path="res://images/mercury/yes.png" id="30_utlqg"]
 [ext_resource type="Texture2D" uid="uid://dnpwjnt6jtdpm" path="res://images/mercury/no.png" id="32_kgyyi"]
@@ -196,7 +196,7 @@ tile_map_data = PackedByteArray("AAApHWkGAAAAAAYAAAAqHWkGAAABAAYAAAArHWkGAAACAAY
 tile_set = ExtResource("5_vujqb")
 
 [node name="astronaut" type="CharacterBody2D" parent="." unique_id=1606066007 groups=["astronaut"]]
-position = Vector2(1372, 391)
+position = Vector2(11264, 861)
 script = ExtResource("2_doqmq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="astronaut" unique_id=1665997636]
@@ -300,6 +300,27 @@ theme_override_fonts/font = ExtResource("9_ta7jb")
 theme_override_font_sizes/font_size = 20
 metadata/_edit_use_anchors_ = true
 
+[node name="powerups" type="HBoxContainer" parent="CanvasLayer" unique_id=1356810547]
+z_index = 100
+offset_left = 25.0
+offset_top = 513.0
+offset_right = 506.5555
+offset_bottom = 623.0
+size_flags_stretch_ratio = 0.0
+
+[node name="skates" type="TextureRect" parent="CanvasLayer/powerups" unique_id=1347795463]
+z_index = 1
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("18_r3d36")
+expand_mode = 2
+
+[node name="raincoat" type="TextureRect" parent="CanvasLayer/powerups" unique_id=138251425]
+z_index = 1
+layout_mode = 2
+texture = ExtResource("20_bta1w")
+expand_mode = 2
+
 [node name="CanvasLayer7" type="CanvasLayer" parent="." unique_id=727188648]
 layer = -4
 
@@ -401,26 +422,6 @@ offset_right = 11789.0
 offset_bottom = 675.0
 text = "PRESS \"E\" TO EQUIP ICE SKATES."
 label_settings = ExtResource("28_vujqb")
-
-[node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=1848539569]
-
-[node name="powerups" type="HBoxContainer" parent="CanvasLayer3" unique_id=1356810547]
-offset_left = 25.0
-offset_top = 513.0
-offset_right = 506.5555
-offset_bottom = 623.0
-size_flags_stretch_ratio = 0.0
-
-[node name="skates" type="TextureRect" parent="CanvasLayer3/powerups" unique_id=1347795463]
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("18_r3d36")
-expand_mode = 2
-
-[node name="raincoat" type="TextureRect" parent="CanvasLayer3/powerups" unique_id=138251425]
-layout_mode = 2
-texture = ExtResource("20_bta1w")
-expand_mode = 2
 
 [node name="waterfall" type="Area2D" parent="." unique_id=724664359]
 z_index = -4096
@@ -830,6 +831,9 @@ offset_right = -4.0
 offset_bottom = 98.0
 text = "38"
 label_settings = SubResource("LabelSettings_unkin")
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=1848539569]
+layer = 4
 
 [connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
 [connection signal="body_entered" from="star2" to="star2" method="_on_body_entered"]
