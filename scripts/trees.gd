@@ -3,7 +3,7 @@ extends Area2D
 var speed = 250
 var direction = -1 #up
 
-@onready var astronaut = get_node("../../astronaut/AnimatedSprite2D")
+@onready var astronaut = get_node("../../astronaut")
 @onready var climbpoint = get_node("climbpoint")
 @onready var startposition = get_node("startposition")
 var entered = false
