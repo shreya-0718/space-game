@@ -1,11 +1,16 @@
 [gd_scene format=4 uid="uid://vyg7dkglkyg6"]
 
-[ext_resource type="TileSet" uid="uid://bk0c4lhwcbjmp" path="res://images/earth_tileset.tres" id="1_5q57j"]
+[ext_resource type="TileSet" uid="uid://drufa7oy3tfua" path="res://images/earth_tileset.tres" id="1_5q57j"]
 [ext_resource type="Texture2D" uid="uid://cen5qm47wnojw" path="res://images/earth/ocean_bckg.png" id="1_e1u4y"]
+[ext_resource type="Script" uid="uid://cv1o28afdj1jl" path="res://scripts/seashells.gd" id="3_pha60"]
 [ext_resource type="Texture2D" uid="uid://im8akvumht5l" path="res://images/earth/shell.png" id="3_uwlb3"]
 [ext_resource type="Texture2D" uid="uid://c830son4x1yls" path="res://images/earth_and_mars.png" id="4_k007f"]
 [ext_resource type="Texture2D" uid="uid://bu87tim2nh1nr" path="res://images/earth/Astrointheocean.png" id="5_4ykf2"]
 [ext_resource type="Script" uid="uid://mv7vhqfk0rk2" path="res://scripts/astro_ocean.gd" id="5_6j36a"]
+[ext_resource type="FontFile" uid="uid://dqp5kyy7yyosk" path="res://pixelfont.ttf" id="5_xeq0s"]
+[ext_resource type="FontFile" uid="uid://xd7jpriyd88y" path="res://number font.ttf" id="6_sntt1"]
+[ext_resource type="Script" uid="uid://bu32bl86ekrkv" path="res://scripts/jellyfish.gd" id="7_sntt1"]
+[ext_resource type="Script" uid="uid://ogqby4a3sev" path="res://scripts/oceanend.gd" id="11_m6xug"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k007f"]
 size = Vector2(239.5593, 239.55945)
@@ -39,7 +44,7 @@ size = Vector2(103, 107)
 radius = 88.051125
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6j36a"]
-size = Vector2(38.5, 651)
+size = Vector2(57, 651)
 
 [node name="EarthOcean" type="Node2D" unique_id=695108042]
 
@@ -58,11 +63,31 @@ position = Vector2(476, 314)
 scale = Vector2(0.6725086, 0.65257734)
 texture = ExtResource("1_e1u4y")
 
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=37959139]
+offset_left = 695.0
+offset_top = 13.0
+offset_right = 897.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.105882354, 0.24705882, 0.63529414, 1)
+theme_override_fonts/font = ExtResource("5_xeq0s")
+theme_override_font_sizes/font_size = 30
+text = "SEASHELL COUNT:"
+
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=83691429]
+offset_left = 905.0
+offset_top = 16.0
+offset_right = 945.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.105882354, 0.24705882, 0.63529414, 1)
+theme_override_fonts/font = ExtResource("6_sntt1")
+theme_override_font_sizes/font_size = 30
+
 [node name="seashells" type="Node2D" parent="." unique_id=1921658778]
 
 [node name="Area2D" type="Area2D" parent="seashells" unique_id=764729268]
 position = Vector2(418, 94)
 scale = Vector2(0.26715708, 0.26715708)
+script = ExtResource("3_pha60")
 
 [node name="shell" type="Sprite2D" parent="seashells/Area2D" unique_id=1614837788]
 texture = ExtResource("3_uwlb3")
@@ -74,6 +99,7 @@ shape = SubResource("RectangleShape2D_k007f")
 [node name="Area2D2" type="Area2D" parent="seashells" unique_id=655070599]
 position = Vector2(742, 421)
 scale = Vector2(0.26715708, 0.26715708)
+script = ExtResource("3_pha60")
 
 [node name="shell" type="Sprite2D" parent="seashells/Area2D2" unique_id=1180040918]
 texture = ExtResource("3_uwlb3")
@@ -85,6 +111,7 @@ shape = SubResource("RectangleShape2D_k007f")
 [node name="Area2D3" type="Area2D" parent="seashells" unique_id=957168805]
 position = Vector2(1119, 208)
 scale = Vector2(0.26715708, 0.26715708)
+script = ExtResource("3_pha60")
 
 [node name="shell" type="Sprite2D" parent="seashells/Area2D3" unique_id=1595003064]
 texture = ExtResource("3_uwlb3")
@@ -96,6 +123,7 @@ shape = SubResource("RectangleShape2D_k007f")
 [node name="Area2D4" type="Area2D" parent="seashells" unique_id=274572241]
 position = Vector2(1531, 120)
 scale = Vector2(0.26715708, 0.26715708)
+script = ExtResource("3_pha60")
 
 [node name="shell" type="Sprite2D" parent="seashells/Area2D4" unique_id=902105180]
 texture = ExtResource("3_uwlb3")
@@ -107,6 +135,7 @@ shape = SubResource("RectangleShape2D_k007f")
 [node name="Area2D5" type="Area2D" parent="seashells" unique_id=1274154356]
 position = Vector2(1862, 327)
 scale = Vector2(0.26715708, 0.26715708)
+script = ExtResource("3_pha60")
 
 [node name="shell" type="Sprite2D" parent="seashells/Area2D5" unique_id=261696712]
 texture = ExtResource("3_uwlb3")
@@ -119,6 +148,7 @@ shape = SubResource("RectangleShape2D_k007f")
 
 [node name="Area2D" type="Area2D" parent="jellyfishies" unique_id=1093647486]
 position = Vector2(51, -67)
+script = ExtResource("7_sntt1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="jellyfishies/Area2D" unique_id=233579577]
 position = Vector2(660, 268.00003)
@@ -133,6 +163,7 @@ shape = SubResource("RectangleShape2D_blcji")
 
 [node name="Area2D2" type="Area2D" parent="jellyfishies" unique_id=965611357]
 position = Vector2(589, -132)
+script = ExtResource("7_sntt1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="jellyfishies/Area2D2" unique_id=380862237]
 position = Vector2(660, 268.00003)
@@ -147,6 +178,7 @@ shape = SubResource("RectangleShape2D_blcji")
 
 [node name="Area2D3" type="Area2D" parent="jellyfishies" unique_id=825821125]
 position = Vector2(1028, 145)
+script = ExtResource("7_sntt1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="jellyfishies/Area2D3" unique_id=295273193]
 position = Vector2(660, 268.00003)
@@ -159,19 +191,19 @@ frame_progress = 0.90826327
 position = Vector2(659.5, 268.5)
 shape = SubResource("RectangleShape2D_blcji")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1958664301]
+[node name="astronaut" type="CharacterBody2D" parent="." unique_id=1958664301]
 script = ExtResource("5_6j36a")
 
-[node name="Astrointheocean" type="Sprite2D" parent="CharacterBody2D" unique_id=1421702836]
+[node name="Astrointheocean" type="Sprite2D" parent="astronaut" unique_id=1421702836]
 position = Vector2(138, 188)
 scale = Vector2(0.06938739, 0.06938739)
 texture = ExtResource("5_4ykf2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1376275530]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="astronaut" unique_id=1376275530]
 position = Vector2(138, 188)
 shape = SubResource("CircleShape2D_6j36a")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=6460025]
+[node name="Camera2D" type="Camera2D" parent="astronaut" unique_id=6460025]
 position = Vector2(423, 120)
 limit_left = 11
 limit_top = -9997307
@@ -184,9 +216,33 @@ drag_vertical_enabled = true
 drag_top_margin = 0.4
 drag_bottom_margin = 0.08
 
-[node name="Marker2D" type="Marker2D" parent="." unique_id=142236243]
+[node name="startpoint" type="Marker2D" parent="." unique_id=142236243]
 position = Vector2(133, 189)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1097647002]
-position = Vector2(1966.75, 300.5)
+[node name="end" type="Area2D" parent="." unique_id=792715058]
+script = ExtResource("11_m6xug")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="end" unique_id=1097647002]
+position = Vector2(2273, 295)
 shape = SubResource("RectangleShape2D_6j36a")
+
+[node name="Label" type="Label" parent="end" unique_id=1283289983]
+offset_left = 1929.0
+offset_top = 218.0
+offset_right = 2217.0
+offset_bottom = 399.0
+theme_override_fonts/font = ExtResource("5_xeq0s")
+theme_override_font_sizes/font_size = 30
+text = "YOU NEED FIVE SEASHELLS TO PASS!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="body_entered" from="seashells/Area2D" to="seashells/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="seashells/Area2D2" to="seashells/Area2D2" method="_on_body_entered"]
+[connection signal="body_entered" from="seashells/Area2D3" to="seashells/Area2D3" method="_on_body_entered"]
+[connection signal="body_entered" from="seashells/Area2D4" to="seashells/Area2D4" method="_on_body_entered"]
+[connection signal="body_entered" from="seashells/Area2D5" to="seashells/Area2D5" method="_on_body_entered"]
+[connection signal="body_entered" from="jellyfishies/Area2D" to="jellyfishies/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="jellyfishies/Area2D2" to="jellyfishies/Area2D2" method="_on_body_entered"]
+[connection signal="body_entered" from="jellyfishies/Area2D3" to="jellyfishies/Area2D3" method="_on_body_entered"]
+[connection signal="body_entered" from="end" to="end" method="_on_body_entered"]
