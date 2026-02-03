@@ -639,6 +639,7 @@ position = Vector2(-319, -159.00003)
 scale = Vector2(0.06225588, 0.06225588)
 sprite_frames = ExtResource("4_pmj2g")
 animation = &"idle"
+autoplay = "idle"
 
 [node name="FactBox" type="Sprite2D" parent="." unique_id=1697395745]
 position = Vector2(766.6576, 301.25)
