@@ -6,6 +6,7 @@ var glide_gravity_scale : float = Global.glide_gravity_scale
 @onready var anim = $AnimatedSprite2D
 
 func _physics_process(delta):
+	print(global.climbing)
 	var direction = 0.0
 	var input = Input.get_axis("left", "right")
 	

@@ -24,6 +24,7 @@ func _process(delta):
 		astronaut.global_position.y += speedd * direction * delta
 	if astronaut.global_position.y <= climbpoint.global_position.y:
 		speedd = 0
+		pressed = false
 		global.climbing = false
 		
 func _on_body_exited(body):

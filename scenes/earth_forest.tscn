@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b84h1hki10wk8" path="res://images/earth/trees.png" id="8_pqjif"]
 [ext_resource type="TileSet" uid="uid://drufa7oy3tfua" path="res://images/earth_tileset.tres" id="9_jipjx"]
 [ext_resource type="SpriteFrames" uid="uid://cj042qejdnd52" path="res://images/astronaut/astronaut_animation.tres" id="9_lf2vo"]
+[ext_resource type="Script" uid="uid://fdsiqsq4oord" path="res://scripts/trees_3.gd" id="9_nt102"]
 [ext_resource type="LabelSettings" uid="uid://erqtt0c1y5lk" path="res://custom_font.tres" id="9_tx6xe"]
 [ext_resource type="Texture2D" uid="uid://bhlphiy3b48wm" path="res://images/mercury/yes.png" id="10_0ln5e"]
 [ext_resource type="Script" uid="uid://qcgrioupnspr" path="res://scripts/yes.gd" id="11_lccmr"]
@@ -35,7 +36,7 @@ size = Vector2(271.75, 19)
 size = Vector2(124.5, 87.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_batua"]
-size = Vector2(299.5, 22)
+size = Vector2(191.75, 22)
 
 [sub_resource type="LabelSettings" id="LabelSettings_batua"]
 font = ExtResource("6_lccmr")
@@ -139,25 +140,25 @@ scale = Vector2(1.0234537, 1.0234536)
 texture = ExtResource("8_pqjif")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/trees2" unique_id=634909864]
-position = Vector2(1698.9375, 16)
+position = Vector2(1751, 31)
 shape = SubResource("RectangleShape2D_drqgp")
 
 [node name="Label" type="Label" parent="Node2D2/trees2" unique_id=613314430]
-offset_left = 1765.0
-offset_top = 8.0
-offset_right = 1909.0
-offset_bottom = 102.0
+offset_left = 1797.0
+offset_top = 12.0
+offset_right = 1941.0
+offset_bottom = 106.0
 theme_override_fonts/font = ExtResource("6_lccmr")
 theme_override_font_sizes/font_size = 25
-text = "PRESS 'SPACE' TO CLIMB DOWN"
+text = "SLIDE DOWN THE TREE TO EXPLORE MORE"
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="startposition2" type="Marker2D" parent="Node2D2/trees2" unique_id=30028084]
-position = Vector2(2063, -28)
+position = Vector2(2041, -16)
 
 [node name="climbpoint2" type="Marker2D" parent="Node2D2/trees2" unique_id=1862115626]
-position = Vector2(1810, 463)
+position = Vector2(2278.239, 463.03696)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Node2D2" unique_id=982160404]
 
@@ -179,7 +180,7 @@ position = Vector2(1983, -43)
 [node name="block" type="StaticBody2D" parent="Node2D2" unique_id=1304796263]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/block" unique_id=136949910]
-position = Vector2(1734, 31)
+position = Vector2(1680.125, 31)
 shape = SubResource("RectangleShape2D_batua")
 one_way_collision_margin = 0.0
 
@@ -192,6 +193,61 @@ text = "CROSS THE BRIDGE!"
 label_settings = SubResource("LabelSettings_batua")
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[node name="trees3" type="Area2D" parent="Node2D2" unique_id=1428089582]
+position = Vector2(2485, 14)
+script = ExtResource("9_nt102")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/trees3" unique_id=1403770827]
+position = Vector2(339, 385)
+shape = SubResource("RectangleShape2D_jxaag")
+
+[node name="Label" type="Label" parent="Node2D2/trees3" unique_id=393972392]
+offset_left = 240.0
+offset_top = 284.0
+offset_right = 403.0
+offset_bottom = 378.0
+theme_override_fonts/font = ExtResource("6_lccmr")
+theme_override_font_sizes/font_size = 25
+text = "PRESS 'SPACE' TO CLIMB UP THE TREE"
+horizontal_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="climbpointt" type="Marker2D" parent="Node2D2/trees3" unique_id=1283955234]
+position = Vector2(115, -97)
+
+[node name="startpositionn" type="Marker2D" parent="Node2D2/trees3" unique_id=2043990394]
+position = Vector2(773, 356)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Node2D2" unique_id=1284333797]
+position = Vector2(2421, 23)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/StaticBody2D2" unique_id=1226614239]
+position = Vector2(510.125, -9)
+shape = SubResource("RectangleShape2D_nvat7")
+one_way_collision = true
+
+[node name="Label2" type="Label" parent="Node2D2" unique_id=345447703]
+offset_left = 2993.0
+offset_top = -61.0
+offset_right = 3136.0
+offset_bottom = -4.0
+text = "CROSS THE BRIDGE!"
+label_settings = SubResource("LabelSettings_batua")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="bridge2" type="Area2D" parent="Node2D2" unique_id=1693575828]
+position = Vector2(2457, 22)
+script = ExtResource("8_drqgp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/bridge2" unique_id=1053735745]
+position = Vector2(665, -42)
+shape = SubResource("RectangleShape2D_8g57r")
+
+[node name="bridgepoint" type="Marker2D" parent="Node2D2/bridge2" unique_id=1935805021]
+position = Vector2(1983, -43)
 
 [node name="astronaut" type="CharacterBody2D" parent="." unique_id=562307866 groups=["astronaut"]]
 position = Vector2(451, 353)
@@ -319,12 +375,12 @@ position = Vector2(-261, 52)
 script = ExtResource("21_yxgbd")
 
 [node name="Sprite2D" type="Sprite2D" parent="star1" unique_id=1155434176]
-position = Vector2(2084.298, 353.5)
+position = Vector2(2552.5369, 353.53696)
 scale = Vector2(0.17487687, 0.17487685)
 texture = ExtResource("20_vb10i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="star1" unique_id=810462484]
-position = Vector2(2085, 350.6875)
+position = Vector2(2553.2388, 350.72446)
 shape = SubResource("RectangleShape2D_ftka3")
 
 [connection signal="pressed" from="CanvasLayer5/back" to="CanvasLayer5/back" method="_on_pressed"]
@@ -333,6 +389,9 @@ shape = SubResource("RectangleShape2D_ftka3")
 [connection signal="body_entered" from="Node2D2/trees2" to="Node2D2/trees2" method="_on_body_entered"]
 [connection signal="body_exited" from="Node2D2/trees2" to="Node2D2/trees2" method="_on_body_exited"]
 [connection signal="body_entered" from="Node2D2/bridge" to="Node2D2/bridge" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D2/trees3" to="Node2D2/trees3" method="_on_body_entered"]
+[connection signal="body_exited" from="Node2D2/trees3" to="Node2D2/trees3" method="_on_body_exited"]
+[connection signal="body_entered" from="Node2D2/bridge2" to="Node2D2/bridge2" method="_on_body_entered"]
 [connection signal="pressed" from="usure?/yes" to="usure?/yes" method="_on_pressed"]
 [connection signal="pressed" from="usure?/NO" to="usure?/NO" method="_on_pressed"]
 [connection signal="body_entered" from="quicksand" to="quicksand" method="_on_body_entered"]
