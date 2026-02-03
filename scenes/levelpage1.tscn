@@ -9,14 +9,15 @@
 [ext_resource type="Texture2D" uid="uid://jhfm2ksvvw6r" path="res://images/level_page/gray_star.png" id="6_rskdi"]
 [ext_resource type="Script" uid="uid://bk7f0x4slvsm0" path="res://scripts/venus.gd" id="6_sr1gy"]
 [ext_resource type="Texture2D" uid="uid://72j4m58ia32a" path="res://images/level_page/venus.png" id="6_ya3mj"]
-[ext_resource type="Texture2D" uid="uid://dpn03rcfnt7rx" path="res://images/level_page/Rocket.png" id="8_igw7c"]
+[ext_resource type="Texture2D" uid="uid://dpn03rcfnt7rx" path="res://images/level_page/rocket.png" id="8_igw7c"]
 [ext_resource type="Script" uid="uid://cjk32o1i0eccm" path="res://scripts/star_venus.gd" id="10_ogrnp"]
 [ext_resource type="Texture2D" uid="uid://cofafrr6pqpjc" path="res://images/level_page/lockimage.png" id="10_ytt8k"]
 [ext_resource type="FontFile" uid="uid://dqp5kyy7yyosk" path="res://pixelfont.ttf" id="11_pv7jr"]
 [ext_resource type="Texture2D" uid="uid://cxtcpcqql3w5a" path="res://images/level_page/earth.png" id="13_2pjr8"]
 [ext_resource type="Script" uid="uid://b0rwuv2aj47lg" path="res://scripts/star_earth.gd" id="14_ryp5e"]
+[ext_resource type="Script" uid="uid://dxgfmxrrp07c5" path="res://scripts/earthbutton.gd" id="15_5g32y"]
 [ext_resource type="Texture2D" uid="uid://dfad2fab08ggs" path="res://images/level_page/mars.png" id="16_7etq8"]
-[ext_resource type="Script" path="res://scripts/star_mars.gd" id="17_sooyk"]
+[ext_resource type="Script" uid="uid://dvoyins5ph3gl" path="res://scripts/star_mars.gd" id="17_sooyk"]
 [ext_resource type="Texture2D" uid="uid://cnpvifebvgmvc" path="res://images/level_page/jupiter.png" id="18_ys2n6"]
 [ext_resource type="Texture2D" uid="uid://bty5ed8qc2uqj" path="res://images/level_page/saturn.png" id="19_5g32y"]
 [ext_resource type="Texture2D" uid="uid://cvxnkn3yhmwn4" path="res://images/level_page/uranus.png" id="20_w185x"]
@@ -146,6 +147,7 @@ offset_right = 1520.0
 offset_bottom = 1137.0
 scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("13_2pjr8")
+script = ExtResource("15_5g32y")
 
 [node name="starcontainer" type="HBoxContainer" parent="." unique_id=782465867]
 offset_left = 667.0
@@ -406,3 +408,4 @@ texture = ExtResource("10_ytt8k")
 
 [connection signal="pressed" from="mercury" to="mercury" method="_on_pressed"]
 [connection signal="pressed" from="venus" to="venus" method="_on_pressed"]
+[connection signal="pressed" from="earth" to="earth" method="_on_pressed"]

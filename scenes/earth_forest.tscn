@@ -17,6 +17,10 @@
 [ext_resource type="Texture2D" uid="uid://dnpwjnt6jtdpm" path="res://images/mercury/no.png" id="12_jxaag"]
 [ext_resource type="Script" uid="uid://dqc0rww00brfs" path="res://scripts/no.gd" id="13_drqgp"]
 [ext_resource type="Script" uid="uid://1m3u7ghoal0i" path="res://scripts/lava.gd" id="16_jxaag"]
+[ext_resource type="Script" uid="uid://b0rwuv2aj47lg" path="res://scripts/star_earth.gd" id="18_batua"]
+[ext_resource type="Texture2D" uid="uid://jhfm2ksvvw6r" path="res://images/level_page/gray_star.png" id="19_nt102"]
+[ext_resource type="Texture2D" uid="uid://s45jw16jj73u" path="res://images/level_page/star.png" id="20_vb10i"]
+[ext_resource type="Script" uid="uid://bpkfgwxoiplt0" path="res://scripts/star.gd" id="21_yxgbd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jxaag"]
 size = Vector2(548, 263)
@@ -38,6 +42,9 @@ size = Vector2(83.5625, 108.99999)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tr1rt"]
 size = Vector2(1097, 101.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ftka3"]
+size = Vector2(116, 100.625)
 
 [node name="EarthForest" type="Node2D" unique_id=1138506274]
 
@@ -262,6 +269,50 @@ horizontal_alignment = 1
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=361473917]
+
+[node name="star_container" type="HBoxContainer" parent="CanvasLayer2" unique_id=246708091]
+offset_left = 661.00006
+offset_top = 13.000001
+offset_right = 874.2001
+offset_bottom = 65.0
+scale = Vector2(1.6800001, 1.6800001)
+mouse_filter = 2
+script = ExtResource("18_batua")
+gray_star = ExtResource("19_nt102")
+gold_star = ExtResource("20_vb10i")
+
+[node name="star1" type="TextureRect" parent="CanvasLayer2/star_container" unique_id=550287470]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("19_nt102")
+expand_mode = 2
+
+[node name="star2" type="TextureRect" parent="CanvasLayer2/star_container" unique_id=1081116573]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("19_nt102")
+expand_mode = 2
+
+[node name="star3" type="TextureRect" parent="CanvasLayer2/star_container" unique_id=1549696865]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("19_nt102")
+expand_mode = 2
+
+[node name="star1" type="Area2D" parent="." unique_id=1763230637]
+position = Vector2(-261, 52)
+script = ExtResource("21_yxgbd")
+
+[node name="Sprite2D" type="Sprite2D" parent="star1" unique_id=1155434176]
+position = Vector2(2084.298, 353.5)
+scale = Vector2(0.17487687, 0.17487685)
+texture = ExtResource("20_vb10i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="star1" unique_id=810462484]
+position = Vector2(2085, 350.6875)
+shape = SubResource("RectangleShape2D_ftka3")
+
 [connection signal="pressed" from="CanvasLayer5/back" to="CanvasLayer5/back" method="_on_pressed"]
 [connection signal="body_entered" from="Node2D2/trees" to="Node2D2/trees" method="_on_body_entered"]
 [connection signal="body_exited" from="Node2D2/trees" to="Node2D2/trees" method="_on_body_exited"]
@@ -271,3 +322,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="usure?/yes" to="usure?/yes" method="_on_pressed"]
 [connection signal="pressed" from="usure?/NO" to="usure?/NO" method="_on_pressed"]
 [connection signal="body_entered" from="quicksand" to="quicksand" method="_on_body_entered"]
+[connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
