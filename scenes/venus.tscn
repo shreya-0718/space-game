@@ -688,7 +688,7 @@ offset_right = -366.0
 offset_bottom = 1609.0
 theme_override_fonts/font = ExtResource("36_rxmr8")
 theme_override_font_sizes/font_size = 30
-text = "PRESS \"E\" TO EQUIP THE BOOTS!"
+text = "PRESS 'E' TO EQUIP THE BOOTS!"
 
 [node name="CanvasLayer4" type="CanvasLayer" parent="." unique_id=1581005649]
 
