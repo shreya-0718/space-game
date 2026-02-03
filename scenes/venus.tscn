@@ -14,34 +14,36 @@
 [ext_resource type="Texture2D" uid="uid://cleyhsn86koph" path="res://images/level_page/Back.png" id="13_mx30g"]
 [ext_resource type="Script" uid="uid://xhnj7qwvf34d" path="res://scripts/back.gd" id="13_nuv3h"]
 [ext_resource type="Texture2D" uid="uid://bhlphiy3b48wm" path="res://images/mercury/yes.png" id="14_8b3eq"]
-[ext_resource type="Script" path="res://scripts/reverse.gd" id="14_426g8"]
+[ext_resource type="Script" uid="uid://djsaoebormi7i" path="res://scripts/reverse.gd" id="14_426g8"]
 [ext_resource type="Texture2D" uid="uid://fowk4mbm2awj" path="res://images/venus/venus bckg.jpeg" id="14_ud6k2"]
 [ext_resource type="Script" uid="uid://qcgrioupnspr" path="res://scripts/yes.gd" id="14_y3sbn"]
-[ext_resource type="Script" path="res://scripts/getready.gd" id="15_426g8"]
-[ext_resource type="Script" path="res://scripts/no.gd" id="15_ya5ls"]
+[ext_resource type="Script" uid="uid://dwim2a5wbgywa" path="res://scripts/getready.gd" id="15_426g8"]
+[ext_resource type="Script" uid="uid://dqc0rww00brfs" path="res://scripts/no.gd" id="15_ya5ls"]
 [ext_resource type="Script" uid="uid://ck3f1altrgk2b" path="res://scripts/getout.gd" id="16_nuv3h"]
 [ext_resource type="Texture2D" uid="uid://dnpwjnt6jtdpm" path="res://images/mercury/no.png" id="16_qs1d7"]
 [ext_resource type="Script" uid="uid://cp5vbbje4v4qv" path="res://scripts/boots.gd" id="17_ya5ls"]
-[ext_resource type="Script" path="res://scripts/barrier.gd" id="22_yc0rh"]
+[ext_resource type="Script" uid="uid://c442tqbkww5lr" path="res://scripts/barrier.gd" id="22_yc0rh"]
 [ext_resource type="Texture2D" uid="uid://cyhibd6xhj537" path="res://images/mercury/boots.png" id="24_tdsfh"]
 [ext_resource type="Texture2D" uid="uid://rmooxlwdh2h" path="res://images/mercury/ice skates.png" id="25_lflb7"]
 [ext_resource type="Texture2D" uid="uid://brib7m4ylkkap" path="res://images/mercury/raincoats.png" id="26_hcxwc"]
 [ext_resource type="Texture2D" uid="uid://c166fr55vpxxn" path="res://images/venus/Acid Rain.png" id="28_r4phb"]
-[ext_resource type="Script" path="res://scripts/metal_snow.gd" id="29_mkknp"]
+[ext_resource type="Script" uid="uid://b7ci2jcm1vcok" path="res://scripts/metal_snow.gd" id="29_mkknp"]
 [ext_resource type="Texture2D" uid="uid://dagxlefmwjrog" path="res://images/venus/metal snow.png" id="30_r4phb"]
-[ext_resource type="Script" path="res://scripts/moving_cloud.gd" id="30_yd4sw"]
+[ext_resource type="Script" uid="uid://dlswbpc0iqdbx" path="res://scripts/moving_cloud.gd" id="30_yd4sw"]
 [ext_resource type="Script" uid="uid://dtf3v7lf7lx2j" path="res://scripts/thunder_cloud.gd" id="32_m310k"]
 [ext_resource type="Texture2D" uid="uid://vhjnv10kglhi" path="res://images/venus/longcloud.png" id="33_qs1d7"]
 [ext_resource type="Script" uid="uid://d16iriehslnbv" path="res://scripts/falling_asteroid.gd" id="33_xe2my"]
 [ext_resource type="Script" uid="uid://bdbbq62f8kbmt" path="res://scripts/crystal.gd" id="35_rxmr8"]
 [ext_resource type="FontFile" uid="uid://5jqbb8lq078c" path="res://pixelfont.ttf" id="36_rxmr8"]
 [ext_resource type="Texture2D" uid="uid://1yk061ola68j" path="res://images/venus/aster.png" id="36_tboo7"]
-[ext_resource type="Script" path="res://scripts/lava_respawn.gd" id="37_msgdu"]
+[ext_resource type="Script" uid="uid://dj6j8nbybw55c" path="res://scripts/lava_respawn.gd" id="37_msgdu"]
 [ext_resource type="Texture2D" uid="uid://cqhqynqsnulje" path="res://images/mercury/shard.png" id="37_yxsa8"]
 [ext_resource type="Script" uid="uid://bveutufglpxep" path="res://scripts/checkpoint.gd" id="41_1usnl"]
 [ext_resource type="Texture2D" uid="uid://cw7xggv5gnbxx" path="res://images/mercury/checkpointwhite.png" id="42_7ffta"]
+[ext_resource type="Script" uid="uid://clw7wi0msuovm" path="res://scripts/zoomin.gd" id="43_r4phb"]
 [ext_resource type="Texture2D" uid="uid://bhulmtu3pyhkh" path="res://images/venus/checkpoint purple actual.png" id="43_yr85m"]
 [ext_resource type="Texture2D" uid="uid://dv56dlaode2po" path="res://images/venus/lightning.png" id="44_lflb7"]
+[ext_resource type="Script" uid="uid://bhrlqb6juuy2a" path="res://scripts/zoomout.gd" id="44_tboo7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wwsvu"]
 texture = ExtResource("3_rbi8o")
@@ -286,10 +288,10 @@ animations = [{
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_y812g"]
 a = Vector2(4745, 254)
-b = Vector2(4823, 336)
+b = Vector2(4798, 312)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_0uv3g"]
-a = Vector2(4651, 333)
+a = Vector2(4673, 312)
 b = Vector2(4730, 251)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0uv3g"]
@@ -336,6 +338,18 @@ size = Vector2(4103.5, 186)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_40gqh"]
 size = Vector2(146, 235)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tdsfh"]
+radius = 136.0588
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lflb7"]
+radius = 326.02454
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hcxwc"]
+radius = 121.103264
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1usnl"]
+radius = 287.9045
 
 [node name="Venus" type="Node" unique_id=1230036420]
 script = ExtResource("1_8u8nx")
@@ -654,7 +668,7 @@ offset_top = 1681.0
 offset_right = 10106.0
 offset_bottom = 1782.0
 theme_override_fonts/font = ExtResource("36_rxmr8")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 40
 text = "PRESS SPACE TO EXIT!"
 horizontal_alignment = 1
 autowrap_mode = 2
@@ -664,7 +678,7 @@ position = Vector2(8144, 1825)
 script = ExtResource("16_nuv3h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="getout" unique_id=621144418]
-position = Vector2(1768, -106)
+position = Vector2(1770, -34)
 shape = SubResource("RectangleShape2D_8u8nx")
 
 [node name="boots" type="Area2D" parent="." unique_id=933547142]
@@ -725,13 +739,13 @@ position = Vector2(1656, 1880)
 shape = SubResource("RectangleShape2D_nykqm")
 
 [node name="Label4" type="Label" parent="barrier" unique_id=1948265480]
-offset_left = 1405.0001
-offset_top = 1819.0001
-offset_right = 1641.1747
-offset_bottom = 1991.0001
+offset_left = 1356.0
+offset_top = 1803.0001
+offset_right = 1695.0356
+offset_bottom = 1980.0001
 rotation = 0.004504407
 theme_override_fonts/font = ExtResource("36_rxmr8")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 40
 text = "MOUNTAINS HERE ARE TOO SLIPPERY... FIND SOME BOOTS TO HELP YOU CLIMB!"
 horizontal_alignment = 1
 autowrap_mode = 2
@@ -786,10 +800,10 @@ shape = SubResource("SegmentShape2D_y812g")
 shape = SubResource("SegmentShape2D_0uv3g")
 
 [node name="Label4" type="Label" parent="metal snow" unique_id=1655089793]
-offset_left = 4503.0
-offset_top = 104.0
-offset_right = 4865.0
-offset_bottom = 168.0
+offset_left = 4564.0
+offset_top = 132.0
+offset_right = 4926.0
+offset_bottom = 196.0
 theme_override_fonts/font = ExtResource("36_rxmr8")
 theme_override_font_sizes/font_size = 25
 text = "VENUS HAS DEADLY 'METAL SNOW' ON ITS MOUNTAINS"
@@ -797,8 +811,8 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="snowimage" type="Sprite2D" parent="metal snow" unique_id=1142858664]
-position = Vector2(4731, 302)
-scale = Vector2(0.13021745, 0.14387938)
+position = Vector2(4731.0005, 288)
+scale = Vector2(0.09415387, 0.10403215)
 texture = ExtResource("30_r4phb")
 
 [node name="lava die" type="Area2D" parent="." unique_id=389592706]
@@ -874,11 +888,11 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("33_qs1d7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="thunder cloud/StaticBody2D" unique_id=1483453267]
-position = Vector2(12908, 1425)
+position = Vector2(12908, 1447)
 shape = SubResource("RectangleShape2D_yes2q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="thunder cloud" unique_id=84911960]
-position = Vector2(12906, 1418)
+position = Vector2(12906, 1439)
 shape = SubResource("RectangleShape2D_rxmr8")
 
 [node name="Label" type="Label" parent="thunder cloud" unique_id=2117566743]
@@ -1059,6 +1073,29 @@ text = "CAREFUL OF THESE SULFURIC CLOUDS... IS IT WORTH IT TO EXPLORE?"
 horizontal_alignment = 1
 autowrap_mode = 2
 
+[node name="zoomin" type="Area2D" parent="." unique_id=1993739752]
+script = ExtResource("43_r4phb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zoomin" unique_id=133881871]
+position = Vector2(4416, 484)
+shape = SubResource("CircleShape2D_tdsfh")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="zoomin" unique_id=177967716]
+position = Vector2(7199, 1938)
+shape = SubResource("CircleShape2D_lflb7")
+
+[node name="zoomout" type="Area2D" parent="." unique_id=1595389028]
+position = Vector2(4940, 450)
+script = ExtResource("44_tboo7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zoomout" unique_id=688218430]
+position = Vector2(53, 45)
+shape = SubResource("CircleShape2D_hcxwc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="zoomout" unique_id=190000004]
+position = Vector2(5377, 1346)
+shape = SubResource("CircleShape2D_1usnl")
+
 [connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
 [connection signal="body_entered" from="star2" to="star2" method="_on_body_entered"]
 [connection signal="body_entered" from="star3" to="star3" method="_on_body_entered"]
@@ -1083,3 +1120,5 @@ autowrap_mode = 2
 [connection signal="body_entered" from="crystal" to="crystal" method="_on_body_entered"]
 [connection signal="body_entered" from="lava respawn" to="lava respawn" method="_on_body_entered"]
 [connection signal="body_entered" from="checkpoint" to="checkpoint" method="_on_body_entered"]
+[connection signal="body_entered" from="zoomin" to="zoomin" method="_on_body_entered"]
+[connection signal="body_entered" from="zoomout" to="zoomout" method="_on_body_entered"]
