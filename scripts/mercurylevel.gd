@@ -20,7 +20,6 @@ func _ready():
 func update_powerups():
 	var container = get_node("CanvasLayer/powerups")
 	var powerups = container.get_children()
-	print(powerups)
 	for i in range(powerups.size()):
 		powerups[0].modulate = Color(1, 1, 1, 1) if global.ice_skates > 0 else Color(1, 1, 1, 0)
 		powerups[1].modulate = Color(1, 1, 1, 1) if global.raincoat > 0 else Color(1, 1, 1, 0)

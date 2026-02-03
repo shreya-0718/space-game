@@ -146,6 +146,7 @@ offset_top = 300.0
 offset_right = 1520.0
 offset_bottom = 1137.0
 scale = Vector2(0.2, 0.2)
+action_mode = 0
 texture_normal = ExtResource("13_2pjr8")
 script = ExtResource("15_5g32y")
 

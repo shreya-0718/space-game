@@ -29,12 +29,9 @@ func update_progress_bar():
 		return
 	var progress = abs(100* (player_x - start_x) / (end_x - start_x))
 	# progress = clamp(progress, 5, 10)
-
 	progress_bar.value = progress
-	print(progress_bar.value)
 	
 func _ready():
-	print("Ready Venus")
 	usure.visible = false
 	progress_bar.add_theme_color_override("font_color", Color.WHITE)
 	progress_bar.add_theme_stylebox_override("background", StyleBoxFlat.new())

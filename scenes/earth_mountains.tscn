@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://jhfm2ksvvw6r" path="res://images/level_page/gray_star.png" id="14_8wltr"]
 [ext_resource type="Texture2D" uid="uid://s45jw16jj73u" path="res://images/level_page/star.png" id="15_ihsu2"]
 [ext_resource type="Script" uid="uid://bpkfgwxoiplt0" path="res://scripts/star.gd" id="16_8nqt1"]
-[ext_resource type="FontFile" path="res://ultpixelfont.ttf" id="17_8wltr"]
+[ext_resource type="FontFile" uid="uid://5jqbb8lq078c" path="res://pixelfont.ttf" id="17_8wltr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_shu3f"]
 size = Vector2(83.5625, 108.99999)

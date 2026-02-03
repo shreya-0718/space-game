@@ -196,7 +196,7 @@ tile_map_data = PackedByteArray("AAApHWkGAAAAAAYAAAAqHWkGAAABAAYAAAArHWkGAAACAAY
 tile_set = ExtResource("5_vujqb")
 
 [node name="astronaut" type="CharacterBody2D" parent="." unique_id=1606066007 groups=["astronaut"]]
-position = Vector2(1419, 382)
+position = Vector2(1436, 348)
 script = ExtResource("2_doqmq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="astronaut" unique_id=1665997636]
@@ -239,7 +239,7 @@ position = Vector2(2085, 350.6875)
 shape = SubResource("RectangleShape2D_2ndqr")
 
 [node name="star2" type="Area2D" parent="." unique_id=389564044]
-position = Vector2(1110, 460)
+position = Vector2(1127, 426)
 script = ExtResource("4_2ndqr")
 
 [node name="Sprite2D" type="Sprite2D" parent="star2" unique_id=1410676592]
@@ -332,7 +332,7 @@ scale = Vector2(0.6212312, 0.62406015)
 texture = ExtResource("5_ta7jb")
 
 [node name="levelstart" type="Marker2D" parent="." unique_id=338364409]
-position = Vector2(1042, 454)
+position = Vector2(1059, 420)
 
 [node name="levelend" type="Marker2D" parent="." unique_id=1437469838]
 position = Vector2(15641, 645)
@@ -541,10 +541,10 @@ frame_progress = 0.90160733
 [node name="left" type="Node2D" parent="." unique_id=416745509]
 
 [node name="tutorialL" type="Label" parent="left" unique_id=1528146382]
-offset_left = 1041.0
-offset_top = 275.0
-offset_right = 1273.0
-offset_bottom = 587.0
+offset_left = 1058.0
+offset_top = 241.0
+offset_right = 1290.0
+offset_bottom = 553.0
 text = "			PRESS
 OR	
 
@@ -553,12 +553,12 @@ label_settings = ExtResource("28_vujqb")
 horizontal_alignment = 1
 
 [node name="leftarrow" type="Sprite2D" parent="left" unique_id=1597151840]
-position = Vector2(1090.56, 365.51642)
+position = Vector2(1107.56, 331.51642)
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("16_s7w1k")
 
 [node name="akey" type="Sprite2D" parent="left" unique_id=1483207175]
-position = Vector2(1222, 368.00003)
+position = Vector2(1239, 334.00003)
 scale = Vector2(0.075, 0.08)
 texture = ExtResource("17_s7w1k")
 
@@ -566,10 +566,10 @@ texture = ExtResource("17_s7w1k")
 position = Vector2(445, -108)
 
 [node name="tutorialR" type="Label" parent="right" unique_id=1425677866]
-offset_left = 1053.0
-offset_top = 386.0
-offset_right = 1301.0
-offset_bottom = 698.0
+offset_left = 1070.0
+offset_top = 352.0
+offset_right = 1318.0
+offset_bottom = 664.0
 text = "			PRESS
 OR
 
@@ -579,12 +579,12 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="rightarrow" type="Sprite2D" parent="right" unique_id=43624466]
-position = Vector2(1110.48, 475.00003)
+position = Vector2(1127.48, 441.00003)
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("18_nh86p")
 
 [node name="dkey" type="Sprite2D" parent="right" unique_id=2054492596]
-position = Vector2(1243, 477.00003)
+position = Vector2(1260, 443.00003)
 scale = Vector2(0.075, 0.08)
 texture = ExtResource("19_p3g0t")
 
@@ -592,10 +592,10 @@ texture = ExtResource("19_p3g0t")
 position = Vector2(-268, -111)
 
 [node name="tutorialU" type="Label" parent="up" unique_id=1302635364]
-offset_left = 1564.4503
-offset_top = 259.0
-offset_right = 1751.4503
-offset_bottom = 616.0
+offset_left = 1581.4503
+offset_top = 225.0
+offset_right = 1768.4503
+offset_bottom = 582.0
 text = "			PRESS
 OR
 
@@ -606,12 +606,12 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="uparrow" type="Sprite2D" parent="up" unique_id=1959206356]
-position = Vector2(1591.4503, 360.00003)
+position = Vector2(1608.4503, 326.00003)
 scale = Vector2(0.08039825, 0.08039825)
 texture = ExtResource("20_u28sr")
 
 [node name="wkey" type="Sprite2D" parent="up" unique_id=63546968]
-position = Vector2(1728.4504, 359.00003)
+position = Vector2(1745.4504, 325.00003)
 scale = Vector2(0.075, 0.08)
 texture = ExtResource("21_vujqb")
 
@@ -695,7 +695,7 @@ offset_left = -93.0
 offset_top = -47.0
 offset_right = 839.0
 offset_bottom = 309.0
-text = "PRESS \"ENTER\" TO WIN A SPECIAL PRIZE!"
+text = "PRESS 'ENTER' TO WIN A SPECIAL PRIZE!"
 label_settings = ExtResource("28_vujqb")
 
 [node name="hint" type="Label" parent="." unique_id=882501189]
@@ -733,7 +733,7 @@ position = Vector2(4255, 1017.25)
 shape = SubResource("RectangleShape2D_vujqb")
 
 [node name="startpoint" type="Marker2D" parent="." unique_id=911174768]
-position = Vector2(1342, 345)
+position = Vector2(1359, 311)
 
 [node name="Label4" type="Label" parent="." unique_id=1538245112]
 offset_left = 5339.0
@@ -786,15 +786,15 @@ shape = SubResource("RectangleShape2D_utlqg")
 position = Vector2(106, -8)
 
 [node name="Space" type="Sprite2D" parent="space" unique_id=1948809012]
-position = Vector2(1958, 316)
+position = Vector2(1953, 274)
 scale = Vector2(0.08832046, 0.08832046)
 texture = ExtResource("38_unkin")
 
 [node name="label" type="Label" parent="space" unique_id=387648122]
-offset_left = 1757.0
-offset_top = 200.0
-offset_right = 2156.0
-offset_bottom = 512.0
+offset_left = 1752.0
+offset_top = 158.0
+offset_right = 2151.0
+offset_bottom = 470.0
 text = "			HOLD SPACE
 
 
@@ -816,10 +816,10 @@ label_settings = SubResource("LabelSettings_bta1w")
 
 [node name="Label" type="Label" parent="gravity" unique_id=1246989161]
 layout_mode = 0
-offset_left = 307.0
-offset_top = 40.0
-offset_right = 381.0
-offset_bottom = 95.0
+offset_left = 301.0
+offset_top = 27.0
+offset_right = 375.0
+offset_bottom = 82.0
 text = "100"
 label_settings = SubResource("LabelSettings_unkin")
 

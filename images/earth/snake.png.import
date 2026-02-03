@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cybe6au0sik6f"
-path="res://.godot/imported/snow.png-2de3d17d48efda4619440698f472e93f.ctex"
+uid="uid://dgrpqfrlvtct3"
+path="res://.godot/imported/snake.png-a0d717bd682aaf4bce1452ebd0ac3acb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/venus/snow.png"
-dest_files=["res://.godot/imported/snow.png-2de3d17d48efda4619440698f472e93f.ctex"]
+source_file="res://images/earth/snake.png"
+dest_files=["res://.godot/imported/snake.png-a0d717bd682aaf4bce1452ebd0ac3acb.ctex"]
 
 [params]
 

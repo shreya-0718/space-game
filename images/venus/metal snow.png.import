@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8i0kfhhmu6bl"
-path="res://.godot/imported/checkpoint.png-a5f286f12d6cab25bef83a1d5b02bf0d.ctex"
+uid="uid://dagxlefmwjrog"
+path="res://.godot/imported/metal snow.png-6b8721bc6a23fc535ead47b5bc609c61.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/venus/checkpoint.png"
-dest_files=["res://.godot/imported/checkpoint.png-a5f286f12d6cab25bef83a1d5b02bf0d.ctex"]
+source_file="res://images/venus/metal snow.png"
+dest_files=["res://.godot/imported/metal snow.png-6b8721bc6a23fc535ead47b5bc609c61.ctex"]
 
 [params]
 
