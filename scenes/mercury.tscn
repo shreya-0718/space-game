@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://6w055ero2apx" path="res://images/mercury/mercury 1 bckg.jpeg" id="5_ta7jb"]
 [ext_resource type="TileSet" uid="uid://bubbasbgvh4mc" path="res://images/mercury/mercury_tileset.tres" id="5_vujqb"]
 [ext_resource type="Script" path="res://scripts/water.gd" id="9_p3g0t"]
-[ext_resource type="FontFile" uid="uid://xd7jpriyd88y" path="res://number font.ttf" id="9_ta7jb"]
+[ext_resource type="FontFile" uid="uid://bhrmquovn2cb1" path="res://progressbar.ttf" id="9_r3d36"]
 [ext_resource type="Script" uid="uid://bveutufglpxep" path="res://scripts/checkpoint.gd" id="11_u28sr"]
 [ext_resource type="Script" path="res://scripts/zoomout.gd" id="12_vujqb"]
 [ext_resource type="Texture2D" uid="uid://cw7xggv5gnbxx" path="res://images/mercury/checkpointwhite.png" id="13_kgyyi"]
@@ -293,7 +293,7 @@ offset_left = -10.0
 offset_top = 6.0
 offset_right = 138.0
 offset_bottom = 67.0
-theme_override_fonts/font = ExtResource("9_ta7jb")
+theme_override_fonts/font = ExtResource("9_r3d36")
 theme_override_font_sizes/font_size = 20
 metadata/_edit_use_anchors_ = true
 
