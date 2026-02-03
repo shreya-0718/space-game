@@ -67,21 +67,4 @@ func respawn():
 func _ready():
 	usure.visible = false
 
-func _process(delta):
-	"""
-	if left and Input.is_action_just_pressed("left") and not triggeredL:
-		following = true
-		triggeredL = true
-		left.queue_free()
-		right.visible = true
-	if right and Input.is_action_just_pressed("right") and not triggeredR and following:
-		continuing = true
-		triggeredR = true
-		right.queue_free()
-		up.visible = true
-	if up and Input.is_action_just_pressed("jump") and not triggeredU and following and continuing:
-		triggeredU = true
-		up.queue_free()
-		skiptutorial.queue_free()
-		"""
 	

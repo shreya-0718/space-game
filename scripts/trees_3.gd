@@ -11,7 +11,6 @@ var pressedd = false
 
 func _on_body_entered(body):
 	if body.name == "astronaut": 
-		print("hi")
 		enteredd = true
 
 func _process(delta):
@@ -25,10 +24,7 @@ func _process(delta):
 	if astronautt.global_position.y <= climbpointt.global_position.y and astronautt.global_position.x >= climbpointt.global_position.x:
 		pressedd = false
 		global.climbing = false
-'''
+
 func _on_body_exited(body):
 	if body.name == "astronaut":
 		enteredd = false
-		global.climbing = false
-		global.earth_gravity = 0
-'''

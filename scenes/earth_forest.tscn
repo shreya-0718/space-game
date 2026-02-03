@@ -5,7 +5,6 @@
 [ext_resource type="FontFile" uid="uid://5jqbb8lq078c" path="res://pixelfont.ttf" id="6_lccmr"]
 [ext_resource type="Script" uid="uid://cj344vnwccvwc" path="res://scripts/astronaut_earth.gd" id="6_pqjif"]
 [ext_resource type="Texture2D" uid="uid://cleyhsn86koph" path="res://images/level_page/Back.png" id="6_vt45y"]
-[ext_resource type="Script" uid="uid://df1pespjgxir7" path="res://scripts/trees2.gd" id="7_lccmr"]
 [ext_resource type="Script" uid="uid://xhnj7qwvf34d" path="res://scripts/back.gd" id="7_pqjif"]
 [ext_resource type="Script" uid="uid://brbyk2hl5l3gx" path="res://scripts/bridge.gd" id="8_drqgp"]
 [ext_resource type="Texture2D" uid="uid://b84h1hki10wk8" path="res://images/earth/trees.png" id="8_pqjif"]
@@ -13,6 +12,8 @@
 [ext_resource type="SpriteFrames" uid="uid://cj042qejdnd52" path="res://images/astronaut/astronaut_animation.tres" id="9_lf2vo"]
 [ext_resource type="Script" uid="uid://fdsiqsq4oord" path="res://scripts/trees_3.gd" id="9_nt102"]
 [ext_resource type="LabelSettings" uid="uid://erqtt0c1y5lk" path="res://custom_font.tres" id="9_tx6xe"]
+[ext_resource type="Script" uid="uid://d0nsct1s8hdci" path="res://scripts/forestending.gd" id="9_vb10i"]
+[ext_resource type="Script" uid="uid://jdjswfeimxy6" path="res://scripts/bridge_3.gd" id="9_yxgbd"]
 [ext_resource type="Texture2D" uid="uid://bhlphiy3b48wm" path="res://images/mercury/yes.png" id="10_0ln5e"]
 [ext_resource type="Script" uid="uid://qcgrioupnspr" path="res://scripts/yes.gd" id="11_lccmr"]
 [ext_resource type="Texture2D" uid="uid://dnpwjnt6jtdpm" path="res://images/mercury/no.png" id="12_jxaag"]
@@ -38,9 +39,15 @@ size = Vector2(124.5, 87.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_batua"]
 size = Vector2(191.75, 22)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxgbd"]
+size = Vector2(175.75, 25.25)
+
 [sub_resource type="LabelSettings" id="LabelSettings_batua"]
 font = ExtResource("6_lccmr")
 font_size = 25
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ih1p4"]
+size = Vector2(304, 170)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tcu1f"]
 size = Vector2(83.5625, 108.99999)
@@ -50,6 +57,9 @@ size = Vector2(1097, 101.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ftka3"]
 size = Vector2(116, 100.625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vb10i"]
+size = Vector2(148.75, 169.625)
 
 [node name="EarthForest" type="Node2D" unique_id=1138506274]
 
@@ -124,7 +134,7 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(474, -75)
 
 [node name="startposition" type="Marker2D" parent="Node2D2/trees" unique_id=1190495930]
-position = Vector2(808, 410)
+position = Vector2(804, 423)
 
 [node name="Trees3" type="Sprite2D" parent="Node2D2" unique_id=11793639]
 position = Vector2(5990, 132.00002)
@@ -132,7 +142,6 @@ scale = Vector2(1.0474575, 1.0474572)
 texture = ExtResource("8_pqjif")
 
 [node name="trees2" type="Area2D" parent="Node2D2" unique_id=481744325]
-script = ExtResource("7_lccmr")
 
 [node name="Trees2" type="Sprite2D" parent="Node2D2/trees2" unique_id=678849679]
 position = Vector2(3421, 101.00001)
@@ -184,6 +193,14 @@ position = Vector2(1680.125, 31)
 shape = SubResource("RectangleShape2D_batua")
 one_way_collision_margin = 0.0
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D2/block" unique_id=472349325]
+position = Vector2(4164, 32)
+shape = SubResource("RectangleShape2D_yxgbd")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D2/block" unique_id=1535960457]
+position = Vector2(6782, 75)
+shape = SubResource("RectangleShape2D_yxgbd")
+
 [node name="Label" type="Label" parent="Node2D2" unique_id=205197267]
 offset_left = 549.0
 offset_top = -83.0
@@ -218,7 +235,7 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(115, -97)
 
 [node name="startpositionn" type="Marker2D" parent="Node2D2/trees3" unique_id=2043990394]
-position = Vector2(773, 356)
+position = Vector2(776, 424)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Node2D2" unique_id=1284333797]
 position = Vector2(2421, 23)
@@ -249,6 +266,90 @@ shape = SubResource("RectangleShape2D_8g57r")
 [node name="bridgepoint" type="Marker2D" parent="Node2D2/bridge2" unique_id=1935805021]
 position = Vector2(1983, -43)
 
+[node name="Label3" type="Label" parent="Node2D2" unique_id=1000870129]
+offset_left = 4239.0
+offset_top = 34.0
+offset_right = 4383.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("6_lccmr")
+theme_override_font_sizes/font_size = 25
+text = "SLIDE DOWN THE TREE "
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="trees4" type="Area2D" parent="Node2D2" unique_id=35847732]
+position = Vector2(5012, 3)
+script = ExtResource("9_nt102")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/trees4" unique_id=306005561]
+position = Vector2(339, 385)
+shape = SubResource("RectangleShape2D_jxaag")
+
+[node name="Label" type="Label" parent="Node2D2/trees4" unique_id=84916650]
+offset_left = 240.0
+offset_top = 284.0
+offset_right = 403.0
+offset_bottom = 378.0
+theme_override_fonts/font = ExtResource("6_lccmr")
+theme_override_font_sizes/font_size = 25
+text = "PRESS 'SPACE' TO CLIMB UP THE TREE"
+horizontal_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="climbpointt" type="Marker2D" parent="Node2D2/trees4" unique_id=1195578507]
+position = Vector2(115, -97)
+
+[node name="startpositionn" type="Marker2D" parent="Node2D2/trees4" unique_id=96269220]
+position = Vector2(808, 398)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Node2D2" unique_id=1782628738]
+position = Vector2(4986, 49)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/StaticBody2D3" unique_id=1801762102]
+position = Vector2(510.125, -9)
+shape = SubResource("RectangleShape2D_nvat7")
+one_way_collision = true
+
+[node name="bridge3" type="Area2D" parent="Node2D2" unique_id=1497761985]
+position = Vector2(4997, 34)
+script = ExtResource("9_yxgbd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/bridge3" unique_id=254857806]
+position = Vector2(665, -42)
+shape = SubResource("RectangleShape2D_8g57r")
+
+[node name="bridgepointt" type="Marker2D" parent="Node2D2/bridge3" unique_id=1779914174]
+z_index = 100
+position = Vector2(2046, -7)
+
+[node name="Label4" type="Label" parent="Node2D2" unique_id=1126623107]
+offset_left = 5543.0
+offset_top = -16.0
+offset_right = 5686.0
+offset_bottom = 41.0
+text = "CROSS THE BRIDGE!"
+label_settings = SubResource("LabelSettings_batua")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label5" type="Label" parent="Node2D2" unique_id=307737974]
+offset_left = 6852.0
+offset_top = -42.0
+offset_right = 6995.0
+offset_bottom = 75.0
+text = "PRESS 'ENTER' TO MOVE TO NEXT BIOME!"
+label_settings = SubResource("LabelSettings_batua")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ending" type="Area2D" parent="Node2D2" unique_id=2129726108]
+script = ExtResource("9_vb10i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/ending" unique_id=724597639]
+position = Vector2(6817, 17)
+shape = SubResource("RectangleShape2D_ih1p4")
+
 [node name="astronaut" type="CharacterBody2D" parent="." unique_id=562307866 groups=["astronaut"]]
 position = Vector2(451, 353)
 script = ExtResource("6_pqjif")
@@ -261,7 +362,7 @@ shape = SubResource("RectangleShape2D_tcu1f")
 position = Vector2(-119.24998, -40.24994)
 limit_left = -2
 limit_top = -601
-limit_right = 6266
+limit_right = 7249
 limit_bottom = 649
 limit_smoothed = true
 position_smoothing_enabled = true
@@ -383,6 +484,19 @@ texture = ExtResource("20_vb10i")
 position = Vector2(2553.2388, 350.72446)
 shape = SubResource("RectangleShape2D_ftka3")
 
+[node name="star2" type="Area2D" parent="." unique_id=1817703805]
+position = Vector2(1110, 460)
+script = ExtResource("21_yxgbd")
+
+[node name="Sprite2D" type="Sprite2D" parent="star2" unique_id=833455353]
+position = Vector2(3687.04, -77.95999)
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("20_vb10i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="star2" unique_id=441182861]
+position = Vector2(3685.6636, -76.77261)
+shape = SubResource("RectangleShape2D_vb10i")
+
 [connection signal="pressed" from="CanvasLayer5/back" to="CanvasLayer5/back" method="_on_pressed"]
 [connection signal="body_entered" from="Node2D2/trees" to="Node2D2/trees" method="_on_body_entered"]
 [connection signal="body_exited" from="Node2D2/trees" to="Node2D2/trees" method="_on_body_exited"]
@@ -392,7 +506,12 @@ shape = SubResource("RectangleShape2D_ftka3")
 [connection signal="body_entered" from="Node2D2/trees3" to="Node2D2/trees3" method="_on_body_entered"]
 [connection signal="body_exited" from="Node2D2/trees3" to="Node2D2/trees3" method="_on_body_exited"]
 [connection signal="body_entered" from="Node2D2/bridge2" to="Node2D2/bridge2" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D2/trees4" to="Node2D2/trees4" method="_on_body_entered"]
+[connection signal="body_exited" from="Node2D2/trees4" to="Node2D2/trees4" method="_on_body_exited"]
+[connection signal="body_entered" from="Node2D2/bridge3" to="Node2D2/bridge3" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D2/ending" to="Node2D2/ending" method="_on_body_entered"]
 [connection signal="pressed" from="usure?/yes" to="usure?/yes" method="_on_pressed"]
 [connection signal="pressed" from="usure?/NO" to="usure?/NO" method="_on_pressed"]
 [connection signal="body_entered" from="quicksand" to="quicksand" method="_on_body_entered"]
 [connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
+[connection signal="body_entered" from="star2" to="star2" method="_on_body_entered"]
