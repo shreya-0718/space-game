@@ -668,7 +668,7 @@ offset_top = 1681.0
 offset_right = 10106.0
 offset_bottom = 1782.0
 theme_override_fonts/font = ExtResource("36_rxmr8")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 40
 text = "PRESS SPACE TO EXIT!"
 horizontal_alignment = 1
 autowrap_mode = 2
@@ -678,7 +678,7 @@ position = Vector2(8144, 1825)
 script = ExtResource("16_nuv3h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="getout" unique_id=621144418]
-position = Vector2(1768, -106)
+position = Vector2(1770, -34)
 shape = SubResource("RectangleShape2D_8u8nx")
 
 [node name="boots" type="Area2D" parent="." unique_id=933547142]
@@ -888,11 +888,11 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("33_qs1d7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="thunder cloud/StaticBody2D" unique_id=1483453267]
-position = Vector2(12908, 1425)
+position = Vector2(12908, 1447)
 shape = SubResource("RectangleShape2D_yes2q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="thunder cloud" unique_id=84911960]
-position = Vector2(12906, 1418)
+position = Vector2(12906, 1439)
 shape = SubResource("RectangleShape2D_rxmr8")
 
 [node name="Label" type="Label" parent="thunder cloud" unique_id=2117566743]
