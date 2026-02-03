@@ -38,7 +38,7 @@
 [ext_resource type="Script" uid="uid://bdbbq62f8kbmt" path="res://scripts/crystal.gd" id="32_vujqb"]
 [ext_resource type="Texture2D" uid="uid://cqhqynqsnulje" path="res://images/mercury/shard.png" id="37_kgyyi"]
 [ext_resource type="Texture2D" uid="uid://bnjxcfjhaibn6" path="res://images/mercury/space.png" id="38_unkin"]
-[ext_resource type="FontFile" uid="uid://dqp5kyy7yyosk" path="res://pixelfont.ttf" id="39_r3d36"]
+[ext_resource type="FontFile" uid="uid://5jqbb8lq078c" path="res://pixelfont.ttf" id="39_r3d36"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_doqmq"]
 size = Vector2(77, 109)
