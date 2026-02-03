@@ -3,17 +3,18 @@
 [ext_resource type="TileSet" uid="uid://drufa7oy3tfua" path="res://images/earth_tileset.tres" id="1_5q57j"]
 [ext_resource type="Texture2D" uid="uid://cen5qm47wnojw" path="res://images/earth/ocean_bckg.png" id="1_e1u4y"]
 [ext_resource type="Script" uid="uid://0a8dp3ewh228" path="res://scripts/earth_oceanlevel.gd" id="1_p82k6"]
-[ext_resource type="Script" uid="uid://cv1o28afdj1jl" path="res://scripts/seashells.gd" id="3_pha60"]
+[ext_resource type="Script" path="res://scripts/seashells.gd" id="3_pha60"]
 [ext_resource type="Texture2D" uid="uid://im8akvumht5l" path="res://images/earth/shell.png" id="3_uwlb3"]
 [ext_resource type="Texture2D" uid="uid://c830son4x1yls" path="res://images/earth_and_mars.png" id="4_k007f"]
 [ext_resource type="Texture2D" uid="uid://bu87tim2nh1nr" path="res://images/earth/Astrointheocean.png" id="5_4ykf2"]
 [ext_resource type="Script" uid="uid://mv7vhqfk0rk2" path="res://scripts/astro_ocean.gd" id="5_6j36a"]
-[ext_resource type="FontFile" uid="uid://dqp5kyy7yyosk" path="res://pixelfont.ttf" id="5_xeq0s"]
+[ext_resource type="FontFile" uid="uid://5jqbb8lq078c" path="res://pixelfont.ttf" id="5_xeq0s"]
 [ext_resource type="FontFile" uid="uid://xd7jpriyd88y" path="res://number font.ttf" id="6_sntt1"]
 [ext_resource type="Script" uid="uid://bu32bl86ekrkv" path="res://scripts/jellyfish.gd" id="7_sntt1"]
 [ext_resource type="Script" uid="uid://ogqby4a3sev" path="res://scripts/oceanend.gd" id="11_m6xug"]
 [ext_resource type="Script" uid="uid://bdbbq62f8kbmt" path="res://scripts/crystal.gd" id="12_dxoki"]
 [ext_resource type="Texture2D" uid="uid://cqhqynqsnulje" path="res://images/mercury/shard.png" id="13_p82k6"]
+[ext_resource type="Texture2D" uid="uid://dfeppq5pumdwm" path="res://images/earth/coralll.png" id="15_ybnj8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k007f"]
 size = Vector2(239.5593, 239.55945)
@@ -155,10 +156,10 @@ position = Vector2(0.00024414063, -6.1035156e-05)
 shape = SubResource("RectangleShape2D_k007f")
 
 [node name="Label3" type="Label" parent="seashells" unique_id=810405258]
-offset_left = 305.0
-offset_top = 157.0
-offset_right = 603.0
-offset_bottom = 303.0
+offset_left = 333.0
+offset_top = 149.0
+offset_right = 631.0
+offset_bottom = 295.0
 theme_override_fonts/font = ExtResource("5_xeq0s")
 theme_override_font_sizes/font_size = 30
 text = "COLLECT THE SEASHELLS, BUT STAY AWAY FROM THE JELLYFISH!"
@@ -166,10 +167,10 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Label4" type="Label" parent="seashells" unique_id=974346905]
-offset_left = 1016.0
-offset_top = 367.0
-offset_right = 1347.0
-offset_bottom = 434.0
+offset_left = 316.0
+offset_top = 416.0
+offset_right = 647.0
+offset_bottom = 483.0
 theme_override_fonts/font = ExtResource("5_xeq0s")
 theme_override_font_sizes/font_size = 30
 text = "THE SPIKY CORAL WILL POP YOUR BUBBLE!"
@@ -179,7 +180,7 @@ autowrap_mode = 2
 [node name="jellyfishies" type="Node2D" parent="." unique_id=469655064]
 
 [node name="Area2D" type="Area2D" parent="jellyfishies" unique_id=1093647486]
-position = Vector2(269, 189)
+position = Vector2(478, 153)
 script = ExtResource("7_sntt1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="jellyfishies/Area2D" unique_id=233579577]
@@ -194,7 +195,7 @@ position = Vector2(659.5, 268.5)
 shape = SubResource("RectangleShape2D_blcji")
 
 [node name="Area2D2" type="Area2D" parent="jellyfishies" unique_id=965611357]
-position = Vector2(589, -132)
+position = Vector2(74, -155)
 script = ExtResource("7_sntt1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="jellyfishies/Area2D2" unique_id=380862237]
@@ -209,7 +210,7 @@ position = Vector2(659.5, 268.5)
 shape = SubResource("RectangleShape2D_blcji")
 
 [node name="Area2D3" type="Area2D" parent="jellyfishies" unique_id=825821125]
-position = Vector2(1028, 145)
+position = Vector2(809, 18)
 script = ExtResource("7_sntt1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="jellyfishies/Area2D3" unique_id=295273193]
@@ -298,6 +299,201 @@ theme_override_font_sizes/font_size = 30
 text = "ONE OF THE CRYSTAL'S PIECES HAS BEEN FOUND ... EXPLORE THE REST TO FIND MORE! "
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[node name="corals" type="Node2D" parent="." unique_id=1696269901]
+position = Vector2(-25.187506, 546.4773)
+scale = Vector2(0.43192306, 0.43192303)
+
+[node name="Coralll" type="Sprite2D" parent="corals" unique_id=206719952]
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll2" type="Sprite2D" parent="corals" unique_id=1528633266]
+position = Vector2(181.02184, 5.8406353)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll3" type="Sprite2D" parent="corals" unique_id=583594208]
+position = Vector2(359.7284, 0.47009277)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll4" type="Sprite2D" parent="corals" unique_id=2046701435]
+position = Vector2(540.75024, 6.31073)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll5" type="Sprite2D" parent="corals" unique_id=1183735513]
+position = Vector2(718.58887, 2.785324)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll6" type="Sprite2D" parent="corals" unique_id=307267519]
+position = Vector2(899.6107, 8.625961)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll7" type="Sprite2D" parent="corals" unique_id=597521827]
+position = Vector2(1078.3175, 3.2554169)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll8" type="Sprite2D" parent="corals" unique_id=222239390]
+position = Vector2(1259.3391, 9.096054)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll9" type="Sprite2D" parent="corals" unique_id=1502925096]
+position = Vector2(1436.3091, 2.7853663)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll10" type="Sprite2D" parent="corals" unique_id=1238899124]
+position = Vector2(1617.3309, 8.626001)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll11" type="Sprite2D" parent="corals" unique_id=1749201228]
+position = Vector2(1796.0375, 3.255459)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll12" type="Sprite2D" parent="corals" unique_id=728985892]
+position = Vector2(1977.0593, 9.096096)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll13" type="Sprite2D" parent="corals" unique_id=142046880]
+position = Vector2(2154.898, 5.57069)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll14" type="Sprite2D" parent="corals" unique_id=756151340]
+position = Vector2(2335.92, 11.411327)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll15" type="Sprite2D" parent="corals" unique_id=2111977384]
+position = Vector2(2514.6265, 6.040783)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll16" type="Sprite2D" parent="corals" unique_id=1256660640]
+position = Vector2(2695.6482, 11.88142)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll17" type="Sprite2D" parent="corals" unique_id=1460670618]
+position = Vector2(2869.4348, 5.1005936)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll18" type="Sprite2D" parent="corals" unique_id=461618978]
+position = Vector2(3050.4565, 10.941229)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll19" type="Sprite2D" parent="corals" unique_id=903262428]
+position = Vector2(3229.1633, 5.5706863)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll20" type="Sprite2D" parent="corals" unique_id=1799170108]
+position = Vector2(3410.185, 11.411324)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll21" type="Sprite2D" parent="corals" unique_id=937613369]
+position = Vector2(3588.0237, 7.8859177)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll22" type="Sprite2D" parent="corals" unique_id=449665017]
+position = Vector2(3769.0457, 13.726555)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll23" type="Sprite2D" parent="corals" unique_id=387840885]
+position = Vector2(3947.7522, 8.35601)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll24" type="Sprite2D" parent="corals" unique_id=1334188459]
+position = Vector2(4128.7734, 14.196648)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll25" type="Sprite2D" parent="corals" unique_id=1853896384]
+position = Vector2(4305.7437, 7.88596)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll26" type="Sprite2D" parent="corals" unique_id=2025763503]
+position = Vector2(4486.7656, 13.726595)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll27" type="Sprite2D" parent="corals" unique_id=1815888695]
+position = Vector2(4665.472, 8.356052)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll28" type="Sprite2D" parent="corals" unique_id=1617335847]
+position = Vector2(4846.494, 14.19669)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll29" type="Sprite2D" parent="corals" unique_id=1610127767]
+position = Vector2(5024.3325, 10.671284)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll30" type="Sprite2D" parent="corals" unique_id=966656179]
+position = Vector2(5205.3545, 16.51192)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll31" type="Sprite2D" parent="corals" unique_id=1421152607]
+position = Vector2(5384.061, 11.1413765)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll32" type="Sprite2D" parent="corals" unique_id=1213306544]
+position = Vector2(5565.083, 16.982014)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll33" type="Sprite2D" parent="corals" unique_id=1114817945]
+position = Vector2(5735.6855, 5.1005936)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll34" type="Sprite2D" parent="corals" unique_id=1793287052]
+position = Vector2(5916.7075, 10.941229)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll35" type="Sprite2D" parent="corals" unique_id=1232590533]
+position = Vector2(6095.414, 5.5706863)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll36" type="Sprite2D" parent="corals" unique_id=2112046260]
+position = Vector2(6276.436, 11.411324)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll37" type="Sprite2D" parent="corals" unique_id=1786458100]
+position = Vector2(6454.2744, 7.8859177)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll38" type="Sprite2D" parent="corals" unique_id=2089926504]
+position = Vector2(6635.297, 13.726555)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll39" type="Sprite2D" parent="corals" unique_id=1451180024]
+position = Vector2(6814.003, 8.35601)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll40" type="Sprite2D" parent="corals" unique_id=9948525]
+position = Vector2(6995.0244, 14.196648)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll41" type="Sprite2D" parent="corals" unique_id=1111527976]
+position = Vector2(7171.9946, 7.88596)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll42" type="Sprite2D" parent="corals" unique_id=1787066840]
+position = Vector2(7353.0166, 13.726595)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll43" type="Sprite2D" parent="corals" unique_id=2085409881]
+position = Vector2(7531.723, 8.356052)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll44" type="Sprite2D" parent="corals" unique_id=645137278]
+position = Vector2(7712.745, 14.19669)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll45" type="Sprite2D" parent="corals" unique_id=1009052979]
+position = Vector2(7890.5835, 10.671284)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll46" type="Sprite2D" parent="corals" unique_id=2081352786]
+position = Vector2(8071.6055, 16.51192)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll47" type="Sprite2D" parent="corals" unique_id=1686749119]
+position = Vector2(8250.3125, 11.1413765)
+texture = ExtResource("15_ybnj8")
+
+[node name="Coralll48" type="Sprite2D" parent="corals" unique_id=1656235671]
+position = Vector2(8431.334, 16.982014)
+texture = ExtResource("15_ybnj8")
 
 [connection signal="body_entered" from="seashells/Area2D" to="seashells/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="seashells/Area2D2" to="seashells/Area2D2" method="_on_body_entered"]
