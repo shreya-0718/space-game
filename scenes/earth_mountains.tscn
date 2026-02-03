@@ -77,7 +77,7 @@ size = Vector2(148.75, 169.625)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ihsu2"]
 font = ExtResource("17_8wltr")
-font_size = 20
+font_size = 25
 font_color = Color(0.32778025, 0.11933509, 0.13703704, 1)
 
 [node name="Node2D" type="Node2D" unique_id=1849760801]
