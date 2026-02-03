@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dpn03rcfnt7rx" path="res://images/level_page/rocket.png" id="8_igw7c"]
 [ext_resource type="Script" uid="uid://cjk32o1i0eccm" path="res://scripts/star_venus.gd" id="10_ogrnp"]
 [ext_resource type="Texture2D" uid="uid://cofafrr6pqpjc" path="res://images/level_page/lockimage.png" id="10_ytt8k"]
-[ext_resource type="FontFile" uid="uid://dqp5kyy7yyosk" path="res://pixelfont.ttf" id="11_pv7jr"]
+[ext_resource type="FontFile" uid="uid://5jqbb8lq078c" path="res://pixelfont.ttf" id="11_pv7jr"]
 [ext_resource type="Texture2D" uid="uid://cxtcpcqql3w5a" path="res://images/level_page/earth.png" id="13_2pjr8"]
 [ext_resource type="Script" uid="uid://b0rwuv2aj47lg" path="res://scripts/star_earth.gd" id="14_ryp5e"]
 [ext_resource type="Script" uid="uid://dxgfmxrrp07c5" path="res://scripts/earthbutton.gd" id="15_5g32y"]
