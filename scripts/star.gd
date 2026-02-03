@@ -6,6 +6,6 @@ func _on_body_entered(body: Node2D):
 			global.mercury_stars += 1
 		if get_tree().current_scene.scene_file_path == "res://scenes/venus.tscn":
 			global.venus_stars += 1
-		if get_tree().current_scene.scene_file_path == "res://scenes/earth_forest.tscn":
+		if get_tree().current_scene.scene_file_path == "res://scenes/earth_forest.tscn" or get_tree().current_scene.scene_file_path == "res://scenes/earth_mountains.tscn" :
 			global.earth_stars += 1
 		queue_free()

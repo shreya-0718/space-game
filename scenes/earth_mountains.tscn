@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://jhfm2ksvvw6r" path="res://images/level_page/gray_star.png" id="14_8wltr"]
 [ext_resource type="Texture2D" uid="uid://s45jw16jj73u" path="res://images/level_page/star.png" id="15_ihsu2"]
 [ext_resource type="Script" uid="uid://bpkfgwxoiplt0" path="res://scripts/star.gd" id="16_8nqt1"]
+[ext_resource type="FontFile" path="res://ultpixelfont.ttf" id="17_8wltr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_shu3f"]
 size = Vector2(83.5625, 108.99999)
@@ -73,6 +74,11 @@ size = Vector2(116, 100.625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_olito"]
 size = Vector2(148.75, 169.625)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ihsu2"]
+font = ExtResource("17_8wltr")
+font_size = 20
+font_color = Color(0.32778025, 0.11933509, 0.13703704, 1)
 
 [node name="Node2D" type="Node2D" unique_id=1849760801]
 
@@ -410,6 +416,41 @@ texture = ExtResource("15_ihsu2")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="star2" unique_id=1129155648]
 position = Vector2(2857.6636, -362.7726)
 shape = SubResource("RectangleShape2D_olito")
+
+[node name="Label" type="Label" parent="." unique_id=1138281148]
+offset_left = 2006.0
+offset_top = 235.0
+offset_right = 2337.0
+offset_bottom = 311.0
+text = "MAUNA KEA IS THE TALLEST MOUNTAIN ON EARTH, WHEN MEASURED FROM BASE TO PEAK. "
+label_settings = SubResource("LabelSettings_ihsu2")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="." unique_id=1023050374]
+offset_left = 381.0
+offset_top = 210.0
+offset_right = 641.0
+offset_bottom = 286.0
+theme_override_colors/font_color = Color(0.5472812, 0.32337803, 0.29755297, 1)
+text = "MOUNT EVEREST IS THE TALLEST MOUNTAIN ABOVE SEA LEVEL. "
+label_settings = SubResource("LabelSettings_ihsu2")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="." unique_id=1466553485]
+offset_left = 3653.0
+offset_top = 197.0
+offset_right = 3913.0
+offset_bottom = 273.0
+theme_override_colors/font_color = Color(0.5472812, 0.32337803, 0.29755297, 1)
+text = "MANY MOUNTAINS ARE STILL GROWING TODAY. "
+label_settings = SubResource("LabelSettings_ihsu2")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="pressed" from="CanvasLayer5/back" to="CanvasLayer5/back" method="_on_pressed"]
