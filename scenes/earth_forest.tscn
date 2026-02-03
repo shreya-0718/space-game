@@ -22,6 +22,7 @@
 [ext_resource type="Script" uid="uid://b0rwuv2aj47lg" path="res://scripts/star_earth.gd" id="18_batua"]
 [ext_resource type="Texture2D" uid="uid://jhfm2ksvvw6r" path="res://images/level_page/gray_star.png" id="19_nt102"]
 [ext_resource type="Texture2D" uid="uid://s45jw16jj73u" path="res://images/level_page/star.png" id="20_vb10i"]
+[ext_resource type="Texture2D" uid="uid://dgrpqfrlvtct3" path="res://images/earth/snake.png" id="20_yxgbd"]
 [ext_resource type="Script" uid="uid://bpkfgwxoiplt0" path="res://scripts/star.gd" id="21_yxgbd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jxaag"]
@@ -54,6 +55,9 @@ size = Vector2(83.5625, 108.99999)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tr1rt"]
 size = Vector2(1097, 101.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g26qa"]
+size = Vector2(243.25, 250.875)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ftka3"]
 size = Vector2(116, 100.625)
@@ -223,6 +227,7 @@ position = Vector2(339, 385)
 shape = SubResource("RectangleShape2D_jxaag")
 
 [node name="Label" type="Label" parent="Node2D2/trees3" unique_id=393972392]
+visible = false
 offset_left = 240.0
 offset_top = 284.0
 offset_right = 403.0
@@ -277,6 +282,17 @@ offset_bottom = 128.0
 theme_override_fonts/font = ExtResource("6_lccmr")
 theme_override_font_sizes/font_size = 25
 text = "SLIDE DOWN THE TREE "
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label6" type="Label" parent="Node2D2" unique_id=1469864144]
+offset_left = 3139.0
+offset_top = 368.0
+offset_right = 3283.0
+offset_bottom = 462.0
+theme_override_fonts/font = ExtResource("6_lccmr")
+theme_override_font_sizes/font_size = 25
+text = "WATCH OUT FOR SNAKES!"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -442,6 +458,15 @@ text = "RAINFORESTS ARE FULL OF TREACHEROUS QUICKSAND - DON'T GET STUCK!"
 horizontal_alignment = 1
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="Snake" type="Sprite2D" parent="quicksand" unique_id=1993302014]
+position = Vector2(3533.2485, 432.82813)
+scale = Vector2(0.24153242, 0.24153246)
+texture = ExtResource("20_yxgbd")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="quicksand" unique_id=676741017]
+position = Vector2(3540.375, 442.4375)
+shape = SubResource("RectangleShape2D_g26qa")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=361473917]
 
