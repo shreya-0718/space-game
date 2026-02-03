@@ -1,37 +1,17 @@
 extends Area2D
 
-var speed = 250
-var direction = 1 #up
+@onready var platform = get_node("../StaticBody2D/CollisionShape2D")
 
-@onready var astronaut = get_node("../../astronaut")
-@onready var just = get_node("../../astronaut/AnimatedSprite2D")
-@onready var climbpoint = get_node("climbpoint2")
-@onready var startposition = get_node("startposition2")
-@onready var block = get_node("../block/CollisionShape2D")
-var entered = false
 var pressed = false
-
 func _on_body_entered(body):
-	if body.name == "astronaut": 
-		entered = true
+	if body.name == "astronaut":
+		pressed = true
+		print(pressed)
 
 func _process(delta):
-	if entered:
-		if Input.is_action_pressed("space"):
-			pressed = true
-			if block:
-				block.queue_free()
-			astronaut.global_position = startposition.global_position
-			global.earth_gravity = 0
-			await get_tree().create_timer(0.1).timeout
-	if pressed:
-		global.earth_gravity = 0
-		global.climbing = true 
-		astronaut.global_position.y += speed * direction * delta
-	if astronaut.global_position.y >= climbpoint.global_position.y:
-		speed = 0
+	if pressed and Input.is_action_just_pressed("space"):
+		platform.disabled = true
+		print(platform.disabled)
 
 func _on_body_exited(body):
-	if body.name == "astronaut":
-		entered = false
-		global.earth_gravity = 90
+	pressed = false

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://r2ihhnkulfkd" path="res://images/earth/forest_bckg.png" id="3_l4fgh"]
 [ext_resource type="Script" uid="uid://btlqayda8gfug" path="res://scripts/trees.gd" id="4_0ln5e"]
-[ext_resource type="FontFile" uid="uid://dqp5kyy7yyosk" path="res://pixelfont.ttf" id="6_lccmr"]
+[ext_resource type="FontFile" uid="uid://5jqbb8lq078c" path="res://pixelfont.ttf" id="6_lccmr"]
 [ext_resource type="Script" uid="uid://cj344vnwccvwc" path="res://scripts/astronaut_earth.gd" id="6_pqjif"]
 [ext_resource type="Texture2D" uid="uid://cleyhsn86koph" path="res://images/level_page/Back.png" id="6_vt45y"]
 [ext_resource type="Script" uid="uid://df1pespjgxir7" path="res://scripts/trees2.gd" id="7_lccmr"]
@@ -36,6 +36,10 @@ size = Vector2(124.5, 87.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_batua"]
 size = Vector2(299.5, 22)
+
+[sub_resource type="LabelSettings" id="LabelSettings_batua"]
+font = ExtResource("6_lccmr")
+font_size = 25
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tcu1f"]
 size = Vector2(83.5625, 108.99999)
@@ -100,7 +104,7 @@ scale = Vector2(1.0234537, 1.0234536)
 texture = ExtResource("8_pqjif")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/trees" unique_id=271306107]
-position = Vector2(302, 386.5)
+position = Vector2(339, 385)
 shape = SubResource("RectangleShape2D_jxaag")
 
 [node name="Label" type="Label" parent="Node2D2/trees" unique_id=1268917550]
@@ -110,7 +114,7 @@ offset_right = 403.0
 offset_bottom = 378.0
 theme_override_fonts/font = ExtResource("6_lccmr")
 theme_override_font_sizes/font_size = 25
-text = "PRESS \"SPACE\" TO CLIMB UP THE TREE"
+text = "PRESS 'SPACE' TO CLIMB UP THE TREE"
 horizontal_alignment = 1
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
@@ -145,7 +149,7 @@ offset_right = 1909.0
 offset_bottom = 102.0
 theme_override_fonts/font = ExtResource("6_lccmr")
 theme_override_font_sizes/font_size = 25
-text = "PRESS \"SPACE\" TO CLIMB DOWN"
+text = "PRESS 'SPACE' TO CLIMB DOWN"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -178,6 +182,16 @@ position = Vector2(1983, -43)
 position = Vector2(1734, 31)
 shape = SubResource("RectangleShape2D_batua")
 one_way_collision_margin = 0.0
+
+[node name="Label" type="Label" parent="Node2D2" unique_id=205197267]
+offset_left = 549.0
+offset_top = -83.0
+offset_right = 692.0
+offset_bottom = -26.0
+text = "CROSS THE BRIDGE!"
+label_settings = SubResource("LabelSettings_batua")
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="astronaut" type="CharacterBody2D" parent="." unique_id=562307866 groups=["astronaut"]]
 position = Vector2(451, 353)

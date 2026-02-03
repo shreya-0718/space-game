@@ -5,3 +5,4 @@ extends Area2D
 func _on_body_entered(body):
 	if body.name == "astronaut":
 		body.global_position = bridgepoint.global_position
+		global.earth_gravity = 90
