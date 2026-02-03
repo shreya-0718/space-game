@@ -61,6 +61,9 @@ size = Vector2(116, 100.625)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vb10i"]
 size = Vector2(148.75, 169.625)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ki08a"]
+size = Vector2(905.88086, 999.999)
+
 [node name="EarthForest" type="Node2D" unique_id=1138506274]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2051168973]
@@ -497,6 +500,20 @@ texture = ExtResource("20_vb10i")
 position = Vector2(3685.6636, -76.77261)
 shape = SubResource("RectangleShape2D_vb10i")
 
+[node name="star3" type="Area2D" parent="." unique_id=2033591161]
+position = Vector2(-183, 427)
+script = ExtResource("21_yxgbd")
+
+[node name="Sprite2D" type="Sprite2D" parent="star3" unique_id=1944838337]
+position = Vector2(658.04004, -501.96)
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("20_vb10i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="star3" unique_id=383953850]
+position = Vector2(654.95996, -503.0402)
+scale = Vector2(0.17, 0.17)
+shape = SubResource("RectangleShape2D_ki08a")
+
 [connection signal="pressed" from="CanvasLayer5/back" to="CanvasLayer5/back" method="_on_pressed"]
 [connection signal="body_entered" from="Node2D2/trees" to="Node2D2/trees" method="_on_body_entered"]
 [connection signal="body_exited" from="Node2D2/trees" to="Node2D2/trees" method="_on_body_exited"]
@@ -515,3 +532,4 @@ shape = SubResource("RectangleShape2D_vb10i")
 [connection signal="body_entered" from="quicksand" to="quicksand" method="_on_body_entered"]
 [connection signal="body_entered" from="star1" to="star1" method="_on_body_entered"]
 [connection signal="body_entered" from="star2" to="star2" method="_on_body_entered"]
+[connection signal="body_entered" from="star3" to="star3" method="_on_body_entered"]

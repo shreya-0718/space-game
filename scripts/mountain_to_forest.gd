@@ -10,3 +10,4 @@ func _on_body_entered(body):
 func _process(delta):
 	if player_inside and Input.is_action_just_pressed("space"):
 		get_tree().change_scene_to_file("res://scenes/earth_forest.tscn")
+		global.earth_stars = 0
