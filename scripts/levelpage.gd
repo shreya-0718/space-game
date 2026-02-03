@@ -27,12 +27,14 @@ extends Node2D
 @onready var pluto = get_node("pluto")
 @onready var lock8 = get_node("lock8")
 
+@onready var txt = get_node("Label2")
 
 var mercurydone = false
 var venusdone = false
 var earthdone = false
 
 func _ready():
+	txt.visible = false
 	check_venus()
 	check_earth()
 	check_mars()
