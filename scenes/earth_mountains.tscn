@@ -4,12 +4,62 @@
 [ext_resource type="Texture2D" uid="uid://buyghuvy0b55s" path="res://images/earth/mountains.png" id="2_2m1x3"]
 [ext_resource type="Script" uid="uid://cj344vnwccvwc" path="res://scripts/astronaut_earth.gd" id="3_6e1ma"]
 [ext_resource type="SpriteFrames" uid="uid://cj042qejdnd52" path="res://images/astronaut/astronaut_animation.tres" id="4_tkyih"]
+[ext_resource type="Script" uid="uid://p08w1el37e0t" path="res://scripts/mountain_to_forest.gd" id="5_shu3f"]
+[ext_resource type="LabelSettings" uid="uid://erqtt0c1y5lk" path="res://custom_font.tres" id="5_tkyih"]
+[ext_resource type="Texture2D" uid="uid://cleyhsn86koph" path="res://images/level_page/Back.png" id="7_6jmwh"]
+[ext_resource type="Script" uid="uid://xhnj7qwvf34d" path="res://scripts/back.gd" id="8_tusj4"]
+[ext_resource type="Texture2D" uid="uid://bhlphiy3b48wm" path="res://images/mercury/yes.png" id="9_g4mcc"]
+[ext_resource type="Script" path="res://scripts/yes.gd" id="10_8n0nh"]
+[ext_resource type="Texture2D" uid="uid://dnpwjnt6jtdpm" path="res://images/mercury/no.png" id="11_dinwf"]
+[ext_resource type="Script" path="res://scripts/no.gd" id="12_8wltr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_shu3f"]
 size = Vector2(83.5625, 108.99999)
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_6e1ma"]
 points = PackedVector2Array(-1, 626, 490, 431, 1035, -49, 1218, -221, 1324, -172, 1413, 180, 1740, 35, 1796, 38, 1909, 220, 2054, 449, 2131, 450, 2250, 532, 2770, 53, 2877, 49, 2957, 158, 3304, -211, 3440, -209, 3588, 253, 3785, 428, 4187, 75, 4298, 88, 4468, 477, 4704, 647)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6e1ma"]
+size = Vector2(970.6813, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tkyih"]
+size = Vector2(237.65695, 173.1528)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vhuq2"]
+size = Vector2(47.897995, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0d44c"]
+size = Vector2(91, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uypjy"]
+size = Vector2(320.40765, 88.38403)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6yiy"]
+size = Vector2(200.68518, 22.606201)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6jmwh"]
+size = Vector2(20, 148.43756)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tusj4"]
+size = Vector2(241.03995, 62.784058)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r7pnr"]
+size = Vector2(343.8144, 16.562195)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4mcc"]
+size = Vector2(108.14282, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8n0nh"]
+size = Vector2(125.50256, 52.403564)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dinwf"]
+size = Vector2(335.52612, 111.46655)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wltr"]
+size = Vector2(419.73102, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihsu2"]
+size = Vector2(267, 392)
 
 [node name="Node2D" type="Node2D" unique_id=1849760801]
 
@@ -25,7 +75,7 @@ shape = SubResource("RectangleShape2D_shu3f")
 position = Vector2(-118, -187)
 limit_left = 5
 limit_top = -9998823
-limit_right = 6273
+limit_right = 4687
 limit_bottom = 640
 limit_smoothed = true
 position_smoothing_enabled = true
@@ -40,14 +90,150 @@ scale = Vector2(0.06225588, 0.06225588)
 sprite_frames = ExtResource("4_tkyih")
 animation = &"idle"
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=843613540]
+[node name="mountains" type="StaticBody2D" parent="." unique_id=843613540]
 
-[node name="Mountains" type="Sprite2D" parent="StaticBody2D" unique_id=1978448272]
+[node name="Mountains" type="Sprite2D" parent="mountains" unique_id=1978448272]
 position = Vector2(2234, 139)
 texture = ExtResource("2_2m1x3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1003084661]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mountains" unique_id=1003084661]
+z_as_relative = false
+rotation = -1.6231562
 shape = SubResource("ConvexPolygonShape2D_6e1ma")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="mountains" unique_id=251277256]
+position = Vector2(385.65848, 520.99304)
+rotation = -0.3700098
+shape = SubResource("RectangleShape2D_6e1ma")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="mountains/CollisionShape2D2" unique_id=275321178]
+position = Vector2(-354.23886, -269.32114)
+rotation = -1.1868238
+shape = SubResource("RectangleShape2D_6e1ma")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="mountains" unique_id=2120682370]
+position = Vector2(786, 236)
+rotation = -0.7382742
+shape = SubResource("RectangleShape2D_6e1ma")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="mountains" unique_id=868448396]
+position = Vector2(2415, 439.99994)
+rotation = -0.75049156
+shape = SubResource("RectangleShape2D_6e1ma")
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="mountains" unique_id=540976037]
+position = Vector2(3816.0002, 463.00012)
+rotation = -0.75049156
+shape = SubResource("RectangleShape2D_6e1ma")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="mountains" unique_id=559151605]
+position = Vector2(2969, 172.99988)
+rotation = -0.7679449
+shape = SubResource("RectangleShape2D_6e1ma")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="mountains" unique_id=1846345863]
+position = Vector2(1229.1715, -38)
+shape = SubResource("RectangleShape2D_tkyih")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="mountains" unique_id=916497714]
+position = Vector2(2824, 193)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_tkyih")
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="mountains" unique_id=1140220173]
+position = Vector2(4225, 216)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_tkyih")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="mountains" unique_id=492238526]
+position = Vector2(2961, 214)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_tkyih")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="mountains" unique_id=1840327323]
+position = Vector2(3781, 506)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_tkyih")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="mountains" unique_id=814889048]
+position = Vector2(3371, -79)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_tkyih")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="mountains" unique_id=952340455]
+position = Vector2(1924.4587, 237.15388)
+rotation = 0.3700098
+shape = SubResource("RectangleShape2D_vhuq2")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="mountains" unique_id=2094716007]
+position = Vector2(1763.5, 55)
+shape = SubResource("RectangleShape2D_0d44c")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="mountains" unique_id=158235677]
+position = Vector2(1343.9136, 40.83259)
+rotation = -1.7627826
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_uypjy")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="mountains" unique_id=1099684390]
+position = Vector2(2941, 237.99998)
+rotation = -2.0263274
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_uypjy")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="mountains" unique_id=1441281890]
+position = Vector2(1847.9999, 137.99997)
+rotation = -2.0804324
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_x6yiy")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="mountains" unique_id=330024139]
+position = Vector2(2184.0002, 499.0001)
+rotation = 2.1816616
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_6jmwh")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="mountains" unique_id=29465835]
+position = Vector2(1975.0435, 358.99725)
+rotation = -2.0280726
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_tusj4")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="mountains" unique_id=1112069655]
+position = Vector2(1566.4403, 125.16185)
+rotation = 2.7052603
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_r7pnr")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="mountains" unique_id=1158168674]
+position = Vector2(2075, 458)
+scale = Vector2(0.99999964, 0.99999964)
+shape = SubResource("RectangleShape2D_g4mcc")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="mountains" unique_id=1122494167]
+position = Vector2(3465.9998, -130.00003)
+rotation = 1.0384709
+shape = SubResource("RectangleShape2D_8n0nh")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="mountains" unique_id=325220920]
+position = Vector2(3666.9998, 406.0001)
+rotation = 0.6981317
+shape = SubResource("RectangleShape2D_dinwf")
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="mountains" unique_id=49411111]
+position = Vector2(4543, 593)
+rotation = 0.6981317
+shape = SubResource("RectangleShape2D_dinwf")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="mountains" unique_id=351947525]
+position = Vector2(3556.9998, 117.000015)
+rotation = 1.3456489
+shape = SubResource("RectangleShape2D_8wltr")
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="mountains" unique_id=896520711]
+position = Vector2(4383, 294.99997)
+rotation = 1.1693707
+shape = SubResource("RectangleShape2D_8wltr")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=997259790]
 layer = -7
@@ -56,3 +242,92 @@ layer = -7
 position = Vector2(481.39615, 320.625)
 scale = Vector2(0.776124, 0.776124)
 texture = ExtResource("1_23mwf")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=707097078]
+script = ExtResource("5_shu3f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1617953175]
+position = Vector2(4591, 481)
+shape = SubResource("RectangleShape2D_ihsu2")
+
+[node name="Label" type="Label" parent="Area2D" unique_id=465664409]
+offset_left = 4254.0
+offset_top = 231.0
+offset_right = 4822.0
+offset_bottom = 363.0
+text = "PRESS SPACE TO 
+ENTER
+ RAINFOREST!"
+label_settings = ExtResource("5_tkyih")
+horizontal_alignment = 1
+
+[node name="CanvasLayer5" type="CanvasLayer" parent="." unique_id=670776688]
+
+[node name="back" type="Button" parent="CanvasLayer5" unique_id=1431754983]
+z_index = 1
+anchors_preset = -1
+anchor_right = 1.3145833
+anchor_bottom = 0.95
+offset_left = 13.000008
+offset_top = 10.0
+offset_right = 873.0
+offset_bottom = 424.0
+scale = Vector2(0.08, 0.08)
+action_mode = 0
+icon = ExtResource("7_6jmwh")
+script = ExtResource("8_tusj4")
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer6" type="CanvasLayer" parent="." unique_id=888311376]
+layer = 0
+
+[node name="dim" type="ColorRect" parent="CanvasLayer6" unique_id=524229348]
+anchors_preset = -1
+anchor_top = -0.0921875
+anchor_right = 0.114583336
+offset_left = -98.0
+offset_top = -2.0
+offset_right = 918.0
+offset_bottom = 708.0
+color = Color(0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="usure?" type="CanvasLayer" parent="." unique_id=1068538354]
+visible = false
+
+[node name="Label" type="Label" parent="usure?" unique_id=466423642]
+offset_left = 206.0
+offset_top = 193.0
+offset_right = 757.0
+offset_bottom = 387.0
+theme_override_font_sizes/font_size = 37
+text = "ARE YOU SURE YOU WANT TO LEAVE?"
+label_settings = ExtResource("5_tkyih")
+metadata/_edit_use_anchors_ = true
+
+[node name="yes" type="Button" parent="usure?" unique_id=1887329597]
+offset_left = 275.0
+offset_top = 265.0
+offset_right = 2374.0
+offset_bottom = 1280.0
+scale = Vector2(0.08, 0.08)
+text = "YES"
+icon = ExtResource("9_g4mcc")
+script = ExtResource("10_8n0nh")
+metadata/_edit_use_anchors_ = true
+
+[node name="NO" type="Button" parent="usure?" unique_id=193776353]
+offset_left = 500.0
+offset_top = 266.0
+offset_right = 2770.0
+offset_bottom = 1298.0
+scale = Vector2(0.08, 0.08)
+text = "NO"
+icon = ExtResource("11_dinwf")
+script = ExtResource("12_8wltr")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="pressed" from="CanvasLayer5/back" to="CanvasLayer5/back" method="_on_pressed"]
+[connection signal="pressed" from="usure?/yes" to="usure?/yes" method="_on_pressed"]
+[connection signal="pressed" from="usure?/NO" to="usure?/NO" method="_on_pressed"]

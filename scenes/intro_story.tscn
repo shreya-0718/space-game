@@ -15,6 +15,11 @@
 [ext_resource type="LabelSettings" uid="uid://erqtt0c1y5lk" path="res://custom_font.tres" id="13_ijfym"]
 [ext_resource type="Texture2D" uid="uid://d3m14m6hbki5g" path="res://images/mercury/right arrow.png" id="14_3y3ka"]
 [ext_resource type="Texture2D" uid="uid://cu4b2k0q5kxi7" path="res://images/mercury/d.png" id="15_cympp"]
+[ext_resource type="Texture2D" uid="uid://cleyhsn86koph" path="res://images/level_page/Back.png" id="16_1jpu1"]
+[ext_resource type="Script" uid="uid://xhnj7qwvf34d" path="res://scripts/back.gd" id="17_yu6ak"]
+[ext_resource type="Script" path="res://scripts/yes.gd" id="18_7ndq4"]
+[ext_resource type="Texture2D" uid="uid://dnpwjnt6jtdpm" path="res://images/mercury/no.png" id="19_1s5ho"]
+[ext_resource type="Script" path="res://scripts/no.gd" id="20_veoiq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cgnwt"]
 texture = ExtResource("2_r1les")
@@ -753,4 +758,73 @@ position = Vector2(1243, 477.00003)
 scale = Vector2(0.075, 0.08)
 texture = ExtResource("15_cympp")
 
+[node name="CanvasLayer5" type="CanvasLayer" parent="." unique_id=1451629229]
+
+[node name="back" type="Button" parent="CanvasLayer5" unique_id=277870748]
+z_index = 1
+anchors_preset = -1
+anchor_right = 1.3145833
+anchor_bottom = 0.95
+offset_left = 13.000008
+offset_top = 10.0
+offset_right = 873.0
+offset_bottom = 424.0
+scale = Vector2(0.08, 0.08)
+action_mode = 0
+icon = ExtResource("16_1jpu1")
+script = ExtResource("17_yu6ak")
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer6" type="CanvasLayer" parent="." unique_id=1040008024]
+layer = 0
+
+[node name="dim" type="ColorRect" parent="CanvasLayer6" unique_id=1756629268]
+anchors_preset = -1
+anchor_top = -0.0921875
+anchor_right = 0.114583336
+offset_left = -98.0
+offset_top = -2.0
+offset_right = 918.0
+offset_bottom = 708.0
+color = Color(0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="usure?" type="CanvasLayer" parent="." unique_id=1127730548]
+visible = false
+
+[node name="Label" type="Label" parent="usure?" unique_id=768772837]
+offset_left = 206.0
+offset_top = 193.0
+offset_right = 757.0
+offset_bottom = 387.0
+theme_override_font_sizes/font_size = 37
+text = "ARE YOU SURE YOU WANT TO LEAVE?"
+label_settings = ExtResource("13_ijfym")
+metadata/_edit_use_anchors_ = true
+
+[node name="yes" type="Button" parent="usure?" unique_id=619792229]
+offset_left = 275.0
+offset_top = 265.0
+offset_right = 2374.0
+offset_bottom = 1280.0
+scale = Vector2(0.08, 0.08)
+text = "YES"
+icon = ExtResource("10_10tom")
+script = ExtResource("18_7ndq4")
+metadata/_edit_use_anchors_ = true
+
+[node name="NO" type="Button" parent="usure?" unique_id=745910914]
+offset_left = 500.0
+offset_top = 266.0
+offset_right = 2770.0
+offset_bottom = 1298.0
+scale = Vector2(0.08, 0.08)
+text = "NO"
+icon = ExtResource("19_1s5ho")
+script = ExtResource("20_veoiq")
+metadata/_edit_use_anchors_ = true
+
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer5/back" to="CanvasLayer5/back" method="_on_pressed"]
+[connection signal="pressed" from="usure?/yes" to="usure?/yes" method="_on_pressed"]
+[connection signal="pressed" from="usure?/NO" to="usure?/NO" method="_on_pressed"]
