@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://jhfm2ksvvw6r" path="res://images/level_page/gray_star.png" id="6_rskdi"]
 [ext_resource type="Script" uid="uid://bk7f0x4slvsm0" path="res://scripts/venus.gd" id="6_sr1gy"]
 [ext_resource type="Texture2D" uid="uid://72j4m58ia32a" path="res://images/level_page/venus.png" id="6_ya3mj"]
-[ext_resource type="Texture2D" uid="uid://dpn03rcfnt7rx" path="res://images/level_page/Rocket.png" id="8_igw7c"]
+[ext_resource type="Texture2D" uid="uid://dpn03rcfnt7rx" path="res://images/level_page/rocket.png" id="8_igw7c"]
 [ext_resource type="Script" uid="uid://cjk32o1i0eccm" path="res://scripts/star_venus.gd" id="10_ogrnp"]
 [ext_resource type="Texture2D" uid="uid://cofafrr6pqpjc" path="res://images/level_page/lockimage.png" id="10_ytt8k"]
 [ext_resource type="FontFile" uid="uid://5jqbb8lq078c" path="res://pixelfont.ttf" id="11_pv7jr"]
@@ -17,12 +17,16 @@
 [ext_resource type="Script" uid="uid://b0rwuv2aj47lg" path="res://scripts/star_earth.gd" id="14_ryp5e"]
 [ext_resource type="Script" uid="uid://dxgfmxrrp07c5" path="res://scripts/earthbutton.gd" id="15_5g32y"]
 [ext_resource type="Texture2D" uid="uid://dfad2fab08ggs" path="res://images/level_page/mars.png" id="16_7etq8"]
-[ext_resource type="Script" path="res://scripts/star_mars.gd" id="17_sooyk"]
+[ext_resource type="Script" uid="uid://dvoyins5ph3gl" path="res://scripts/star_mars.gd" id="17_sooyk"]
 [ext_resource type="Texture2D" uid="uid://cnpvifebvgmvc" path="res://images/level_page/jupiter.png" id="18_ys2n6"]
 [ext_resource type="Texture2D" uid="uid://bty5ed8qc2uqj" path="res://images/level_page/saturn.png" id="19_5g32y"]
 [ext_resource type="Texture2D" uid="uid://cvxnkn3yhmwn4" path="res://images/level_page/uranus.png" id="20_w185x"]
 [ext_resource type="Texture2D" uid="uid://cgnyg6368je1u" path="res://images/level_page/neptune.png" id="21_p3i2x"]
 [ext_resource type="Texture2D" uid="uid://sinotpsm4obw" path="res://images/level_page/moon.png" id="22_ys2n6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5g32y"]
+font = ExtResource("11_pv7jr")
+font_size = 30
 
 [sub_resource type="LabelSettings" id="LabelSettings_7etq8"]
 font = ExtResource("11_pv7jr")
@@ -92,6 +96,15 @@ script = ExtResource("6_sr1gy")
 position = Vector2(500.99997, 232)
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("10_ytt8k")
+
+[node name="Label2" type="Label" parent="." unique_id=369391543]
+z_index = 1
+offset_left = 438.0
+offset_top = 437.0
+offset_right = 548.0
+offset_bottom = 469.0
+text = "LOADING..."
+label_settings = SubResource("LabelSettings_5g32y")
 
 [node name="Label" type="Label" parent="." unique_id=163333192]
 offset_left = 591.0
