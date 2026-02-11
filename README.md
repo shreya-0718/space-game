@@ -10,5 +10,3 @@ Overall, making *Voyage to the Stars* was a huge bonding experience for all four
 Play it HERE: [https://ntexas201201.itch.io/voyage-to-the-stars](https://ntexas201201.itch.io/voyage-to-the-stars)
 
 <img width="969" height="648" alt="image" src="https://github.com/user-attachments/assets/e2d16cce-7714-4c56-aaee-8d362f68103e" />
-
-
